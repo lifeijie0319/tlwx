@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>住宅信息</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <link href="{{ static_url('css/yinsho.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('css/main.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('font/iconfont.css') }}" rel="stylesheet"/>
+    <script src="{{ static_url('asset/jquery.min.js') }}"></script>
+    <script src="{{ static_url('asset/jquery-extend.js') }}"></script>
+    <script src="{{ static_url('asset/validate.js') }}"></script>
+    <script src="{{ static_url('asset/picker.js') }}"></script>
+    <script src="{{ static_url('asset/picker-city.js') }}"></script>
+    <script src="{{ static_url('js/tool.js') }}"></script>
+    <script src="{{ static_url('js/credit_card/online_apply5.js') }}"></script>
+    <script>
+        $(function() {
+            $("#ssx").cityPicker({
+                title: "单位所在省市县（区）"
+            });
+        });
+    </script>
+</head>
+<body ontouchstart>
+	<div class="container">
+        <ul class="nav_process">
+            <li class="nav_process_item complete">
+                <a class="nav_step" href="#">
+                    <i class="iconfont icon-correct"></i>
+                </a>
+                <span class="nav_title">信用卡申请</span>
+            </li>
+            <li class="nav_process_item complete">
+                <a class="nav_step" href="#">
+                    <i class="iconfont icon-correct"></i>
+                </a>
+                <span class="nav_title">工作信息</span>
+            </li>
+            <li class="nav_process_item processing">
+                <a class="nav_step" href="#">
+                    3
+                </a>
+                <span class="nav_title">住宅信息</span>
+            </li>
+            <li class="nav_process_item">
+                <a class="nav_step" href="#">
+                    4
+                </a>
+                <span class="nav_title">其他信息</span>
+            </li>
+        </ul>
+        <form id="form5">
+        <div class="ys_cells card_apply_cell card_apply_cell_2">
+            <div class="ys_cell">
+                <div class="ys_cell_hd">
+                    <label>住宅所在地</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <input id="ssx" class="ys_input" type="text" placeholder="单位所在省市县（区）" emptyTips="住宅所在地不能为空" required>
+                </div>
+            </div>
+            <div class="ys_cell">
+                <div class="ys_cell_hd">
+                    <label>住宅具体地址</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <input class="ys_input" type="text" placeholder="请输入住宅具体地址" emptyTips="住宅具体地址不能为空" required>
+                </div>
+            </div>
+            <div class="ys_cell">
+                <div class="ys_cell_hd">
+                    <label>住宅电话（选填）</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <input class="ys_input" type="text" placeholder="请输入住宅电话（加区号）" pattern="(^\d{3}-\d{8}$)|(^\d{4}-\d{7}$)" notMatchTips="电话格式不正确（例021-88888888）" required>
+                </div>
+            </div>
+            <div class="ys_cell ys_cell_select">
+                <div class="ys_cell_hd">
+                    <label>住宅状况</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <select class="ys_select" name="select">
+                        <option selected="">请选择</option>
+                        <option>有房无贷</option>
+                        <option>有房有贷</option>
+                        <option>无房与父母同住</option>
+                        <option>单位宿舍</option>
+                        <option>租房</option>
+                        <option>其它</option>
+                    </select>
+                </div>
+            </div>
+            <div class="ys_cell">
+                <div class="ys_cell_hd">
+                    <label>亲属联系人姓名</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <input class="ys_input" type="text" placeholder="请输入亲属联系人姓名" emptyTips="亲属联系人姓名不能为空" required>
+                </div>
+            </div>
+            <div class="ys_cell ys_cell_select">
+                <div class="ys_cell_hd">
+                    <label>与申请人关系</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <select class="ys_select" name="select">
+                        <option selected="">请选择</option>
+                        <option>父母</option>
+                        <option>配偶</option>
+                        <option>子女</option>
+                        <option>兄弟姐妹</option>
+                        <option>其他</option>
+                    </select>
+                </div>
+            </div>
+            <div class="ys_cell">
+                <div class="ys_cell_hd">
+                    <label>亲属联系人电话</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <input class="ys_input" type="number" placeholder="请输入亲属联系人手机号码" pattern="^[0-9]{11}$" emptyTips="亲属联系人电话不能为空" notMatchTips="请输入正确的手机号" required>
+                </div>
+            </div>
+            <div class="ys_cell">
+                <div class="ys_cell_hd">
+                    <label>其他人联系姓名</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <input class="ys_input" type="text" placeholder="请输入其他人联系姓名" emptyTips="其他人联系姓名不能为空" required>
+                </div>
+            </div>
+            <div class="ys_cell ys_cell_select">
+                <div class="ys_cell_hd">
+                    <label>与申请人关系</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <select class="ys_select" name="select">
+                        <option selected="">请选择</option>
+                        <option>朋友</option>
+                        <option>同事</option>
+                        <option>其他</option>
+                    </select>
+                </div>
+            </div>
+            <div class="ys_cell">
+                <div class="ys_cell_hd">
+                    <label>其他联系人电话</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <input class="ys_input" type="number" placeholder="请输入其他联系人手机号码" pattern="^[0-9]{11}$" emptyTips="其他联系人电话不能为空" notMatchTips="请输入正确的手机号" required>
+                </div>
+            </div>
+        </div>
+	    <div class="ys_btns mt30">
+            <a class="ys_btn" href="javascript:;" id="submit5">下一步</a>
+        </div>
+        </form>
+	</div>
+</body>

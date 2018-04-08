@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>信用卡申请</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <link href="{{ static_url('css/yinsho.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('css/main.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('font/iconfont.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('asset/photoswipe/photoswipe.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('asset/photoswipe/default-skin/default-skin.css') }}" rel="stylesheet"/>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script src="{{ static_url('asset/jquery.min.js') }}"></script>
+    <script src="{{ static_url('asset/jquery-extend.js') }}"></script>
+    <script src="{{ static_url('asset/validate.js') }}"></script>
+    <script src="{{ static_url('asset/picker-city.js') }}"></script>
+    <script src="{{ static_url('asset/picker.js') }}"></script>
+    <script src="{{ static_url('asset/photoswipe/photoswipe.min.js') }}"></script>
+    <script src="{{ static_url('asset/photoswipe/photoswipe-ui-default.min.js') }}"></script>
+    <script src="{{ static_url('asset/popup.js') }}"></script>
+    <script src="{{ static_url('js/tool.js') }}"></script>
+    <script src="{{ static_url('js/credit_card/online_apply3.js') }}"></script>
+    <script>
+        $(function() {
+            $("#date").datetimePicker({
+                title: "证件有效期（起始日）",
+                m: 1
+            });
+            $("#date2").datetimePicker({
+                title: "证件有效期（到期日）",
+                m: 1
+            });
+            $("#ssx").cityPicker({
+                title: "签发机关"
+            });
+        });
+    </script>
+</head>
+<body ontouchstart>
+	<div class="container">
+        <ul class="nav_process">
+            <li class="nav_process_item processing">
+                <a class="nav_step" href="#">
+                    1
+                </a>
+                <span class="nav_title">信用卡申请</span>
+            </li>
+            <li class="nav_process_item">
+                <a class="nav_step" href="#">
+                    2
+                </a>
+                <span class="nav_title">工作信息</span>
+            </li>
+            <li class="nav_process_item">
+                <a class="nav_step" href="#">
+                    3
+                </a>
+                <span class="nav_title">住宅信息</span>
+            </li>
+            <li class="nav_process_item">
+                <a class="nav_step" href="#">
+                    4
+                </a>
+                <span class="nav_title">其他信息</span>
+            </li>
+        </ul>
+        <form id="form3">
+        <div class="ys_cells card_apply_cell">
+            <div class="ys_cell">
+                <div class="ys_cell_hd">
+                    <label>申请人姓名</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <input name="name" class="ys_input" type="text" placeholder="请输入申请人姓名" emptyTips="姓名不能为空" pattern="^[\u4e00-\u9fa5]{2,}$" notMatchTips="姓名必须是中文，至少两个字" required>
+                </div>
+            </div>
+            <div class="ys_cell">
+                <div class="ys_cell_hd">
+                    <label>身份证号码</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <input name="idno" class="ys_input" type="number" placeholder="请输入身份证号码" pattern="(^\d{18}$)|(^\d{17}(\d|X|x)$)" emptyTips="身份证号码不能为空" notMatchTips="请输入正确的18位身份证号码" required>
+                </div>
+            </div>
+            <div class="ys_cell">
+                <div class="ys_cell_hd">
+                    <label>签发机关</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <input id="ssx" class="ys_input" type="text" placeholder="请选择省市县" emptyTips="签发机关不能为空" required>
+                </div>
+            </div>
+            <label class="ys_cell ys_cell_checkbox" for="c3">
+                <div class="ys_cell_bd">
+                    证件永久有效？
+                </div>
+                <div>是</div>
+                <div class="ys_cell_ft">
+                    <input class="ys_checkbox" id="c3" type="checkbox" name="checkbox4" checked="">
+                    <i class="iconfont icon-c-radio-none"></i>
+                </div>
+            </label>
+            <div class="ys_cell">
+                <div class="ys_cell_hd">
+                    <label>证件有效期（起始日）</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <input id="date" class="ys_input" type="text" placeholder="证件有效期" emptyTips="证件有效期不能为空" required>
+                </div>
+            </div>
+            <div class="ys_cell">
+                <div class="ys_cell_hd">
+                    <label>证件有效期（到期日）</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <input id="date2" class="ys_input" type="text" placeholder="证件有效期" emptyTips="证件有效期不能为空" required>
+                </div>
+            </div>
+            <div class="ys_cell ys_cell_select">
+                <div class="ys_cell_hd">
+                    <label>税收居民声明</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <select class="ys_select" name="select">
+                        <option selected="" value="1">仅为中国税收居民</option>
+                        <option value="2">仅为非居民</option>
+                        <option value="6">既是中国税收居民又是其他国家（地区）居民</option>
+                    </select>
+                </div>
+            </div>
+            <div class="ys_cell">
+                <div class="ys_cell_hd">
+                    <label>车牌号（选填）</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <input class="ys_input" type="text" placeholder="请输入车牌号" pattern="^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]{1}[A-Z]{1}[A-Z0-9]{4}[A-Z0-9挂学警港澳]{1}$" notMatchTips="车牌号格式不正确" required>
+                </div>
+            </div>
+            <div class="ys_cell ys_cell_vcode">
+                <div class="ys_cell_hd">
+                    <label>行驶证（选填）</label>
+                </div>
+                <div class="ys_cell_bd image_cell">
+                    <div class="my-gallery" data-pswp-uid="1">
+                    　　<figure>
+                            <a href="{{ static_url('img/id01.png') }}" data-size="750x500">
+                                <img src="{{ static_url('img/id01.png') }}">
+                            </a>
+                        </figure>
+                    </div>
+                </div>
+                <div class="ys_cell_ft">
+                    <a name="upload_img_btn" class="ys_input_btn" href="javascript:;">上传图片</a>
+                </div>
+            </div>
+            <div class="ys_cell ys_cell_vcode">
+                <div class="ys_cell_hd">
+                    <label>工作证（选填）</label>
+                </div>
+                <div class="ys_cell_bd image_cell">
+                    <div class="my-gallery" data-pswp-uid="2">
+                    　　<figure>
+                            <a href="{{ static_url('img/id01.png') }}" data-size="750x500">
+                                <img src="{{ static_url('img/id01.png') }}">
+                            </a>
+                        </figure>
+                    </div>
+                </div>
+                <div class="ys_cell_ft">
+                    <a name="upload_img_btn" class="ys_input_btn" href="javascript:;">上传图片</a>
+                </div>
+            </div>
+            <div class="ys_cell ys_cell_vcode">
+                <div class="ys_cell_hd">
+                    <label>房产证（选填）</label>
+                </div>
+                <div class="ys_cell_bd image_cell">
+                    <div class="my-gallery" data-pswp-uid="3">
+                    　　<figure>
+                            <a href="{{ static_url('img/id01.png') }}" data-size="750x500">
+                                <img src="{{ static_url('img/id01.png') }}">
+                            </a>
+                        </figure>
+                    </div>
+                </div>
+                <div class="ys_cell_ft">
+                    <a name="upload_img_btn" class="ys_input_btn" href="javascript:;">上传图片</a>
+                </div>
+            </div>
+            <div class="ys_cell ys_cell_vcode">
+                <div class="ys_cell_hd">
+                    <label>其他证明文件（选填）</label>
+                </div>
+                <div class="ys_cell_bd image_cell">
+                    <div class="my-gallery" data-pswp-uid="4">
+                    　　<figure>
+                            <a href="{{ static_url('img/id01.png') }}" data-size="750x500">
+                                <img src="{{ static_url('img/id01.png') }}">
+                            </a>
+                        </figure>
+                    </div>
+                </div>
+                <div class="ys_cell_ft">
+                    <a name="upload_img_btn" class="ys_input_btn" href="javascript:;">上传图片</a>
+                </div>
+            </div>
+            <div class="ys_cell">
+                <div class="ys_cell_hd">
+                    <label>手机号码</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <input class="ys_input" type="number" name="cel" placeholder="请输入手机号码" pattern="^[0-9]{11}$" emptyTips="手机号不能为空" notMatchTips="请输入正确的手机号" required>
+                </div>
+            </div>
+<!--
+            <div class="ys_cell ys_cell_vcode">
+                <div class="ys_cell_hd">
+                    <label>验证码</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <input class="ys_input" type="text" type="number" placeholder="短信验证码" pattern="[0-9]{6}" emptyTips="验证码不
+能为空" notMatchTips="验证码格式不正确" required>
+                </div>
+                <div class="ys_cell_ft">
+                    <a class="ys_input_btn" href="javascript:;" id="send_vcode">获取验证码</a>
+                </div>
+            </div>
+-->
+            <label class="ys_cell ys_cell_checkbox" for="c4">
+                <div class="ys_cell_bd">是否卡片寄送</div>
+                <div>是</div>
+                <div class="ys_cell_ft">
+                    <input class="ys_checkbox" id="c4" type="checkbox" name="checkbox" checked="">
+                    <i class="iconfont icon-c-radio-none"></i>
+                </div>
+            </label>
+            <div class="ys_cell">
+                <div class="ys_cell_hd">
+                    <label>推荐码（选填）</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <input class="ys_input" type="number" placeholder="请输入推荐码">
+                </div>
+            </div>
+        </div>
+        </form>
+        <div class="ys_agree">
+            <label for="ysagree">
+                <input class="ys_agree_checkbox" type="checkbox" id="ysagree" checked="checked">
+                <span class="ys_agree_text">
+                    本人已完全知悉并保证遵守
+                    <a class="ys_agree_clause open-popup" href="javascript:;" data-target="#clause-a">《秦皇岛银行信用卡章程》</a>
+                    已经阅读并了解
+                    <a class="ys_agree_clause open-popup" href="javascript:;" data-target="#clause-b">《秦皇岛银行信用卡领用协议》</a>
+                </span>
+            </label>
+        </div>
+	    <div class="ys_btns mt30">
+            <a class="ys_btn" href="javascript:;" id="submit3">下一步</a>
+        </div>
+        <div id="clause-a" class="ys_page">
+            <div class="ys_content ys_page_y">
+                <div class="ys_btns">
+                    <div class="clause_content">
+                        <h4>《秦皇岛银行信用卡章程》</h4>
+                        <p id="protocol1"></p>
+                    </div>
+                    <div class="pb60"></div>
+                </div>
+            </div>
+            <div class="ys_fixed_footer clause_btn">
+                <a class="ys_fixed_btn close-popup" href="javascript:;">继续</a>
+            </div>
+        </div>
+        <div id="clause-b" class="ys_page">
+            <div class="ys_content ys_page_y">
+                <div class="ys_btns">
+                    <div class="clause_content">
+                        <h4>《秦皇岛银行信用卡领用协议》</h4>
+                        <p id="protocol2"></p>
+                    </div>
+                    <div class="pb60"></div>
+                </div>
+            </div>
+            <div class="ys_fixed_footer clause_btn">
+                <a class="ys_fixed_btn close-popup" href="javascript:;">继续</a>
+            </div>
+        </div>
+	</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+        <div class="pswp__bg"></div>
+        <!-- Slides wrapper with overflow:hidden. -->
+        <div class="pswp__scroll-wrap">
+            <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <!--  Controls are self-explanatory. Order can be changed. -->
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <!-- element will get class pswp__preloader-active when preloader is running -->
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                          <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                </button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                </button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var initPhotoSwipeFromDOM = function(gallerySelector) {
+
+                // parse slide data (url, title, size ...) from DOM elements 
+                // (children of gallerySelector)
+                var parseThumbnailElements = function(el) {
+                    var thumbElements = el.childNodes,
+                        numNodes = thumbElements.length,
+                        items = [],
+                        figureEl,
+                        linkEl,
+                        size,
+                        item;
+
+                    for(var i = 0; i < numNodes; i++) {
+
+                        figureEl = thumbElements[i]; // <figure> element
+
+                        // include only element nodes 
+                        if(figureEl.nodeType !== 1) {
+                            continue;
+                        }
+
+                        linkEl = figureEl.children[0]; // <a> element
+
+                        size = linkEl.getAttribute('data-size').split('x');
+
+                        // create slide object
+                        item = {
+                            src: linkEl.children[0].getAttribute('src'),//linkEl.getAttribute('href'),
+                            w: parseInt(size[0], 10),
+                            h: parseInt(size[1], 10)
+                        };
+
+
+
+                        if(figureEl.children.length > 1) {
+                            // <figcaption> content
+                            item.title = figureEl.children[1].innerHTML; 
+                        }
+
+                        if(linkEl.children.length > 0) {
+                            // <img> thumbnail element, retrieving thumbnail url
+                            item.msrc = linkEl.children[0].getAttribute('src');
+                        } 
+
+                        item.el = figureEl; // save link to element for getThumbBoundsFn
+                        items.push(item);
+                    }
+
+                    return items;
+                };
+
+                // find nearest parent element
+                var closest = function closest(el, fn) {
+                    return el && ( fn(el) ? el : closest(el.parentNode, fn) );
+                };
+
+                // triggers when user clicks on thumbnail
+                var onThumbnailsClick = function(e) {
+                    e = e || window.event;
+                    e.preventDefault ? e.preventDefault() : e.returnValue = false;
+
+                    var eTarget = e.target || e.srcElement;
+
+                    // find root element of slide
+                    var clickedListItem = closest(eTarget, function(el) {
+                        return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
+                    });
+
+                    if(!clickedListItem) {
+                        return;
+                    }
+
+                    // find index of clicked item by looping through all child nodes
+                    // alternatively, you may define index via data- attribute
+                    var clickedGallery = clickedListItem.parentNode,
+                        childNodes = clickedListItem.parentNode.childNodes,
+                        numChildNodes = childNodes.length,
+                        nodeIndex = 0,
+                        index;
+
+                    for (var i = 0; i < numChildNodes; i++) {
+                        if(childNodes[i].nodeType !== 1) { 
+                            continue; 
+                        }
+
+                        if(childNodes[i] === clickedListItem) {
+                            index = nodeIndex;
+                            break;
+                        }
+                        nodeIndex++;
+                    }
+
+
+
+                    if(index >= 0) {
+                        // open PhotoSwipe if valid index found
+                        openPhotoSwipe( index, clickedGallery );
+                    }
+                    return false;
+                };
+
+                // parse picture index and gallery index from URL (#&pid=1&gid=2)
+                var photoswipeParseHash = function() {
+                    var hash = window.location.hash.substring(1),
+                    params = {};
+
+                    if(hash.length < 5) {
+                        return params;
+                    }
+
+                    var vars = hash.split('&');
+                    for (var i = 0; i < vars.length; i++) {
+                        if(!vars[i]) {
+                            continue;
+                        }
+                        var pair = vars[i].split('=');  
+                        if(pair.length < 2) {
+                            continue;
+                        }           
+                        params[pair[0]] = pair[1];
+                    }
+
+                    if(params.gid) {
+                        params.gid = parseInt(params.gid, 10);
+                    }
+
+                    return params;
+                };
+
+                var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+                    var pswpElement = document.querySelectorAll('.pswp')[0],
+                        gallery,
+                        options,
+                        items;
+
+                    items = parseThumbnailElements(galleryElement);
+                    console.log(items);
+
+                    // define options (if needed)
+                    options = {
+
+                        // define gallery index (for URL)
+                        galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+
+                        getThumbBoundsFn: function(index) {
+                            // See Options -> getThumbBoundsFn section of documentation for more info
+                            var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
+                                pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                                rect = thumbnail.getBoundingClientRect(); 
+
+                            return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
+                        }
+
+                    };
+
+                    // PhotoSwipe opened from URL
+                    if(fromURL) {
+                        if(options.galleryPIDs) {
+                            // parse real index when custom PIDs are used 
+                            // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
+                            for(var j = 0; j < items.length; j++) {
+                                if(items[j].pid == index) {
+                                    options.index = j;
+                                    break;
+                                }
+                            }
+                        } else {
+                            // in URL indexes start from 1
+                            options.index = parseInt(index, 10) - 1;
+                        }
+                    } else {
+                        options.index = parseInt(index, 10);
+                    }
+
+                    // exit if index not found
+                    if( isNaN(options.index) ) {
+                        return;
+                    }
+
+                    if(disableAnimation) {
+                        options.showAnimationDuration = 0;
+                    }
+
+                    // Pass data to PhotoSwipe and initialize it
+                    gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+                    gallery.init();
+                    console.log(items);
+                };
+
+                // loop through all gallery elements and bind events
+                var galleryElements = document.querySelectorAll( gallerySelector );
+
+                for(var i = 0, l = galleryElements.length; i < l; i++) {
+                    galleryElements[i].setAttribute('data-pswp-uid', i+1);
+                    galleryElements[i].onclick = onThumbnailsClick;
+                }
+
+                // Parse URL and open gallery if it contains #&pid=3&gid=1
+                var hashData = photoswipeParseHash();
+                if(hashData.pid && hashData.gid) {
+                    openPhotoSwipe( hashData.pid ,  galleryElements[ hashData.gid - 1 ], true, true );
+                }
+            };
+
+            // execute above function
+            initPhotoSwipeFromDOM('.my-gallery');
+        </script>
+    </div>
+</body>
+</html>

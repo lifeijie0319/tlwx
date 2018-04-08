@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>信用卡申请</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <link href="{{ static_url('css/yinsho.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('css/main.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('font/iconfont.css') }}" rel="stylesheet"/>
+    <script src="{{ static_url('asset/jquery.min.js') }}"></script>
+    <script src="{{ static_url('asset/validate.js') }}"></script>
+    <script src="{{ static_url('js/tool.js') }}"></script>
+    <script src="{{ static_url('js/credit_card/online_apply1.js') }}"></script>
+</head>
+<body ontouchstart>
+	<div class="container">
+        <form id="form1">
+        <div class="ys_cells">
+            <div class="ys_cell">
+                <div class="ys_cell_hd">
+                    <label>申请人姓名</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <input name="name" class="ys_input" type="text" placeholder="请输入申请人姓名" emptyTips="姓名不能为空" pattern="^[\u4e00-\u9fa5]{2,}$" notMatchTips="姓名必须是中文，至少两个字" required>
+                </div>
+            </div>
+            <div class="ys_cell ys_cell_select">
+                <div class="ys_cell_hd">
+                    <label>证件类型</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <select class="ys_select" name="cardtype">
+                        <option selected="">身份证</option>
+                    </select>
+                </div>
+            </div>
+            <div class="ys_cell">
+                <div class="ys_cell_hd">
+                    <label>证件号码</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <input name="idno" class="ys_input" type="text" placeholder="请输入证件号码" pattern="(^\d{18}$)|(^\d{17}(\d|X|x)$)" emptyTips="证件号不能为空" notMatchTips="请输入正确的证件号" required>
+                </div>
+            </div>
+            <div class="ys_cell">
+                <div class="ys_cell_hd">
+                    <label>手机号码</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <input class="ys_input" type="number" name="cel" placeholder="请输入手机号码" pattern="^[0-9]{11}$" emptyTips="手>机号不能为空" notMatchTips="请输入正确的手机号" required>
+                </div>
+            </div>
+            <div class="ys_cell ys_cell_vcode">
+                <div class="ys_cell_hd">
+                    <label>验证码</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <input name="vcode" class="ys_input" type="text" type="number" placeholder="短信验证码" pattern="[0-9]{6}" emptyTips="验证码不
+能为空" notMatchTips="验证码格式不正确" required>
+                </div>
+                <div class="ys_cell_ft">
+                    <a class="ys_input_btn" href="javascript:;" id="send_vcode">获取验证码</a>
+                </div>
+            </div>
+            <!--
+            <div class="ys_cell ys_cell_vcode">
+                <div class="ys_cell_hd">
+                    <label>验证码</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <input name="pic_vcode" class="ys_input" type="text" placeholder="请输入验证码" pattern="^\w{4}$" emptyTips="验证码不能为空" notMatchTips="验证码不匹配" required>
+                </div>
+                <div class="ys_cell_ft">
+                    <img class="ys_vcode_img" src="{{ static_url('img/vcode.png') }}">
+                </div>
+            </div>
+            -->
+        </div>
+	    <div class="ys_btns mt30">
+            <a class="ys_btn" href="javascript:;" id="submit1">确定</a>
+        </div>
+        </form>
+	</div>
+</body>
+</html>

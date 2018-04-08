@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>信用卡申请进度查询</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <link href="{{ static_url('css/yinsho.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('css/main.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('font/iconfont.css') }}" rel="stylesheet"/>
+    <script src="{{ static_url('asset/jquery.min.js') }}"></script>
+    <script src="{{ static_url('asset/validate.js') }}"></script>
+    <script src="{{ static_url('js/tool.js') }}"></script>
+    <script src="{{ static_url('js/credit_card/online_apply_status1.js') }}"></script>
+</head>
+<body ontouchstart>
+	<div class="container">
+        <form id="form1">
+        <div class="ys_cells">
+            <div class="ys_cell ys_cell_select">
+                <div class="ys_cell_hd">
+                    <label>证件类型</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <select class="ys_select" name="select">
+                        <option selected="">身份证</option>
+                    </select>
+                </div>
+            </div>
+            <div class="ys_cell">
+                <div class="ys_cell_hd">
+                    <label>证件号码</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <input class="ys_input" type="text" placeholder="请输入证件号码" pattern="(^\d{18}$)|(^\d{17}(\d|X|x)$)" emptyTips="证件号不能为空" notMatchTips="请输入正确的证件号" required>
+                </div>
+            </div>
+            <div class="ys_cell ys_cell_vcode">
+                <div class="ys_cell_hd">
+                    <label>验证码</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <input class="ys_input" type="text" placeholder="请输入验证码" pattern="^\w{4}$" emptyTips="验证码不能为空" notMatchTips="验证码不匹配" required>
+                </div>
+                <div class="ys_cell_ft">
+                    <img class="ys_vcode_img" src="{{ static_url('img/vcode.png') }}">
+                </div>
+            </div>
+        </div>
+	    <div class="ys_btns mt30">
+            <a class="ys_btn" href="javascript:;" id="submit1">确定</a>
+        </div>
+        </form>
+	</div>
+</body>
+</html>

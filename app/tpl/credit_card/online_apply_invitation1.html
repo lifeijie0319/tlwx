@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>信用卡推荐</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <link href="{{ static_url('css/yinsho.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('css/main.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('font/iconfont.css') }}" rel="stylesheet"/>
+    <script src="{{ static_url('asset/jquery.min.js') }}"></script>
+    <script src="{{ static_url('asset/validate.js') }}"></script>
+    <script src="{{ static_url('js/tool.js') }}"></script>
+    <script src="{{ static_url('js/credit_card/online_apply_invitation1.js') }}"></script>
+</head>
+<body ontouchstart>
+	<div class="container">
+        <form id="form1">
+        <div class="ys_cells">
+            <div class="ys_cell">
+                <div class="ys_cell_hd">
+                    <label>推荐人姓名</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <input name="name" class="ys_input" type="text" placeholder="请输入推荐人姓名" emptyTips="姓名不能为空" pattern="^[\u4e00-\u9fa5]{2,}$" notMatchTips="姓名必须是中文，至少两个字" required>
+                </div>
+            </div>
+            <div class="ys_cell">
+                <div class="ys_cell_hd">
+                    <label>推荐人工号</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <input name="employee_id" class="ys_input" type="text" placeholder="请输入工号" pattern="(^\d+$)" emptyTips="工号不能为空" notMatchTips="请输入正确的工号" required>
+                </div>
+            </div>
+        </div>
+	    <div class="ys_btns mt30">
+            <a class="ys_btn ys_agree_clause" href="javascript:;" id="submit1">生成推荐二维码</a>
+        </div>
+        </form>
+	</div>
+</body>
+</html>

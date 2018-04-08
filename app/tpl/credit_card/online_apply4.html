@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>工作信息</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <link href="{{ static_url('css/yinsho.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('css/main.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('font/iconfont.css') }}" rel="stylesheet"/>
+    <script src="{{ static_url('asset/jquery.min.js') }}"></script>
+    <script src="{{ static_url('asset/jquery-extend.js') }}"></script>
+    <script src="{{ static_url('asset/validate.js') }}"></script>
+    <script src="{{ static_url('asset/picker.js') }}"></script>
+    <script src="{{ static_url('asset/picker-city.js') }}"></script>
+    <script src="{{ static_url('js/tool.js') }}"></script>
+    <script src="{{ static_url('js/credit_card/online_apply4.js') }}"></script>
+    <script>
+        $(function() {
+            $("#ssx").cityPicker({
+                title: "单位所在省市县（区）"
+            });
+        });
+    </script>
+</head>
+<body ontouchstart>
+	<div class="container">
+        <ul class="nav_process">
+            <li class="nav_process_item complete">
+                <a class="nav_step" href="#">
+                    <i class="iconfont icon-correct"></i>
+                </a>
+                <span class="nav_title">信用卡申请</span>
+            </li>
+            <li class="nav_process_item processing">
+                <a class="nav_step" href="#">
+                    2
+                </a>
+                <span class="nav_title">工作信息</span>
+            </li>
+            <li class="nav_process_item">
+                <a class="nav_step" href="#">
+                    3
+                </a>
+                <span class="nav_title">住宅信息</span>
+            </li>
+            <li class="nav_process_item">
+                <a class="nav_step" href="#">
+                    4
+                </a>
+                <span class="nav_title">其他信息</span>
+            </li>
+        </ul>
+        <form id="form4">
+        <div class="ys_cells card_apply_cell card_apply_cell_2">
+            <div class="ys_cell">
+                <div class="ys_cell_hd">
+                    <label>单位所在地</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <input id="ssx" class="ys_input" type="text" placeholder="单位所在省市县（区）" emptyTips="单位所在地不能为空" required>
+                </div>
+            </div>
+            <div class="ys_cell">
+                <div class="ys_cell_hd">
+                    <label>单位名称</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <input class="ys_input" type="text" placeholder="请输入单位名称" emptyTips="单位名称不能为空" required>
+                </div>
+            </div>
+            <div class="ys_cell">
+                <div class="ys_cell_hd">
+                    <label>单位具体地址</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <input class="ys_input" type="text" placeholder="请输入单位具体地址" emptyTips="单位具体地址不能为空" required>
+                </div>
+            </div>
+            <div class="ys_cell ys_cell_select">
+                <div class="ys_cell_hd">
+                    <label>单位性质</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <select class="ys_select" name="select">
+                        <option selected="">请选择</option>
+                        <option>民营</option>
+                        <option>国企</option>
+                    </select>
+                </div>
+            </div>
+            <div class="ys_cell ys_cell_select">
+                <div class="ys_cell_hd">
+                    <label>单位所属行业</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <select class="ys_select" name="select">
+                        <option selected="">请选择</option>
+                        <option>信息技术</option>
+                        <option>金融</option>
+                        <option>批发零售</option>
+                    </select>
+                </div>
+            </div>
+            <div class="ys_cell">
+                <div class="ys_cell_hd">
+                    <label>单位电话</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <input class="ys_input" type="text" placeholder="请输入单位电话（加区号）" pattern="(^\d{3}-\d{8}$)|(^\d{4}-\d{7}$)" emptyTips="单位电话不能为空" notMatchTips="电话格式不正确（例021-88888888）" required>
+                </div>
+            </div>
+            <div class="ys_cell ys_cell_select">
+                <div class="ys_cell_hd">
+                    <label>职务</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <select class="ys_select" name="select">
+                        <option selected="">请选择</option>
+                        <option>服务人员</option>
+                        <option>劳务派遣</option>
+                        <option>特殊工种</option>
+                    </select>
+                </div>
+            </div>
+            <div class="ys_cell">
+                <div class="ys_cell_hd">
+                    <label>岗位</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <input class="ys_input" type="text" placeholder="请输入岗位" emptyTips="岗位不能为空" required>
+                </div>
+            </div>
+            <div class="ys_cell">
+                <div class="ys_cell_hd">
+                    <label>部门（选填）</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <input class="ys_input" type="text" placeholder="请输入部门">
+                </div>
+            </div>
+            <div class="ys_cell">
+                <div class="ys_cell_hd">
+                    <label>个人税收年收入</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <input class="ys_input" type="number" placeholder="个人税收年收入（万元）" emptyTips="个人税收年收入不能为空" required>
+                </div>
+            </div>
+            <div class="ys_cell">
+                <div class="ys_cell_hd">
+                    <label>本单位工作年限</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <input class="ys_input" type="number" placeholder="本单位工作年限（年）" emptyTips="本单位工作年限不能为空" required>
+                </div>
+            </div>
+            <div class="ys_cell">
+                <div class="ys_cell_hd">
+                    <label>累计工作年限</label>
+                </div>
+                <div class="ys_cell_bd">
+                    <input class="ys_input" type="number" placeholder="累计工作年限（年）（选填）">
+                </div>
+            </div>
+        </div>
+	    <div class="ys_btns mt30">
+            <a class="ys_btn" href="javascript:;" id="submit4">下一步</a>
+        </div>
+        </form>
+	</div>
+</body>
