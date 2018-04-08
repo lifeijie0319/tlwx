@@ -1,0 +1,7 @@
+[I 180314 11:09:30 web:2063] 200 GET /tlwx/credit_card/online_apply?code=061CDM2H1XTG070PkQ1H1Cg03H1CDM2e&state=1 (192.168.100.52) 8.60ms
+[I 180314 11:09:38 web:2063] 200 POST /tlwx?signature=abdc43f0cb2d639703d65499437d15f0b01b1e68&timestamp=1520996997&nonce=154840875&openid=oSDTiwq1vFtLARyBeBGhRpNeXczA (192.168.100.52) 5.47ms
+[I 180314 11:09:47 web:2063] 200 POST /tlwx?signature=afaf79cc4c6fbf1a492dd61f4b9614977ca90586&timestamp=1520997006&nonce=1322898643&openid=oSDTiwq1vFtLARyBeBGhRpNeXczA (192.168.100.52) 4.10ms
+[I 180314 11:10:23 autoreload:198] /home/nanxun/tlwx/app/views/common.py modified; restarting server
+[I 180314 11:10:32 web:2063] 200 GET /tlwx/credit_card/online_apply?code=011wqieA0AD0Dg1h0IdA0AvfeA0wqiey&state=1 (192.168.100.52) 8.08ms
+[I 180314 11:10:35 common:48] EVENT
+[I 180314 11:10:35 web:2063] 200 POST /tlwx?signature=bc728f8160a5918d70a47933a2d92d0bd8ff03be&timestamp=1520997054&nonce=428856765&openid=oSDTiwq1vFtLARyBeBGhRpNeXczA (192.168.100.52) 6.54ms

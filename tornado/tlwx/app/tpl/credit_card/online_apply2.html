@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>信用卡申请</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <link href="{{ static_url('css/yinsho.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('css/main.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('font/iconfont.css') }}" rel="stylesheet"/>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script src="{{ static_url('asset/jquery.min.js') }}"></script>
+    <script src="{{ static_url('asset/validate.js') }}"></script>
+    <script src="{{ static_url('asset/jquery-extend.js') }}"></script>
+    <script src="{{ static_url('asset/dialog.js') }}"></script>
+    <script src="{{ static_url('js/tool.js') }}"></script>
+    <script src="{{ static_url('js/credit_card/online_apply2.js') }}"></script>
+</head>
+<body ontouchstart style="background: #fff;">
+	<div class="container">
+        <div class="pay_ph_hd ys_btop card_name" style="font-size: 14px;line-height: 1.6;">拍照您的二代身份证原件，请保持网络良好</div>
+        <div class="id_card_section ys_bbottom">
+            <p>拍摄正面</p>
+            <div class="id_card_wrapper" id="front">
+                <img id="front_id" src="{{ static_url('img/id01.png') }}">
+                <a href="javascript:;"></a>
+            </div>
+        </div>
+        <div class="id_card_section">
+            <p>拍摄反面</p>
+            <div class="id_card_wrapper" id="back">
+                <img id="back_id" src="{{ static_url('img/id02.png') }}">
+                <a href="javascript:;"></a>
+            </div>
+        </div>
+        <div class="ys_btns flex_grid">
+            <div class="flex_grow">
+                <a class="ys_btn" href="3">跳过此步骤</a>
+            </div>
+            <div style="width: 15px;"></div>
+            <div class="flex_grow">
+                <a class="ys_btn ys_plain_btn_default" href="javascript:;" id="ensure">确定</a>
+            </div>
+        </div>
+	</div>
+</body>
+</html>

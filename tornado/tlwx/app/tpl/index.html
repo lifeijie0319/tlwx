@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <title>九宫格</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <link href="{{ static_url('css/yinsho.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('css/demo.css') }}" rel="stylesheet"/>
+    <script src="{{ static_url('asset/jquery.min.js') }}"></script>
+</head>
+
+<body ontouchstart>
+
+    <header>
+        <h1>九宫格</h1>
+    </header>
+
+    <div class="container">
+        <div class="ys_grids ys_grids_border grids_small">
+            <a class="ys_grid grid_border" href="yinshoUI-button.html">
+                <div class="ys_grid_icon">
+                    <img src="{{ static_url('img/icon_tabbar.png') }}" alt="">
+                </div>
+                <p class="ys_grid_label">按钮</p>
+            </a>
+            <a class="ys_grid grid_border">
+                <div class="ys_grid_icon">
+                    <img src="{{ static_url('img/icon_tabbar.png') }}" alt="">
+                </div>
+                <p class="ys_grid_label">列表</p>
+            </a>
+            <a class="ys_grid grid_border">
+                <div class="ys_grid_icon">
+                    <img src="{{ static_url('img/icon_tabbar.png') }}" alt="">
+                </div>
+                <p class="ys_grid_label">表单</p>
+            </a>
+            <a class="ys_grid grid_border">
+                <div class="ys_grid_icon">
+                    <img src="{{ static_url('img/icon_tabbar.png') }}" alt="">
+                </div>
+                <p class="ys_grid_label">对话框</p>
+            </a>
+            <a class="ys_grid grid_border">
+                <div class="ys_grid_icon">
+                    <img src="{{ static_url('img/icon_tabbar.png') }}" alt="">
+                </div>
+                <p class="ys_grid_label">通知</p>
+            </a>
+            <a class="ys_grid grid_border">
+                <div class="ys_grid_icon">
+                    <img src="{{ static_url('img/icon_tabbar.png') }}" alt="">
+                </div>
+                <p class="ys_grid_label">按钮</p>
+            </a>
+            <a class="ys_grid grid_border">
+                <div class="ys_grid_icon">
+                    <img src="{{ static_url('img/icon_tabbar.png') }}" alt="">
+                </div>
+                <p class="ys_grid_label">按钮</p>
+            </a>
+            <a class="ys_grid grid_border">
+                <div class="ys_grid_icon">
+                    <img src="{{ static_url('img/icon_tabbar.png') }}" alt="">
+                </div>
+                <p class="ys_grid_label">按钮</p>
+            </a>
+        </div>
+        <div class="pb15"></div>
+
+    </div>
+
+    <script src="{{ static_url('asset/fastclick.js') }}"></script>
+    <script>
+      $(function() {
+        FastClick.attach(document.body);
+      });
+    </script>
+</body>
+</html>
+

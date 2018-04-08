@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>信用卡推荐</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <link href="{{ static_url('css/yinsho.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('css/main.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('font/iconfont.css') }}" rel="stylesheet"/>
+    <script src="{{ static_url('asset/jquery.min.js') }}"></script>
+    <script src="{{ static_url('asset/jquery_qrcode/jquery.qrcode.js') }}"></script>
+    <script src="{{ static_url('asset/jquery_qrcode/utf.js') }}"></script>
+    <script src="{{ static_url('js/tool.js') }}"></script>
+    <script src="{{ static_url('js/credit_card/online_apply_invitation2.js') }}"></script>
+</head>
+<body ontouchstart>
+	<div class="container">
+        <div class="invitation_content">
+            <div class="invitation_card">
+                <div id="signed_qrcode" class="qrcode">
+                    <div id="qrcode"></div>
+                </div>
+                <div class="card_title">邀请人：<span name="name">**</span></div>
+                <div class="card_title">邀请人工号：<span name="employee_id">**</span></div>
+            </div>
+        </div>
+        <div class="signin_belief">
+            <div class="sb_list">提示：长按可保存上述二维码图片。</div>
+        </div>
+	</div>
+</body>
+</html>

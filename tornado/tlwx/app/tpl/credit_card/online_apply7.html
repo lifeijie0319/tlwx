@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>信用卡申请</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <link href="{{ static_url('css/yinsho.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('css/main.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('font/iconfont.css') }}" rel="stylesheet"/>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script src="{{ static_url('asset/jquery.min.js') }}"></script>
+    <script src="{{ static_url('asset/validate.js') }}"></script>
+    <script src="{{ static_url('asset/jquery-extend.js') }}"></script>
+    <script src="{{ static_url('asset/dialog.js') }}"></script>
+    <script src="{{ static_url('js/tool.js') }}"></script>
+    <script src="{{ static_url('js/credit_card/online_apply7.js') }}"></script>
+</head>
+<body ontouchstart style="background: #fff;">
+	<div class="container">
+        <div class="pay_ph_hd ys_btop card_name" style="font-size: 14px;line-height: 1.6;">点击下方相框拍摄人脸照片</div>
+        <div class="id_card_section ys_bbottom">
+            <p>拍照</p>
+            <div class="id_card_wrapper">
+                <img id="face" src="{{ static_url('img/id01.png') }}">
+                <a href="javascript:;"></a>
+            </div>
+        </div>
+        <div class="ys_btns mt30">
+            <a class="ys_btn" href="javascript:;" id="submit7">下一步</a>
+        </div>
+	</div>
+</body>
+</html>
