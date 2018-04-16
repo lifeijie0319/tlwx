@@ -5,6 +5,8 @@ tornado_settings = {
     'template_path': os.path.join(os.path.dirname(__file__), 'tpl'),
     'static_path': os.path.join(os.path.dirname(__file__), 'static'),
     'static_url_prefix': '/tlwx/static/',
+    'cookie_secret': 'bZJc2sWbQLKos6GkHn/VB9oXwQt8S0R0kRvJ5/xJ89E=',
+    'xsrf_cookies': True,
     'debug': True,
 }
 BASE_URL = 'https://hz.wx.yinsho.com/tlwx'

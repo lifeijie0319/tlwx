@@ -1,6 +1,12 @@
-from model.ccrd import CCRDOnlineApply
+from model import Base, User, SignInRule, SignInRecord
 from sqlal import get_engine
 
 
 engine = get_engine()
-#CCRDOnlineApply.__table__.create(bind=engine, checkfirst=True)
+#Base.metadata.create_all(engine)
+User.__table__.drop(bind=engine, checkfirst=True)
+SignInRule.__table__.drop(bind=engine, checkfirst=True)
+SignInRecord.__table__.drop(bind=engine, checkfirst=True)
+User.__table__.create(bind=engine, checkfirst=True)
+SignInRule.__table__.create(bind=engine, checkfirst=True)
+SignInRecord.__table__.create(bind=engine, checkfirst=True)

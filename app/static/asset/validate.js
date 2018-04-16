@@ -28,33 +28,45 @@
     }
 }($);
 //from validate
-(function() {
-    $.cell_validate = _validate;//added by lifeijie
+(function($) {
+    $.cell_validate = _validate;
     function _validate($input) {
+        //console.log($input);
         var input = $input[0],
             val = $input.val();
-        //added by lifeijie
         if (!input.getAttribute("emptyTips") && !$input.val().length) {
             return null;
         }
-        //added by lifeijie
+        //console.log('val', val);
         if (input.tagName == "INPUT" || input.tagName == "TEXTAREA") {
             var reg = input.getAttribute("required") || input.getAttribute("pattern") || "";
-            if (!$input.val().length) {
+            if (input.getAttribute("type") == "checkbox" || input.getAttribute("type") == "radio") {
+                return input.checked ? null : "empty";
+            }else if (!$input.val().length) {
                 return "empty";
+            } else if (input.getAttribute('type') == 'date') {
+                min_date = input.getAttribute('min');
+                max_date = input.getAttribute('max');
+                if(min_date && max_date){
+                    return val >= min_date && val <= max_date ? null : 'beyond';
+                }else if(min_date){
+                    return val >= min_date ? null : 'beyond';
+                }else if(max_date){
+                    return val <= max_date ? null : 'beyond';
+                }else{
+                    return null;
+                }
             } else if (reg) {
                 return new RegExp(reg).test(val) ? null : "notMatch";
             } else {
                 return null;
             }
-        } else if (input.getAttribute("type") == "checkbox" || input.getAttribute("type") == "radio") {
-            return input.checked ? null : "empty";
         } else if (val.length) {
             return null;
+        } else {
+            return "empty";
         }
-        return "empty";
     }
-
     function _showErrorMsg(error) {
         if (error) {
             var $dom = error.$dom,
@@ -62,12 +74,14 @@
                 tips = $dom.attr(msg + "Tips") || $dom.attr("tips") || $dom.attr("placeholder");
             if (tips) $.toptips(tips);
             $dom.parents(".ys_cell").addClass("color_danger");
+            $dom.parents(".form-material").addClass("color_danger");
         }
     }
     var oldFnForm = $.fn.form;
     $.fn.form = function() {
         return this.each(function(index, ele) {
             var $form = $(ele);
+            //console.log($form.find("[required]").attr('placeholder'))
             $form.find("[required]").on("blur", function() {
                 var $this = $(this),
                     errorMsg;
@@ -82,6 +96,7 @@
             }).on("focus", function() {
                 var $this = $(this);
                 $this.parents(".ys_cell").removeClass("color_danger");
+                $this.parents(".form-material").removeClass("color_danger");
             });
         });
     };
@@ -100,9 +115,16 @@
                         $dom: $dom,
                         msg: errorMsg
                     };
+                console.log(errorMsg);
                 if (errorMsg) {
-                    if (!callback(error)) _showErrorMsg(error);
-                    return;
+                    //if (!callback(error)) _showErrorMsg(error);
+                    //return;
+                    if (!callback(error)){
+                        _showErrorMsg(error);
+                        return;
+                    }else{
+                        continue;
+                    }
                 }
             }
             callback(null);
@@ -111,4 +133,24 @@
     $.fn.validate.noConflict = function() {
         return oldFnValidate;
     };
-})();
+})($);
+//serialize form
++ function($) {
+    $.fn.serializeForm= function(){
+        var o = {};
+        var a = this.serializeArray();
+        //console.log(a);
+        $.each(a, function() {
+            if (o[this.name] !== undefined) {
+                if (!o[this.name].push) {
+                    o[this.name] = [o[this.name]];
+                }
+                o[this.name].push(this.value || '');
+            } else {
+                o[this.name] = this.value || '';
+            }
+        });
+        return JSON.stringify(o);
+    }
+}($);
+

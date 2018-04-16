@@ -1,12 +1,12 @@
 #-*- coding:utf-8 -*-
 import tornado.web
 
+from tornado.gen import coroutine
 from tornado.log import app_log
 
 from ..common import BaseHandler
 from ... import config
-from ...tool import get_openid
-from ...service.wx import get_tmp_media, oauth_get_openid
+
 
 class PageHandler(BaseHandler):
     def get(self, page=1):

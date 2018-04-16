@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
 <xml>
 <ToUserName><![CDATA[{{ to_user }}]]></ToUserName>
 <FromUserName><![CDATA[{{ from_user }}]]></FromUserName>
 <CreateTime>12345678</CreateTime>
-<MsgType><![CDATA[text]]></MsgType>
-<Content><![CDATA[{% raw content %}]]></Content>
+<MsgType><![CDATA[image]]></MsgType>
+<Image>
+    <MediaId><![CDATA[{{ media_id }}]]></MediaId>
+</Image>
 </xml>
