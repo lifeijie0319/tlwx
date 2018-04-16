@@ -1,6 +1,23 @@
-var BASE_URL = 'https://hz.wx.yinsho.com/tlwx';
-var APPID = 'wx6290daffb81416ac';
-//APPID = 'wx64a1fdc74458e608';
+var BASE_URL = 'https://hz.wx.yinsho.com/wxdemo';
+var APPID = 'wx6502e1ff74d2a5bd';
+
+function getCookie(name) {
+    var c = document.cookie.match("\\b" + name + "=([^;]*)\\b");
+    return c ? c[1] : undefined;
+}
+function csrfSafeMethod(method) {
+    // these HTTP methods do not require CSRF protection
+    return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+}
+var csrftoken = getCookie('_xsrf');
+console.log(csrftoken);
+$.ajaxSetup({
+    beforeSend: function(xhr, settings) {
+        if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+            xhr.setRequestHeader("X-XSRFToken", csrftoken);
+        }
+    }
+})
 
 function getClientType(){
     var u = navigator.userAgent;
@@ -22,38 +39,6 @@ function getUrlArgs(name, query=window.location.search) {
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
     var r = query.substr(1).match(reg); 
     if (r != null) return unescape(r[2]); return null; 
-}
-
-function sendVcode(sendBtn, telephoneInputEle) {
-    //alert('enter send_vcode');
-    //alert('disabled:', sendBtn.prop('disabled'));
-    console.log(sendBtn.prop('disabled'));
-    if(sendBtn.prop('disabled')) return false;
-    telValidateRes = $.cell_validate(telephoneInputEle);
-    if(telValidateRes == 'empty'){
-        $.toptips('发送验证码之前请输入手机号!');
-        return false;
-    }else if(telValidateRes == 'notMatch'){
-        return false;
-    }else{
-        $.post(BASE_URL + '/common/send_vcode', telephoneInputEle.val(), function (resp) {
-            $.toptips("验证码已发送，请查收！", 'success');
-        });
-    };
-    var times = 60;
-    sendBtn.prop('disabled', true);
-    console.log(sendBtn.prop('disabled'));
-    timer = setInterval(function () {
-        times--;
-        sendBtn.text(times + "秒后重试");
-        if (times <= 0) {
-            sendBtn.text("发送验证码");
-            sendBtn.prop('disabled', false);
-            console.log(sendBtn.prop('disabled'));
-            clearInterval(timer);
-            times = 60;
-        }
-    }, 1000);
 }
 
 function configJssdk(apilist){
@@ -112,9 +97,8 @@ function wxUploadImg(img_dom, source_type=['album']){
     });
 }
 
-//serialize form
-+ function($) {
-    $.fn.serializeForm= function(){
+(function($) {
+    $.fn.serializeForm = function(){
         var o = {};
         var a = this.serializeArray();
         //console.log(a);
@@ -130,4 +114,41 @@ function wxUploadImg(img_dom, source_type=['album']){
         });
         return JSON.stringify(o);
     }
-}($);
+
+    $.fn.sendVcode = function(cellphone) {
+        send_btn = $(this);
+        //alert('enter send_vcode');
+        //alert('disabled:', send_btn.prop('disabled'));
+        //console.log(send_btn, send_btn.prop('disabled'));
+        if(send_btn.prop('disabled')) return false;
+        validate_res = false;
+        cellphone.validate(function(error){
+            if(!error) validate_res = true;
+        });
+        if (!validate_res) return false;
+        data = {
+            cellphone: cellphone.val(),
+            now: new Date().getTime(),
+        }
+        $.post(BASE_URL + '/common/send_vcode', data, function (resp) {
+            console.log(new Date().toGMTString());
+            $.toptips("验证码已发送，请查收！", 'success');
+        }).error(function(){
+            $.toptips('服务器错误');
+        });
+        var times = 60;
+        send_btn.prop('disabled', true);
+        //console.log(send_btn, send_btn.prop('disabled'));
+        timer = setInterval(function () {
+            times--;
+            send_btn.text(times + "秒后重试");
+            if (times <= 0) {
+                send_btn.text("发送验证码");
+                send_btn.prop('disabled', false);
+                //console.log(send_btn.prop('disabled'));
+                clearInterval(timer);
+                times = 60;
+            }
+        }, 1000);
+    }
+})(jQuery);

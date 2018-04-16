@@ -3003,3 +3003,582 @@
 [I 180404 12:36:22 web:2106] 200 GET /tlwx/static/img/icon_tabbar.png (192.168.100.52) 1.83ms
 [I 180404 12:36:22 web:2106] 200 GET /tlwx/static/img/icon_tabbar.png (192.168.100.52) 4.77ms
 [I 180404 12:36:22 web:2106] 200 GET /tlwx/static/img/credit_card/mes_apply1.jpg (192.168.100.52) 4.23ms
+[I 180408 17:08:14 web:2106] 200 GET /tlwx/static/img/icon_tabbar.png (192.168.100.52) 8.65ms
+[I 180408 17:08:14 web:2106] 200 GET /tlwx/static/img/icon_tabbar.png (192.168.100.52) 5.59ms
+[I 180408 17:08:14 web:2106] 200 GET /tlwx/static/img/icon_tabbar.png (192.168.100.52) 4.03ms
+[I 180409 16:14:25 web:2106] 200 GET /tlwx/static/img/icon_tabbar.png (192.168.100.52) 8.19ms
+[I 180409 16:14:25 web:2106] 200 GET /tlwx/static/img/icon_tabbar.png (192.168.100.52) 5.41ms
+[I 180409 16:14:25 web:2106] 200 GET /tlwx/static/img/icon_tabbar.png (192.168.100.52) 3.90ms
+[I 180409 16:14:25 web:2106] 200 GET /tlwx/static/img/credit_card/mes_apply2.png (192.168.100.52) 6.64ms
+[I 180409 16:14:25 web:2106] 200 GET /tlwx/static/img/credit_card/mes_progress.png (192.168.100.52) 5.14ms
+[I 180409 16:14:25 web:2106] 200 GET /tlwx/static/img/credit_card/mes_apply2.png (192.168.100.52) 3.77ms
+[I 180409 16:14:25 web:2106] 200 GET /tlwx/static/img/credit_card/mes_apply1.jpg (192.168.100.52) 10.89ms
+[I 180409 16:14:25 web:2106] 200 GET /tlwx/static/img/credit_card/mes_progress.png (192.168.100.52) 2.31ms
+[I 180409 16:14:25 web:2106] 200 GET /tlwx/static/img/credit_card/mes_apply1.jpg (192.168.100.52) 5.48ms
+[I 180409 16:14:26 web:2106] 200 GET /tlwx/static/img/icon_tabbar.png (192.168.100.52) 6.10ms
+[I 180409 16:14:26 web:2106] 200 GET /tlwx/static/img/icon_tabbar.png (192.168.100.52) 4.58ms
+[I 180409 16:14:26 web:2106] 200 GET /tlwx/static/img/icon_tabbar.png (192.168.100.52) 3.11ms
+[D 180409 16:14:41 online_apply:13] 0 <class 'str'>
+[I 180409 16:14:41 web:2106] 200 GET /tlwx/credit_card/online_apply/page/0?code=011l9fnx1CIpNg05WKpx1iUknx1l9fnB&state=1 (192.168.100.52) 11.79ms
+[I 180409 16:14:41 web:2106] 200 GET /tlwx/static/css/yinsho.css?v=47b66ecdfa903d7e270189ca641745fe (192.168.100.52) 2.11ms
+[I 180409 16:14:41 web:2106] 200 GET /tlwx/static/css/swiper.min.css?v=56d9b8b2ca1ad95c3cfafaf768e17fec (192.168.100.52) 8.46ms
+[I 180409 16:14:41 web:2106] 200 GET /tlwx/static/css/main.css?v=6da11b3eae07a22f7adac8f2f62ba16c (192.168.100.52) 6.89ms
+[I 180409 16:14:41 web:2106] 200 GET /tlwx/static/font/iconfont.css?v=8d895e475d2d71afef3137fbdc52e85a (192.168.100.52) 5.42ms
+[I 180409 16:14:41 web:2106] 200 GET /tlwx/static/asset/jquery.min.js?v=33cabfa15c1060aaa3d207c653afb1ee (192.168.100.52) 5.08ms
+[I 180409 16:14:42 web:2106] 200 GET /tlwx/static/asset/tab.js?v=4fdbca0d6ae52a0acfb75fa94e831f53 (192.168.100.52) 7.16ms
+[I 180409 16:14:42 web:2106] 200 GET /tlwx/static/asset/swiper.min.js?v=acba23eda80d638c392471aea0a9c351 (192.168.100.52) 5.72ms
+[I 180409 16:14:42 web:2106] 200 GET /tlwx/static/img/credit_card/card01.png?v=5d693dd0d3af8f23b0de2dd8321cac7a (192.168.100.52) 7.34ms
+[I 180409 16:14:42 web:2106] 200 GET /tlwx/static/img/credit_card/card02.png?v=a9956ca0fb0e70a54e33e9bffab96d1a (192.168.100.52) 7.03ms
+[I 180409 16:14:42 web:2106] 200 GET /tlwx/static/img/card-bg.jpg (192.168.100.52) 1.99ms
+[D 180409 16:14:47 online_apply:13] 1 <class 'str'>
+[I 180409 16:14:47 web:2106] 200 GET /tlwx/credit_card/online_apply/page/1 (192.168.100.52) 5.01ms
+[I 180409 16:14:47 web:2106] 200 GET /tlwx/static/asset/validate.js?v=71d3aec16656027c9c67cfe0f5ca92fe (192.168.100.52) 5.78ms
+[I 180409 16:14:47 web:2106] 200 GET /tlwx/static/js/tool.js?v=49c74b58cecebe0584d8f827713fca47 (192.168.100.52) 4.34ms
+[I 180409 16:14:47 web:2106] 200 GET /tlwx/static/js/credit_card/online_apply1.js?v=9cafada92e1540f23200fb21ed07aa16 (192.168.100.52) 2.86ms
+[D 180409 16:15:07 online_apply:19] 1 <class 'str'>
+[I 180409 16:15:07 web:2106] 200 GET /tlwx/credit_card/online_apply/status/page/1?code=071mZV3c2pDPdP0eZp3c29c54c2mZV3A&state=1 (192.168.100.52) 4.87ms
+[I 180409 16:15:07 web:2106] 200 GET /tlwx/static/js/credit_card/online_apply_status1.js?v=6bd49c7ffa1a4acdd8edfbb72a3caa91 (192.168.100.52) 2.06ms
+[I 180409 16:15:07 web:2106] 200 GET /tlwx/static/img/vcode.png?v=d6ad072d300266fc8bd53ccc3247e0e8 (192.168.100.52) 1.72ms
+[I 180409 16:15:07 tool:30] FINAL OPENID: oSDTiwjobsmlFZNmNsvqvZsBLXLk
+[I 180409 16:15:07 web:2106] 200 GET /tlwx/common/refresh_pic_vcode (192.168.100.52) 36.63ms
+[I 180409 16:15:07 web:2106] 200 GET /tlwx/media/pic_vcode/oSDTiwjobsmlFZNmNsvqvZsBLXLk.jpg?v=0.05544902275236119 (192.168.100.52) 2.67ms
+[D 180409 16:15:31 online_apply:19] 2 <class 'str'>
+[I 180409 16:15:31 web:2106] 200 GET /tlwx/credit_card/online_apply/status/page/2 (192.168.100.52) 4.77ms
+[I 180409 16:15:32 web:2106] 200 GET /tlwx/static/font/iconfont.woff?t=1493801407135 (192.168.100.52) 2.06ms
+[I 180409 16:18:21 common:56] EVENT
+[I 180409 16:18:21 web:2106] 200 POST /tlwx?signature=b3ca0bc26890c451960924db36158cbadb1f0517&timestamp=1523261945&nonce=387913633&openid=oSDTiwjobsmlFZNmNsvqvZsBLXLk (192.168.100.52) 2.22ms
+[I 180409 17:37:11 common:56] EVENT
+[I 180409 17:37:11 web:2106] 200 POST /tlwx?signature=c4a94ba8b1a679132383e2cc049d79e978305f34&timestamp=1523266675&nonce=1215079760&openid=oSDTiwjobsmlFZNmNsvqvZsBLXLk (192.168.100.52) 2.90ms
+[I 180409 17:37:14 tool:30] FINAL OPENID: oSDTiwjobsmlFZNmNsvqvZsBLXLk
+[D 180409 17:37:14 common:76] OPENID oSDTiwjobsmlFZNmNsvqvZsBLXLk
+[I 180409 17:37:14 web:2106] 200 GET /tlwx/staticfile/credit_card/online_apply_invitation1.html?code=0219l0Qf1VwQmy0Ew6Qf1oqaQf19l0Qm&state=1 (192.168.100.52) 8.08ms
+[I 180409 17:37:14 web:2106] 200 GET /tlwx/static/js/credit_card/online_apply_invitation1.js?v=8f0d82e1d43e9d5d1e20413e43aa5fe0 (192.168.100.52) 2.69ms
+[I 180409 17:37:22 tool:30] FINAL OPENID: oSDTiwjobsmlFZNmNsvqvZsBLXLk
+[D 180409 17:37:22 common:76] OPENID oSDTiwjobsmlFZNmNsvqvZsBLXLk
+[I 180409 17:37:22 web:2106] 200 GET /tlwx/staticfile/credit_card/online_apply_invitation2.html?name=%E6%A2%85%E8%95%BE&employee_id=2073 (192.168.100.52) 6.06ms
+[I 180409 17:37:23 web:2106] 200 GET /tlwx/static/asset/jquery_qrcode/jquery.qrcode.js?v=ade0b3055a1f4d14ba65f6e90b0a5309 (192.168.100.52) 2.28ms
+[I 180409 17:37:23 web:2106] 200 GET /tlwx/static/asset/jquery_qrcode/utf.js?v=9d20384efb48ff86aef8ca9056b5f052 (192.168.100.52) 4.73ms
+[I 180409 17:37:23 web:2106] 200 GET /tlwx/static/js/credit_card/online_apply_invitation2.js?v=0012abf0bf296647b3dfab6ffa9ad3fc (192.168.100.52) 2.71ms
+[D 180409 17:37:34 online_apply:13] 0 <class 'str'>
+[I 180409 17:37:34 web:2106] 200 GET /tlwx/credit_card/online_apply/page/0?code=061K7en72ucn7L0K93m72zean72K7enx&state=1 (192.168.100.52) 9.99ms
+[I 180409 17:37:54 common:56] EVENT
+[I 180409 17:37:54 web:2106] 200 POST /tlwx?signature=437f2674e980c5fb0103773f437cb680a98f83d6&timestamp=1523266718&nonce=1410321499&openid=oSDTiwjobsmlFZNmNsvqvZsBLXLk (192.168.100.52) 1.87ms
+[D 180409 17:37:55 online_apply:19] 1 <class 'str'>
+[I 180409 17:37:55 web:2106] 200 GET /tlwx/credit_card/online_apply/status/page/1?code=011MNS3a1lERvR1eko3a1Vpv3a1MNS3J&state=1 (192.168.100.52) 5.40ms
+[I 180409 17:37:55 tool:30] FINAL OPENID: oSDTiwjobsmlFZNmNsvqvZsBLXLk
+[I 180409 17:37:55 web:2106] 304 GET /tlwx/common/refresh_pic_vcode (192.168.100.52) 15.89ms
+[I 180409 17:37:55 web:2106] 200 GET /tlwx/media/pic_vcode/oSDTiwjobsmlFZNmNsvqvZsBLXLk.jpg?v=0.4103367560848983 (192.168.100.52) 2.21ms
+[D 180410 09:30:00 online_apply:13] 1 <class 'str'>
+[I 180410 09:30:00 web:2106] 200 GET /tlwx/credit_card/online_apply/page/1 (192.168.100.52) 8.24ms
+[I 180410 09:30:01 web:2106] 200 GET /tlwx/static/css/yinsho.css?v=47b66ecdfa903d7e270189ca641745fe (192.168.100.52) 3.17ms
+[I 180410 09:30:01 web:2106] 200 GET /tlwx/static/css/main.css?v=6da11b3eae07a22f7adac8f2f62ba16c (192.168.100.52) 11.11ms
+[I 180410 09:30:01 web:2106] 200 GET /tlwx/static/font/iconfont.css?v=8d895e475d2d71afef3137fbdc52e85a (192.168.100.52) 9.49ms
+[I 180410 09:30:01 web:2106] 200 GET /tlwx/static/asset/validate.js?v=71d3aec16656027c9c67cfe0f5ca92fe (192.168.100.52) 7.99ms
+[I 180410 09:30:01 web:2106] 200 GET /tlwx/static/js/tool.js?v=49c74b58cecebe0584d8f827713fca47 (192.168.100.52) 4.41ms
+[I 180410 09:30:01 web:2106] 200 GET /tlwx/static/asset/jquery.min.js?v=33cabfa15c1060aaa3d207c653afb1ee (192.168.100.52) 7.96ms
+[I 180410 09:30:01 web:2106] 200 GET /tlwx/static/js/credit_card/online_apply1.js?v=9cafada92e1540f23200fb21ed07aa16 (192.168.100.52) 1.73ms
+[D 180410 09:34:02 online_apply:13] 2 <class 'str'>
+[I 180410 09:34:03 web:2106] 200 GET /tlwx/credit_card/online_apply/page/2 (192.168.100.52) 8.89ms
+[I 180410 09:34:03 web:2106] 200 GET /tlwx/static/asset/jquery-extend.js?v=76342d61d51045187e755415345c6ed8 (192.168.100.52) 2.39ms
+[I 180410 09:34:03 web:2106] 200 GET /tlwx/static/asset/dialog.js?v=a200543991dbeda7e5391d17fa0b04e4 (192.168.100.52) 1.93ms
+[I 180410 09:34:03 web:2106] 200 GET /tlwx/static/js/credit_card/online_apply2.js?v=dc7251b9e1a3356542de8ae1a038df9c (192.168.100.52) 3.97ms
+[I 180410 09:34:03 web:2106] 200 GET /tlwx/static/img/id01.png?v=975e34682ecc388f3a412cb9e6e06a67 (192.168.100.52) 2.53ms
+[I 180410 09:34:03 web:2106] 200 GET /tlwx/static/img/id02.png?v=81ecdc6c371027ce7e27573cedf0216f (192.168.100.52) 1.78ms
+[D 180410 09:34:03 wx:93] <class 'str'>
+    
+[D 180410 09:34:03 wx:93] <class 'str'>
+    
+[D 180410 09:34:03 wx:93] <class 'int'>
+    
+[D 180410 09:34:03 wx:93] <class 'str'>
+    
+[D 180410 09:34:03 wx:93] <class 'str'>
+    
+[I 180410 09:34:03 wx:105] RETURN: {'nonceStr': 'COocB7lsF2dyukC', 'jsapi_ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSrCga4se5mCqPptglmEnWzoRiGWNjbGv5godM-fFBj1Q', 'timestamp': 1523324043, 'url': 'https://hz.wx.yinsho.com/tlwx/credit_card/online_apply/page/2', 'signature': 'c7add5d208e75fa911ee37b23f36cb50a54e93fa'} <class 'dict'>
+[D 180410 09:34:03 wx:42] <class 'dict'> {'success': True, 'config': {'nonceStr': 'COocB7lsF2dyukC', 'jsapi_ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSrCga4se5mCqPptglmEnWzoRiGWNjbGv5godM-fFBj1Q', 'timestamp': 1523324043, 'url': 'https://hz.wx.yinsho.com/tlwx/credit_card/online_apply/page/2', 'signature': 'c7add5d208e75fa911ee37b23f36cb50a54e93fa'}}
+[I 180410 09:34:03 web:2106] 200 POST /tlwx/wx/jssdk (192.168.100.52) 4.71ms
+[D 180410 09:34:06 online_apply:13] 3 <class 'str'>
+[I 180410 09:34:06 web:2106] 200 GET /tlwx/credit_card/online_apply/page/3 (192.168.100.52) 12.63ms
+[I 180410 09:34:06 web:2106] 200 GET /tlwx/static/asset/photoswipe/photoswipe.css?v=a78e12d3a036307b9ef08fc063278e02 (192.168.100.52) 9.13ms
+[I 180410 09:34:06 web:2106] 200 GET /tlwx/static/asset/photoswipe/default-skin/default-skin.css?v=1ce09d402b4c3aee84ed6299f793cd21 (192.168.100.52) 7.42ms
+[I 180410 09:34:06 web:2106] 200 GET /tlwx/static/asset/picker.js?v=50226c50563b6d2b46abc8ddd5317dcd (192.168.100.52) 5.93ms
+[I 180410 09:34:06 web:2106] 200 GET /tlwx/static/asset/picker-city.js?v=4a5300e0dacfb54f4b40e88ad067fc36 (192.168.100.52) 5.12ms
+[I 180410 09:34:06 web:2106] 200 GET /tlwx/static/asset/photoswipe/photoswipe.min.js?v=90d5a5ff4789f25f79840f95fc089c0e (192.168.100.52) 1.96ms
+[I 180410 09:34:06 web:2106] 200 GET /tlwx/static/asset/photoswipe/photoswipe-ui-default.min.js?v=c061a13816b98ce8c8a7ffb2e62dc403 (192.168.100.52) 2.14ms
+[I 180410 09:34:06 web:2106] 200 GET /tlwx/static/asset/popup.js?v=8fe1003623bb52e7d5938844d9fac4d1 (192.168.100.52) 3.70ms
+[I 180410 09:34:06 web:2106] 200 GET /tlwx/static/js/credit_card/online_apply3.js?v=53456e008a636f4759731560206f360b (192.168.100.52) 2.22ms
+[I 180410 09:34:06 web:2106] 200 GET /tlwx/static/font/iconfont.woff?t=1493801407135 (192.168.100.52) 2.29ms
+[D 180410 09:34:06 wx:93] <class 'str'>
+    
+[D 180410 09:34:06 wx:93] <class 'str'>
+    
+[D 180410 09:34:06 wx:93] <class 'int'>
+    
+[D 180410 09:34:06 wx:93] <class 'str'>
+    
+[D 180410 09:34:06 wx:93] <class 'str'>
+    
+[I 180410 09:34:06 wx:105] RETURN: {'nonceStr': 'nzh4RdcDOg1bqhE', 'jsapi_ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSrCga4se5mCqPptglmEnWzoRiGWNjbGv5godM-fFBj1Q', 'timestamp': 1523324046, 'url': 'https://hz.wx.yinsho.com/tlwx/credit_card/online_apply/page/3', 'signature': '42efab3f740f7ab76f78421cbea6f3a705050063'} <class 'dict'>
+[D 180410 09:34:06 wx:42] <class 'dict'> {'success': True, 'config': {'nonceStr': 'nzh4RdcDOg1bqhE', 'jsapi_ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSrCga4se5mCqPptglmEnWzoRiGWNjbGv5godM-fFBj1Q', 'timestamp': 1523324046, 'url': 'https://hz.wx.yinsho.com/tlwx/credit_card/online_apply/page/3', 'signature': '42efab3f740f7ab76f78421cbea6f3a705050063'}}
+[I 180410 09:34:06 web:2106] 200 POST /tlwx/wx/jssdk (192.168.100.52) 2.23ms
+[I 180410 09:34:06 web:2106] 200 GET /tlwx/static/doc/credit_card/1.txt (192.168.100.52) 4.07ms
+[I 180410 09:34:06 web:2106] 200 GET /tlwx/static/doc/credit_card/2.txt (192.168.100.52) 2.60ms
+[D 180410 09:36:05 online_apply:13] 3 <class 'str'>
+[I 180410 09:36:05 web:2106] 304 GET /tlwx/credit_card/online_apply/page/3 (192.168.100.52) 13.27ms
+[I 180410 09:36:05 web:2106] 304 GET /tlwx/static/css/yinsho.css?v=47b66ecdfa903d7e270189ca641745fe (192.168.100.52) 1.82ms
+[I 180410 09:36:05 web:2106] 304 GET /tlwx/static/css/main.css?v=6da11b3eae07a22f7adac8f2f62ba16c (192.168.100.52) 1.07ms
+[I 180410 09:36:05 web:2106] 304 GET /tlwx/static/font/iconfont.css?v=8d895e475d2d71afef3137fbdc52e85a (192.168.100.52) 1.04ms
+[I 180410 09:36:05 web:2106] 304 GET /tlwx/static/asset/photoswipe/photoswipe.css?v=a78e12d3a036307b9ef08fc063278e02 (192.168.100.52) 1.00ms
+[I 180410 09:36:05 web:2106] 304 GET /tlwx/static/asset/photoswipe/default-skin/default-skin.css?v=1ce09d402b4c3aee84ed6299f793cd21 (192.168.100.52) 1.31ms
+[I 180410 09:36:05 web:2106] 304 GET /tlwx/static/asset/jquery.min.js?v=33cabfa15c1060aaa3d207c653afb1ee (192.168.100.52) 1.08ms
+[I 180410 09:36:05 web:2106] 304 GET /tlwx/static/asset/jquery-extend.js?v=76342d61d51045187e755415345c6ed8 (192.168.100.52) 1.00ms
+[I 180410 09:36:05 web:2106] 304 GET /tlwx/static/asset/validate.js?v=71d3aec16656027c9c67cfe0f5ca92fe (192.168.100.52) 0.94ms
+[I 180410 09:36:05 web:2106] 304 GET /tlwx/static/asset/picker-city.js?v=4a5300e0dacfb54f4b40e88ad067fc36 (192.168.100.52) 1.27ms
+[I 180410 09:36:05 web:2106] 304 GET /tlwx/static/asset/picker.js?v=50226c50563b6d2b46abc8ddd5317dcd (192.168.100.52) 0.92ms
+[I 180410 09:36:05 web:2106] 304 GET /tlwx/static/asset/photoswipe/photoswipe.min.js?v=90d5a5ff4789f25f79840f95fc089c0e (192.168.100.52) 1.12ms
+[I 180410 09:36:05 web:2106] 304 GET /tlwx/static/asset/photoswipe/photoswipe-ui-default.min.js?v=c061a13816b98ce8c8a7ffb2e62dc403 (192.168.100.52) 1.02ms
+[I 180410 09:36:05 web:2106] 304 GET /tlwx/static/js/tool.js?v=49c74b58cecebe0584d8f827713fca47 (192.168.100.52) 1.44ms
+[I 180410 09:36:05 web:2106] 304 GET /tlwx/static/asset/popup.js?v=8fe1003623bb52e7d5938844d9fac4d1 (192.168.100.52) 0.90ms
+[I 180410 09:36:05 web:2106] 304 GET /tlwx/static/js/credit_card/online_apply3.js?v=53456e008a636f4759731560206f360b (192.168.100.52) 0.98ms
+[I 180410 09:36:05 web:2106] 304 GET /tlwx/static/img/id01.png?v=975e34682ecc388f3a412cb9e6e06a67 (192.168.100.52) 1.08ms
+[D 180410 09:36:06 wx:93] <class 'str'>
+    
+[D 180410 09:36:06 wx:93] <class 'str'>
+    
+[D 180410 09:36:06 wx:93] <class 'int'>
+    
+[D 180410 09:36:06 wx:93] <class 'str'>
+    
+[D 180410 09:36:06 wx:93] <class 'str'>
+    
+[I 180410 09:36:06 wx:105] RETURN: {'nonceStr': 'hGwNpuOqAw31Z1o', 'jsapi_ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSrCga4se5mCqPptglmEnWzoRiGWNjbGv5godM-fFBj1Q', 'timestamp': 1523324166, 'url': 'https://hz.wx.yinsho.com/tlwx/credit_card/online_apply/page/3', 'signature': '509196633d7a156cf4695a0ee7812d78c6ef4d7e'} <class 'dict'>
+[D 180410 09:36:06 wx:42] <class 'dict'> {'success': True, 'config': {'nonceStr': 'hGwNpuOqAw31Z1o', 'jsapi_ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSrCga4se5mCqPptglmEnWzoRiGWNjbGv5godM-fFBj1Q', 'timestamp': 1523324166, 'url': 'https://hz.wx.yinsho.com/tlwx/credit_card/online_apply/page/3', 'signature': '509196633d7a156cf4695a0ee7812d78c6ef4d7e'}}
+[I 180410 09:36:06 web:2106] 200 POST /tlwx/wx/jssdk (192.168.100.52) 2.43ms
+[I 180410 09:36:06 web:2106] 304 GET /tlwx/static/doc/credit_card/1.txt (192.168.100.52) 0.94ms
+[I 180410 09:36:06 web:2106] 304 GET /tlwx/static/doc/credit_card/2.txt (192.168.100.52) 0.97ms
+[D 180410 09:36:08 online_apply:13] 3 <class 'str'>
+[I 180410 09:36:08 web:2106] 304 GET /tlwx/credit_card/online_apply/page/3 (192.168.100.52) 10.47ms
+[I 180410 09:36:09 web:2106] 304 GET /tlwx/static/css/yinsho.css?v=47b66ecdfa903d7e270189ca641745fe (192.168.100.52) 1.46ms
+[I 180410 09:36:09 web:2106] 304 GET /tlwx/static/font/iconfont.css?v=8d895e475d2d71afef3137fbdc52e85a (192.168.100.52) 0.95ms
+[I 180410 09:36:09 web:2106] 304 GET /tlwx/static/css/main.css?v=6da11b3eae07a22f7adac8f2f62ba16c (192.168.100.52) 1.10ms
+[I 180410 09:36:09 web:2106] 304 GET /tlwx/static/asset/photoswipe/photoswipe.css?v=a78e12d3a036307b9ef08fc063278e02 (192.168.100.52) 0.93ms
+[I 180410 09:36:09 web:2106] 304 GET /tlwx/static/asset/photoswipe/default-skin/default-skin.css?v=1ce09d402b4c3aee84ed6299f793cd21 (192.168.100.52) 1.26ms
+[I 180410 09:36:09 web:2106] 304 GET /tlwx/static/asset/jquery.min.js?v=33cabfa15c1060aaa3d207c653afb1ee (192.168.100.52) 1.15ms
+[I 180410 09:36:09 web:2106] 304 GET /tlwx/static/asset/jquery-extend.js?v=76342d61d51045187e755415345c6ed8 (192.168.100.52) 1.07ms
+[I 180410 09:36:09 web:2106] 304 GET /tlwx/static/asset/validate.js?v=71d3aec16656027c9c67cfe0f5ca92fe (192.168.100.52) 1.22ms
+[I 180410 09:36:09 web:2106] 304 GET /tlwx/static/asset/picker-city.js?v=4a5300e0dacfb54f4b40e88ad067fc36 (192.168.100.52) 1.10ms
+[I 180410 09:36:09 web:2106] 304 GET /tlwx/static/asset/picker.js?v=50226c50563b6d2b46abc8ddd5317dcd (192.168.100.52) 1.12ms
+[I 180410 09:36:09 web:2106] 304 GET /tlwx/static/asset/photoswipe/photoswipe.min.js?v=90d5a5ff4789f25f79840f95fc089c0e (192.168.100.52) 1.11ms
+[I 180410 09:36:09 web:2106] 304 GET /tlwx/static/asset/photoswipe/photoswipe-ui-default.min.js?v=c061a13816b98ce8c8a7ffb2e62dc403 (192.168.100.52) 0.94ms
+[I 180410 09:36:09 web:2106] 304 GET /tlwx/static/asset/popup.js?v=8fe1003623bb52e7d5938844d9fac4d1 (192.168.100.52) 1.20ms
+[I 180410 09:36:09 web:2106] 304 GET /tlwx/static/js/tool.js?v=49c74b58cecebe0584d8f827713fca47 (192.168.100.52) 0.99ms
+[I 180410 09:36:09 web:2106] 304 GET /tlwx/static/js/credit_card/online_apply3.js?v=53456e008a636f4759731560206f360b (192.168.100.52) 0.88ms
+[I 180410 09:36:09 web:2106] 304 GET /tlwx/static/img/id01.png?v=975e34682ecc388f3a412cb9e6e06a67 (192.168.100.52) 0.96ms
+[D 180410 09:36:09 wx:93] <class 'str'>
+    
+[D 180410 09:36:09 wx:93] <class 'str'>
+    
+[D 180410 09:36:09 wx:93] <class 'int'>
+    
+[D 180410 09:36:09 wx:93] <class 'str'>
+    
+[D 180410 09:36:09 wx:93] <class 'str'>
+    
+[I 180410 09:36:09 wx:105] RETURN: {'nonceStr': 'TGbsVaOQeh8usW5', 'jsapi_ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSrCga4se5mCqPptglmEnWzoRiGWNjbGv5godM-fFBj1Q', 'timestamp': 1523324169, 'url': 'https://hz.wx.yinsho.com/tlwx/credit_card/online_apply/page/3', 'signature': '4febc22803432065f3a352decbdc099e932b47b1'} <class 'dict'>
+[D 180410 09:36:09 wx:42] <class 'dict'> {'success': True, 'config': {'nonceStr': 'TGbsVaOQeh8usW5', 'jsapi_ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSrCga4se5mCqPptglmEnWzoRiGWNjbGv5godM-fFBj1Q', 'timestamp': 1523324169, 'url': 'https://hz.wx.yinsho.com/tlwx/credit_card/online_apply/page/3', 'signature': '4febc22803432065f3a352decbdc099e932b47b1'}}
+[I 180410 09:36:09 web:2106] 200 POST /tlwx/wx/jssdk (192.168.100.52) 2.26ms
+[I 180410 09:36:09 web:2106] 304 GET /tlwx/static/doc/credit_card/2.txt (192.168.100.52) 0.89ms
+[I 180410 09:36:09 web:2106] 304 GET /tlwx/static/doc/credit_card/1.txt (192.168.100.52) 0.89ms
+[D 180410 09:36:17 online_apply:13] 3 <class 'str'>
+[I 180410 09:36:17 web:2106] 200 GET /tlwx/credit_card/online_apply/page/3 (192.168.100.52) 10.59ms
+[I 180410 09:36:17 web:2106] 200 GET /tlwx/static/css/yinsho.css?v=47b66ecdfa903d7e270189ca641745fe (192.168.100.52) 14.20ms
+[I 180410 09:36:17 web:2106] 200 GET /tlwx/static/css/main.css?v=6da11b3eae07a22f7adac8f2f62ba16c (192.168.100.52) 12.84ms
+[I 180410 09:36:17 web:2106] 200 GET /tlwx/static/asset/photoswipe/default-skin/default-skin.css?v=1ce09d402b4c3aee84ed6299f793cd21 (192.168.100.52) 11.04ms
+[I 180410 09:36:17 web:2106] 200 GET /tlwx/static/font/iconfont.css?v=8d895e475d2d71afef3137fbdc52e85a (192.168.100.52) 9.40ms
+[I 180410 09:36:17 web:2106] 200 GET /tlwx/static/asset/photoswipe/photoswipe.css?v=a78e12d3a036307b9ef08fc063278e02 (192.168.100.52) 6.58ms
+[I 180410 09:36:17 web:2106] 200 GET /tlwx/static/asset/jquery.min.js?v=33cabfa15c1060aaa3d207c653afb1ee (192.168.100.52) 6.45ms
+[I 180410 09:36:17 web:2106] 200 GET /tlwx/static/asset/jquery-extend.js?v=76342d61d51045187e755415345c6ed8 (192.168.100.52) 1.95ms
+[I 180410 09:36:17 web:2106] 200 GET /tlwx/static/asset/validate.js?v=71d3aec16656027c9c67cfe0f5ca92fe (192.168.100.52) 2.01ms
+[I 180410 09:36:17 web:2106] 200 GET /tlwx/static/asset/picker-city.js?v=4a5300e0dacfb54f4b40e88ad067fc36 (192.168.100.52) 2.46ms
+[I 180410 09:36:17 web:2106] 200 GET /tlwx/static/asset/picker.js?v=50226c50563b6d2b46abc8ddd5317dcd (192.168.100.52) 1.84ms
+[I 180410 09:36:17 web:2106] 200 GET /tlwx/static/asset/photoswipe/photoswipe.min.js?v=90d5a5ff4789f25f79840f95fc089c0e (192.168.100.52) 1.84ms
+[I 180410 09:36:17 web:2106] 200 GET /tlwx/static/asset/photoswipe/photoswipe-ui-default.min.js?v=c061a13816b98ce8c8a7ffb2e62dc403 (192.168.100.52) 1.91ms
+[I 180410 09:36:17 web:2106] 200 GET /tlwx/static/asset/popup.js?v=8fe1003623bb52e7d5938844d9fac4d1 (192.168.100.52) 1.76ms
+[I 180410 09:36:17 web:2106] 200 GET /tlwx/static/js/tool.js?v=49c74b58cecebe0584d8f827713fca47 (192.168.100.52) 1.86ms
+[I 180410 09:36:17 web:2106] 200 GET /tlwx/static/js/credit_card/online_apply3.js?v=53456e008a636f4759731560206f360b (192.168.100.52) 1.91ms
+[I 180410 09:36:17 web:2106] 200 GET /tlwx/static/img/id01.png?v=975e34682ecc388f3a412cb9e6e06a67 (192.168.100.52) 1.75ms
+[I 180410 09:36:17 web:2106] 200 GET /tlwx/static/font/iconfont.woff?t=1493801407135 (192.168.100.52) 2.17ms
+[D 180410 09:36:17 wx:93] <class 'str'>
+    
+[D 180410 09:36:17 wx:93] <class 'str'>
+    
+[D 180410 09:36:17 wx:93] <class 'int'>
+    
+[D 180410 09:36:17 wx:93] <class 'str'>
+    
+[D 180410 09:36:17 wx:93] <class 'str'>
+    
+[I 180410 09:36:17 wx:105] RETURN: {'nonceStr': '7Fim9Hv3aAtYVF0', 'jsapi_ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSrCga4se5mCqPptglmEnWzoRiGWNjbGv5godM-fFBj1Q', 'timestamp': 1523324177, 'url': 'https://hz.wx.yinsho.com/tlwx/credit_card/online_apply/page/3', 'signature': '1743330429829f96f996726139328e74ea603ca9'} <class 'dict'>
+[D 180410 09:36:17 wx:42] <class 'dict'> {'success': True, 'config': {'nonceStr': '7Fim9Hv3aAtYVF0', 'jsapi_ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSrCga4se5mCqPptglmEnWzoRiGWNjbGv5godM-fFBj1Q', 'timestamp': 1523324177, 'url': 'https://hz.wx.yinsho.com/tlwx/credit_card/online_apply/page/3', 'signature': '1743330429829f96f996726139328e74ea603ca9'}}
+[I 180410 09:36:17 web:2106] 200 POST /tlwx/wx/jssdk (192.168.100.52) 2.35ms
+[I 180410 09:36:17 web:2106] 200 GET /tlwx/static/doc/credit_card/1.txt (192.168.100.52) 3.82ms
+[I 180410 09:36:17 web:2106] 200 GET /tlwx/static/doc/credit_card/2.txt (192.168.100.52) 2.45ms
+[I 180410 17:03:03 autoreload:196] /home/tonglian/py3venv/lib/python3.6/site-packages/tornado/web.py modified; restarting server
+[I 180410 17:03:03 tool:43] <class 'app.config.G'>
+[D 180410 17:03:03 selector_events:65] Using selector: EpollSelector
+[I 180410 18:53:55 autoreload:196] /home/tonglian/py3venv/lib/python3.6/site-packages/tornado/web.py modified; restarting server
+[I 180410 18:53:55 tool:43] <class 'app.config.G'>
+[D 180410 18:53:55 selector_events:65] Using selector: EpollSelector
+[I 180410 19:17:53 autoreload:196] /home/tonglian/py3venv/lib/python3.6/site-packages/tornado/web.py modified; restarting server
+[I 180410 19:17:53 tool:43] <class 'app.config.G'>
+[D 180410 19:17:53 selector_events:65] Using selector: EpollSelector
+[I 180410 20:03:42 autoreload:196] /home/tonglian/py3venv/lib/python3.6/site-packages/tornado/web.py modified; restarting server
+[I 180410 20:03:42 tool:43] <class 'app.config.G'>
+[D 180410 20:03:42 selector_events:65] Using selector: EpollSelector
+[I 180411 09:14:58 autoreload:196] /home/tonglian/py3venv/lib/python3.6/site-packages/tornado/web.py modified; restarting server
+[I 180411 09:14:58 tool:43] <class 'app.config.G'>
+[D 180411 09:14:58 selector_events:65] Using selector: EpollSelector
+[I 180411 09:16:50 autoreload:196] /home/tonglian/py3venv/lib/python3.6/site-packages/tornado/web.py modified; restarting server
+[I 180411 09:16:51 tool:43] <class 'app.config.G'>
+[D 180411 09:16:51 selector_events:65] Using selector: EpollSelector
+[I 180411 09:18:20 autoreload:196] /home/tonglian/py3venv/lib/python3.6/site-packages/tornado/web.py modified; restarting server
+[I 180411 09:18:20 tool:43] <class 'app.config.G'>
+[D 180411 09:18:20 selector_events:65] Using selector: EpollSelector
+[D 180411 10:53:28 online_apply:13] 1 <class 'str'>
+[I 180411 10:53:28 web:2106] 200 GET /tlwx/credit_card/online_apply/page/1 (192.168.100.52) 11.10ms
+[I 180411 10:53:28 web:2106] 200 GET /tlwx/static/css/yinsho.css?v=47b66ecdfa903d7e270189ca641745fe (192.168.100.52) 9.09ms
+[I 180411 10:53:29 web:2106] 200 GET /tlwx/static/css/main.css?v=6da11b3eae07a22f7adac8f2f62ba16c (192.168.100.52) 13.38ms
+[I 180411 10:53:29 web:2106] 200 GET /tlwx/static/asset/validate.js?v=098e8e3d8d4b03e58428896205b6bc66 (192.168.100.52) 11.45ms
+[I 180411 10:53:29 web:2106] 200 GET /tlwx/static/js/tool.js?v=49c74b58cecebe0584d8f827713fca47 (192.168.100.52) 5.37ms
+[I 180411 10:53:29 web:2106] 200 GET /tlwx/static/font/iconfont.css?v=8d895e475d2d71afef3137fbdc52e85a (192.168.100.52) 3.79ms
+[I 180411 10:53:29 web:2106] 200 GET /tlwx/static/asset/jquery.min.js?v=33cabfa15c1060aaa3d207c653afb1ee (192.168.100.52) 11.49ms
+[I 180411 10:53:29 web:2106] 200 GET /tlwx/static/js/credit_card/online_apply1.js?v=9cafada92e1540f23200fb21ed07aa16 (192.168.100.52) 2.19ms
+[D 180411 10:55:33 online_apply:13] 1 <class 'str'>
+[I 180411 10:55:33 web:2106] 200 GET /tlwx/credit_card/online_apply/page/1 (192.168.100.52) 16.18ms
+[I 180411 10:55:34 web:2106] 200 GET /tlwx/static/css/yinsho.css?v=47b66ecdfa903d7e270189ca641745fe (192.168.100.52) 3.09ms
+[I 180411 10:55:34 web:2106] 200 GET /tlwx/static/css/main.css?v=6da11b3eae07a22f7adac8f2f62ba16c (192.168.100.52) 12.12ms
+[I 180411 10:55:34 web:2106] 200 GET /tlwx/static/font/iconfont.css?v=8d895e475d2d71afef3137fbdc52e85a (192.168.100.52) 10.25ms
+[I 180411 10:55:34 web:2106] 200 GET /tlwx/static/js/tool.js?v=373ea4f46227e2c70948680be7b51f3b (192.168.100.52) 8.37ms
+[I 180411 10:55:34 web:2106] 200 GET /tlwx/static/asset/validate.js?v=098e8e3d8d4b03e58428896205b6bc66 (192.168.100.52) 4.13ms
+[I 180411 10:55:34 web:2106] 200 GET /tlwx/static/asset/jquery.min.js?v=33cabfa15c1060aaa3d207c653afb1ee (192.168.100.52) 8.16ms
+[I 180411 10:55:34 web:2106] 200 GET /tlwx/static/js/credit_card/online_apply1.js?v=9cafada92e1540f23200fb21ed07aa16 (192.168.100.52) 2.04ms
+[D 180411 10:55:45 online_apply:13] 1 <class 'str'>
+[I 180411 10:55:45 web:2106] 200 GET /tlwx/credit_card/online_apply/page/1 (192.168.100.52) 5.89ms
+[I 180411 10:55:45 web:2106] 200 GET /tlwx/static/font/iconfont.css?v=8d895e475d2d71afef3137fbdc52e85a (192.168.100.52) 13.80ms
+[I 180411 10:55:45 web:2106] 200 GET /tlwx/static/css/yinsho.css?v=47b66ecdfa903d7e270189ca641745fe (192.168.100.52) 11.88ms
+[I 180411 10:55:45 web:2106] 200 GET /tlwx/static/css/main.css?v=6da11b3eae07a22f7adac8f2f62ba16c (192.168.100.52) 10.05ms
+[I 180411 10:55:45 web:2106] 200 GET /tlwx/static/js/tool.js?v=373ea4f46227e2c70948680be7b51f3b (192.168.100.52) 6.15ms
+[I 180411 10:55:45 web:2106] 200 GET /tlwx/static/asset/validate.js?v=098e8e3d8d4b03e58428896205b6bc66 (192.168.100.52) 4.49ms
+[I 180411 10:55:45 web:2106] 200 GET /tlwx/static/asset/jquery.min.js?v=33cabfa15c1060aaa3d207c653afb1ee (192.168.100.52) 10.22ms
+[I 180411 10:55:45 web:2106] 200 GET /tlwx/static/js/credit_card/online_apply1.js?v=9cafada92e1540f23200fb21ed07aa16 (192.168.100.52) 1.75ms
+[D 180411 10:58:04 online_apply:13] 1 <class 'str'>
+[I 180411 10:58:04 web:2106] 200 GET /tlwx/credit_card/online_apply/page/1 (192.168.100.52) 7.83ms
+[I 180411 10:58:04 web:2106] 200 GET /tlwx/static/css/yinsho.css?v=47b66ecdfa903d7e270189ca641745fe (192.168.100.52) 2.50ms
+[I 180411 10:58:04 web:2106] 200 GET /tlwx/static/font/iconfont.css?v=8d895e475d2d71afef3137fbdc52e85a (192.168.100.52) 10.77ms
+[I 180411 10:58:04 web:2106] 200 GET /tlwx/static/css/main.css?v=6da11b3eae07a22f7adac8f2f62ba16c (192.168.100.52) 9.24ms
+[I 180411 10:58:04 web:2106] 200 GET /tlwx/static/js/tool.js?v=373ea4f46227e2c70948680be7b51f3b (192.168.100.52) 5.79ms
+[I 180411 10:58:04 web:2106] 200 GET /tlwx/static/asset/validate.js?v=098e8e3d8d4b03e58428896205b6bc66 (192.168.100.52) 4.37ms
+[I 180411 10:58:04 web:2106] 200 GET /tlwx/static/asset/jquery.min.js?v=33cabfa15c1060aaa3d207c653afb1ee (192.168.100.52) 9.27ms
+[I 180411 10:58:04 web:2106] 200 GET /tlwx/static/js/credit_card/online_apply1.js?v=9cafada92e1540f23200fb21ed07aa16 (192.168.100.52) 1.85ms
+[D 180411 11:00:43 online_apply:13] 1 <class 'str'>
+[I 180411 11:00:43 web:2106] 304 GET /tlwx/credit_card/online_apply/page/1 (192.168.100.52) 6.77ms
+[I 180411 11:00:43 web:2106] 304 GET /tlwx/static/css/yinsho.css?v=47b66ecdfa903d7e270189ca641745fe (192.168.100.52) 1.66ms
+[I 180411 11:00:43 web:2106] 304 GET /tlwx/static/css/main.css?v=6da11b3eae07a22f7adac8f2f62ba16c (192.168.100.52) 1.24ms
+[I 180411 11:00:43 web:2106] 304 GET /tlwx/static/font/iconfont.css?v=8d895e475d2d71afef3137fbdc52e85a (192.168.100.52) 0.99ms
+[I 180411 11:00:43 web:2106] 304 GET /tlwx/static/asset/jquery.min.js?v=33cabfa15c1060aaa3d207c653afb1ee (192.168.100.52) 1.14ms
+[I 180411 11:00:43 web:2106] 304 GET /tlwx/static/asset/validate.js?v=098e8e3d8d4b03e58428896205b6bc66 (192.168.100.52) 1.11ms
+[I 180411 11:00:43 web:2106] 304 GET /tlwx/static/js/credit_card/online_apply1.js?v=9cafada92e1540f23200fb21ed07aa16 (192.168.100.52) 0.98ms
+[I 180411 11:00:43 web:2106] 304 GET /tlwx/static/js/tool.js?v=373ea4f46227e2c70948680be7b51f3b (192.168.100.52) 0.91ms
+[D 180411 11:01:22 online_apply:13] 1 <class 'str'>
+[I 180411 11:01:22 web:2106] 304 GET /tlwx/credit_card/online_apply/page/1 (192.168.100.52) 6.37ms
+[I 180411 11:01:23 web:2106] 304 GET /tlwx/static/css/yinsho.css?v=47b66ecdfa903d7e270189ca641745fe (192.168.100.52) 1.80ms
+[I 180411 11:01:23 web:2106] 304 GET /tlwx/static/font/iconfont.css?v=8d895e475d2d71afef3137fbdc52e85a (192.168.100.52) 1.10ms
+[I 180411 11:01:23 web:2106] 304 GET /tlwx/static/css/main.css?v=6da11b3eae07a22f7adac8f2f62ba16c (192.168.100.52) 1.13ms
+[I 180411 11:01:23 web:2106] 304 GET /tlwx/static/asset/jquery.min.js?v=33cabfa15c1060aaa3d207c653afb1ee (192.168.100.52) 1.36ms
+[I 180411 11:01:23 web:2106] 304 GET /tlwx/static/asset/validate.js?v=098e8e3d8d4b03e58428896205b6bc66 (192.168.100.52) 0.92ms
+[I 180411 11:01:23 web:2106] 304 GET /tlwx/static/js/tool.js?v=373ea4f46227e2c70948680be7b51f3b (192.168.100.52) 1.02ms
+[I 180411 11:01:23 web:2106] 304 GET /tlwx/static/js/credit_card/online_apply1.js?v=9cafada92e1540f23200fb21ed07aa16 (192.168.100.52) 0.95ms
+[D 180411 11:01:29 online_apply:13] 1 <class 'str'>
+[I 180411 11:01:29 web:2106] 304 GET /tlwx/credit_card/online_apply/page/1 (192.168.100.52) 4.80ms
+[D 180411 11:01:33 online_apply:13] 1 <class 'str'>
+[I 180411 11:01:33 web:2106] 304 GET /tlwx/credit_card/online_apply/page/1 (192.168.100.52) 5.46ms
+[I 180411 11:01:33 web:2106] 304 GET /tlwx/static/css/yinsho.css?v=47b66ecdfa903d7e270189ca641745fe (192.168.100.52) 1.48ms
+[I 180411 11:01:33 web:2106] 304 GET /tlwx/static/css/main.css?v=6da11b3eae07a22f7adac8f2f62ba16c (192.168.100.52) 1.06ms
+[I 180411 11:01:33 web:2106] 304 GET /tlwx/static/asset/jquery.min.js?v=33cabfa15c1060aaa3d207c653afb1ee (192.168.100.52) 1.13ms
+[I 180411 11:01:33 web:2106] 304 GET /tlwx/static/font/iconfont.css?v=8d895e475d2d71afef3137fbdc52e85a (192.168.100.52) 1.20ms
+[I 180411 11:01:33 web:2106] 304 GET /tlwx/static/js/tool.js?v=373ea4f46227e2c70948680be7b51f3b (192.168.100.52) 0.96ms
+[I 180411 11:01:33 web:2106] 304 GET /tlwx/static/asset/validate.js?v=098e8e3d8d4b03e58428896205b6bc66 (192.168.100.52) 1.01ms
+[I 180411 11:01:33 web:2106] 304 GET /tlwx/static/js/credit_card/online_apply1.js?v=9cafada92e1540f23200fb21ed07aa16 (192.168.100.52) 0.94ms
+[D 180411 11:01:34 online_apply:13] 1 <class 'str'>
+[I 180411 11:01:34 web:2106] 304 GET /tlwx/credit_card/online_apply/page/1 (192.168.100.52) 4.68ms
+[I 180411 11:01:34 web:2106] 304 GET /tlwx/static/css/yinsho.css?v=47b66ecdfa903d7e270189ca641745fe (192.168.100.52) 1.50ms
+[I 180411 11:01:34 web:2106] 304 GET /tlwx/static/font/iconfont.css?v=8d895e475d2d71afef3137fbdc52e85a (192.168.100.52) 1.02ms
+[I 180411 11:01:34 web:2106] 304 GET /tlwx/static/css/main.css?v=6da11b3eae07a22f7adac8f2f62ba16c (192.168.100.52) 1.00ms
+[I 180411 11:01:34 web:2106] 304 GET /tlwx/static/asset/jquery.min.js?v=33cabfa15c1060aaa3d207c653afb1ee (192.168.100.52) 1.27ms
+[I 180411 11:01:34 web:2106] 304 GET /tlwx/static/asset/validate.js?v=098e8e3d8d4b03e58428896205b6bc66 (192.168.100.52) 1.55ms
+[I 180411 11:01:34 web:2106] 304 GET /tlwx/static/js/tool.js?v=373ea4f46227e2c70948680be7b51f3b (192.168.100.52) 1.01ms
+[I 180411 11:01:34 web:2106] 304 GET /tlwx/static/js/credit_card/online_apply1.js?v=9cafada92e1540f23200fb21ed07aa16 (192.168.100.52) 1.26ms
+[D 180411 11:01:35 online_apply:13] 1 <class 'str'>
+[I 180411 11:01:35 web:2106] 304 GET /tlwx/credit_card/online_apply/page/1 (192.168.100.52) 5.32ms
+[I 180411 11:01:35 web:2106] 304 GET /tlwx/static/css/yinsho.css?v=47b66ecdfa903d7e270189ca641745fe (192.168.100.52) 1.46ms
+[I 180411 11:01:35 web:2106] 304 GET /tlwx/static/css/main.css?v=6da11b3eae07a22f7adac8f2f62ba16c (192.168.100.52) 1.02ms
+[I 180411 11:01:35 web:2106] 304 GET /tlwx/static/font/iconfont.css?v=8d895e475d2d71afef3137fbdc52e85a (192.168.100.52) 1.02ms
+[I 180411 11:01:35 web:2106] 304 GET /tlwx/static/asset/validate.js?v=098e8e3d8d4b03e58428896205b6bc66 (192.168.100.52) 0.94ms
+[I 180411 11:01:35 web:2106] 304 GET /tlwx/static/js/tool.js?v=373ea4f46227e2c70948680be7b51f3b (192.168.100.52) 0.92ms
+[I 180411 11:01:35 web:2106] 304 GET /tlwx/static/asset/jquery.min.js?v=33cabfa15c1060aaa3d207c653afb1ee (192.168.100.52) 1.13ms
+[I 180411 11:01:35 web:2106] 304 GET /tlwx/static/js/credit_card/online_apply1.js?v=9cafada92e1540f23200fb21ed07aa16 (192.168.100.52) 1.00ms
+[D 180411 11:01:39 online_apply:13] 1 <class 'str'>
+[I 180411 11:01:39 web:2106] 304 GET /tlwx/credit_card/online_apply/page/1 (192.168.100.52) 4.91ms
+[D 180411 11:01:41 online_apply:13] 1 <class 'str'>
+[I 180411 11:01:41 web:2106] 304 GET /tlwx/credit_card/online_apply/page/1 (192.168.100.52) 4.80ms
+[I 180411 11:01:41 web:2106] 304 GET /tlwx/static/css/yinsho.css?v=47b66ecdfa903d7e270189ca641745fe (192.168.100.52) 1.36ms
+[I 180411 11:01:41 web:2106] 304 GET /tlwx/static/font/iconfont.css?v=8d895e475d2d71afef3137fbdc52e85a (192.168.100.52) 1.00ms
+[I 180411 11:01:41 web:2106] 304 GET /tlwx/static/css/main.css?v=6da11b3eae07a22f7adac8f2f62ba16c (192.168.100.52) 1.00ms
+[I 180411 11:01:41 web:2106] 304 GET /tlwx/static/asset/jquery.min.js?v=33cabfa15c1060aaa3d207c653afb1ee (192.168.100.52) 1.17ms
+[I 180411 11:01:41 web:2106] 304 GET /tlwx/static/asset/validate.js?v=098e8e3d8d4b03e58428896205b6bc66 (192.168.100.52) 1.23ms
+[I 180411 11:01:41 web:2106] 304 GET /tlwx/static/js/tool.js?v=373ea4f46227e2c70948680be7b51f3b (192.168.100.52) 1.04ms
+[I 180411 11:01:41 web:2106] 304 GET /tlwx/static/js/credit_card/online_apply1.js?v=9cafada92e1540f23200fb21ed07aa16 (192.168.100.52) 1.02ms
+[D 180411 11:02:07 online_apply:13] 1 <class 'str'>
+[I 180411 11:02:07 web:2106] 304 GET /tlwx/credit_card/online_apply/page/1 (192.168.100.52) 6.18ms
+[D 180411 11:03:05 online_apply:13] 1 <class 'str'>
+[I 180411 11:03:05 web:2106] 304 GET /tlwx/credit_card/online_apply/page/1 (192.168.100.52) 6.88ms
+[I 180411 11:03:05 web:2106] 304 GET /tlwx/static/css/yinsho.css?v=47b66ecdfa903d7e270189ca641745fe (192.168.100.52) 2.26ms
+[I 180411 11:03:05 web:2106] 304 GET /tlwx/static/css/main.css?v=6da11b3eae07a22f7adac8f2f62ba16c (192.168.100.52) 1.08ms
+[I 180411 11:03:05 web:2106] 304 GET /tlwx/static/asset/jquery.min.js?v=33cabfa15c1060aaa3d207c653afb1ee (192.168.100.52) 1.27ms
+[I 180411 11:03:05 web:2106] 304 GET /tlwx/static/asset/validate.js?v=098e8e3d8d4b03e58428896205b6bc66 (192.168.100.52) 0.90ms
+[I 180411 11:03:05 web:2106] 304 GET /tlwx/static/font/iconfont.css?v=8d895e475d2d71afef3137fbdc52e85a (192.168.100.52) 0.88ms
+[I 180411 11:03:05 web:2106] 304 GET /tlwx/static/js/tool.js?v=373ea4f46227e2c70948680be7b51f3b (192.168.100.52) 0.92ms
+[I 180411 11:03:05 web:2106] 304 GET /tlwx/static/js/credit_card/online_apply1.js?v=9cafada92e1540f23200fb21ed07aa16 (192.168.100.52) 0.98ms
+[D 180411 11:03:17 online_apply:13] 1 <class 'str'>
+[I 180411 11:03:17 web:2106] 304 GET /tlwx/credit_card/online_apply/page/1 (192.168.100.52) 6.25ms
+[I 180411 11:03:17 web:2106] 304 GET /tlwx/static/css/yinsho.css?v=47b66ecdfa903d7e270189ca641745fe (192.168.100.52) 1.15ms
+[I 180411 11:03:17 web:2106] 304 GET /tlwx/static/css/main.css?v=6da11b3eae07a22f7adac8f2f62ba16c (192.168.100.52) 1.01ms
+[I 180411 11:03:17 web:2106] 304 GET /tlwx/static/font/iconfont.css?v=8d895e475d2d71afef3137fbdc52e85a (192.168.100.52) 0.94ms
+[I 180411 11:03:17 web:2106] 304 GET /tlwx/static/asset/jquery.min.js?v=33cabfa15c1060aaa3d207c653afb1ee (192.168.100.52) 1.12ms
+[I 180411 11:03:17 web:2106] 304 GET /tlwx/static/asset/validate.js?v=098e8e3d8d4b03e58428896205b6bc66 (192.168.100.52) 1.29ms
+[I 180411 11:03:17 web:2106] 304 GET /tlwx/static/js/credit_card/online_apply1.js?v=9cafada92e1540f23200fb21ed07aa16 (192.168.100.52) 0.97ms
+[I 180411 11:03:17 web:2106] 304 GET /tlwx/static/js/tool.js?v=373ea4f46227e2c70948680be7b51f3b (192.168.100.52) 0.91ms
+[D 180411 11:03:46 online_apply:13] 1 <class 'str'>
+[I 180411 11:03:46 web:2106] 304 GET /tlwx/credit_card/online_apply/page/1 (192.168.100.52) 5.06ms
+[I 180411 11:03:46 web:2106] 304 GET /tlwx/static/css/main.css?v=6da11b3eae07a22f7adac8f2f62ba16c (192.168.100.52) 1.22ms
+[I 180411 11:03:46 web:2106] 304 GET /tlwx/static/font/iconfont.css?v=8d895e475d2d71afef3137fbdc52e85a (192.168.100.52) 1.06ms
+[I 180411 11:03:46 web:2106] 304 GET /tlwx/static/css/yinsho.css?v=47b66ecdfa903d7e270189ca641745fe (192.168.100.52) 1.02ms
+[I 180411 11:03:46 web:2106] 304 GET /tlwx/static/asset/jquery.min.js?v=33cabfa15c1060aaa3d207c653afb1ee (192.168.100.52) 1.17ms
+[I 180411 11:03:46 web:2106] 304 GET /tlwx/static/asset/validate.js?v=098e8e3d8d4b03e58428896205b6bc66 (192.168.100.52) 0.91ms
+[I 180411 11:03:46 web:2106] 304 GET /tlwx/static/js/credit_card/online_apply1.js?v=9cafada92e1540f23200fb21ed07aa16 (192.168.100.52) 1.00ms
+[I 180411 11:03:46 web:2106] 304 GET /tlwx/static/js/tool.js?v=373ea4f46227e2c70948680be7b51f3b (192.168.100.52) 0.93ms
+[D 180411 11:04:16 online_apply:13] 1 <class 'str'>
+[I 180411 11:04:16 web:2106] 304 GET /tlwx/credit_card/online_apply/page/1 (192.168.100.52) 5.66ms
+[I 180411 11:04:16 web:2106] 304 GET /tlwx/static/css/yinsho.css?v=47b66ecdfa903d7e270189ca641745fe (192.168.100.52) 1.69ms
+[I 180411 11:04:16 web:2106] 304 GET /tlwx/static/css/main.css?v=6da11b3eae07a22f7adac8f2f62ba16c (192.168.100.52) 1.00ms
+[I 180411 11:04:16 web:2106] 304 GET /tlwx/static/font/iconfont.css?v=8d895e475d2d71afef3137fbdc52e85a (192.168.100.52) 0.96ms
+[I 180411 11:04:16 web:2106] 304 GET /tlwx/static/asset/jquery.min.js?v=33cabfa15c1060aaa3d207c653afb1ee (192.168.100.52) 1.18ms
+[I 180411 11:04:16 web:2106] 304 GET /tlwx/static/asset/validate.js?v=098e8e3d8d4b03e58428896205b6bc66 (192.168.100.52) 0.96ms
+[I 180411 11:04:16 web:2106] 304 GET /tlwx/static/js/tool.js?v=373ea4f46227e2c70948680be7b51f3b (192.168.100.52) 1.05ms
+[I 180411 11:04:16 web:2106] 304 GET /tlwx/static/js/credit_card/online_apply1.js?v=9cafada92e1540f23200fb21ed07aa16 (192.168.100.52) 0.96ms
+[D 180411 11:04:31 online_apply:13] 1 <class 'str'>
+[I 180411 11:04:31 web:2106] 304 GET /tlwx/credit_card/online_apply/page/1 (192.168.100.52) 5.67ms
+[I 180411 11:04:32 web:2106] 304 GET /tlwx/static/css/main.css?v=6da11b3eae07a22f7adac8f2f62ba16c (192.168.100.52) 1.46ms
+[I 180411 11:04:32 web:2106] 304 GET /tlwx/static/font/iconfont.css?v=8d895e475d2d71afef3137fbdc52e85a (192.168.100.52) 1.11ms
+[I 180411 11:04:32 web:2106] 304 GET /tlwx/static/asset/jquery.min.js?v=33cabfa15c1060aaa3d207c653afb1ee (192.168.100.52) 1.33ms
+[I 180411 11:04:32 web:2106] 304 GET /tlwx/static/css/yinsho.css?v=47b66ecdfa903d7e270189ca641745fe (192.168.100.52) 1.09ms
+[I 180411 11:04:32 web:2106] 304 GET /tlwx/static/asset/validate.js?v=098e8e3d8d4b03e58428896205b6bc66 (192.168.100.52) 0.94ms
+[I 180411 11:04:32 web:2106] 304 GET /tlwx/static/js/tool.js?v=373ea4f46227e2c70948680be7b51f3b (192.168.100.52) 0.90ms
+[I 180411 11:04:32 web:2106] 304 GET /tlwx/static/js/credit_card/online_apply1.js?v=9cafada92e1540f23200fb21ed07aa16 (192.168.100.52) 0.93ms
+[D 180411 11:05:49 online_apply:13] 1 <class 'str'>
+[I 180411 11:05:49 web:2106] 200 GET /tlwx/credit_card/online_apply/page/1 (192.168.100.52) 6.24ms
+[I 180411 11:05:49 web:2106] 200 GET /tlwx/static/css/yinsho.css?v=47b66ecdfa903d7e270189ca641745fe (192.168.100.52) 2.73ms
+[I 180411 11:05:49 web:2106] 200 GET /tlwx/static/font/iconfont.css?v=8d895e475d2d71afef3137fbdc52e85a (192.168.100.52) 4.52ms
+[I 180411 11:05:49 web:2106] 200 GET /tlwx/static/css/main.css?v=6da11b3eae07a22f7adac8f2f62ba16c (192.168.100.52) 2.89ms
+[I 180411 11:05:49 web:2106] 200 GET /tlwx/static/js/tool.js?v=373ea4f46227e2c70948680be7b51f3b (192.168.100.52) 9.27ms
+[I 180411 11:05:49 web:2106] 200 GET /tlwx/static/asset/validate.js?v=098e8e3d8d4b03e58428896205b6bc66 (192.168.100.52) 5.13ms
+[I 180411 11:05:49 web:2106] 200 GET /tlwx/static/js/credit_card/online_apply1.js?v=d551f745f9e038ab9d2952bc9f61ff1b (192.168.100.52) 3.25ms
+[I 180411 11:05:49 web:2106] 200 GET /tlwx/static/asset/jquery.min.js?v=33cabfa15c1060aaa3d207c653afb1ee (192.168.100.52) 9.04ms
+[D 180411 11:05:59 online_apply:13] 1 <class 'str'>
+[I 180411 11:05:59 web:2106] 200 GET /tlwx/credit_card/online_apply/page/1 (192.168.100.52) 5.55ms
+[I 180411 11:05:59 web:2106] 200 GET /tlwx/static/css/main.css?v=6da11b3eae07a22f7adac8f2f62ba16c (192.168.100.52) 13.25ms
+[I 180411 11:05:59 web:2106] 200 GET /tlwx/static/css/yinsho.css?v=47b66ecdfa903d7e270189ca641745fe (192.168.100.52) 11.12ms
+[I 180411 11:05:59 web:2106] 200 GET /tlwx/static/asset/validate.js?v=098e8e3d8d4b03e58428896205b6bc66 (192.168.100.52) 7.20ms
+[I 180411 11:05:59 web:2106] 200 GET /tlwx/static/js/tool.js?v=373ea4f46227e2c70948680be7b51f3b (192.168.100.52) 5.41ms
+[I 180411 11:05:59 web:2106] 200 GET /tlwx/static/font/iconfont.css?v=8d895e475d2d71afef3137fbdc52e85a (192.168.100.52) 3.96ms
+[I 180411 11:05:59 web:2106] 200 GET /tlwx/static/asset/jquery.min.js?v=33cabfa15c1060aaa3d207c653afb1ee (192.168.100.52) 11.25ms
+[I 180411 11:05:59 web:2106] 200 GET /tlwx/static/js/credit_card/online_apply1.js?v=d551f745f9e038ab9d2952bc9f61ff1b (192.168.100.52) 1.80ms
+[I 180412 15:41:17 web:2106] 200 GET /tlwx/static/img/credit_card/mes_progress.png (192.168.100.52) 4.22ms
+[I 180412 15:41:17 web:2106] 200 GET /tlwx/static/img/credit_card/mes_apply1.jpg (192.168.100.52) 2.72ms
+[I 180412 15:41:17 web:2106] 200 GET /tlwx/static/img/credit_card/mes_apply2.png (192.168.100.52) 1.64ms
+[I 180412 17:59:21 common:56] EVENT
+[I 180412 17:59:21 web:2106] 200 POST /tlwx?signature=7cd4ffd9cbc9455283c4ed607c169891e95ec8cc&timestamp=1523527209&nonce=367576522&openid=oSDTiwgyLLAgOBPWwHsBQxOXd860 (192.168.100.52) 3.96ms
+[I 180413 16:34:58 common:56] EVENT
+[I 180413 16:34:58 web:2106] 200 POST /tlwx?signature=3191d1685546f42c316de41146de0518d7462d35&timestamp=1523608546&nonce=1568246345&openid=oSDTiwgyLLAgOBPWwHsBQxOXd860 (192.168.100.52) 3.32ms
+[D 180413 16:34:59 connectionpool:818] Starting new HTTPS connection (1): api.weixin.qq.com
+/home/tonglian/py3venv/lib/python3.6/site-packages/urllib3/connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning)
+[D 180413 16:34:59 connectionpool:395] https://api.weixin.qq.com:443 "GET /sns/oauth2/access_token?appid=wx6290daffb81416ac&secret=f3bc7bb9c6dca40dd1bbe9b69fdf6ea0&code=011zr4oX1p3HKS0V2OmX1r53oX1zr4oO&grant_type=authorization_code HTTP/1.1" 200 336
+[I 180413 16:34:59 tool:30] FINAL OPENID: oSDTiwgyLLAgOBPWwHsBQxOXd860
+[D 180413 16:34:59 common:76] OPENID oSDTiwgyLLAgOBPWwHsBQxOXd860
+[I 180413 16:34:59 web:2106] 200 GET /tlwx/staticfile/credit_card/online_apply_invitation1.html?code=011zr4oX1p3HKS0V2OmX1r53oX1zr4oO&state=1 (192.168.100.52) 214.24ms
+[I 180413 16:34:59 web:2106] 200 GET /tlwx/static/css/yinsho.css?v=47b66ecdfa903d7e270189ca641745fe (192.168.100.52) 2.28ms
+[I 180413 16:34:59 web:2106] 200 GET /tlwx/static/css/main.css?v=6da11b3eae07a22f7adac8f2f62ba16c (192.168.100.52) 1.78ms
+[I 180413 16:34:59 web:2106] 200 GET /tlwx/static/font/iconfont.css?v=8d895e475d2d71afef3137fbdc52e85a (192.168.100.52) 1.81ms
+[I 180413 16:34:59 web:2106] 200 GET /tlwx/static/asset/jquery.min.js?v=33cabfa15c1060aaa3d207c653afb1ee (192.168.100.52) 2.20ms
+[I 180413 16:34:59 web:2106] 200 GET /tlwx/static/asset/validate.js?v=098e8e3d8d4b03e58428896205b6bc66 (192.168.100.52) 1.96ms
+[I 180413 16:34:59 web:2106] 200 GET /tlwx/static/js/credit_card/online_apply_invitation1.js?v=8f0d82e1d43e9d5d1e20413e43aa5fe0 (192.168.100.52) 2.20ms
+[I 180413 16:34:59 web:2106] 200 GET /tlwx/static/js/tool.js?v=49c74b58cecebe0584d8f827713fca47 (192.168.100.52) 2.25ms
+[I 180413 16:35:10 tool:30] FINAL OPENID: oSDTiwgyLLAgOBPWwHsBQxOXd860
+[D 180413 16:35:10 common:76] OPENID oSDTiwgyLLAgOBPWwHsBQxOXd860
+[I 180413 16:35:10 web:2106] 200 GET /tlwx/staticfile/credit_card/online_apply_invitation2.html?name=%E5%BE%90%E5%98%89%E9%A2%96&employee_id=1003 (192.168.100.52) 5.72ms
+[I 180413 16:35:10 web:2106] 200 GET /tlwx/static/asset/jquery_qrcode/jquery.qrcode.js?v=ade0b3055a1f4d14ba65f6e90b0a5309 (192.168.100.52) 6.09ms
+[I 180413 16:35:10 web:2106] 200 GET /tlwx/static/js/credit_card/online_apply_invitation2.js?v=0012abf0bf296647b3dfab6ffa9ad3fc (192.168.100.52) 4.32ms
+[I 180413 16:35:10 web:2106] 200 GET /tlwx/static/asset/jquery_qrcode/utf.js?v=9d20384efb48ff86aef8ca9056b5f052 (192.168.100.52) 2.82ms
+[I 180413 16:35:13 tool:30] FINAL OPENID: oSDTiwgyLLAgOBPWwHsBQxOXd860
+[D 180413 16:35:13 common:76] OPENID oSDTiwgyLLAgOBPWwHsBQxOXd860
+[I 180413 16:35:13 web:2106] 200 GET /tlwx/staticfile/credit_card/online_apply_invitation1.html?code=011zr4oX1p3HKS0V2OmX1r53oX1zr4oO&state=1 (192.168.100.52) 5.22ms
+[D 180413 16:37:28 online_apply:19] 1 <class 'str'>
+[I 180413 16:37:28 web:2106] 200 GET /tlwx/credit_card/online_apply/status/page/1?code=001avDU50L0ASK1nOFV509fGU50avDUX&state=1 (192.168.100.52) 6.81ms
+[I 180413 16:37:28 web:2106] 200 GET /tlwx/static/js/credit_card/online_apply_status1.js?v=6bd49c7ffa1a4acdd8edfbb72a3caa91 (192.168.100.52) 2.09ms
+[I 180413 16:37:28 web:2106] 200 GET /tlwx/static/img/vcode.png?v=d6ad072d300266fc8bd53ccc3247e0e8 (192.168.100.52) 1.93ms
+[I 180413 16:37:28 tool:30] FINAL OPENID: oSDTiwgyLLAgOBPWwHsBQxOXd860
+[I 180413 16:37:28 web:2106] 200 GET /tlwx/common/refresh_pic_vcode (192.168.100.52) 34.21ms
+[I 180413 16:37:28 web:2106] 200 GET /tlwx/media/pic_vcode/oSDTiwgyLLAgOBPWwHsBQxOXd860.jpg?v=0.8792924354683747 (192.168.100.52) 2.14ms
+[D 180413 16:38:03 online_apply:19] 1 <class 'str'>
+[I 180413 16:38:03 web:2106] 200 GET /tlwx/credit_card/online_apply/status/page/1?code=071a1CAb2LkfVP02Mpzb2fVyAb2a1CAC&state=1 (192.168.100.52) 6.12ms
+[I 180413 16:38:04 tool:30] FINAL OPENID: oSDTiwgyLLAgOBPWwHsBQxOXd860
+[I 180413 16:38:04 web:2106] 304 GET /tlwx/common/refresh_pic_vcode (192.168.100.52) 17.24ms
+[I 180413 16:38:04 web:2106] 200 GET /tlwx/media/pic_vcode/oSDTiwgyLLAgOBPWwHsBQxOXd860.jpg?v=0.08900042514583073 (192.168.100.52) 2.27ms
+[D 180413 17:01:45 online_apply:19] 2 <class 'str'>
+[I 180413 17:01:45 web:2106] 200 GET /tlwx/credit_card/online_apply/status/page/2 (192.168.100.52) 5.83ms
+[I 180413 17:01:45 web:2106] 200 GET /tlwx/static/font/iconfont.woff?t=1493801407135 (192.168.100.52) 2.33ms
+[I 180413 17:13:24 common:56] EVENT
+[I 180413 17:13:24 web:2106] 200 POST /tlwx?signature=a58d5daca7c6b3f72c526a678097b2c11332353b&timestamp=1523610852&nonce=55447288&openid=oSDTiwgyLLAgOBPWwHsBQxOXd860 (192.168.100.52) 2.89ms
+[I 180416 15:04:56 autoreload:196] /home/tonglian/py3venv/lib/python3.6/site-packages/tornado/web.py modified; restarting server
+[I 180416 15:04:57 tool:43] <class 'app.config.G'>
+[D 180416 15:04:57 selector_events:65] Using selector: EpollSelector
+[I 180416 15:05:35 autoreload:196] /home/tonglian/py3venv/lib/python3.6/site-packages/tornado/web.py modified; restarting server
+[I 180416 15:05:36 tool:43] <class 'app.config.G'>
+[D 180416 15:05:36 selector_events:65] Using selector: EpollSelector
+[I 180416 15:05:56 autoreload:196] /home/tonglian/py3venv/lib/python3.6/site-packages/tornado/web.py modified; restarting server
+[I 180416 15:05:56 tool:43] <class 'app.config.G'>
+[D 180416 15:05:56 selector_events:65] Using selector: EpollSelector
+[I 180416 15:06:13 autoreload:196] /home/tonglian/py3venv/lib/python3.6/site-packages/tornado/web.py modified; restarting server
+[I 180416 15:06:14 tool:43] <class 'app.config.G'>
+[D 180416 15:06:14 selector_events:65] Using selector: EpollSelector
+[I 180416 15:06:55 autoreload:196] /home/tonglian/py3venv/lib/python3.6/site-packages/tornado/web.py modified; restarting server
+[I 180416 15:06:55 tool:43] <class 'app.config.G'>
+[D 180416 15:06:55 selector_events:65] Using selector: EpollSelector
+[I 180416 15:07:40 autoreload:196] /home/tonglian/py3venv/lib/python3.6/site-packages/tornado/web.py modified; restarting server
+[I 180416 15:07:41 tool:43] <class 'app.config.G'>
+[D 180416 15:07:41 selector_events:65] Using selector: EpollSelector
+[I 180416 15:08:24 autoreload:196] /home/tonglian/py3venv/lib/python3.6/site-packages/tornado/web.py modified; restarting server
+[I 180416 15:08:24 tool:43] <class 'app.config.G'>
+[D 180416 15:08:24 selector_events:65] Using selector: EpollSelector
+[I 180416 15:09:21 autoreload:196] /home/tonglian/py3venv/lib/python3.6/site-packages/tornado/web.py modified; restarting server
+[I 180416 15:09:22 tool:43] <class 'app.config.G'>
+[D 180416 15:09:22 selector_events:65] Using selector: EpollSelector
+[I 180416 15:09:39 autoreload:196] /home/tonglian/py3venv/lib/python3.6/site-packages/tornado/web.py modified; restarting server
+[I 180416 15:09:39 tool:43] <class 'app.config.G'>
+[D 180416 15:09:39 selector_events:65] Using selector: EpollSelector
+[I 180416 15:09:59 autoreload:196] /home/tonglian/py3venv/lib/python3.6/site-packages/tornado/web.py modified; restarting server
+[I 180416 15:09:59 tool:43] <class 'app.config.G'>
+[D 180416 15:09:59 selector_events:65] Using selector: EpollSelector
+[I 180416 15:10:28 autoreload:196] /home/tonglian/py3venv/lib/python3.6/site-packages/tornado/web.py modified; restarting server
+[I 180416 15:10:28 tool:43] <class 'app.config.G'>
+[D 180416 15:10:28 selector_events:65] Using selector: EpollSelector
+[I 180416 15:12:45 autoreload:196] /home/tonglian/py3venv/lib/python3.6/site-packages/tornado/web.py modified; restarting server
+[I 180416 15:12:46 tool:43] <class 'app.config.G'>
+[D 180416 15:12:46 selector_events:65] Using selector: EpollSelector
+[I 180416 15:14:51 autoreload:196] /home/tonglian/py3venv/lib/python3.6/site-packages/tornado/web.py modified; restarting server
+[I 180416 15:14:52 tool:43] <class 'app.config.G'>
+[D 180416 15:14:52 selector_events:65] Using selector: EpollSelector
+[I 180416 15:15:10 autoreload:196] /home/tonglian/py3venv/lib/python3.6/site-packages/tornado/web.py modified; restarting server
+[I 180416 15:15:10 tool:43] <class 'app.config.G'>
+[D 180416 15:15:10 selector_events:65] Using selector: EpollSelector
+[I 180416 15:28:11 tool:30] FINAL OPENID: oxWOi1FZEtD1PLAnWDnGmNwwrM8g
+[D 180416 15:28:11 common:76] OPENID oxWOi1FZEtD1PLAnWDnGmNwwrM8g
+[E 180416 15:28:11 web:2798] Could not open static file '/home/tonglian/tlwx/app/static/css/demo.css'
+[I 180416 15:28:11 web:2106] 200 GET /tlwx/staticfile/index.html (192.168.100.52) 11.89ms
+[I 180416 15:28:11 web:2106] 200 GET /tlwx/static/css/yinsho.css?v=47b66ecdfa903d7e270189ca641745fe (192.168.100.52) 3.33ms
+[W 180416 15:28:11 web:2106] 404 GET /tlwx/static/css/demo.css (192.168.100.52) 3.05ms
+[I 180416 15:28:11 web:2106] 200 GET /tlwx/static/asset/fastclick.js?v=6e9d3b0da74f2a4a7042b494cdaa7c2e (192.168.100.52) 6.61ms
+[I 180416 15:28:11 web:2106] 200 GET /tlwx/static/img/icon_tabbar.png?v=baed3dd93f736941c7e1e8ec294eeb50 (192.168.100.52) 2.90ms
+[I 180416 15:28:11 web:2106] 200 GET /tlwx/static/asset/jquery.min.js?v=33cabfa15c1060aaa3d207c653afb1ee (192.168.100.52) 6.09ms
+[I 180416 15:28:56 tool:30] FINAL OPENID: oxWOi1FZEtD1PLAnWDnGmNwwrM8g
+[D 180416 15:28:56 common:76] OPENID oxWOi1FZEtD1PLAnWDnGmNwwrM8g
+[E 180416 15:28:56 web:2798] Could not open static file '/home/tonglian/tlwx/app/static/css/demo.css'
+[I 180416 15:28:56 web:2106] 304 GET /tlwx/staticfile/index.html (192.168.100.52) 6.20ms
+[W 180416 15:28:56 web:2106] 404 GET /tlwx/static/css/demo.css (192.168.100.52) 3.26ms
+[I 180416 15:28:56 web:2106] 304 GET /tlwx/static/css/yinsho.css?v=47b66ecdfa903d7e270189ca641745fe (192.168.100.52) 1.28ms
+[I 180416 15:28:56 web:2106] 304 GET /tlwx/static/img/icon_tabbar.png?v=baed3dd93f736941c7e1e8ec294eeb50 (192.168.100.52) 1.69ms
+[I 180416 15:28:56 web:2106] 304 GET /tlwx/static/asset/fastclick.js?v=6e9d3b0da74f2a4a7042b494cdaa7c2e (192.168.100.52) 1.09ms
+[I 180416 15:28:56 web:2106] 304 GET /tlwx/static/asset/jquery.min.js?v=33cabfa15c1060aaa3d207c653afb1ee (192.168.100.52) 1.27ms
+[I 180416 15:28:56 web:2106] 200 GET /tlwx/static/img/icon_tabbar.png?v=baed3dd93f736941c7e1e8ec294eeb50 (192.168.100.52) 2.00ms
+[I 180416 15:29:02 tool:30] FINAL OPENID: oxWOi1FZEtD1PLAnWDnGmNwwrM8g
+[D 180416 15:29:02 common:76] OPENID oxWOi1FZEtD1PLAnWDnGmNwwrM8g
+[E 180416 15:29:02 web:2798] Could not open static file '/home/tonglian/tlwx/app/static/css/demo.css'
+[I 180416 15:29:02 web:2106] 200 GET /tlwx/staticfile/index.html (192.168.100.52) 5.60ms
+[W 180416 15:29:02 web:2106] 404 GET /tlwx/static/css/demo.css (192.168.100.52) 2.33ms
+[I 180416 15:29:02 web:2106] 200 GET /tlwx/static/css/yinsho.css?v=47b66ecdfa903d7e270189ca641745fe (192.168.100.52) 7.00ms
+[I 180416 15:29:02 web:2106] 200 GET /tlwx/static/img/icon_tabbar.png?v=baed3dd93f736941c7e1e8ec294eeb50 (192.168.100.52) 3.17ms
+[I 180416 15:29:02 web:2106] 200 GET /tlwx/static/asset/jquery.min.js?v=33cabfa15c1060aaa3d207c653afb1ee (192.168.100.52) 6.12ms
+[I 180416 15:29:02 web:2106] 200 GET /tlwx/static/asset/fastclick.js?v=6e9d3b0da74f2a4a7042b494cdaa7c2e (192.168.100.52) 1.76ms
+[I 180416 15:29:06 tool:30] FINAL OPENID: oxWOi1FZEtD1PLAnWDnGmNwwrM8g
+[D 180416 15:29:06 common:76] OPENID oxWOi1FZEtD1PLAnWDnGmNwwrM8g
+[E 180416 15:29:06 web:2798] Could not open static file '/home/tonglian/tlwx/app/static/css/demo.css'
+[I 180416 15:29:06 web:2106] 304 GET /tlwx/staticfile/index.html (192.168.100.52) 5.41ms
+[I 180416 15:29:07 web:2106] 304 GET /tlwx/static/css/yinsho.css?v=47b66ecdfa903d7e270189ca641745fe (192.168.100.52) 1.33ms
+[W 180416 15:29:07 web:2106] 404 GET /tlwx/static/css/demo.css (192.168.100.52) 2.28ms
+[I 180416 15:29:07 web:2106] 304 GET /tlwx/static/asset/jquery.min.js?v=33cabfa15c1060aaa3d207c653afb1ee (192.168.100.52) 1.15ms
+[I 180416 15:29:07 web:2106] 304 GET /tlwx/static/asset/fastclick.js?v=6e9d3b0da74f2a4a7042b494cdaa7c2e (192.168.100.52) 1.04ms
+[I 180416 15:29:07 web:2106] 304 GET /tlwx/static/img/icon_tabbar.png?v=baed3dd93f736941c7e1e8ec294eeb50 (192.168.100.52) 0.96ms
+[I 180416 15:29:07 web:2106] 200 GET /tlwx/static/img/icon_tabbar.png?v=baed3dd93f736941c7e1e8ec294eeb50 (192.168.100.52) 1.88ms
+[I 180416 15:29:08 tool:30] FINAL OPENID: oxWOi1FZEtD1PLAnWDnGmNwwrM8g
+[D 180416 15:29:08 common:76] OPENID oxWOi1FZEtD1PLAnWDnGmNwwrM8g
+[E 180416 15:29:08 web:2798] Could not open static file '/home/tonglian/tlwx/app/static/css/demo.css'
+[I 180416 15:29:08 web:2106] 304 GET /tlwx/staticfile/index.html (192.168.100.52) 5.42ms
+[I 180416 15:29:08 web:2106] 304 GET /tlwx/static/css/yinsho.css?v=47b66ecdfa903d7e270189ca641745fe (192.168.100.52) 1.54ms
+[W 180416 15:29:08 web:2106] 404 GET /tlwx/static/css/demo.css (192.168.100.52) 2.41ms
+[I 180416 15:29:08 web:2106] 304 GET /tlwx/static/asset/jquery.min.js?v=33cabfa15c1060aaa3d207c653afb1ee (192.168.100.52) 1.24ms
+[I 180416 15:29:08 web:2106] 304 GET /tlwx/static/img/icon_tabbar.png?v=baed3dd93f736941c7e1e8ec294eeb50 (192.168.100.52) 0.96ms
+[I 180416 15:29:08 web:2106] 304 GET /tlwx/static/asset/fastclick.js?v=6e9d3b0da74f2a4a7042b494cdaa7c2e (192.168.100.52) 1.08ms
+[I 180416 15:29:08 web:2106] 200 GET /tlwx/static/img/icon_tabbar.png?v=baed3dd93f736941c7e1e8ec294eeb50 (192.168.100.52) 1.94ms
+[I 180416 15:29:38 tool:30] FINAL OPENID: oxWOi1FZEtD1PLAnWDnGmNwwrM8g
+[D 180416 15:29:38 common:76] OPENID oxWOi1FZEtD1PLAnWDnGmNwwrM8g
+[E 180416 15:29:38 web:2798] Could not open static file '/home/tonglian/tlwx/app/static/css/demo.css'
+[I 180416 15:29:38 web:2106] 304 GET /tlwx/staticfile/index.html (192.168.100.52) 7.05ms
+[I 180416 15:29:39 web:2106] 304 GET /tlwx/static/css/yinsho.css?v=47b66ecdfa903d7e270189ca641745fe (192.168.100.52) 1.78ms
+[W 180416 15:29:39 web:2106] 404 GET /tlwx/static/css/demo.css (192.168.100.52) 3.17ms
+[I 180416 15:29:39 web:2106] 304 GET /tlwx/static/asset/jquery.min.js?v=33cabfa15c1060aaa3d207c653afb1ee (192.168.100.52) 1.24ms
+[I 180416 15:29:39 web:2106] 304 GET /tlwx/static/asset/fastclick.js?v=6e9d3b0da74f2a4a7042b494cdaa7c2e (192.168.100.52) 1.02ms
+[I 180416 15:29:39 web:2106] 200 GET /tlwx/static/img/icon_tabbar.png?v=baed3dd93f736941c7e1e8ec294eeb50 (192.168.100.52) 2.04ms
+[I 180416 15:30:27 autoreload:196] /home/tonglian/py3venv/lib/python3.6/site-packages/tornado/web.py modified; restarting server
+[I 180416 15:30:27 tool:43] <class 'app.config.G'>
+[D 180416 15:30:27 selector_events:65] Using selector: EpollSelector
+[I 180416 15:30:31 tool:30] FINAL OPENID: oxWOi1FZEtD1PLAnWDnGmNwwrM8g
+[D 180416 15:30:31 common:76] OPENID oxWOi1FZEtD1PLAnWDnGmNwwrM8g
+[E 180416 15:30:31 web:2799] Could not open static file '/home/tonglian/tlwx/app/static/css/demo.css'
+[I 180416 15:30:31 web:2107] 304 GET /tlwx/staticfile/index.html (192.168.100.52) 7.45ms
+[I 180416 15:30:31 web:2107] 304 GET /tlwx/static/css/yinsho.css?v=47b66ecdfa903d7e270189ca641745fe (192.168.100.52) 2.22ms
+[I 180416 15:30:31 web:2107] 304 GET /tlwx/static/asset/jquery.min.js?v=33cabfa15c1060aaa3d207c653afb1ee (192.168.100.52) 1.23ms
+[W 180416 15:30:31 web:2107] 404 GET /tlwx/static/css/demo.css (192.168.100.52) 2.87ms
+[I 180416 15:30:31 web:2107] 304 GET /tlwx/static/asset/fastclick.js?v=6e9d3b0da74f2a4a7042b494cdaa7c2e (192.168.100.52) 1.08ms
+[I 180416 15:30:31 web:2107] 200 GET /tlwx/static/img/icon_tabbar.png?v=baed3dd93f736941c7e1e8ec294eeb50 (192.168.100.52) 1.85ms
+[I 180416 15:31:03 tool:30] FINAL OPENID: oxWOi1FZEtD1PLAnWDnGmNwwrM8g
+[D 180416 15:31:03 common:76] OPENID oxWOi1FZEtD1PLAnWDnGmNwwrM8g
+[E 180416 15:31:03 web:2799] Could not open static file '/home/tonglian/tlwx/app/static/css/demo.css'
+[I 180416 15:31:03 web:2107] 304 GET /tlwx/staticfile/index.html (192.168.100.52) 5.86ms
+[I 180416 15:31:03 web:2107] 304 GET /tlwx/static/css/yinsho.css?v=47b66ecdfa903d7e270189ca641745fe (192.168.100.52) 1.34ms
+[I 180416 15:31:03 web:2107] 304 GET /tlwx/static/asset/jquery.min.js?v=33cabfa15c1060aaa3d207c653afb1ee (192.168.100.52) 1.13ms
+[W 180416 15:31:03 web:2107] 404 GET /tlwx/static/css/demo.css (192.168.100.52) 2.29ms
+[I 180416 15:31:04 web:2107] 304 GET /tlwx/static/asset/fastclick.js?v=6e9d3b0da74f2a4a7042b494cdaa7c2e (192.168.100.52) 1.09ms
+[I 180416 15:31:04 web:2107] 200 GET /tlwx/static/img/icon_tabbar.png?v=baed3dd93f736941c7e1e8ec294eeb50 (192.168.100.52) 1.75ms
+[I 180416 15:31:12 tool:30] FINAL OPENID: oxWOi1FZEtD1PLAnWDnGmNwwrM8g
+[D 180416 15:31:12 common:76] OPENID oxWOi1FZEtD1PLAnWDnGmNwwrM8g
+[E 180416 15:31:12 web:2799] Could not open static file '/home/tonglian/tlwx/app/static/css/demo.css'
+[I 180416 15:31:12 web:2107] 200 GET /tlwx/staticfile/index.html (192.168.100.52) 5.69ms
+[W 180416 15:31:12 web:2107] 404 GET /tlwx/static/css/demo.css (192.168.100.52) 2.54ms
+[I 180416 15:31:12 web:2107] 200 GET /tlwx/static/css/yinsho.css?v=47b66ecdfa903d7e270189ca641745fe (192.168.100.52) 13.07ms
+[I 180416 15:31:12 web:2107] 200 GET /tlwx/static/img/icon_tabbar.png?v=baed3dd93f736941c7e1e8ec294eeb50 (192.168.100.52) 8.91ms
+[I 180416 15:31:12 web:2107] 200 GET /tlwx/static/asset/fastclick.js?v=6e9d3b0da74f2a4a7042b494cdaa7c2e (192.168.100.52) 3.80ms
+[I 180416 15:31:12 web:2107] 200 GET /tlwx/static/asset/jquery.min.js?v=33cabfa15c1060aaa3d207c653afb1ee (192.168.100.52) 12.17ms
+[I 180416 15:32:45 autoreload:196] /home/tonglian/py3venv/lib/python3.6/site-packages/tornado/web.py modified; restarting server
+[I 180416 15:32:46 tool:43] <class 'app.config.G'>
+[D 180416 15:32:46 selector_events:65] Using selector: EpollSelector

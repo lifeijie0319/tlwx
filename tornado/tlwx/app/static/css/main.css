@@ -1024,3 +1024,165 @@ input::-webkit-input-placeholder {
   color: #888;
   font-size: 14px;
 }
+
+/*签到
+************************************************************/
+.signin_banner{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    color: #ffc3bc;
+}
+.signin_mycoin{
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    color: #fff;
+}
+.signin_banner img{
+    width: 100%;
+}
+.signin_btn{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 46px;
+    font-size: 18px;
+    color: #ef503d;
+    background-color: #ffd454;
+    border-radius: 22px;
+}
+.signin_btn.actived{
+    background-color: #ffa499;
+}
+.signin_wrapper{
+    padding: 20px 15px;
+}
+.signin_calendar{
+    background-color: #fff;
+    border-radius: 6px;
+}
+.signin_calendar_top{
+    overflow: hidden;
+    padding: 10px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 6px 6px 0 0;
+    margin-bottom: 5px;
+    background-color: #ef503d;
+}
+.signin_date{
+    float: left;
+    color: #fff;
+    font-size: 14px;
+}
+.signin_history{
+    float: right;
+    display: inline-block;
+    padding: 4px 14px;
+    font-size: 14px;
+    line-height: 22px;
+    color: #ef503d;
+    background-color: #fff;
+    border-radius: 20px;
+}
+.signin_calendar_body{
+    padding: 10px;
+}
+.signin_calendar_body .flex_grow{
+    text-align: center;
+    margin-bottom: 5px;
+}
+.signin_calendar_days{
+    overflow: hidden;
+}
+.signin_calendar_days li{
+    float: left;
+    text-align: center;
+    box-sizing: border-box;
+    width: 14.2857143%
+}
+.qiandao-icon{
+    margin: 5px;
+    background-color: #fff;
+    color: inherit;
+}
+.qiandao .qiandao-icon{
+    border-radius: 50%;
+    background-color: #2fd06c;
+    color: #fff;
+}
+.qiandao-layer {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 888;
+    background-color: rgba(0,0,0,.7);
+    display: none;
+    height: 100%;
+    width: 100%;
+}
+.qiandao-layer-con {
+    position: relative;
+    padding: 30px;
+    margin: 0 40px;
+    background: #fff;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 9999;
+    box-sizing: border-box;
+}
+.close-qiandao-layer{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    background: url(../img/signin/close.png) center center no-repeat;
+    background-size: 50% 50%;
+}
+.qiandao-layer p{
+    line-height: 1.6;
+    color: #999;
+}
+.qiandao-layer .coins_add{
+    font-size: 18px;
+    color: #ff5a46;
+}
+.qiandao-history-inf li{
+    margin-bottom: 10px;
+}
+.qiandao-history-inf li:last-child{
+    margin-bottom: 0;
+}
+.qiandao-history-inf h4{
+    color: #2fd06c;
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+.signin_belief{
+  padding: 15px;
+  margin: 0 15px 0;
+  border-radius: 5px;
+  background: #f0503d;
+  border: 1px solid #ec4b38;
+}
+.belief_title{
+  color: #fff;
+}
+.sb_t{
+  margin-top: 15px;
+  color: #ffefee;
+  font-size: 14px;
+}
+.sb_list{
+  margin-top: 8px;
+}
+.sb_list li{
+  line-height: 1.8;
+  font-size: 12px;
+  white-space: normal;
+  text-align: justify;
+  color: #ffd4cf;
+}

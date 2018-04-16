@@ -8,21 +8,28 @@ from tornado.log import app_log
 
 from .common import BaseHandler
 from .. import config
-from ..tool import get_oauth_url, get_openid, get_redis_value
-from ..service.wx import weixin_jssdk
-from ..service.async_wx import get_tmp_media, Menu
+from ..tool import get_oauth_url, get_redis_value, G
+from ..service.async_wx import Basic, JSSDK, Material, Menu
+
+
+class RefreshTokenHandler(BaseHandler):
+    @coroutine
+    def get(self):
+        access_token, expires_in = yield Basic.get_access_token()
+        G.redis_conn.set(config.ACCESS_TOKEN_KEY, access_token)
+        ticket = yield Basic.get_jsapi_ticket(access_token)
+        G.redis_conn.set(config.JSAPI_TICKET_KEY, ticket)
+        self.write('success')
 
 
 class RefreshMenuHandler(BaseHandler):
     def get(self):
+        menu = Menu()
         access_token = get_redis_value(config.ACCESS_TOKEN_KEY)
         app_log.info('ACCESS_TOKEN: %s', access_token)
-        menu = Menu()
-        app_log.debug(config.MENU)
-        menu_json = json.dumps(self.configure(config.MENU), ensure_ascii=False)
         menu.delete(access_token)
-        menu.create(menu_json, access_token)
-        return self.write('success')
+        menu.create(access_token)
+        self.write('success')
 
     def configure(self, origin_menu):
         menu_config = copy.deepcopy(origin_menu)
@@ -37,29 +44,30 @@ class RefreshMenuHandler(BaseHandler):
 class JSSDKHandler(BaseHandler):
     def post(self):
         url = self.get_argument('url')
-        result = weixin_jssdk(url)
-        import json
+        result = JSSDK.config(url)
         app_log.debug('%s %s', type(result), result)
-        return self.finish(result)
+        self.write(result)
 
 
 class UploadImgHandler(BaseHandler):
-    #@coroutine
+    @coroutine
     def post(self):
-        openid = get_openid(self)
+        openid = yield self.get_openid()
         kargs = json.loads(self.request.body)
         app_log.info(kargs)
         for item in kargs.get('imgs'):
-            img = self.download_file(item['mediaid'], config.MEDIA_PATH + '/' + item['dirname'] + '/', openid)
+            img = yield self.download_file(item['mediaid'], config.MEDIA_PATH + '/' + item['dirname'] + '/', openid)
             if not img.get('success'):
-                return self.write({'success': False, 'msg': '图片提交失败'})
-        return self.write({'success': True})
+                self.write({'success': False, 'msg': '图片提交失败'})
+                return
+        self.write({'success': True})
 
-    #@coroutine
+    @coroutine
     def download_file(self, mediaid, path, filename):
         app_log.info('%s, %s, %s', mediaid, path, filename)
-        res = get_tmp_media(mediaid)
+        res = yield Material.get_tmp(mediaid)
         if res.get('success'):
+            app_log.debug('%s, %s', path, filename)
             with open(path + filename + '.jpg', 'wb') as f:
                 f.write(res.get('content'))
             res = {'success': True}
