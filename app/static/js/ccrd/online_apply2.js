@@ -52,7 +52,7 @@ $(function(){
             front_id: front_id,
             back_id: back_id,
         }
-        $.post(BASE_URL + '/credit_card/online_apply/upload_idcard', params, function(resp){
+        $.post(BASE_URL + '/ccrd/online_apply/upload_idcard', params, function(resp){
             if(resp.success){
                 $.toptips('图片存储成功', 'success');
                 window.location.href = '3';

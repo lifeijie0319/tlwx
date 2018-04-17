@@ -6,7 +6,6 @@ import string
 import time
 
 from datetime import datetime
-from tornado.gen import coroutine
 from tornado.httpclient import HTTPRequest
 from tornado.log import gen_log
 
@@ -17,20 +16,18 @@ from ..tool import common_callback, get_oauth_url, get_redis_value, G
 
 class Basic:
     @staticmethod
-    @coroutine
-    def get_access_token():
+    async def get_access_token():
         url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=%s&secret=%s' % (APPID, APPSECRET)
-        res = yield G.async_http_cli.fetch(url)
+        res = await G.async_http_cli.fetch(url)
         res = json.loads(res.body)
         gen_log.info('get_access_token %s', res)
         return res['access_token'], res['expires_in']
 
     @staticmethod
-    @coroutine
-    def get_jsapi_ticket(access_token):
+    async def get_jsapi_ticket(access_token):
         url = 'https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token={access_token}&type={type}'
         params = {'access_token': access_token, 'type': 'jsapi'}
-        res = yield G.async_http_cli.fetch(url.format(**params))
+        res = await G.async_http_cli.fetch(url.format(**params))
         res = json.loads(res.body)
         gen_log.info('get_jsapi_ticket %s', res)
         return res['ticket']
@@ -41,21 +38,19 @@ class WXUser:
         pass
 
     @staticmethod
-    @coroutine
-    def oauth_get_openid(code, state='1'):
+    async def oauth_get_openid(code, state='1'):
         url = 'https://api.weixin.qq.com/sns/oauth2/access_token?appid=%s&secret=%s&code=%s&grant_type=authorization_code'%(APPID, APPSECRET, code)
-        res = yield G.async_http_cli.fetch(url)
+        res = await G.async_http_cli.fetch(url)
         res = json.loads(res.body)
         gen_log.info('OAUTH_GET_OPENID RES: %s', res)
         openid = res['openid']
         return openid
 
     @staticmethod
-    @coroutine
-    def check_user_subscribed(openid):
+    async def check_user_subscribed(openid):
         access_token = get_redis_value(ACCESS_TOKEN_KEY)
         url = 'https://api.weixin.qq.com/cgi-bin/user/info?access_token=%s&openid=%s&lang=zh_CN' % (access_token, openid)
-        res = yield G.async_http_cli.fetch(url)
+        res = await G.async_http_cli.fetch(url)
         res = json.loads(res.body)
         #gen_log.debug(res)
         if res.get('errcode'):
@@ -157,12 +152,17 @@ class Menu:
             raise Exception('未知的按钮类型')
         return unit
 
-    def create(self, access_token):
+    async def create(self, access_token):
         post_url = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=%s" % access_token
         data = json.dumps(self.menu, ensure_ascii=False)
         if isinstance(data, str):
             data = data.encode('utf-8')
-        G.async_http_cli.fetch(post_url, common_callback, method='POST', body=data)
+        res = await G.async_http_cli.fetch(post_url, method='POST', body=data)
+        if res.error:
+            res.rethrow()
+        else:
+            gen_log.info('create menu: %s', res.body)
+            return json.loads(res.body)
 
     @staticmethod
     def query(access_token):
@@ -170,10 +170,15 @@ class Menu:
         G.async_http_cli.fetch(url, common_callback)
 
     @staticmethod
-    def delete(access_token):
+    async def delete(access_token):
         url = "https://api.weixin.qq.com/cgi-bin/menu/delete?access_token=%s" % access_token
         #url = 'http://192.168.10.210:8888'
-        G.async_http_cli.fetch(url, common_callback)
+        res = await G.async_http_cli.fetch(url)
+        if res.error:
+            res.rethrow()
+        else:
+            gen_log.info('delete menu: %s', res.body)
+            return json.loads(res.body)
 
 
 class JSSDK:
@@ -213,8 +218,7 @@ class JSSDK:
 
 class Material:
     @staticmethod
-    @coroutine
-    def get(type='image', offset=0, count=1):
+    async def get(type='image', offset=0, count=1):
         access_token = get_redis_value(ACCESS_TOKEN_KEY)
         url = 'https://api.weixin.qq.com/cgi-bin/material/batchget_material?access_token=%s' % access_token
         post_data = {
@@ -223,19 +227,18 @@ class Material:
             'count': 1,
         }
         post_data = json.dumps(post_data)
-        res = yield G.async_http_cli.fetch(url, method='POST', body=post_data)
+        res = await G.async_http_cli.fetch(url, method='POST', body=post_data)
         res = json.loads(res.body)
         gen_log.info('RETURN: %s', res)
         return res['item'][0]['media_id']
 
     @staticmethod
-    @coroutine
-    def get_tmp(mediaid):
+    async def get_tmp(mediaid):
         access_token = get_redis_value(ACCESS_TOKEN_KEY)
         #gen_log.debug(mediaid)
         gen_log.debug('access_token %s', access_token)
         url = 'http://file.api.weixin.qq.com/cgi-bin/media/get?access_token=%s&media_id=%s' %(access_token, mediaid)
-        res = yield G.async_http_cli.fetch(url)
+        res = await G.async_http_cli.fetch(url)
         #gen_log.debug(res.headers)
         content_type = res.headers.get('Content-Type')
         res = res.body

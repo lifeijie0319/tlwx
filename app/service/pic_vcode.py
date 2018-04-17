@@ -1,5 +1,5 @@
 #coding=utf-8
-#from .. import config
+from .. import config
 from PIL import Image,ImageDraw, ImageFont, ImageFilter
 import random
 
@@ -13,7 +13,7 @@ class VerifyCode():
 
     def createCodeImage(self,size=(120,30),img_type='jpg',
                         mode='RGB',bg_color=(255,255,255),fg_color=(0,0,255),
-                            font_size=18,font_type='/home/tonglian/tlwx/app/static/font/Arial.ttf',
+                            font_size=18,font_type=config.BASE_DIR + '/app/static/font/Arial.ttf',
                             length=4,draw_lines=True,n_line=(1,2),
                             draw_points=True,point_chance=2):
         width,height = size;

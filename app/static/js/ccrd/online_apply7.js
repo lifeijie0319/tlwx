@@ -31,7 +31,7 @@ $(function(){
         $.post(BASE_URL + '/wx/upload_img', params, function(resp){
             if(resp.success){
                 $.toptips('图片存储成功', 'success');
-                window.location.href = BASE_URL + '/staticfile/done.html?from=credit_card_online_apply';
+                window.location.href = BASE_URL + '/staticfile/done.html?from=ccrd_online_apply';
             }else{
                 $.toptips('图片存储失败');
             }

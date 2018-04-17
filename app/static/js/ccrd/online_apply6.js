@@ -1,5 +1,5 @@
 $(function(){
-    $.get(BASE_URL + '/static/doc/credit_card/3.txt', function(resp){
+    $.get(BASE_URL + '/static/doc/ccrd/3.txt', function(resp){
         $('#protocol3').html('<pre>' + resp + '</pre>');
     }); 
     $('.ys_agree_clause').on('click', function(){

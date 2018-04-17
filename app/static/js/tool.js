@@ -1,5 +1,5 @@
-var BASE_URL = 'https://hz.wx.yinsho.com/wxdemo';
-var APPID = 'wx6502e1ff74d2a5bd';
+var BASE_URL = 'https://hz.wx.yinsho.com/tlwx';
+var APPID = 'wx6290daffb81416ac';
 
 function getCookie(name) {
     var c = document.cookie.match("\\b" + name + "=([^;]*)\\b");

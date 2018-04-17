@@ -9,10 +9,10 @@ $(function(){
     });
 
     //生成协议文本
-    $.get(BASE_URL + '/static/doc/credit_card/1.txt', function(resp){
+    $.get(BASE_URL + '/static/doc/ccrd/1.txt', function(resp){
         $('#protocol1').html('<pre>' + resp + '</pre>');
     });
-    $.get(BASE_URL + '/static/doc/credit_card/2.txt', function(resp){
+    $.get(BASE_URL + '/static/doc/ccrd/2.txt', function(resp){
         $('#protocol2').html('<pre>' + resp + '</pre>');
     });
     $('.ys_agree_clause').on('click', function(){
@@ -23,7 +23,7 @@ $(function(){
     });
 
     //回显首页填入数据
-    data = JSON.parse(localStorage.getItem('credit_card_online_apply_data'));
+    data = JSON.parse(localStorage.getItem('ccrd_online_apply_data'));
     console.log(typeof data, data);
     $('input[name="name"]').val(data.name).attr('disabled', true);
     $('input[name="idno"]').val(data.idno).attr('disabled', true);

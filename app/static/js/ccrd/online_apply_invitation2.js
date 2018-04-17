@@ -5,7 +5,7 @@ $(function(){
     $('.card_title > span[name="name"]').text(invitor_name);
     invitor_employee_id = getUrlArgs('employee_id', query=query_str);
     $('.card_title > span[name="employee_id"]').text(invitor_employee_id);
-    qrcode_url = BASE_URL + '/credit_card/online_apply/page/0';
+    qrcode_url = BASE_URL + '/ccrd/online_apply/page/0';
     $('#qrcode').empty().qrcode({
         width: $('#signed_qrcode').width(),
         height: $('#signed_qrcode').width(),
