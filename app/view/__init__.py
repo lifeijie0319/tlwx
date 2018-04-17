@@ -1,2 +1,2 @@
-from .credit_card import *
+from .ccrd import *
 from .common import *
