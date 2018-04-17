@@ -44,29 +44,29 @@ class TPL:
 
 class XML:
     @staticmethod
-    def example_news(openid, serverid):
+    def ccrd_news(openid, serverid):
         ret = {
             'to_user': openid,
             'from_user': serverid,
             'count': 3,
             'items': [
                 {
-                    'title': '表单',
+                    'title': '在线申请信用卡',
                     'description': '',
-                    'picurl': config.BASE_URL + '/static/img/credit_card/mes_apply1.jpg',
-                    'url': get_oauth_url('/staticfile/form.html'),
+                    'picurl': config.BASE_URL + '/static/img/ccrd/mes_apply1.jpg',
+                    'url': get_oauth_url('/ccrd/online_apply/1'),
                 },
                 {
-                    'title': 'jssdk',
+                    'title': '在线申请信用卡',
                     'description': '',
-                    'picurl': config.BASE_URL + '/static/img/credit_card/mes_apply2.png',
-                    'url': get_oauth_url('/staticfile/jssdk/index.html'),
+                    'picurl': config.BASE_URL + '/static/img/ccrd/mes_apply2.png',
+                    'url': get_oauth_url('/ccrd/online_apply/1'),
                 },
                 {
-                    'title': '图片上传',
+                    'title': '信用卡申请进度查询',
                     'description': '',
-                    'picurl': config.BASE_URL + '/static/img/credit_card/mes_progress.png',
-                    'url': get_oauth_url('/staticfile/img_upload.html'),
+                    'picurl': config.BASE_URL + '/static/img/ccrd/mes_progress.png',
+                    'url': get_oauth_url('/ccrd/online_apply/status/1'),
                 },
             ],
         }
@@ -82,12 +82,12 @@ class Custom:
                 'title': '自定义测试图文消息',
                 'description': description,
                 'url': get_oauth_url('/staticfile/form.html'),
-                #'picurl': config.BASE_URL + '/static/img/credit_card/mes_apply1.jpg',
+                #'picurl': config.BASE_URL + '/static/img/ccrd/mes_apply1.jpg',
             },
             {
                 'title': '自定义测试图文消息',
                 'url': get_oauth_url('/staticfile/form.html'),
-                'picurl': config.BASE_URL + '/static/img/credit_card/mes_apply2.png',
+                'picurl': config.BASE_URL + '/static/img/ccrd/mes_apply2.png',
             },
         ]
         return articles

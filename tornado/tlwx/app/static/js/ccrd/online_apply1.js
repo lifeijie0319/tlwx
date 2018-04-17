@@ -8,7 +8,7 @@ $(function(){
         });
         if (!validate_res) return false;
         data = $('#form1').serializeForm();
-        localStorage.setItem('credit_card_online_apply_data', data);
+        localStorage.setItem('ccrd_online_apply_data', data);
         window.location.href = '2';
     });
 
