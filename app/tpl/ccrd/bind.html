@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>绑定信用卡</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <link href="{{ static_url('css/yinsho.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('css/main.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('font/iconfont.css') }}" rel="stylesheet"/>
+    <script src="{{ static_url('asset/jquery.min.js') }}"></script>
+    <script src="{{ static_url('asset/jquery-extend.js') }}"></script>
+    <script src="{{ static_url('asset/dialog.js') }}"></script>
+    <script src="{{ static_url('asset/validate.js') }}"></script>
+    <script src="{{ static_url('js/tool.js') }}"></script>
+    <script src="{{ static_url('js/ccrd/bind.js') }}"></script>
+</head>
+<body ontouchstart>
+	<div class="container">
+        <form id="form">
+            <div class="ys_cells_title">请绑您本人的信用卡</div>
+            <div class="ys_cells">
+                <div class="ys_cell">
+                    <div class="ys_cell_hd">
+                        <label style="width: 100px;">身份证证件号</label>
+                    </div>
+                    <div class="ys_cell_bd">
+                        <input name="idno" class="ys_input text-right" type="text" pattern="^(\d{15}$|^\d{18}$|^\d{17}(\d|X|x))$" placeholder="请输入身份证号" emptyTips="身份证号不能为空" notMatchTips="请输入正确的身份证号" required>
+                    </div>
+                </div>
+                <div class="ys_cell">
+                    <div class="ys_cell_hd">
+                        <label style="width: 100px;">信用卡卡号</label>
+                    </div>
+                    <div class="ys_cell_bd">
+                        <input name="ccrdno" class="ys_input text-right" type="number" pattern="^\d{16,19}$" placeholder="请输入卡号" emptyTips="卡号不能为空" notMatchTips="请输入正确的16-19位卡号" required>
+                    </div>
+                </div>
+                <div class="ys_cell">
+                    <div class="ys_cell_hd">
+                        <label>手机号码</label>
+                    </div>
+                    <div class="ys_cell_bd">
+                        <input class="ys_input" type="number" name="cellphone" placeholder="请输入手机号码" pattern="^[0-9]{11}$" emptyTips="手机号不能为空" notMatchTips="请输入正确的手机号" required>
+                    </div>
+                </div>
+                <div class="ys_cell ys_cell_vcode">
+                    <div class="ys_cell_hd">
+                        <label>验证码</label>
+                    </div>
+                    <div class="ys_cell_bd">
+                        <input name="vcode" class="ys_input" type="number"id = 'vcode' pattern="^\d{4}$" placeholder="请输入手机验证码
+" emptyTips="验证码不能为空" notMatchTips="请输入正确的4位验证码" required>
+                    </div>
+                    <div class="ys_cell_ft">
+                        <a id="get_vcode" class="ys_input_btn" href="javascript:;">获取验证码</a>
+                    </div>
+                </div>
+            </div>
+<!--
+            <div class="ys_agree">
+                <label for="ysagree">
+                    <input name="agree" class="ys_agree_checkbox"id= "ysagree" type="checkbox" checked=false >
+                    <span class="ys_agree_text">阅读并同意<a class="ys_agree_clause open-popup" href="javascript:;"  data-target="#show_protocol">《相关条款》</a></span>
+                </label>
+            </div>
+-->
+            <div class="ys_btns mt30">
+                <a id="submit" class="ys_btn" href="javascript:;">下一步</a>
+            </div>
+            <div class="nomore">信息已安全加密，仅用于银行验证</div>
+        </form>
+        <div id="show_protocol" class="ys_page">
+            <div class="ys_content ys_page_y">
+                <div class="ys_btns">
+                    <div class="clause_content">
+                        <h4>河北农信信用卡中心微信服务协议</h4>
+                        <p id="protocol"><pre>{ protocol }</pre></p>
+                    </div>
+                    <div class="pb60"></div>
+                </div>
+            </div>
+            <div class="ys_fixed_footer clause_btn">
+                <a class="ys_fixed_btn close-popup" href="javascript:;">继续</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

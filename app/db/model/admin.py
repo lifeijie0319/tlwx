@@ -1,4 +1,4 @@
-from sqlalchemy import Column, ForeignKey, Integer, String
+from sqlalchemy import Boolean, Column, ForeignKey, Integer, String
 from sqlalchemy.orm import backref, relationship
 
 from .base import Base
@@ -23,5 +23,6 @@ class User(Base):
 
     id = Column(Integer, primary_key=True)
     openid = Column(String(36), nullable=False, unique=True)
-    name = Column(String(36), nullable=False)
-    credits = Column(Integer, nullable=False, default=0)
+    ccrdno = Column(String(20), nullable=False, unique=True)
+    cellphone = Column(String(11), nullable=False, unique=True)
+    binded = Column(Boolean(), default=True)

@@ -22,7 +22,7 @@ class RefreshTokenHandler(BaseHandler):
 
 class RefreshMenuHandler(BaseHandler):
     async def get(self):
-        menu = Menu()
+        menu = Menu(session=self.db)
         access_token = get_redis_value(config.ACCESS_TOKEN_KEY)
         app_log.info('ACCESS_TOKEN: %s', access_token)
         res = await menu.delete(access_token)

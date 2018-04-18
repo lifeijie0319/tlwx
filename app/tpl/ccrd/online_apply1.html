@@ -29,8 +29,8 @@
                     <label>证件类型</label>
                 </div>
                 <div class="ys_cell_bd">
-                    <select class="ys_select" name="cardtype">
-                        <option selected="">身份证</option>
+                    <select class="ys_select" name="cardtype" emptyTips="证件类型不能为空" required>
+                        <option selected>身份证</option>
                     </select>
                 </div>
             </div>
@@ -55,8 +55,7 @@
                     <label>验证码</label>
                 </div>
                 <div class="ys_cell_bd">
-                    <input name="vcode" class="ys_input" type="text" type="number" placeholder="短信验证码" pattern="[0-9]{6}" emptyTips="验证码不
-能为空" notMatchTips="验证码格式不正确" required>
+                    <input name="vcode" class="ys_input" type="text" type="number" placeholder="短信验证码" pattern="[0-9]{6}" emptyTips="验证码不能为空" notMatchTips="验证码应为6位数字" required>
                 </div>
                 <div class="ys_cell_ft">
                     <a class="ys_input_btn" href="javascript:;" id="send_vcode">获取验证码</a>
