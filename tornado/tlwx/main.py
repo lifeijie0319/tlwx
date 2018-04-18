@@ -1,22 +1,30 @@
 #-*- coding:utf-8 -*-
+import logging
 import redis
 import tornado.httpserver
 import tornado.ioloop
 import tornado.options
 import tornado.web
 
-from app.config import tornado_settings
-from app.tool import init_G
-from app.url import url_patterns
+from tornado.httpclient import AsyncHTTPClient, HTTPClient
 from tornado.options import define, options
+from dicttoxml import LOG
+
+from app.config import G, REDIS, TL_HOST, TL_PORT, tornado_settings, URL_PREFIX
+from app.service.tl_api import TLClient
+from app.url import url_patterns
 
 
 define('port', default=8002, help='run on the given port', type=int)
+LOG.setLevel(logging.WARNING)
 
 
 class Application(tornado.web.Application):
     def __init__(self):
-        init_G()
+        G.redis_conn = redis.StrictRedis(host=REDIS.get('HOST'), port=REDIS.get('PORT'), db=0)
+        G.http_cli = HTTPClient()
+        G.async_http_cli = AsyncHTTPClient()
+        G.tl_cli = TLClient(TL_HOST, TL_PORT)
         handlers = url_patterns
         tornado.web.Application.__init__(self, handlers, **tornado_settings)
 

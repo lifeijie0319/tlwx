@@ -6,6 +6,8 @@ from tornado.web import StaticFileHandler
 from . import config
 from .view import common
 from .view import wx
+from .view.ccrd import activate
+from .view.ccrd import bind
 from .view.ccrd import online_apply
 
 
@@ -24,5 +26,8 @@ url_patterns = [
     (r'/tlwx/wx/upload_img', wx.UploadImgHandler),
     (r'/tlwx/ccrd/online_apply/(?P<page>\d?)', online_apply.PageHandler),
     (r'/tlwx/ccrd/online_apply/status/(?P<page>\d?)', online_apply.StatusPageHandler),
+    (r'/tlwx/ccrd/bind', bind.BindHandler),
+    (r'/tlwx/ccrd/unbind', bind.UnbindHandler),
+    (r'/tlwx/ccrd/activate', activate.ActivateHandler),
     #(r'/tlwx/ccrd/online_apply/upload_idcard', online_apply.UploadIDCardHandler),
 ]

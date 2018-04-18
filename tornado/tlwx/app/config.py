@@ -23,4 +23,6 @@ REDIS = {
     'HOST': 'localhost',
     'PORT': '6379',
 }
+TL_HOST = '127.0.0.1'
+TL_PORT = '8001'
 class G:pass

@@ -9,6 +9,7 @@ from tornado.web import MissingArgumentError, RequestHandler
 
 from .. import config
 from ..db.model import User
+from ..db.sqlal import Session
 from ..service.async_wx import CustomMessage, Material, WXUser
 from ..service.pic_vcode import VerifyCode
 from ..tool import get_oauth_url, G
@@ -38,7 +39,7 @@ def need_openid(func):
 
 #def need_reg(func):
 #    async def wrapper(self, *args, **kwargs):
-#        user = G.db.query(User).filter(User.openid==self.openid).one_or_none()
+#        user = self.db.query(User).filter(User.openid==self.openid).one_or_none()
 #        if not user:
 #            if self.request.method in ("GET", "HEAD"):
 #                url = config.REG_URL
@@ -57,12 +58,28 @@ def need_openid(func):
 
 
 class BaseHandler(RequestHandler):
-    def prepare(self, *args, **kargs):
+    def prepare(self):
         self.xsrf_token
+        self.db = Session()
+
+    def on_finish(self):
+        #app_log.debug('%' * 10 + 'FINISHED' + '%' * 10)
+        self.db.close()
 
     def check_xsrf_cookie(self):
         if not hasattr(self, 'exempt_csrf'):
             super().check_xsrf_cookie()
+
+    def check_bind(self, openid):
+        user = self.db.query(User).filter(openid==openid).one_or_none()
+        if not user:
+            return False
+        else:
+            return user.binded
+
+    @property
+    def c_openid(self):
+        return self.get_cookie('openid')
 
 
 class RootHandler(BaseHandler):
@@ -100,17 +117,36 @@ class RootHandler(BaseHandler):
         openid = root.find('FromUserName').text
         serverid = root.find('ToUserName').text
         send_text = root.find('Content').text
-        if send_text == '图片':
-            mediaid = await Material.get()
-            app_log.info('mediaid %s', mediaid)
-            ret = {'to_user': openid, 'from_user': serverid, 'media_id': mediaid}
-            app_log.debug(ret)
-            return self.render('xml/img.xml', **ret)
+        binded = self.check_bind(openid)
+        if send_text in ('jcbd'):
+            if binded:
+                url = get_oauth_url('/ccrd/unbind')
+                reply_text = '解绑信用卡，<a href="' + url + '">点击这里</a>。'
+            else:
+                reply_text = '您当前未绑定信用卡'
+            ret = {'to_user': openid, 'from_user': serverid, 'content': reply_text}
+            self.render('xml/text.xml', **ret)
+            return
+        if not binded:
+            url = get_oauth_url('/ccrd/bind')
+            reply_text = '尚未绑定信用卡，绑定<a href="' + url + '">点击这里</a>。'
+            ret = {'to_user': openid, 'from_user': serverid, 'content': reply_text}
+            self.render('xml/text.xml', **ret)
+            return
+        elif send_text in ('账单', 'ZD', 'zd'):
+            return
+        elif send_text in ('额度', 'ED', 'ed'):
+            return
+        elif send_text in ('积分', 'JF', 'jf'):
+            return
+        elif send_text in ('活动', 'HD', 'hd'):
+            return
+        elif send_text in ('优惠', 'yh', 'YH'):
+            return
         else:
             reply_text = '''1、输入“图片”返回默认图片。\n2、这是一个<a href="http://www.baidu.com/">百度链接</a>。'''
             ret = {'to_user': openid, 'from_user': serverid, 'content': reply_text}
             return self.render('xml/text.xml', **ret)
-
 
     def event_handler(self, root):
         app_log.info('EVENT')

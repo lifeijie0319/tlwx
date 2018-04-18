@@ -109,7 +109,8 @@ class CustomMessage:
 
 
 class Menu:
-    def __init__(self, menu=None):
+    def __init__(self, menu=None, session=None):
+        self.db = session
         if menu:
             self.menu = menu
         else:
@@ -117,7 +118,7 @@ class Menu:
         gen_log.info('menu: %s', self.menu)
 
     def construct(self):
-        menus = G.db.query(WXMenu).filter(WXMenu.level==1)
+        menus = self.db.query(WXMenu).filter(WXMenu.level==1)
         gen_log.info('count: %s', menus.count())
         root = {
             'button': []

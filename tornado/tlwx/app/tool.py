@@ -3,10 +3,8 @@ import datetime
 import redis
 
 from tornado.log import gen_log
-from tornado.httpclient import AsyncHTTPClient, HTTPClient
 
-from .config import APPID, BASE_URL, G, REDIS, URL_PREFIX
-from .db.sqlal import get_session
+from .config import APPID, BASE_URL, G
 
 
 def get_oauth_url(redirect_uri, state='1'):
@@ -19,14 +17,6 @@ def common_callback(res):
     if res.error:
         res.rethrow()
     gen_log.info('ASYNC HTTP RESPONSE: %s', res.body)
-
-
-def init_G():
-    G.redis_conn = redis.StrictRedis(host=REDIS.get('HOST'), port=REDIS.get('PORT'), db=0)
-    G.http_cli = HTTPClient()
-    G.async_http_cli = AsyncHTTPClient()
-    G.db = get_session()
-    #gen_log.info(G)
 
 
 def get_redis_value(key):

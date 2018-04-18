@@ -16,6 +16,9 @@ $.ajaxSetup({
         if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
             xhr.setRequestHeader("X-XSRFToken", csrftoken);
         }
+    },
+    error: function(){
+        $.toptips('服务器错误');
     }
 })
 

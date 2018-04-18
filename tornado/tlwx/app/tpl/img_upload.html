@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>人脸识别</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <link href="{{ static_url('css/yinsho.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('css/main.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('font/iconfont.css') }}" rel="stylesheet"/>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script src="{{ static_url('asset/jquery.min.js') }}"></script>
+    <script src="{{ static_url('asset/validate.js') }}"></script>
+    <script src="{{ static_url('js/tool.js') }}"></script>
+    <script src="{{ static_url('js/findface.js') }}"></script>
+</head>
+<body ontouchstart style="background-color: #fff">
+	<div class="container">
+        <div class="ys_cells">
+            <div class="ys_cell">
+                <div class="ys_cell_hd">
+                    <label>人脸识别</label> 
+                </div>
+                <div class="ys_cell_bd">
+                    <input id="face" class="ys_input" type="file" capture="camera" accept="image/*">
+                </div>
+            </div>
+        </div>
+        <div class="ys_btns mt30">
+            <a class="ys_btn" href="javascript:;" id="upload">本地上传</a>
+        </div>
+        <div class="ys_btns mt30">
+            <a class="ys_btn" href="javascript:;" id="detect">第三方识别</a>
+        </div>
+	</div>
+</body>
+</html>
