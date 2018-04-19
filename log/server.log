@@ -1,0 +1,9 @@
+[I 180417 21:26:50 web:2106] 200 GET /tlwx/ccrd/unbind (192.168.100.52) 7.77ms
+[I 180417 21:26:57 web:2106] 200 GET /tlwx/ccrd/unbind (192.168.100.52) 5.41ms
+[I 180417 21:26:58 web:2106] 200 GET /tlwx/static/css/yinsho.css?v=47b66ecdfa903d7e270189ca641745fe (192.168.100.52) 2.97ms
+[I 180417 21:26:58 web:2106] 200 GET /tlwx/static/css/main.css?v=07abab27a9ec9d947c13cd9ac58c9932 (192.168.100.52) 9.82ms
+[I 180417 21:26:58 web:2106] 200 GET /tlwx/static/font/iconfont.css?v=8d895e475d2d71afef3137fbdc52e85a (192.168.100.52) 8.31ms
+[I 180417 21:26:58 web:2106] 200 GET /tlwx/static/asset/validate.js?v=098e8e3d8d4b03e58428896205b6bc66 (192.168.100.52) 7.26ms
+[I 180417 21:26:58 web:2106] 200 GET /tlwx/static/js/tool.js?v=dec3f6ff44e35c29ef1acf78ebabb108 (192.168.100.52) 5.98ms
+[I 180417 21:26:58 web:2106] 200 GET /tlwx/static/asset/jquery.min.js?v=33cabfa15c1060aaa3d207c653afb1ee (192.168.100.52) 5.37ms
+[I 180417 21:26:58 web:2106] 200 GET /tlwx/static/js/ccrd/unbind.js?v=1ebaefd41f1388718438b78a89c46668 (192.168.100.52) 1.83ms

@@ -107,6 +107,7 @@
     $.fn.validate = function(callback) {
         return this.each(function() {
             var $requireds = $(this).find("[required]");
+            console.log($requireds);
             if (typeof callback != "function") callback = _showErrorMsg;
             for (var i = 0, len = $requireds.length; i < len; ++i) {
                 var $dom = $requireds.eq(i),

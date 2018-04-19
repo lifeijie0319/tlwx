@@ -52,3 +52,35 @@ class TLClient:
         ret = await tl_cli.read_bytes(int(ret_len))
         app_log.info('[R]: %s', ret)
         return ret.decode()
+
+    async def api_11010(self, ccrdno):
+        request = {
+            'CARD_NO': ccrdno,
+            'OPT': 0,
+        }
+        ret = await self.send_request('11010', request)
+        app_log.debug('[R] %s', ret)
+        status = ret['SERVICE']['SERVICE_HEADER']['SERV_RESPONSE']['STATUS']
+        if status == 'F':
+            return {'success': False, 'msg': '客户信息不存在，请确定卡是否已激活'}
+        response = ret['SERVICE']['SERVICE_BODY']['RESPONSE']
+        if not response['MOBILE_NO']:
+            return {'success': False, 'msg': '获取不到手机号'}
+        #app_log.debug(response)
+        response['success'] = True
+        return response
+
+    async def api_14040(self, ccrdno, expire, cvv2):
+        request = {
+            'CARD_NO': ccrdno,
+            'EXPIRE_DATE': expire,
+            'CVV2': cvv2, 
+        }
+        ret = await self.send_request('14040', request)
+        app_log.debug('[R] %s', ret)
+        serv_response = ret['SERVICE']['SERVICE_HEADER']['SERV_RESPONSE']
+        if serv_response['STATUS'] == 'F':
+            return {'success': False, 'msg': serv_response['DESC']}
+        response = ret['SERVICE']['SERVICE_BODY']['RESPONSE']
+        response['success'] = True
+        return response

@@ -8,3 +8,10 @@ class CCRDOnlineApply(Base):
     idno = Column(String(18), primary_key=True)
     name = Column(String(36), nullable=False)
     cel = Column(String(11), nullable=False)
+
+
+class CredentialType(Base):
+    __tablename__ = 'CREDENTIAL_TYPE'
+
+    code = Column(String(1), nullable=False, primary_key=True)
+    name = Column(String(36), nullable=False)
