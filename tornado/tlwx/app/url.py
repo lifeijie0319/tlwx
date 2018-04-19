@@ -5,6 +5,7 @@ from tornado.web import StaticFileHandler
 
 from . import config
 from .view import common
+from .view import root
 from .view import wx
 from .view.ccrd import activate
 from .view.ccrd import bind
@@ -12,7 +13,7 @@ from .view.ccrd import online_apply
 
 
 url_patterns = [
-    (r'/tlwx', common.RootHandler),
+    (r'/tlwx', root.RootHandler),
     (r'/tlwx/([^/]+\.[^/]+)', StaticFileHandler, {'path': config.MEDIA_PATH}),
     (r'/tlwx/media/(.*)', StaticFileHandler, {'path': config.MEDIA_PATH}),
     (r'/tlwx/staticfile/(.*)', common.StaticTPLHandler),
@@ -20,6 +21,7 @@ url_patterns = [
     (r'/tlwx/common/send_vcode', common.SendVcodeHandler),
     (r'/tlwx/common/refresh_pic_vcode', common.RefreshPicVcodeHandler),
     (r'/tlwx/common/upload_img', common.UploadImgHandler),
+    (r'/tlwx/common/info_check', common.InfoCheckHandler),
     (r'/tlwx/wx/jssdk', wx.JSSDKHandler),
     (r'/tlwx/wx/refresh_token', wx.RefreshTokenHandler),
     (r'/tlwx/wx/refresh_menu', wx.RefreshMenuHandler),

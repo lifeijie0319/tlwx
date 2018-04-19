@@ -120,17 +120,20 @@ function wxUploadImg(img_dom, source_type=['album']){
 
     $.fn.sendVcode = function(cellphone) {
         send_btn = $(this);
-        //alert('enter send_vcode');
-        //alert('disabled:', send_btn.prop('disabled'));
-        //console.log(send_btn, send_btn.prop('disabled'));
         if(send_btn.prop('disabled')) return false;
-        validate_res = false;
-        cellphone.validate(function(error){
-            if(!error) validate_res = true;
-        });
-        if (!validate_res) return false;
+        if(typeof cellphone == 'string'){
+            cellphone_val = cellphone;
+        }else{
+            console.log(cellphone, typeof cellphone == 'string');
+            validate_res = false;
+            cellphone.parents('.ys_cell').validate(function(error){
+                if(!error) validate_res = true;
+            });
+            if (!validate_res) return false;
+            cellphone_val = cellphone.val();
+        }
         data = {
-            cellphone: cellphone.val(),
+            cellphone: cellphone_val,
             now: new Date().getTime(),
         }
         $.post(BASE_URL + '/common/send_vcode', data, function (resp) {
@@ -153,5 +156,42 @@ function wxUploadImg(img_dom, source_type=['album']){
                 times = 60;
             }
         }, 1000);
+    }
+    $.fn.infoCheck = function(){
+        vcode_btn = $(this);
+        if(vcode_btn.prop('disabled')) return false;
+        validate_res = false;
+        $('form').validate(function(error){
+            if (error){
+                dom_name = error.$dom.attr('name');
+                console.log(dom_name);
+                if(dom_name != 'idno' && dom_name != 'ccrdno'){
+                    return true;
+                }
+                return false;
+            }else{
+                validate_res = true;
+            }
+        });
+        if (!validate_res) return;
+
+        data = JSON.stringify({
+            'idno': $('input[name="idno"]').val(),
+            'ccrdno': $('input[name="ccrdno"]').val(),
+        });
+        $.post(BASE_URL + '/common/info_check', data, function(resp){
+            console.log(resp);
+            if(resp.success){
+                tips = '即将向尾号为' + resp.cellphone.slice(-4) + '的手机发送短信验证码，请确认';
+                title = '短信验证码发送确认';
+                $.confirm(tips, title, function(){
+                    vcode_btn.sendVcode(resp.cellphone);
+                },function(){
+                    console.log('cancel');
+                });
+            }else{
+                $.toptips(resp.msg);
+            }
+        });
     }
 })(jQuery);

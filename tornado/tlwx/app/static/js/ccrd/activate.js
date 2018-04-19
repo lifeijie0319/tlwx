@@ -1,9 +1,9 @@
 $(function(){
-    $('form').form();
 
+    $("form").form();
     $('.ys_agree_clause').on('click', function(){
         $('.ys_fixed_footer').addClass('clause_btn_visible');
-    });
+    }); 
     $('.ys_fixed_footer').on('click', function(){
         $(this).removeClass('clause_btn_visible');
     });
@@ -20,14 +20,9 @@ $(function(){
         if (!validate_res) return false;
 
         data = $('form').serializeForm();
-        data = JSON.parse(data);
-        data['action'] = 'submit';
-        delete data.agree;
-        console.log(data);
-        data = JSON.stringify(data);
-        $.post(BASE_URL + '/ccrd/bind', data, function(resp){
+        $.post(BASE_URL + '/ccrd/activate', data, function(resp){
             if(resp.success){
-                window.location.href = BASE_URL + '/staticfile/done.html?from=bind';
+                window.location.href = BASE_URL + '/staticfile/done.html?from=activate';
             }else{
                 $.toptips(resp.msg);
             }

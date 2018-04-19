@@ -13,7 +13,7 @@ $(function(){
     });
 
     $('#send_vcode').on('click', function () {
-         sendVcode($(this), $('input[name="cel"]'));
+         $(this).sendVcode($('input[name="cel"]'));
     });
 
     /*$('.ys_vcode_img').on('click', function(){
