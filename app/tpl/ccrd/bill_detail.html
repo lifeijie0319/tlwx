@@ -1,0 +1,21 @@
+{% for item in items %}
+    <div class="bill_money_panel">
+        <h1 class="bill_money">{{ item['curr_symbol'] }}{{ item['txn_amt'] }}</h1>
+    </div>
+    <div class="pay_preview history_detail">
+        <div class="pay_ph_bd">
+            <div class="pay_ph_item">
+                <label>交易日期</label>
+                <span>{{ item['txn_date'] }}</span>
+            </div>
+            <div class="pay_ph_item">
+                <label>信用卡尾号</label>
+                <span>尾号{{ item['ccrdno_tail'] }}</span>
+            </div>
+            <div class="pay_ph_item">
+                <label>交易描述</label>
+                <span>{{ item['txn_short_desc'] }}</span>
+            </div>
+        </div>
+    </div>
+{% end %}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>未出账单</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <link href="{{ static_url('css/yinsho.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('css/main.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('font/iconfont.css') }}" rel="stylesheet"/>
+    <script src="{{ static_url('asset/jquery.min.js') }}"></script>
+    <script src="{{ static_url('asset/validate.js') }}"></script>
+    <script src="{{ static_url('js/tool.js') }}"></script>
+    <script src="{{ static_url('js/ccrd/bill_due.js') }}"></script>
+</head>
+<body ontouchstart>
+	<div class="container">
+         <div class="ys_cell" id="test_btn">
+            <div class="ys_cell_hd">
+                <img src="{{ static_url('img/ccrd/bill.png') }}">
+            </div>
+            <div class="ys_cell_bd">未出账单</div>
+         </div>
+        <div id="content"></div>
+        <div id="loading" class="ys_loadmore"></div>
+    </div>
+</body>
+</html>

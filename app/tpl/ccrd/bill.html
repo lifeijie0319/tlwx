@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>我的账单</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <link href="{{ static_url('css/yinsho.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('css/main.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('font/iconfont.css') }}" rel="stylesheet"/>
+    <script src="{{ static_url('asset/jquery.min.js') }}"></script>
+    <script src="{{ static_url('asset/validate.js') }}"></script>
+    <script src="{{ static_url('asset/tab.js') }}"></script>
+    <script src="{{ static_url('js/tool.js') }}"></script>
+    <script src="{{ static_url('js/ccrd/bill.js') }}"></script>
+</head>
+<body ontouchstart>
+	<div class="container">
+        <div class="ys_navbar">
+            <input hidden id = "curr_tab" value=1>
+            <a class="ys_navbar_item nav_active" id ="tab1_btn" href="#tab1">账单信息</a>
+            <a class="ys_navbar_item" id="tab2_btn" href="#tab2">账单详情</a>
+        </div>
+        <div class="ys_tab logo_tab">
+            <div id="tab1" class="ys_tab_item tab_active">
+                <div class="pay_preview history_detail">
+                {% if not success %}
+                    <div class = "pay_ph_bd">
+                        <div class = "pay_ph_item">
+                        <label>无账单记录</label>
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="pay_ph_bd">
+                        <div class="pay_ph_item">
+                            <label>账单日</label>
+                            <span>{{ billing_date }}</span>
+                        </div>
+                        <div class="pay_ph_item">
+                            <label>最后还款日</label>
+                            <span>{{ pmt_due_date }}</span>
+                        </div>
+                    </div>
+                    <div class="pay_ph_bd">
+                        <div class="pay_ph_item">
+                            <label>币种</label>
+                            <span>{{ curr_name }}</span>
+                        </div>
+                        <div class="pay_ph_item">
+                             <label>账单总额</label>
+                             <span>{{ curr_symbol }} {{ qual_grace_bal }}</span>
+                        </div>
+                        <div class="pay_ph_item">
+                            <label>最低还款金额</label>
+                            <span>{{ curr_symbol }} {{ tot_due_amt }}</span>
+                        </div>
+                        <div class="pay_ph_item">
+                            <label>本期剩余还款额</label>
+                            <span>{{ curr_symbol }} {{ ctd_pmt_not_amt }}</span>
+                        </div>
+                    </div>
+                {% end %}
+                </div>
+            </div>
+            <div id="tab2" class="ys_tab_item ">
+                <div id="bill_detail"></div>
+                <div id="loading" class="ys_loadmore"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

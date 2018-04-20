@@ -7,7 +7,7 @@ from tornado.log import app_log
 from tornado.web import MissingArgumentError, RequestHandler
 
 from .. import config
-from ..db.model import User
+from ..db.api import OP_User
 from ..db.sqlal import Session
 from ..service.async_wx import WXUser
 from ..service.pic_vcode import VerifyCode
@@ -36,24 +36,22 @@ def need_openid(func):
     return wrapper
 
 
-#def need_reg(func):
-#    async def wrapper(self, *args, **kwargs):
-#        user = self.db.query(User).filter(User.openid==self.openid).one_or_none()
-#        if not user:
-#            if self.request.method in ("GET", "HEAD"):
-#                url = config.REG_URL
-#                if "?" not in url:
-#                    if urlparse.urlsplit(url).scheme:
-#                        next_url = self.request.full_url()
-#                    else:
-#                        next_url = self.request.uri
-#                    url += "?" + urlparse.urlencode(dict(next=next_url))
-#                self.redirect(url)
-#                return
-#            raise HTTPError(403)
-#        self.user = user
-#        await func(self, *args, **kwargs)
-#    return wrapper
+def need_bind(func):
+    async def wrapper(self, *args, **kwargs):
+        if not OP_User(self.db).check_bind(self.openid):
+            if self.request.method in ("GET", "HEAD"):
+                url = config.BASE_URL + '/ccrd/bind'
+                #if "?" not in url:
+                #    if urlparse.urlsplit(url).scheme:
+                #        next_url = self.request.full_url()
+                #    else:
+                #        next_url = self.request.uri
+                #    url += "?" + urlparse.urlencode(dict(next=next_url))
+                self.redirect(url)
+                return
+            raise HTTPError(403)
+        await func(self, *args, **kwargs)
+    return wrapper
 
 
 class BaseHandler(RequestHandler):

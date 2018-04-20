@@ -39,6 +39,17 @@ class TLClient:
         ret = await self.send(data)
         return xmltodict.parse(ret)
 
+    async def send2tl(self, service_id, data):
+        data = self.format_xml(service_id, data)
+        ret = await self.send(data)
+        ret = xmltodict.parse(ret)
+        serv_response = ret['SERVICE']['SERVICE_HEADER']['SERV_RESPONSE']
+        if serv_response['STATUS'] == 'F':
+            return {'success': False, 'msg': serv_response['DESC']}
+        response = ret['SERVICE']['SERVICE_BODY']['RESPONSE']
+        response['success'] = True
+        return response
+
     def add_prefix(self, data):
         return str(len(data)).zfill(self.header_length).encode('utf-8') + data
 
@@ -77,6 +88,21 @@ class TLClient:
             'CVV2': cvv2, 
         }
         ret = await self.send_request('14040', request)
+        app_log.debug('[R] %s', ret)
+        serv_response = ret['SERVICE']['SERVICE_HEADER']['SERV_RESPONSE']
+        if serv_response['STATUS'] == 'F':
+            return {'success': False, 'msg': serv_response['DESC']}
+        response = ret['SERVICE']['SERVICE_BODY']['RESPONSE']
+        response['success'] = True
+        return response
+
+    async def api_12010(self, ccrdno, currency='156'):
+        request = {
+            'CARD_NO': ccrdno,
+            'CURR_CD': currency,
+            'STMT_DATE': '000000',
+        }
+        ret = await self.send_request('12010', request)
         app_log.debug('[R] %s', ret)
         serv_response = ret['SERVICE']['SERVICE_HEADER']['SERV_RESPONSE']
         if serv_response['STATUS'] == 'F':

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SERVICE xmlns="http://www.allinfinance.com/dataspec/">
+    <SERVICE_HEADER>
+        <SERVICE_SN>19823471237417412748</SERVICE_SN>
+        <SERVICE_ID>15020</SERVICE_ID>
+        <REQUESTER_ID>0004</REQUESTER_ID>
+        <CHANNEL_ID>070711</CHANNEL_ID>
+        <SERVICE_DATE>20050621</SERVICE_DATE>
+        <SERVICE_TIME>123000</SERVICE_TIME>
+        <VERSION_ID>02</VERSION_ID>
+        <SERV_RESPONSE>
+            <STATUS>S</STATUS>
+            <CODE></CODE>
+            <DESC></DESC>
+        </SERV_RESPONSE>
+    </SERVICE_HEADER>
+    <SERVICE_BODY>
+        <EXT_ATTRIBUTES>
+        </EXT_ATTRIBUTES>
+        <RESPONSE>
+            <ACCT_LIMIT>100</ACCT_LIMIT>
+            <ACCT_OTB>100.00</ACCT_OTB>
+            <ACCT_CASH_OTB>199.00</ACCT_CASH_OTB>
+        </RESPONSE>
+    </SERVICE_BODY>
+</SERVICE>

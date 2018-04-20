@@ -1,4 +1,6 @@
 $(function(){
+    next = getUrlArgs('next');
+    console.log(next);
     $('form').form();
 
     $('.ys_agree_clause').on('click', function(){
