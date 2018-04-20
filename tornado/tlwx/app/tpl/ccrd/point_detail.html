@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>积分明细</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <link href="{{ static_url('css/yinsho.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('css/main.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('font/iconfont.css') }}" rel="stylesheet"/>
+    <script src="{{ static_url('asset/jquery.min.js') }}"></script>
+    <script src="{{ static_url('asset/validate.js') }}"></script>
+    <script src="{{ static_url('js/tool.js') }}"></script>
+    <script src="{{ static_url('js/ccrd/point_detail.js') }}"></script>
+</head>
+<body ontouchstart>
+	<div class="container">
+        <div class="ys_cells">
+            <form>
+                <a class="ys_cell">
+                    <div class="ys_cell_hd"><label style="width: 120px;">起始日期</label></div>
+                    <div class="ys_cell_bd">
+                        <input name="start_date" class="ys_input" type="date"/>
+                    </div>
+                </a>
+                <a class="ys_cell">
+                    <div class="ys_cell_hd"><label style="width: 120px;">截止日期</label></div>
+                    <div class="ys_cell_bd">
+                        <input name="detailEndMonth" class="ys_input" type="date"/>
+                    </div>
+                </a>
+            </form>
+            <div class="ys_btns">
+                <a class="ys_btn" href="javascript:;" id="submit">查询</a>
+            </div>
+        </div>
+        <div id="detail_body">
+            <div class="ys_panel bill_history">
+                <div class="ys_cell">
+                    <div class="ys_cell_hd">
+                        <img src="{{ static_url('img/ccrd/point.png') }}">
+                    </div>
+                    <div class="ys_cell_bd">历史明细</div>
+                </div>
+                <div id="content"></div>
+            </div>
+            <div id="loading" class="ys_loadmore">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

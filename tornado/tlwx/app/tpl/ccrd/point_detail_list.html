@@ -1,0 +1,11 @@
+{% for item in items %}
+<div class="ys_item_media">
+    <div class="ys_item_bd">
+        <h3>{{ item['acq_name_addr'] }} &nbsp&nbsp {{ item['sett_txn_type'] }} {{ item['txn_amt'] }}元</h3>
+    </div>
+    <div class="ys_item_ft">
+        <span>{{ item['point'] }}</span>
+        <p class="ys_item_p">{{ item['txn_date'] }}</p>
+    </div>
+</div>
+{% end %}

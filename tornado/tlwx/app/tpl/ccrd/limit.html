@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>额度查询</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <link href="{{ static_url('css/yinsho.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('css/main.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('font/iconfont.css') }}" rel="stylesheet"/>
+    <script src="{{ static_url('asset/jquery.min.js') }}"></script>
+    <script src="{{ static_url('asset/validate.js') }}"></script>
+    <script src="{{ static_url('js/tool.js') }}"></script>
+    <script src="{{ static_url('js/ccrd/bill.js') }}"></script>
+</head>
+<body ontouchstart>
+	<div class="container">
+        <div class="ys_cell" id="test_btn">
+            <div class="ys_cell_bd">额度查询</div>
+        </div>
+        <div class="ys_tab logo_tab">
+            <div id="tab1" class="ys_tab_item tab_active">
+                <div class="pay_preview history_detail">
+                {% if not success %}
+                    <div class = "pay_ph_bd">
+                        <div class = "pay_ph_item">
+                            <label>无记录</label>
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="pay_ph_bd">
+                        <div class="pay_ph_item">
+                            <label>账户可用额度</label>
+                            <span>{{ acct_otb }}</span>
+                        </div>
+                        <div class="pay_ph_item">
+                            <label>取现可用额度</label>
+                            <span>{{ acct_cash_otb }}</span>
+                        </div>
+                        <div class="pay_ph_item">
+                            <label>信用额度</label>
+                            <span>{{ acct_limit }}</span>
+                        </div>
+                    </div>
+                {% end %}
+                </div>
+            </div>
+            <div id="tab2" class="ys_tab_item ">
+                <div id="bill_detail"></div>
+                <div id="loading" class="ys_loadmore"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

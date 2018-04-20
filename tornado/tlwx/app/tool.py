@@ -27,3 +27,15 @@ def gen_req_token():
     token_id = G.redis_conn.incr('REQ_TOKEN_ID')
     token = datetime.datetime.now().strftime('%Y%m%d%H%m%s') + str(token_id % 1000).zfill(3)
     return token
+
+
+def format_date(s):
+    t = s[:4] + '-' + s[4:6] + '-' + s[6:]
+    return t
+
+
+class Currency:
+    def __init__(self, code='156'):
+        self.code = code
+        self.symbol = '$' if code == '840' else '￥'
+        self.name = '美元' if code == '840' else '人民币'
