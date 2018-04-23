@@ -22,6 +22,12 @@ $(function(){
         case 'ccrd_online_apply':
             $('#content').html('您的信用卡申请已提交，请等待银行审核');
             break;
+        case 'installment_bill':
+            $('#content').html('您的账单分期申请已成功');
+            break;
+        case 'installment_consumption':
+            $('#content').html('消费分期申请成功');
+            break;
         default:
     }
 });

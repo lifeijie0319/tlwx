@@ -14,15 +14,15 @@
 </head>
 <body ontouchstart>
 	<div class="container">
-        <form id="form">
+        <form>
             <div class="ys_cells">
                 <div class="ys_cell ys_cell_select">
                     <div class="ys_cell_hd">
                         <label style="width: 130px">币种</label>
                     </div>
                     <div class="ys_cell_bd">
-                        <select class="ys_select" id ="money_type_select" name="money_type_select">
-                            <option selected="" value="1">人民币</option>
+                        <select class="ys_select" name="currency">
+                            <option selected value="1">人民币</option>
                             <option value="2">美元</option>
                             <option value="3">欧元</option>
                             <option value="4">日元</option>
@@ -33,23 +33,25 @@
                     <div class="ys_cell_hd">
                         <label style="width: 130px">账单金额</label>
                     </div>
-                    <div class="ys_cell_bd" id="bill_money" >
-                             ￥1200
-                   </div>
+                    <div class="ys_cell_bd">
+                        <input class="ys_input" name="bill_amount" value=1200>
+                    </div>
                 </div>
+                <!--
                 <div class="ys_cell">
                     <div class="ys_cell_hd">
                         <label style="width: 130px">最高可分期金额</label>
                     </div>
-                    <div class="ys_cell_bd" id ="bill_max_money">
+                    <div class="ys_cell_bd" name="max_staging_amount">
                     </div>
                 </div>
+                -->
                 <div class="ys_cell">
                     <div class="ys_cell_hd">
                         <label style="width: 130px">分期金额</label>
                     </div>
                     <div class="ys_cell_bd">
-                        <input class="ys_input" id="staging_money" name="staging_money" emptyTips="申请金额不能为空" required></input>
+                        <input class="ys_input" name="total_amount" emptyTips="申请金额不能为空" required>
                     </div>
                 </div>
                 <div class="ys_cell ys_cell_select">
@@ -57,11 +59,10 @@
                         <label style="width: 130px">分期期数</label>
                     </div>
                     <div class="ys_cell_bd">
-                        <select class="ys_select" name="num_select" id="num_select">
+                        <select class="ys_select" name="num">
+                            <option value="">0</option>
                             {% for item in items %}
-                            <option value="{{ item['loan_init_term'] }}" name="{{ item['loan_amt'] }}">
-                                {{ item['loan_init_term'] }}
-                            </option>
+                            <option value="{{ item['loan_amt'] }}">{{ item['loan_init_term'] }}</option>
                             {% end %}
                         </select>
                     </div>
@@ -70,16 +71,16 @@
                     <div class="ys_cell_hd">
                         <label style="width: 130px">每期还款金额</label>
                     </div>
-                    <div class="ys_cell_bd" id="money_every_set">
-
+                    <div class="ys_cell_bd">
+                        <input class="ys_input" name="staging_pay" readonly>
                     </div>
                 </div>
                 <div class="ys_cell">
                     <div class="ys_cell_hd">
                         <label style="width: 130px">总手续费</label>
                     </div>
-                    <div class="ys_cell_bd" id="money_sum_sx">
-                        
+                    <div class="ys_cell_bd">
+                        <input class="ys_input" name="total_fee" readonly>
                     </div>
                 </div>
             </div>
@@ -89,8 +90,13 @@
                     <span class="ys_agree_text">阅读并同意<a class="ys_agree_clause" href="javascript:;">《相关条款》</a></span>
                 </label>
             </div>
-            <div class="ys_btns mt30">
-                <a class="ys_btn" id="credit_card_stage" name="credit_card_stage" href="javascript:;">确定</a>
+            <div class="clause">
+                <h4>温馨提醒：</h4>
+                <p>1、提交申请后无法修改期数和金额。<br>
+                    2、若提前还清分期余额需还清本金和手续费并可能产生额外的费用。</p>
+            </div>
+            <div class="ys_btns">
+                <a class="ys_btn" id="submit" href="javascript:;">确定</a>
             </div>
         </form>
     </div>

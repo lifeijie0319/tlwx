@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>消费分期</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <link href="{{ static_url('css/yinsho.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('css/main.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('font/iconfont.css') }}" rel="stylesheet"/>
+    <script src="{{ static_url('asset/jquery.min.js') }}"></script>
+    <script src="{{ static_url('asset/validate.js') }}"></script>
+    <script src="{{ static_url('js/tool.js') }}"></script>
+    <script src="{{ static_url('js/ccrd/installment_consumption_form.js') }}"></script>
+</head>
+<body ontouchstart>
+	<div class="container">
+        <form id="form">
+            <div class="ys_cells">
+                <div class="ys_cell">
+                    <div class="ys_cell_hd">
+                        <label style="width: 130px">交易金额</label>
+                    </div>
+                    <div class="ys_cell_bd">
+                        <input name="amount" class="ys_input" type="text" value="{{ amount }}" readonly>
+                    </div>
+                </div>
+                <div class="ys_cell ys_cell_select">
+                    <div class="ys_cell_hd">
+                        <label style="width: 130px">分期期数</label>
+                    </div>
+                    <div class="ys_cell_bd">
+                        <select class="ys_select" name="num">
+                            <option value=3>3</option>
+                            <option value=6>6</option>
+                            <option value=9>9</option>
+                            <option value=12>12</option>
+                            <option value=24>24</option>
+                            <option value=36>36</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="ys_cell">
+                    <div class="ys_cell_hd">
+                        <label style="width: 130px">每期还款金额</label>
+                    </div>
+                    <div class="ys_cell_bd">
+                        <input name="period_pay" class="ys_input" type="text" readonly>
+                    </div>
+                </div>
+                <div class="ys_cell">
+                    <div class="ys_cell_hd">
+                        <label style="width: 130px">总手续费</label>
+                    </div>
+                    <div class="ys_cell_bd" id="LOAN_INIT_FEE1">
+                        <input name="total_fee" class="ys_input" type="text" readonly>
+                    </div>
+                </div>
+            </div>
+            <div class="ys_agree">
+                <label for="ysagree">
+                    <input class="ys_agree_checkbox" type="checkbox" id="ysagree" checked = false> 
+                    <span class="ys_agree_text">阅读并同意<a class="ys_agree_clause" href="#javascript:;">《相关条款》</a></span>
+                </label>
+            </div>
+            <div class="ys_btns mt30">
+                <a class="ys_btn" id="submit" href="javascript:;">确定</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
