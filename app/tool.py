@@ -34,6 +34,14 @@ def format_date(s):
     return t
 
 
+def xml_format(s, type):
+    if type == 'date':
+        t = s[:4] + '-' + s[4:6] + '-' + s[6:]
+    elif type == 'time':
+        t = s[:2] + ':' + s[2:4] + ':' + s[6:]
+    return t
+
+
 class Currency:
     def __init__(self, code='156'):
         self.code = code

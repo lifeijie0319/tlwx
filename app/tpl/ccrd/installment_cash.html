@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>现金分期</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <link href="{{ static_url('css/yinsho.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('css/main.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('font/iconfont.css') }}" rel="stylesheet"/>
+    <script src="{{ static_url('asset/jquery.min.js') }}"></script>
+    <script src="{{ static_url('asset/validate.js') }}"></script>
+    <script src="{{ static_url('js/tool.js') }}"></script>
+    <script src="{{ static_url('js/ccrd/installment_cash.js') }}"></script>
+</head>
+<body ontouchstart>
+	<div class="container">
+        <form id="form" class="container">
+            <div class="ys_cells">
+                <div class="ys_cell">
+                    <div class="ys_cell_hd">
+                        <label style="width: 130px">收款账号</label>
+                    </div>
+                    <div class="ys_cell_bd">6022*********3566</div>
+                </div>
+                <div class="ys_cell ys_cell_select">
+                    <div class="ys_cell_hd">
+                        <label style="width: 130px">收款银行</label>
+                    </div>
+                    <div class="ys_cell_bd">
+                        <select class="ys_select" name="select">
+                            <option selected="" value="1">工商银行</option>
+                            <option value="2">中国银行</option>
+                            <option value="3">浦发银行</option>
+                            <option value="4">交通银行</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="ys_cell ys_cell_select">
+                    <div class="ys_cell_hd">
+                        <label style="width: 130px">资金用途</label>
+                    </div>
+                    <div class="ys_cell_bd">
+                        <select class="ys_select" name="select">
+                            <option selected="" value="1">添置家用</option>
+                            <option value="2">旅游远足</option>
+                            <option value="3">学习进修</option>
+                            <option value="4">婚庆喜宴</option>
+                            <option value="5">装潢装修</option>
+                            <option value="6">购车服务</option>
+                            <option value="7">其它消费</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="ys_cell">
+                    <div class="ys_cell_hd">
+                        <label style="width: 130px">申请金额（元）</label>
+                    </div>
+                    <div class="ys_cell_bd">
+                        <input id="staging_money" class="ys_input" type="number" placeholder="请输入申请金额" emptyTips="申请金额不能为空" required>
+                    </div>
+                </div>
+                <div class="ys_cell ys_cell_select">
+                    <div class="ys_cell_hd">
+                        <label style="width: 130px">分期期数</label>
+                    </div>
+                    <div class="ys_cell_bd">
+                        <select class="ys_select" name="num_select" id="num_select">
+                            <option selected="" value="3" name="200">3</option>
+                            <option value="6" name="200">6</option>
+                            <option value="9" name="200">9</option>
+                            <option value="12" name="200">12</option>
+                            <option value="24" name="200">24</option>
+                            <option value="36" name="200">36</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="ys_cell">
+                    <div class="ys_cell_hd">
+                        <label style="width: 130px">每期还款金额</label>
+                    </div>
+                    <div id="money_every_set" class="ys_cell_bd">
+                        0
+                    </div>
+                </div>
+                <div class="ys_cell">
+                    <div class="ys_cell_hd">
+                        <label style="width: 130px">总手续费</label>
+                    </div>
+                    <div id="money_sum_sx" class="ys_cell_bd">
+                        0
+                    </div>
+                </div>
+            </div>
+            <div class="ys_agree">
+                <label for="ysagree">
+                    <input class="ys_agree_checkbox" type="checkbox" id="ysagree" checked="checked">
+                    <span class="ys_agree_text">阅读并同意<a class="ys_agree_clause" href="javascript:;">《相关条款》</a></span>
+                </label>
+            </div>
+            <div class="ys_btns mt30">
+                <a  id="credit_card_stage" class="ys_btn" href="javascript:;">下一步</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

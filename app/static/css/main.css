@@ -1186,3 +1186,26 @@ input::-webkit-input-placeholder {
   text-align: justify;
   color: #ffd4cf;
 }
+
+/*注意事项
+************************************************************/
+
+.clause{
+  padding: 15px;
+}
+.clause h4{
+  font-size: 15px;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+.clause p{
+  font-size: 13px;
+  color: #6b6b6b;
+  line-height: 1.6;
+}
+.clause-light h4{
+  color: #fff;
+}
+.clause-light p{
+  color: rgba(255,255,255,.8);
+}
