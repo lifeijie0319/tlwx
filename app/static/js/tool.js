@@ -1,5 +1,12 @@
-var BASE_URL = 'https://hz.wx.yinsho.com/tlwx';
+//var BASE_URL = 'https://hz.wx.yinsho.com/tlwx';
+var BASE_URL = 'http://10.252.22.131:8002/tlwx';
 var APPID = 'wx6290daffb81416ac';
+var PUB_KEY = '-----BEGIN PUBLIC KEY-----\
+MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDC3K9zrxu/uT/TfEzmCv0D0RA5\
+/pK53JR4VJcHbabvBzSKAR9pn1bpjfWIjmqUO/mKndJpy+ha3tzcNPdZ+uKn0+uQ\
+QjQRDtsufovhZyRDWRPw9e+cS+C7GutzS4vEstudX+eScgaMPTCdBRQNpYdiK0WV\
+ovVAB3BoWAEpB2yQVQIDAQAB\
+-----END PUBLIC KEY-----'
 
 function getCookie(name) {
     var c = document.cookie.match("\\b" + name + "=([^;]*)\\b");
@@ -192,6 +199,9 @@ function wxUploadImg(img_dom, source_type=['album']){
             'idno': $('input[name="idno"]').val(),
             'ccrdno': $('input[name="ccrdno"]').val(),
         });
+        var encrypt = new JSEncrypt();
+        encrypt.setPublicKey(PUB_KEY);
+        data = encrypt.encrypt(data);
         $.post(BASE_URL + '/common/info_check', data, function(resp){
             console.log(resp);
             if(resp.success){

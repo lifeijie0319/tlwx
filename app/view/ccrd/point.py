@@ -33,19 +33,34 @@ class DetailHandler(BaseHandler):
 
     async def post(self):
         req_data = json.loads(self.request.body)
+        app_log.debug('\nREQ: %s\n', req_data)
         user = OP_User(self.db).get(self.openid)
+        start = req_data.get('start')
+        start = start.replace('-', '') if start else None
+        end = req_data.get('end')
+        end = end.replace('-', '') if end else None
         tl_data = {
             'CARD_NO': user.ccrdno,
-            'START_DATE': req_data.get('START_DATE'),
-            'END_DATE': req_data.get('END_DATE'),
+            'START_DATE': start,
+            'END_DATE': end,
             'FIRSTROW': req_data['firstrow'],
             'LASTROW': req_data['lastrow']
         }
         ret = await G.tl_cli.send2tl('17011', tl_data)
-        info_keys = ['success', 'ACQ_NAME_ADDR', 'SETT_TXN_TYPE', 'TXN_AMT', 'POINT']
-        context = {key.lower(): value for key, value in ret.items() if key in info_keys}
-        currency = Currency(ret['CURR_CD'])
-        context = dict(context, txn_date=format_date(ret['TXN_DATE']))
+        if not ret.get('TXN_POINTS'):
+            return self.write({'html': '', 'nextpage': False})
+        items = ret['TXN_POINTS']['TXN_POINT']
+        if not isinstance(items, list):
+            items = [items]
+        html = self.render_string('ccrd/point_detail_list.html', **{
+            'items':[{
+                'txn_date': format_date(item['TXN_DATE']),
+                'acq_name_addr': item['ACQ_NAME_ADDR'],
+                'sett_txn_type': item['SETT_TXN_TYPE'],
+                'txn_amt': item['TXN_AMT'],
+                'point': item['POINT']
+            } for item in items]
+        })
         context = {
             'html': html.decode(),
             'nextpage': True if ret['NEXTPAGE_FLG'] == 'Y' else False

@@ -48,6 +48,11 @@ class BillHandler(BaseHandler):
         }
         ret = await G.tl_cli.send2tl('12011', tl_data)
         app_log.debug('BILL_DETAIL: %s\n%s', ret['TXNS'], type(ret['TXNS']))
+        if not ret.get('TXNS'):
+            return self.write({'html': '', 'nextpage': False})
+        items = ret['TXNS']['TXN']
+        if not isinstance(items, list):
+            items = [items]
         html = self.render_string('ccrd/bill_detail.html', **{
             'items':[{
                 'curr_symbol': Currency(item['TXN_CURR_CD']).symbol,
@@ -55,7 +60,7 @@ class BillHandler(BaseHandler):
                 'ccrdno_tail': item['TXN_CARD_NO'][-4:],
                 'txn_amt': item['TXN_AMT'],
                 'txn_short_desc': item['TXN_SHORT_DESC']
-            } for item in ret['TXNS']['TXN']]
+            } for item in items]
         })
         context = {
             'html': html.decode(),
@@ -80,14 +85,20 @@ class BillDueHandler(BaseHandler):
             'LASTROW': req_data['lastrow']
         }
         ret = await G.tl_cli.send2tl('13060', tl_data)
-        app_log.debug('BILL_DETAIL: %s\n%s', ret['TXNS'], type(ret['TXNS']))
+        if not ret.get('TXNS'):
+            return self.write({'html': '', 'nextpage': False})
+        app_log.debug('BILL_DETAIL: %s\n%s', ret['TXNS']['TXN'], type(ret['TXNS']['TXN']))
+        items = ret['TXNS']['TXN']
+        if not isinstance(items, list):
+            items = [items]
         html = self.render_string('ccrd/bill_due_list.html', **{
             'items':[{
                 'curr_symbol': Currency(item['TXN_CURR_CD']).symbol,
                 'txn_date': format_date(item['TXN_DATE']),
+                'txn_card_no': item['TXN_CARD_NO'][-4:],
                 'txn_amt': item['TXN_AMT'],
                 'txn_short_desc': item['TXN_SHORT_DESC']
-            } for item in ret['TXNS']['TXN']]
+            } for item in items]
         })
         context = {
             'html': html.decode(),

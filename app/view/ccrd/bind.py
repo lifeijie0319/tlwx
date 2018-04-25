@@ -7,6 +7,8 @@ from ..common import BaseHandler, need_openid
 from ...config import G, BASE_URL
 from ...db.api import OP_User
 from ...db.model import User
+from ...service.rsa import rsa_decrypt
+from ...tool import get_doc
 
 
 class BindHandler(BaseHandler):
@@ -15,12 +17,13 @@ class BindHandler(BaseHandler):
         if OP_User(self.db).check_bind(self.openid):
             return self.redirect(BASE_URL + '/staticfile/done.html?from=binded')
         else:
-            self.render('ccrd/bind.html')
+            protocol = get_doc('protocol.txt')
+            self.render('ccrd/bind.html', **{'protocol': protocol})
     async def post(self):
-        app_log.debug('REQ: %s', self.request.body)
-        data = json.loads(self.request.body)
+        data = rsa_decrypt(self.request.body)
+        app_log.debug('REQ: %s', data)
+        data = json.loads(data)
         data['openid'] = self.openid
-        idno = data.pop('idno')
         vcode = data.pop('vcode')
         res = self.check_vcode(vcode)
         if res['success']:
@@ -41,16 +44,20 @@ class UnbindHandler(BaseHandler):
         user = OP_User(self.db).get(self.openid)
         if user and user.binded:
             ccrdno = user.ccrdno
-            cus_info = await G.tl_cli.api_11010(ccrdno)
-            if not cus_info['success']:
-                raise Exception(cus_info['msg'])
-            cellphone = cus_info['MOBILE_NO']
-            idno = cus_info['ID_NO']
+            req = {
+                'CARD_NO': ccrdno,
+                'OPT': 0,
+            }
+            ret = await G.tl_cli.send2tl('11010', req)
+            if not ret['success']:
+                raise Exception(ret['msg'])
+            cellphone = ret['MOBILE_NO']
+            idno = ret['ID_NO']
             context = {
                 'idtype': '身份证',
                 'idno': idno[:4] + '*' * (len(idno) - 8) + idno[-4:],
                 'ccrdno': ccrdno[:4] + '*' * (len(ccrdno) - 8) + ccrdno[-4:],
-                'name': cus_info['NAME'],
+                'name': ret['NAME'],
                 'cellphone': cellphone[:3] + '****' + cellphone[-4:],
             }
             return self.render('ccrd/unbind.html', **context)

@@ -11,6 +11,7 @@ from ..db.api import OP_User
 from ..db.sqlal import Session
 from ..service.async_wx import WXUser
 from ..service.pic_vcode import VerifyCode
+from ..service.rsa import rsa_decrypt
 from ..tool import get_oauth_url, G
 from ..wx_msg import TPL
 
@@ -18,6 +19,7 @@ from ..wx_msg import TPL
 def need_openid(func):
     async def wrapper(self, *args, **kwargs):
         openid = self.get_cookie('openid')
+        openid = 'oSDTiwq1vFtLARyBeBGhRpNeXczA'
         if not openid:
             try:
                 code = self.get_argument('code')
@@ -92,13 +94,21 @@ class StaticTPLHandler(BaseHandler):
 
 
 class SendVcodeHandler(BaseHandler):
-    def post(self):
-        cellphone_number = self.get_argument('cellphone')
+    async def post(self):
+        cellphone = self.get_argument('cellphone')
         client_now = self.get_argument('now')
         app_log.info('params: %s', self.request.body)
         vcode = str(random.randint(1000, 9999))
         app_log.info('VCODE %s', vcode)
         self.set_secure_cookie('vcode', vcode, expires=int(client_now) / 1000 + 120)
+        message = '来自通联金融的验证码，%s' % vcode
+        req = {
+            'MOBILE_NO': cellphone,
+            'MESSAGE': message,
+        }
+        ret = await G.tl_cli.send2tl('12105', req)
+        if not ret['success']:
+            return self.write(ret)
         self.write({'success': True})
 
 
@@ -129,24 +139,28 @@ class UploadImgHandler(BaseHandler):
 class InfoCheckHandler(BaseHandler):
     async def post(self):
         app_log.debug('REQ: %s', self.request.body)
-        data = json.loads(self.request.body)
-        cus_info = await G.tl_cli.api_11010(data['ccrdno'])
-        if not cus_info['success']:
-            return self.write(cus_info)
-        elif cus_info['ID_NO'] != data['idno']:
+        data = json.loads(rsa_decrypt(self.request.body))
+        req = {
+            'CARD_NO': data['ccrdno'],
+            'OPT': 0,
+        }
+        ret = await G.tl_cli.send2tl('11010', req)
+        if not ret['success']:
+            return self.write(ret)
+        elif not ret['MOBILE_NO']:
+            return self.write({'success': False, 'msg': '获取不到手机号'})
+        elif ret['ID_NO'] != data['idno']:
             return self.write({'success': False, 'msg': '卡号对应的证件号与输入的证件号不匹配'})
-        return self.write({'success': True, 'cellphone': cus_info['MOBILE_NO']})
+        return self.write({'success': True, 'cellphone': ret['MOBILE_NO']})
 
 
-#from tornado.httpclient import AsyncHTTPClient
-#class TestHandler(BaseHandler):
-#    async def get(self, action):
-#        if action == 'tpl_msg':
-#            openid = 'oSDTiwq1vFtLARyBeBGhRpNeXczA'
-#            data = {
-#                'date': '2015年6月16日 10:20',
-#                'type': '收入/支出500元',
-#                'balance': '300元',
-#                'summary': '手机银行',
-#            }
-#            await TPL.send_trade_detail(openid, data)
+class TestHandler(BaseHandler):
+    async def get(self, action):
+        ccrdno = '6283650040003441'
+        data = {
+            'CARD_NO': ccrdno,
+            'CURR_CD': '156',
+            'STMT_DATE': '000000',
+        }
+        ret = await G.tl_cli.send2tl('12010', data)
+        app_log.info('RET: %s', ret)

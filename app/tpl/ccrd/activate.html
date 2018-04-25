@@ -10,6 +10,8 @@
     <script src="{{ static_url('asset/jquery.min.js') }}"></script>
     <script src="{{ static_url('asset/jquery-extend.js') }}"></script>
     <script src="{{ static_url('asset/dialog.js') }}"></script>
+    <script src="{{ static_url('asset/popup.js') }}"></script>
+    <script src="{{ static_url('asset/jsencrypt.min.js') }}"></script>
     <script src="{{ static_url('asset/validate.js') }}"></script>
     <script src="{{ static_url('js/tool.js') }}"></script>
     <script src="{{ static_url('js/ccrd/activate.js') }}"></script>
@@ -74,14 +76,12 @@
                     </div>
                 </div>
             </div>
-<!--
             <div class="ys_agree">
                 <label for="ysagree">
                     <input  name="agree" class="ys_agree_checkbox" type="checkbox" id="ysagree" checked="checked">
                     <span class="ys_agree_text">阅读并同意<a class="ys_agree_clause open-popup" href="javascript:;" data-target="#show_protocol">《相关条款》</a></span>
                 </label>
             </div>
--->
             <div class="ys_btns mt30">
                 <a id="submit" class="ys_btn" href="javascript:;">激活</a>
             </div>
@@ -92,7 +92,7 @@
                 <div class="ys_btns">
                     <div class="clause_content">
                         <h4>河北农信微信公众号使用条款</h4>
-                        <p id="protocol"><pre>{ protocol }</pre></p>
+                        <p id="protocol"><pre>{{ protocol }}</pre></p>
                     </div>
                     <div class="pb60"></div>
                 </div>
