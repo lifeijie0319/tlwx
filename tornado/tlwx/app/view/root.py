@@ -6,8 +6,9 @@ from tornado.log import app_log
 
 from .common import BaseHandler
 from .. import config
+from ..db.api import OP_User
 from ..service.async_wx import CustomMessage
-from ..tool import get_oauth_url
+from ..tool import Currency, get_oauth_url, G, xml_format
 from ..wx_msg import Custom, TPL, XML
 
 
@@ -46,7 +47,7 @@ class RootHandler(BaseHandler):
         openid = root.find('FromUserName').text
         serverid = root.find('ToUserName').text
         send_text = root.find('Content').text
-        binded = self.check_bind(openid)
+        binded = OP_User(self.db).check_bind(openid)
         if send_text in ('jcbd'):
             if binded:
                 url = get_oauth_url('/ccrd/unbind')
@@ -63,6 +64,27 @@ class RootHandler(BaseHandler):
             self.render('xml/text.xml', **ret)
             return
         elif send_text in ('账单', 'ZD', 'zd'):
+            user = OP_User(self.db).get(openid)
+            data = {
+                'CARD_NO': user.ccrdno,
+                'CURR_CD': '156',
+                'STMT_DATE': '000000',
+            }
+            ret = await G.tl_cli.send2tl('12010', data)
+            if ret['DUAL_CURR_IND'] == 'Y':
+                data['CURR_CD'] = ret['DUAL_CURR_CD']
+                ret = await send2tl('12010', data)
+            currency = Currency(ret['CURR_CD'])
+            kwargs = {
+                'billing_date': xml_format(ret['BILLING_DATE'], 'date'),
+                'curr_symbol': currency.symbol,
+                'qual_grace_bal': ret['QUAL_GRACE_BAL'],
+                'tot_due_amt': ret['TOT_DUE_AMT'],
+                'pmt_due_date': xml_format(ret['PMT_DUE_DATE'], 'date'),
+            }
+            app_log.info('bill_query: %s', kwargs)
+            articles = Custom.bill_query(**kwargs)
+            CustomMessage.news(openid, articles)
             return
         elif send_text in ('额度', 'ED', 'ed'):
             return

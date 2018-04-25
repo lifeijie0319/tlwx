@@ -54,7 +54,6 @@ class JSSDKHandler(BaseHandler):
 
 
 class UploadImgHandler(BaseHandler):
-    @need_openid
     async def post(self):
         kargs = json.loads(self.request.body)
         app_log.info(kargs)

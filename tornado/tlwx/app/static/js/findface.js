@@ -1,4 +1,8 @@
 $(function(){
+    $('#face').on('change', function(){
+        img = getObjectURL(this.files[0]);
+        $('#preview').attr('src', img);
+    });
     $('#upload').on('click', function(){
         formdata = new FormData();
         img = $('#face')[0].files[0];
@@ -25,15 +29,16 @@ $(function(){
         });
     });
     $('#detect').on('click', function(){
-        api_url = 'http://jswj888.f3322.net:8889';
+        api_url = 'https://yun.anytec.cn';
         formdata = new FormData();
         img = $('#face')[0].files[0];
-        console.log(img);
-        formdata.append('photo', img);
+        console.log(BASE_URL);
+        formdata.append('photo1', img);
+        //formdata.append('photo2', BASE_URL + '/media/face/oSDTiwjobsmlFZNmNsvqvZsBLXLk.jpg');
+        formdata.append('photo2', BASE_URL + '/media/front_id/oSDTiwq1vFtLARyBeBGhRpNeXczA.jpg');
         $.ajax({
-            url: api_url + '/n-tech/v0/detect',
+            url: api_url + '/n-tech/v0/verify',
             type: 'post',
-            headers: {'Authorization': 'Token tGd3-nXYt'},
             contentType: false,
             processData: false,
             data: formdata,
