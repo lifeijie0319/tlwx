@@ -3,6 +3,7 @@ $(function(){
     var lastrow = 4;
     var nextpage = true;
     var loading = false;
+    var load_num = 4;
     function load(start=null, end=null){
         data = JSON.stringify({
             'firstrow': firstrow,
@@ -13,8 +14,10 @@ $(function(){
         if(loading) return false;
         loading = true;
         $("#loading").html('<i class="ys_loading"></i><span class="ys_more_tips">正在加载</span>');
-        $.post(BASE_URL + '/ccrd/bill_due', data, function(resp){
+        $.post(BASE_URL + '/ccrd/point/detail', data, function(resp){
             $("#content").append(resp.html);
+            firstrow = lastrow + 1;
+            lastrow = firstrow + load_num;
             nextpage = resp.nextpage;
             if(resp.nextpage){
                 $("#loading").html('<span class= "ys_more_tips">下拉加载更多</span>');
@@ -25,7 +28,7 @@ $(function(){
         });
     }
     load();
-    $(window).on('touchmove', function(){
+    $(window).on('scroll', function(){
         var scrollTop = $(this).scrollTop();               //滚动条距离顶部的高度
         var scrollHeight = $(document).height();           //当前页面的总高度
         var windowHeight = $(this).height();               //当前可视的页面高度

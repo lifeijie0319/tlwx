@@ -20,6 +20,10 @@ $(function(){
         if (!validate_res) return false;
 
         data = $('form').serializeForm();
+        var encrypt = new JSEncrypt();
+        encrypt.setPublicKey(PUB_KEY);
+        data = encrypt.encrypt(data);
+
         $.post(BASE_URL + '/ccrd/activate', data, function(resp){
             if(resp.success){
                 window.location.href = BASE_URL + '/staticfile/done.html?from=activate';

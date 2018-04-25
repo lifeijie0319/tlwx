@@ -21,12 +21,13 @@ $(function(){
         });
         if (!validate_res) return false;
 
-        data = $('form').serializeForm();
-        data = JSON.parse(data);
-        data['action'] = 'submit';
-        delete data.agree;
-        console.log(data);
-        data = JSON.stringify(data);
+        var encrypt = new JSEncrypt();
+        encrypt.setPublicKey(PUB_KEY);
+        data = JSON.stringify({
+            'ccrdno': $('input[name="ccrdno"]').val(),
+            'vcode': $('input[name="vcode"]').val(),
+        });
+        data = encrypt.encrypt(data);
         $.post(BASE_URL + '/ccrd/bind', data, function(resp){
             if(resp.success){
                 window.location.href = BASE_URL + '/staticfile/done.html?from=bind';

@@ -28,6 +28,14 @@ $(function(){
         case 'installment_consumption':
             $('#content').html('消费分期申请成功');
             break;
+        case 'error':
+            $('.ys_prompt_icon > i').removeClass('icon-correct_big').addClass('icon-close-fill color_danger');
+            $('#content_title').html('页面加载失败');
+            url = decodeURI(window.location.search);
+            console.log(url);
+            msg = getUrlArgs('error_msg', url);
+            $('#content').html(msg);
+            break;
         default:
     }
 });

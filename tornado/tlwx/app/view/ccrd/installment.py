@@ -2,8 +2,10 @@
 import json
 
 from tornado.log import app_log
+from urllib.parse import urlencode
 
 from ..common import BaseHandler, need_bind, need_openid
+from ... import config
 from ...tool import Currency, G, xml_format
 from ...db.api import OP_User
 
@@ -18,6 +20,11 @@ class BillHandler(BaseHandler):
             'CURR_CD': '156'
         }
         ret = await G.tl_cli.send2tl('13110', data)
+        if not ret['success']:
+            url = config.BASE_URL + '/staticfile/done.html?from=error'
+            url += '&' + urlencode({'error_msg': ret['msg']})
+            app_log.debug('URL: %s', url)
+            return self.redirect(url)
         app_log.info('账单可分期金额查询: %s', ret.items())
         info_keys = ['LOAN_INIT_TERM', 'LOAN_AMT']
         items = ret['TERMS']['TERM']

@@ -3,6 +3,7 @@ $(function(){
     var lastrow = 4;
     var nextpage = true;
     var loading = false;
+    var load_num = 4;
     function load(){
         data = JSON.stringify({
             'firstrow': firstrow,
@@ -13,6 +14,8 @@ $(function(){
         $("#loading").html('<i class="ys_loading"></i><span class="ys_more_tips">正在加载</span>');
         $.post(BASE_URL + '/ccrd/bill', data, function(resp){
             $('#bill_detail').append(resp.html);
+            firstrow = lastrow + 1;
+            lastrow = firstrow + load_num;
             nextpage = resp.nextpage;
             if(resp.nextpage){
                 $("#loading").html('<span class= "ys_more_tips">下拉加载更多</span>');
@@ -22,7 +25,9 @@ $(function(){
             loading = false;
         });
     }
-    load(firstrow, lastrow)
+    $('#tab2_btn').on('click', function(){
+        load(firstrow, lastrow);
+    });
     $(window).on('touchmove', function(){
         var scrollTop = $(this).scrollTop();               //滚动条距离顶部的高度
         var scrollHeight = $(document).height();           //当前页面的总高度

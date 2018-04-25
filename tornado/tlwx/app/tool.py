@@ -2,9 +2,9 @@
 import datetime
 import redis
 
-from tornado.log import gen_log
+from tornado.log import app_log
 
-from .config import APPID, BASE_URL, G
+from .config import APPID, BASE_DIR, BASE_URL, G
 
 
 def get_oauth_url(redirect_uri, state='1'):
@@ -13,10 +13,10 @@ def get_oauth_url(redirect_uri, state='1'):
 
 
 def common_callback(res):
-    gen_log.debug(res)
+    app_log.debug(res)
     if res.error:
         res.rethrow()
-    gen_log.info('ASYNC HTTP RESPONSE: %s', res.body)
+    app_log.info('ASYNC HTTP RESPONSE: %s', res.body)
 
 
 def get_redis_value(key):
@@ -25,7 +25,7 @@ def get_redis_value(key):
 
 def gen_req_token():
     token_id = G.redis_conn.incr('REQ_TOKEN_ID')
-    token = datetime.datetime.now().strftime('%Y%m%d%H%m%s') + str(token_id % 1000).zfill(3)
+    token = datetime.datetime.now().strftime('%Y%m%d%H%M%S') + str(token_id % 1000).zfill(3)
     return token
 
 
@@ -40,6 +40,12 @@ def xml_format(s, type):
     elif type == 'time':
         t = s[:2] + ':' + s[2:4] + ':' + s[6:]
     return t
+
+
+def get_doc(name):
+    with open(BASE_DIR + '/app/static/doc/ccrd/' + name) as f:
+        doc = f.read()
+    return doc
 
 
 class Currency:

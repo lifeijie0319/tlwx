@@ -2,6 +2,7 @@
 <a class="ys_item_media"  >
     <div class="ys_item_bd">
         <h4>{{ item['txn_short_desc'] }}</h4>
+        <p class="ys_item_p">信用卡尾号：{{ item['txn_card_no'] }}</p>
         <p class="ys_item_p">{{ item['txn_date'] }}</p>
     </div>
     <div class="ys_item_ft">{{ item['curr_symbol'] }} {{ item['txn_amt'] }}</div>
