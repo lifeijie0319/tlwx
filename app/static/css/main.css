@@ -1209,3 +1209,13 @@ input::-webkit-input-placeholder {
 .clause-light p{
   color: rgba(255,255,255,.8);
 }
+
+.img_upload_box{
+  height: 60vw;
+  width: 100%;
+}
+.img_upload_box img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}

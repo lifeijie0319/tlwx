@@ -1,4 +1,6 @@
 #-*- coding:utf8 -*-
+import datetime
+
 from tornado.log import app_log
 
 from . import config
@@ -88,6 +90,21 @@ class Custom:
                 'title': '自定义测试图文消息',
                 'url': get_oauth_url('/staticfile/form.html'),
                 'picurl': config.BASE_URL + '/static/img/ccrd/mes_apply2.png',
+            },
+        ]
+        return articles
+
+    def bill_query(curr_symbol, qual_grace_bal, tot_due_amt, billing_date, pmt_due_date):
+        today = datetime.date.today().strftime('%m月%d日')
+        description = today + '\n账单金额：' + curr_symbol + qual_grace_bal + '\n最低还款额：'\
+           + curr_symbol + tot_due_amt + '\n账单日：' + billing_date + '\n最后还款日：' + pmt_due_date\
+           + '\n备注' + '\n' + '-' * 30 + '\n<b>阅读全文</b>'
+        articles = [
+            {
+                'title': '我的账单',
+                'description': description,
+                'url': get_oauth_url('/ccrd/bill'),
+                #'picurl': config.BASE_URL + '/static/img/ccrd/mes_apply1.jpg',
             },
         ]
         return articles

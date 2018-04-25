@@ -8,6 +8,7 @@ from ... import config
 
 
 class PageHandler(BaseHandler):
+    @need_openid
     def get(self, page=1):
         app_log.debug('%s %s', page, type(page))
         return self.render('ccrd/online_apply' + page + '.html')
