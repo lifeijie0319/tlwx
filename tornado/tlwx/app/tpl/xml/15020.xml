@@ -18,6 +18,7 @@
         <EXT_ATTRIBUTES>
         </EXT_ATTRIBUTES>
         <RESPONSE>
+            <CURR_CD>158</CURR_CD>
             <ACCT_LIMIT>100</ACCT_LIMIT>
             <ACCT_OTB>100.00</ACCT_OTB>
             <ACCT_CASH_OTB>199.00</ACCT_CASH_OTB>
