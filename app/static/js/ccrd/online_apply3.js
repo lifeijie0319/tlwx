@@ -22,12 +22,17 @@ $(function(){
         $(this).removeClass('clause_btn_visible');
     });
 
-    //回显首页填入数据
+    /*回显首页填入数据
     data = JSON.parse(localStorage.getItem('ccrd_online_apply_data'));
     console.log(typeof data, data);
     $('input[name="name"]').val(data.name).attr('disabled', true);
     $('input[name="idno"]').val(data.idno).attr('disabled', true);
-    $('input[name="cel"]').val(data.cel).attr('disabled', true);
+    $('input[name="cel"]').val(data.cel).attr('disabled', true);*/
+    $.get('./base_info', function(resp){
+        $('input[name="name"]').val(resp.name);
+        $('input[name="idno"]').val(resp.idno);
+        $('input[name="cellphone"]').val(resp.cellphone);
+    });
     /*$('#send_vcode').on('click', function () {
          sendVcode($(this), $('input[name="cel"]'));
     });*/

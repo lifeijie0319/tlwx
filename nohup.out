@@ -3582,3 +3582,4 @@
 [I 180416 15:32:45 autoreload:196] /home/tonglian/py3venv/lib/python3.6/site-packages/tornado/web.py modified; restarting server
 [I 180416 15:32:46 tool:43] <class 'app.config.G'>
 [D 180416 15:32:46 selector_events:65] Using selector: EpollSelector
+[D 180425 20:38:25 selector_events:65] Using selector: EpollSelector

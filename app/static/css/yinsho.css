@@ -650,6 +650,12 @@ a.ys_cell .ys_cell_ft {
   -webkit-appearance: none;
   appearance: none;
 }
+button.ys_btn{
+  width: 100%;
+  outline: none;
+  border: none;
+}
+
 .ys_btn:active {
   color: rgba(256, 256, 256, .8);
   background-color: #d25a19;
@@ -659,14 +665,17 @@ a.ys_cell .ys_cell_ft {
 }
 
 /*不可点击按钮*/
-.ys_btn_disabled {
+.ys_btn_disabled{
   color: rgba(256, 256, 256, .8);
   background-color: #bbdafb;
 }
 .ys_btn_disabled:active {
   background: #bbdafb;
 }
-
+button.ys_btn:disabled{
+  color: rgba(256, 256, 256, .8);
+  background-color: #F7C9AF;
+}
 /*默认按钮*/
 .ys_btn_default {
   color: #434343;

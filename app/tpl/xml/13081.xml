@@ -21,44 +21,49 @@
             <NEXTPAGE_FLG>N</NEXTPAGE_FLG>
             <TXNS>
                 <TXN>
-                <TXN_DATE>2017-02-17</TXN_DATE>
+                <TXN_DATE>20170217</TXN_DATE>
                 <TXN_TIME>190540</TXN_TIME>
-                <TXN_AMT>-2000.00</TXN_AMT>
+                <TXN_AMT>2000.00</TXN_AMT>
                 <TXN_CURR_CD>156</TXN_CURR_CD>
                 <TXN_CARD_NO>12390819878918973</TXN_CARD_NO>
                 <TXN_SHORT_DESC>支付宝快捷交易</TXN_SHORT_DESC>
+                <REF_NBR>123</REF_NBR>
                 </TXN>
                 <TXN>
-                <TXN_DATE>2017-02-17</TXN_DATE>
+                <TXN_DATE>20170217</TXN_DATE>
                 <TXN_TIME>190540</TXN_TIME>
-                <TXN_AMT>-2000.00</TXN_AMT>
+                <TXN_AMT>2000.00</TXN_AMT>
                 <TXN_CURR_CD>156</TXN_CURR_CD>
                 <TXN_CARD_NO>12390819878918973</TXN_CARD_NO>
                 <TXN_SHORT_DESC>支付宝快捷交易</TXN_SHORT_DESC>
+                <REF_NBR>123</REF_NBR>
                 </TXN>
                 <TXN>
-                <TXN_DATE>2017-02-17</TXN_DATE>
+                <TXN_DATE>20170217</TXN_DATE>
                 <TXN_TIME>190540</TXN_TIME>
-                <TXN_AMT>-2000.00</TXN_AMT>
+                <TXN_AMT>2000.00</TXN_AMT>
                 <TXN_CURR_CD>156</TXN_CURR_CD>
                 <TXN_CARD_NO>12390819878918973</TXN_CARD_NO>
                 <TXN_SHORT_DESC>支付宝快捷交易</TXN_SHORT_DESC>
+                <REF_NBR>123</REF_NBR>
                 </TXN>
                 <TXN>
-                <TXN_DATE>2017-02-17</TXN_DATE>
+                <TXN_DATE>20170217</TXN_DATE>
                 <TXN_TIME>190540</TXN_TIME>
-                <TXN_AMT>-2000.00</TXN_AMT>
+                <TXN_AMT>2000.00</TXN_AMT>
                 <TXN_CURR_CD>156</TXN_CURR_CD>
                 <TXN_CARD_NO>12390819878918973</TXN_CARD_NO>
                 <TXN_SHORT_DESC>大润发支付</TXN_SHORT_DESC>
+                <REF_NBR>123</REF_NBR>
                 </TXN>
                 <TXN>
-                <TXN_DATE>2017-02-17</TXN_DATE>
+                <TXN_DATE>20170217</TXN_DATE>
                 <TXN_TIME>190540</TXN_TIME>
-                <TXN_AMT>-2000.00</TXN_AMT>
+                <TXN_AMT>2000.00</TXN_AMT>
                 <TXN_CURR_CD>156</TXN_CURR_CD>
                 <TXN_CARD_NO>12390819878918973</TXN_CARD_NO>
                 <TXN_SHORT_DESC>大润发支付</TXN_SHORT_DESC>
+                <REF_NBR>123</REF_NBR>
                 </TXN>
             </TXNS>
         </RESPONSE>

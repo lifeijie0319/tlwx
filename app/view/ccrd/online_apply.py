@@ -1,10 +1,12 @@
 #-*- coding:utf-8 -*-
+import json
 import tornado.web
 
 from tornado.log import app_log
 
 from ..common import BaseHandler, need_openid
 from ... import config
+from ...db.api import OP_CCRDOnlineApply
 
 
 class PageHandler(BaseHandler):
@@ -12,6 +14,30 @@ class PageHandler(BaseHandler):
     def get(self, page=1):
         app_log.debug('%s %s', page, type(page))
         return self.render('ccrd/online_apply' + page + '.html')
+
+
+class BaseInfoHandler(BaseHandler):
+    def get(self, page=1):
+        item = OP_CCRDOnlineApply(self.db).get(self.openid)
+        context = {
+            'name': item.name,
+            'idno': item.idno,
+            'cellphone': item.cellphone,
+        }
+        return self.write(context)
+
+    @need_openid
+    async def post(self):
+        data = json.loads(self.request.body)
+        vcode = data.pop('vcode')
+        res = self.check_vcode(vcode)
+        if not res['success']:
+            return self.write(res)
+        data['openid'] = self.openid
+        app_log.info('REQ: %s', data)
+        OP_CCRDOnlineApply(self.db).create(data)
+        self.db.commit()
+        return self.write({'success': True})
 
 
 class StatusPageHandler(BaseHandler):
