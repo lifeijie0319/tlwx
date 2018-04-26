@@ -1,62 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>现金分期</title>
+    <title>现金分期申请</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
     <link href="{{ static_url('css/yinsho.css') }}" rel="stylesheet"/>
     <link href="{{ static_url('css/main.css') }}" rel="stylesheet"/>
     <link href="{{ static_url('font/iconfont.css') }}" rel="stylesheet"/>
     <script src="{{ static_url('asset/jquery.min.js') }}"></script>
+    <script src="{{ static_url('asset/popup.js') }}"></script>
+    <script src="{{ static_url('asset/jsencrypt.min.js') }}"></script>
     <script src="{{ static_url('asset/validate.js') }}"></script>
     <script src="{{ static_url('js/tool.js') }}"></script>
     <script src="{{ static_url('js/ccrd/installment_cash.js') }}"></script>
 </head>
 <body ontouchstart>
 	<div class="container">
-        <form id="form" class="container">
+        <form>
             <div class="ys_cells">
                 <div class="ys_cell">
                     <div class="ys_cell_hd">
-                        <label style="width: 130px">收款账号</label>
-                    </div>
-                    <div class="ys_cell_bd">6022*********3566</div>
-                </div>
-                <div class="ys_cell ys_cell_select">
-                    <div class="ys_cell_hd">
-                        <label style="width: 130px">收款银行</label>
+                        <label style="width: 130px">最高可分期金额</label>
                     </div>
                     <div class="ys_cell_bd">
-                        <select class="ys_select" name="select">
-                            <option selected="" value="1">工商银行</option>
-                            <option value="2">中国银行</option>
-                            <option value="3">浦发银行</option>
-                            <option value="4">交通银行</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="ys_cell ys_cell_select">
-                    <div class="ys_cell_hd">
-                        <label style="width: 130px">资金用途</label>
-                    </div>
-                    <div class="ys_cell_bd">
-                        <select class="ys_select" name="select">
-                            <option selected="" value="1">添置家用</option>
-                            <option value="2">旅游远足</option>
-                            <option value="3">学习进修</option>
-                            <option value="4">婚庆喜宴</option>
-                            <option value="5">装潢装修</option>
-                            <option value="6">购车服务</option>
-                            <option value="7">其它消费</option>
-                        </select>
+                        <input name="max_stage_amt" class="ys_input" readonly>
                     </div>
                 </div>
                 <div class="ys_cell">
                     <div class="ys_cell_hd">
-                        <label style="width: 130px">申请金额（元）</label>
+                        <label style="width: 130px">分期金额</label>
                     </div>
                     <div class="ys_cell_bd">
-                        <input id="staging_money" class="ys_input" type="number" placeholder="请输入申请金额" emptyTips="申请金额不能为空" required>
+                        <input class="ys_input" type="number" name="total_amt" emptyTips="申请金额不能为空" required>
                     </div>
                 </div>
                 <div class="ys_cell ys_cell_select">
@@ -64,43 +39,81 @@
                         <label style="width: 130px">分期期数</label>
                     </div>
                     <div class="ys_cell_bd">
-                        <select class="ys_select" name="num_select" id="num_select">
-                            <option selected="" value="3" name="200">3</option>
-                            <option value="6" name="200">6</option>
-                            <option value="9" name="200">9</option>
-                            <option value="12" name="200">12</option>
-                            <option value="24" name="200">24</option>
-                            <option value="36" name="200">36</option>
+                        <select class="ys_select" name="num" emptyTips="分期期数不能为空" required>
+                            <option value=""></option>
+                            {% for item in items %}
+                            <option value={{ item['loan_amt'] }}>{{ item['loan_init_term'] }}</option>
+                            {% end %}
                         </select>
                     </div>
                 </div>
+                <div class="ys_cell ys_cell_select">
+                    <div class="ys_cell_hd">
+                        <label style="width: 130px">手续费收取方式</label>
+                    </div>
+                    <div class="ys_cell_bd">
+                        <select class="ys_select" name="fee_method">
+                            <option value="E">分期收取</option>
+                            <option value="F">一次性收取</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="ys_cells_title">试算结果</div>
+            <div class="ys_cells">
                 <div class="ys_cell">
                     <div class="ys_cell_hd">
                         <label style="width: 130px">每期还款金额</label>
                     </div>
-                    <div id="money_every_set" class="ys_cell_bd">
-                        0
+                    <div class="ys_cell_bd">
+                        <input class="ys_input" name="staging_pay" readonly>
                     </div>
                 </div>
                 <div class="ys_cell">
                     <div class="ys_cell_hd">
                         <label style="width: 130px">总手续费</label>
                     </div>
-                    <div id="money_sum_sx" class="ys_cell_bd">
-                        0
+                    <div class="ys_cell_bd">
+                        <input class="ys_input" name="total_fee" readonly>
+                    </div>
+                </div>
+                <div class="ys_cell">
+                    <div class="ys_cell_hd">
+                        <label style="width: 130px">分期手续费</label>
+                    </div>
+                    <div class="ys_cell_bd">
+                        <input class="ys_input" name="stage_fee" readonly>
                     </div>
                 </div>
             </div>
             <div class="ys_agree">
-                <label for="ysagree">
-                    <input class="ys_agree_checkbox" type="checkbox" id="ysagree" checked="checked">
-                    <span class="ys_agree_text">阅读并同意<a class="ys_agree_clause" href="javascript:;">《相关条款》</a></span>
+                <label for="agree">
+                    <input name="agree" class="ys_agree_checkbox" type="checkbox">
+                    <span class="ys_agree_text">阅读并同意<a class="ys_agree_clause open-popup" href="javascript:;" data-target="#show_protocol">《相关条款》</a></span>
                 </label>
             </div>
-            <div class="ys_btns mt30">
-                <a  id="credit_card_stage" class="ys_btn" href="javascript:;">下一步</a>
+            <div class="clause">
+                <h4>温馨提醒：</h4>
+                <p>1、提交需借记卡状态正常。</p>
+            </div>
+            <div class="ys_btns">
+                <button class="ys_btn" id="submit" disabled>确定</button>
             </div>
         </form>
+        <div id="show_protocol" class="ys_page">
+            <div class="ys_content ys_page_y">
+                <div class="ys_btns">
+                    <div class="clause_content">
+                        <h4>河北农信信用卡中心微信服务协议</h4>
+                        <p id="protocol"><pre>{{ protocol }}</pre></p>
+                    </div>
+                    <div class="pb60"></div>
+                </div>
+            </div>
+            <div class="ys_fixed_footer clause_btn">
+                <a class="ys_fixed_btn close-popup" href="javascript:;">继续</a>
+            </div>
+        </div>
     </div>
 </body>
 </html>

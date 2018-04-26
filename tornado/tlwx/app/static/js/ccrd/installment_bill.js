@@ -1,31 +1,52 @@
 $(function(){
+    $('.ys_agree_clause').on('click', function(){
+        $('.ys_fixed_footer').addClass('clause_btn_visible');
+    });     
+    $('.ys_fixed_footer').on('click', function(){
+        $(this).removeClass('clause_btn_visible');
+    });
+
+    $('input[name="agree"]').on('change', function(){
+        //console.log($(this).prop('checked'));
+        if($(this).prop('checked')){
+            $('#submit').prop('disabled', false);
+        }else{
+            $('#submit').prop('disabled', true);
+        }
+    });
+
     $('form').form();
     $('select[name="num"]').on('change', function(){
-        total_amount = $('input[name="total_amount"]');
+        $('input[name="max_stage_amt"]').val($(this).val());
+        total_amt = $('input[name="total_amt"]');
         validate_res = false;
-        total_amount.parents('.ys_cell').validate(function(error){
+        total_amt.parents('.ys_cell').validate(function(error){
             if(!error) validate_res = true;
         });
         if (!validate_res){
             $(this).val('');
             return false;
         }
-        if(total_amount.val() > $('input[name="bill_amount"]').val()){
-            $.toptips('分期金额大于账单金额');
+        total_amt_val = parseInt(total_amt.val());
+        max_stage_amt = parseInt($(this).val());
+        if(total_amt_val > max_stage_amt){
+            $.toptips('分期金额不能大于最高可分期金额');
+            $(this).val('');
             return false;
         }
         data = JSON.stringify({
-            'CURR_CD': $('select[name="currency"]').val(),
-            'LOAN_INIT_PRIN': total_amount.val(),
-            'LOAN_INIT_TERM': $('input[name="num"]').val(),
-            'LOAN_FEE_METHOD': 'E',
+            'CURR_CD': '156',
+            'LOAN_INIT_TERM': $('select[name="num"]').val(),
+            'LOAN_INIT_PRIN': total_amt.val(),
+            'LOAN_FEE_METHOD': $('select[name="fee_method"]').val(),
             'OPT': '0',
         });
         $.post(BASE_URL + '/ccrd/installment/bill', data, function(resp){
             console.log(resp);
             if(resp.success){
                 $('input[name="staging_pay"]').val(resp.loan_fixed_pmt_prin);
-                $('input[name="total_fee"]').val(resp.loan_fixed_pmt_prin);
+                $('input[name="total_fee"]').val(resp.loan_init_fee1);
+                $('input[name="stage_fee"]').val(resp.loan_fixed_fee1);
             }else{
                 $.toptips(resp.msg);
             }
@@ -41,10 +62,10 @@ $(function(){
             return false;
         }
         data = JSON.stringify({
-            'CURR_CD': $('select[name="currency"]').val(),
-            'LOAN_INIT_PRIN': total_amount.val(),
-            'LOAN_INIT_TERM': $('input[name="num"]').val(),
-            'LOAN_FEE_METHOD': 'E',
+            'CURR_CD': '156',
+            'LOAN_INIT_TERM': $('select[name="num"]').val(),
+            'LOAN_INIT_PRIN':  $('input[name="total_amt"]').val(),
+            'LOAN_FEE_METHOD': $('select[name="fee_method"]').val(),
             'OPT': '1',
         });
         $.post(BASE_URL + '/ccrd/installment/bill', data, function(resp){

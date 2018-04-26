@@ -1,13 +1,16 @@
-from sqlalchemy import Column, String
+from sqlalchemy import Column, ForeignKey, Integer, String
 from .base import Base
 
 
 class CCRDOnlineApply(Base):
-    __tablename__ = 'ccrd_online_apply'
+    __tablename__ = 'CCRD_ONLINE_APPLY'
 
-    idno = Column(String(18), primary_key=True)
+    id = Column(Integer, primary_key=True)
+    openid = Column(String(36), nullable=False)
     name = Column(String(36), nullable=False)
-    cel = Column(String(11), nullable=False)
+    idno = Column(String(18), nullable=False)
+    id_type = Column(String(1), ForeignKey('CREDENTIAL_TYPE.code'), default='I')
+    cellphone = Column(String(11), nullable=False)
 
 
 class CredentialType(Base):

@@ -9,8 +9,7 @@ tornado_settings = {
     'xsrf_cookies': True,
     'debug': True,
 }
-#BASE_URL = 'https://hz.wx.yinsho.com/tlwx'
-BASE_URL = 'http://10.252.22.131:8002/tlwx'
+BASE_URL = 'https://hz.wx.yinsho.com/tlwx'
 URL_PREFIX = '/tlwx'
 TOKEN = 'yinshowxtoken'
 APPID = 'wx6290daffb81416ac'
@@ -24,6 +23,6 @@ REDIS = {
     'HOST': 'localhost',
     'PORT': '6379',
 }
-TL_HOST = '10.250.1.166'
-TL_PORT = '15777'
+TL_HOST = '127.0.0.1'
+TL_PORT = '8001'
 class G:pass

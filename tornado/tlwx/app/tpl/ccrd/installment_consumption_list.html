@@ -8,7 +8,7 @@
     <div class="pay_ph_bd">
         <div class="pay_ph_item">
             <label>交易日期</label>
-            <span>{{ item['txn_date'] }}{{ item['txn_time'] }}</span>
+            <span>{{ item['txn_date'] }} {{ item['txn_time'] }}</span>
         </div>
         <div class="pay_ph_item">
             <label>卡号末尾</label>
@@ -19,7 +19,7 @@
             <span>{{ item['txn_short_desc'] }}</span>
         </div>
     </div>
-    <a class="ys_panel_ft" href="./consumption/form?amt={{ item['txn_amt'] }}:;">进入分期</a>
+    <a class="ys_panel_ft" href="./consumption/form?txn_date={{ item['txn_date'] }}&txn_amt={{ item['txn_amt'] }}&ref_nbr={{ item['ref_nbr'] }}">进入分期</a>
 </div>
 {% end %}
 {% else %}

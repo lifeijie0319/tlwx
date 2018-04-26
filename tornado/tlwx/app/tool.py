@@ -38,7 +38,7 @@ def xml_format(s, type):
     if type == 'date':
         t = s[:4] + '-' + s[4:6] + '-' + s[6:]
     elif type == 'time':
-        t = s[:2] + ':' + s[2:4] + ':' + s[6:]
+        t = s[:2] + ':' + s[2:4] + ':' + s[4:]
     return t
 
 

@@ -31,6 +31,7 @@ url_patterns = [
     (r'/tlwx/wx/refresh_menu', wx.RefreshMenuHandler),
     (r'/tlwx/wx/upload_img', wx.UploadImgHandler),
     (r'/tlwx/ccrd/online_apply/(?P<page>\d?)', online_apply.PageHandler),
+    (r'/tlwx/ccrd/online_apply/base_info', online_apply.BaseInfoHandler),
     (r'/tlwx/ccrd/online_apply/status/(?P<page>\d?)', online_apply.StatusPageHandler),
     (r'/tlwx/ccrd/bind', bind.BindHandler),
     (r'/tlwx/ccrd/unbind', bind.UnbindHandler),

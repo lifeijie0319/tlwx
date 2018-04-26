@@ -31,3 +31,13 @@ class OP_CredentialType(OP_Base):
         else:
             ret = query.all()
         return ret
+
+
+class OP_CCRDOnlineApply(OP_Base):
+    def get(self, openid):
+        ret = self.db.query(CCRDOnlineApply).filter(openid==openid).one_or_none()
+        return ret
+
+    def create(self, data):
+        item = CCRDOnlineApply(**data)
+        self.db.add(item)

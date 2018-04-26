@@ -1,12 +1,35 @@
 $(function(){
+    txn_date = getUrlArgs('txn_date').replace('-', '');
+    txn_amt = getUrlArgs('txn_amt');
+    ref_nbr = getUrlArgs('ref_nbr');
+
+    $('.ys_agree_clause').on('click', function(){
+        $('.ys_fixed_footer').addClass('clause_btn_visible');
+    });     
+    $('.ys_fixed_footer').on('click', function(){
+        $(this).removeClass('clause_btn_visible');
+    });
+
+    $('input[name="agree"]').on('change', function(){
+        //console.log($(this).prop('checked'));
+        if($(this).prop('checked')){
+            $('#submit').prop('disabled', false);
+        }else{
+            $('#submit').prop('disabled', true);
+        }
+    });
     $('form').form();
     $('select[name="num"]').on('change', function(){
-        total_amount = $('input[name="total_amount"]');
+        option = $(this).find('option:selected');
+        $('input[name="min_amount"]').val(option.attr('min_amount'));
+        $('input[name="max_amount"]').val(option.attr('max_amount'));
         data = JSON.stringify({
-            'CURR_CD': $('select[name="currency"]').val(),
-            'LOAN_INIT_PRIN': total_amount.val(),
-            'LOAN_INIT_TERM': $('input[name="num"]').val(),
-            'LOAN_FEE_METHOD': 'E',
+            'CURR_CD': '156',
+            'TXN_DATE': txn_date,
+            'TXN_AMT': txn_amt,
+            'REF_NBR': ref_nbr,
+            'LOAN_INIT_TERM': $('select[name="num"]').val(),
+            'LOAN_FEE_METHOD': $('select[name="fee_method"]').val(),
             'OPT': '0',
         });
         $.post(BASE_URL + '/ccrd/installment/bill', data, function(resp){
@@ -14,6 +37,7 @@ $(function(){
             if(resp.success){
                 $('input[name="period_pay"]').val(resp.loan_fixed_pmt_prin);
                 $('input[name="total_fee"]').val(resp.loan_init_fee1);
+                $('input[name="stage_fee"]').val(resp.loan_fixed_fee1);
             }else{
                 $.toptips(resp.msg);
             }
@@ -29,10 +53,12 @@ $(function(){
             return false;
         }
         data = JSON.stringify({
-            'CURR_CD': $('select[name="currency"]').val(),
-            'LOAN_INIT_PRIN': total_amount.val(),
-            'LOAN_INIT_TERM': $('input[name="num"]').val(),
-            'LOAN_FEE_METHOD': 'E',
+            'CURR_CD': '156',
+            'TXN_DATE': txn_date,
+            'TXN_AMT': txn_amt,
+            'REF_NBR': ref_nbr,
+            'LOAN_INIT_TERM': $('select[name="num"]').val(),
+            'LOAN_FEE_METHOD': $('select[name="fee_method"]').val(),
             'OPT': '1',
         });
         $.post(BASE_URL + '/ccrd/installment/bill', data, function(resp){
