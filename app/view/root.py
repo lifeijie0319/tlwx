@@ -53,10 +53,12 @@ class RootHandler(BaseHandler):
                 url = get_oauth_url('/ccrd/unbind')
                 reply_text = '解绑信用卡，<a href="' + url + '">点击这里</a>。'
             else:
-                reply_text = '您当前未绑定信用卡'
+                url = get_oauth_url('/ccrd/bind')
+                reply_text = '您当前未绑定信用卡，绑定<a href="' + url + '">点击这里</a>。'
             ret = {'to_user': openid, 'from_user': serverid, 'content': reply_text}
             self.render('xml/text.xml', **ret)
             return
+        user = OP_User(self.db).get(openid)
         if not binded:
             url = get_oauth_url('/ccrd/bind')
             reply_text = '尚未绑定信用卡，绑定<a href="' + url + '">点击这里</a>。'
@@ -64,7 +66,6 @@ class RootHandler(BaseHandler):
             self.render('xml/text.xml', **ret)
             return
         elif send_text in ('账单', 'ZD', 'zd'):
-            user = OP_User(self.db).get(openid)
             data = {
                 'CARD_NO': user.ccrdno,
                 'CURR_CD': '156',
@@ -87,8 +88,28 @@ class RootHandler(BaseHandler):
             CustomMessage.news(openid, articles)
             return
         elif send_text in ('额度', 'ED', 'ed'):
+            data = {
+                'CARD_NO': user.ccrdno,
+                'CURR_CD': '156',
+            }
+            ret = await G.tl_cli.send2tl('15020', data)
+            app_log.debug('15020: %s', ret)
+            info_keys = ['ACCT_OTB', 'ACCT_LIMIT', 'ACCT_CASH_OTB']
+            context = {key.lower(): value for key, value in ret.items() if key in info_keys}
+            currency = Currency(ret['CURR_CD'])
+            context['curr_symbol'] = currency.symbol
+            articles = Custom.limit_query(**context)
+            CustomMessage.news(openid, articles)
             return
         elif send_text in ('积分', 'JF', 'jf'):
+            data = {
+                'CARD_NO': user.ccrdno,
+            }
+            ret = await G.tl_cli.send2tl('17010', data)
+            info_keys = ['POINT_BAL', 'CTD_EARNED_POINTS']
+            context = {key.lower(): value for key, value in ret.items() if key in info_keys}
+            articles = Custom.point_query(**context)
+            CustomMessage.news(openid, articles)
             return
         elif send_text in ('活动', 'HD', 'hd'):
             return
