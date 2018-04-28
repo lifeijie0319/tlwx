@@ -34,10 +34,19 @@ class OP_CredentialType(OP_Base):
 
 
 class OP_CCRDOnlineApply(OP_Base):
-    def get(self, openid):
-        ret = self.db.query(CCRDOnlineApply).filter(openid==openid).one_or_none()
+    def get(self, openid, product_cd=None):
+        query = self.db.query(CCRDOnlineApply).filter(CCRDOnlineApply.openid==openid)\
+            .filter(~CCRDOnlineApply.status.in_(['成功', '失败', '取消']))
+        if product_cd:
+            ret = query.filter(CCRDOnlineApply.product_cd==product_cd).one()
+        else:
+            ret = query.all()
         return ret
 
     def create(self, data):
         item = CCRDOnlineApply(**data)
         self.db.add(item)
+
+    def update(self, openid, product_cd, data):
+        self.db.query(CCRDOnlineApply).filter(CCRDOnlineApply.openid==openid)\
+            .filter(CCRDOnlineApply.product_cd==product_cd).update(data)

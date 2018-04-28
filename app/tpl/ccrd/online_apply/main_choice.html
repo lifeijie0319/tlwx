@@ -9,8 +9,11 @@
     <link href="{{ static_url('css/main.css') }}" rel="stylesheet"/>
     <link href="{{ static_url('font/iconfont.css') }}" rel="stylesheet"/>
     <script src="{{ static_url('asset/jquery.min.js') }}"></script>
-    <script src="{{ static_url('asset/tab.js') }}"></script>
     <script src="{{ static_url('asset/swiper.min.js') }}"></script>
+    <script src="{{ static_url('asset/tab.js') }}"></script>
+    <script src="{{ static_url('asset/validate.js') }}"></script>
+    <script src="{{ static_url('js/tool.js') }}"></script>
+    <script src="{{ static_url('js/ccrd/online_apply/main_choice.js') }}"></script>
 </head>
 <body ontouchstart>
 	<div class="container">
@@ -64,7 +67,7 @@
 	</div>
     <div class="fixed_height"></div>
     <div class="ys_fixed_footer">
-        <a class="ys_fixed_btn" href="1">立即申请</a>
+        <a id="submit" class="ys_fixed_btn" href="javascript:;">立即申请</a>
     </div>
     <script type="text/javascript">
         var mySwiper = new Swiper(".swiper-card-list", {

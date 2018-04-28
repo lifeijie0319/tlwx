@@ -9,8 +9,6 @@ from .service.async_wx import Message
 
 
 class TPL:
-    TRADE_DETAAIL_TPL_ID = 'dIKccSFgM7gi7zwzd2t960_4Akm-JORICZNwZCAoS1s'
-
     @classmethod
     def send_trade_detail(cls, openid, data):
         app_log.info('send_trade_detail')
@@ -41,7 +39,61 @@ class TPL:
                 'color': '#000000'
             },
         }
-        Message.send_template_msg(openid, cls.TRADE_DETAAIL_TPL_ID, url, content)
+        Message.send_template_msg(openid, config.TRADE_TPL_ID, url, content)
+
+    @classmethod
+    def send_bill(cls, openid, data):
+        url = ''
+        content = {
+            'first': {
+                'value': u'您的' + data['card_type'] + '卡' + data['month'] + '月账单',
+                'color': '#000000'
+            },
+            'keyword1': {
+                'value': data.get('date'),
+                'color': '#000000'
+            },
+            'keyword2': {
+                'value': data.get('pay_date'),
+                'color': '#000000'
+            },
+            'keyword3': {
+                'value': data.get('amt'),
+                'color': '#000000'
+            },
+            'keyword4': {
+                'value' : data.get('min_amt'),
+                'color' :'#000000'
+            },
+            'remark': {
+                'value': u'点击查看详情',
+                'color': '#000000'
+            },
+        }
+        Message.send_template_msg(openid, config.BILL_TPL_ID, url, content)
+
+    @classmethod
+    def repay(cls, openid, data):
+        url = ''
+        content = {
+            'first': {
+                'value': data['date'],
+                'color': '#000000'
+            },
+            'keyword1': {
+                'value': data.get('ccrdno_tail'),
+                'color': '#000000'
+            },
+            'keyword2': {
+                'value': data.get('amt'),
+                'color': '#000000'
+            },
+            'remark': {
+                'value': u'点击查看详情',
+                'color': '#000000'
+            },
+        }
+        Message.send_template_msg(openid, config.REPAY_TPL_ID, url, content)
 
 
 class XML:

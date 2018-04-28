@@ -17,6 +17,15 @@ $(function(){
             if(!error) validate_res = true;
         });
         if (!validate_res) return false;
-        window.location.href = '7';
+
+        data = $('#form6').serializeForm();
+        $.post('', data, function(resp){
+            console.log(resp);
+            if(resp.success){
+                window.location.href = './face_check';
+            }else{
+                $.toptips(resp.msg);
+            }
+        });
     });
 });
