@@ -1,43 +1,36 @@
 #-*- coding:utf-8 -*-
+import base64
 import json
-import tornado.web
 
 from tornado.log import app_log
+from tornado.web import MissingArgumentError
 
 from ..common import BaseHandler, need_openid
 from ... import config
 from ...db.api import OP_CCRDOnlineApply
+from ...tool import G
 
 
 def check_apply(func):
     async def wrapper(self, *args, **kwargs):
         items = OP_CCRDOnlineApply(self.db).get(self.openid)
-        if len(items) > 1:
-            return self.redirect(config.BASE_URL + '/select')
-        elif len(items) == 1:
-            status = items[0].status
-            mapper = {
-                '基本信息': 'base_info',
-                '身份证': 'id_card',
-                '概述': 'profile',
-                '工作信息': 'job_info',
-                '住宅信息': 'house_info',
-                '其他信息': 'other_info',
-                '人脸识别': 'face_check',
-            }
-            tail = mapper[status]
-            self.set_secure_cookie('product_cd', items[0].product_cd)
-            current = self.request.path.split('/')[-1]
-            if current == tail:
-                await func(self, *args, **kwargs)
+        if len(items) >= 1:
+            product_cd = self.get_cookie('product_cd')
+            if not product_cd:
+                return self.redirect(config.BASE_URL + '/ccrd/online_apply/select')
+            step = 'choice'
+            for item in items:
+                app_log.info('product_cd: %s %s', item.product_cd, product_cd)
+                if item.product_cd == product_cd:
+                    step = item.step
+                    break
+            tail = self.request.path.split('/')[-1]
+            if tail == step:
+                return await func(self, *args, **kwargs)
             else:
-                return self.redirect(config.BASE_URL + '/ccrd/online_apply/' + tail)
+                return self.redirect(config.BASE_URL + '/ccrd/online_apply/' + step)
         else:
-            current = self.request.path.split('/')[-1]
-            if current == 'choice':
-                await func(self, *args, **kwargs)
-            else:
-                return self.redirect(config.BASE_URL + '/ccrd/choice')
+            return self.redirect(config.BASE_URL + '/ccrd/online_apply/choice')
     return wrapper
 
 
@@ -46,9 +39,27 @@ class PageHandler(BaseHandler):
         return self.render('ccrd/online_apply' + page + '.html')
 
 
+class SelectHandler(BaseHandler):
+    @need_openid
+    async def get(self):
+        items = OP_CCRDOnlineApply(self.db).get(self.openid)
+        app_log.info('items: %s', items)
+        if not items:
+            return self.redirect(config.BASE_URL + '/ccrd/online_apply/choice')
+        mapper = {
+            'base_info': '基本信息',
+            'id_card': '身份证上传',
+            'profile': '概况',
+            'job_info': '工作信息',
+            'house_info': '住宅信息',
+            'other_info': '其他信息',
+            'face_check': '人脸识别'
+        }
+        return self.render('ccrd/online_apply/main_select.html', items=items, mapper=mapper)
+
+
 class ChoiceHandler(BaseHandler):
     @need_openid
-    @check_apply
     async def get(self):
         return self.render('ccrd/online_apply/main_choice.html')
 
@@ -56,7 +67,6 @@ class ChoiceHandler(BaseHandler):
         data = json.loads(self.request.body)
         data['openid'] = self.openid
         app_log.info('REQ: %s', data)
-        self.set_secure_cookie('product_cd', data['product_cd'])
         OP_CCRDOnlineApply(self.db).create(data)
         self.db.commit()
         return self.write({'success': True})
@@ -75,9 +85,9 @@ class BaseInfoHandler(BaseHandler):
         if not res['success']:
             return self.write(res)
         OP_CCRDOnlineApply(self.db).get(self.openid)
-        product_cd = self.get_secure_cookie('product_cd').decode()
+        product_cd = self.get_cookie('product_cd')
         app_log.info('PRODUCT_TYPE: %s', product_cd)
-        data['status'] = '身份证'
+        data['step'] = 'id_card'
         OP_CCRDOnlineApply(self.db).update(self.openid, product_cd, data)
         self.db.commit()
         return self.write({'success': True})
@@ -90,8 +100,8 @@ class IDCardHandler(BaseHandler):
         return self.render('ccrd/online_apply/main_id_card.html')
 
     def post(self):
-        product_cd = self.get_secure_cookie('product_cd').decode()
-        OP_CCRDOnlineApply(self.db).update(self.openid, product_cd, {'status': '概述'})
+        product_cd = self.get_cookie('product_cd')
+        OP_CCRDOnlineApply(self.db).update(self.openid, product_cd, {'step': 'profile'})
         self.db.commit()
         return self.write({'success': True})
 
@@ -100,8 +110,8 @@ class ProfileHandler(BaseHandler):
     @need_openid
     @check_apply
     async def get(self):
-        product_cd = self.get_secure_cookie('product_cd').decode()
-        item = OP_CCRDOnlineApply(self.db).get(self.openid, product_cd=product_cd)
+        product_cd = self.get_cookie('product_cd')
+        item = OP_CCRDOnlineApply(self.db).get(self.openid, product_cd=product_cd)[0]
         context = {
             'name': item.name,
             'id_no': item.id_no,
@@ -111,12 +121,12 @@ class ProfileHandler(BaseHandler):
 
     async def post(self):
         data = json.loads(self.request.body)
-        data.pop('if_serve_ever')
+        data['if_serve_ever'] = 'Y' if data.get('if_serve_ever') else 'N'
         data['id_start_date'] = data['id_start_date'].replace('-', '')
         data['id_last_date'] = data['id_last_date'].replace('-', '')
-        data['status'] = '工作信息'
+        data['step'] = 'job_info'
         app_log.info('REQ: %s', data)
-        product_cd = self.get_secure_cookie('product_cd').decode()
+        product_cd = self.get_cookie('product_cd')
         OP_CCRDOnlineApply(self.db).update(self.openid, product_cd, data)
         self.db.commit()
         return self.write({'success': True})
@@ -138,9 +148,9 @@ class JobInfoHandler(BaseHandler):
         data = json.loads(self.request.body)
         ssx = data.pop('ssx')
         data['emp_province'], data['emp_city'], data['emp_zone'] = ssx.split(' ')
-        data['status'] = '住宅信息'
+        data['step'] = 'house_info'
         app_log.info('REQ: %s', data)
-        product_cd = self.get_secure_cookie('product_cd').decode()
+        product_cd = self.get_cookie('product_cd')
         OP_CCRDOnlineApply(self.db).update(self.openid, product_cd, data)
         self.db.commit()
         return self.write({'success': True})
@@ -160,9 +170,9 @@ class HouseInfoHandler(BaseHandler):
         data = json.loads(self.request.body)
         ssx = data.pop('ssx')
         data['home_state'], data['home_city'], data['home_zone'] = ssx.split(' ')
-        data['status'] = '其他信息'
+        data['step'] = 'other_info'
         app_log.info('REQ: %s', data)
-        product_cd = self.get_secure_cookie('product_cd').decode()
+        product_cd = self.get_cookie('product_cd')
         OP_CCRDOnlineApply(self.db).update(self.openid, product_cd, data)
         self.db.commit()
         return self.write({'success': True})
@@ -183,10 +193,10 @@ class OtherInfoHandler(BaseHandler):
 
     def post(self):
         data = json.loads(self.request.body)
-        data['status'] = '人脸识别'
+        data['step'] = 'face_check'
         data['sm_amt_verify_ind'] = 'Y' if data.get('sm_amt_verify_ind') else 'N'
         app_log.info('REQ: %s', data)
-        product_cd = self.get_secure_cookie('product_cd').decode()
+        product_cd = self.get_cookie('product_cd')
         OP_CCRDOnlineApply(self.db).update(self.openid, product_cd, data)
         self.db.commit()
         return self.write({'success': True})
@@ -202,15 +212,53 @@ class FaceCheckHandler(BaseHandler):
         data = json.loads(self.request.body)
         ssx = data.pop('ssx')
         data['home_state'], data['home_city'], data['home_zone'] = ssx.split(' ')
-        data['status'] = '其他信息'
+        data['step'] = 'other_info'
         app_log.info('REQ: %s', data)
-        product_cd = self.get_secure_cookie('product_cd').decode()
+        product_cd = self.get_cookie('product_cd')
         OP_CCRDOnlineApply(self.db).update(self.openid, product_cd, data)
         self.db.commit()
         return self.write({'success': True})
 
 
-class StatusPageHandler(BaseHandler):
-    def get(self, page=1):
-        app_log.debug('%s %s', page, type(page))
-        return self.render('ccrd/online_apply_status' + page + '.html')
+class StatusHandler(BaseHandler):
+    def get(self, action):
+        if action == 'form':
+            return self.render('ccrd/online_apply/status.html', id_types=config.ID_TYPE)
+        elif action == 'list':
+            data = self.get_cookie('ccrd_online_apply_status')
+            data = base64.b64decode(data)
+            data = json.loads(data)
+            app_log.info('DATA: %s', data)
+            return self.render('ccrd/online_apply/status_list.html', items=data)
+        elif action == 'detail':
+            app_no = self.get_argument('app_no')
+            data = self.get_cookie('ccrd_online_apply_status')
+            data = base64.b64decode(data)
+            data = json.loads(data)
+            for item in data:
+                if item['APP_NO'] == app_no:
+                    context = item
+                    break
+            app_log.info('DETAIL: %s', context)
+            return self.render('ccrd/online_apply/status_detail.html', **context)
+
+    async def post(self, action):
+        data = json.loads(self.request.body)
+        ret = await G.tl_cli.send2tl('11000', data)
+        if not ret.get('APPLYS'):
+            return self.write({'success': False, 'msg': '没有数据'})
+        items = ret['APPLYS']['APPLY']
+        if not isinstance(items, list):
+            items = [items]
+        mapper = {
+            'APPLY10': '申请已受理',
+            'L05': '成功申请',
+            'M05': '失败申请'
+        }
+        for item in items:
+            item['STATUS'] = mapper[item['RTF_STATE']]
+        data = json.dumps(items, ensure_ascii=False).encode('utf-8')
+        app_log.info('DATA: %s', type(data))
+        data = base64.b64encode(data)
+        self.set_cookie('ccrd_online_apply_status', data)
+        return self.write({'success': True})

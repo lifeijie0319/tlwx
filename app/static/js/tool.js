@@ -8,6 +8,12 @@ QjQRDtsufovhZyRDWRPw9e+cS+C7GutzS4vEstudX+eScgaMPTCdBRQNpYdiK0WV\
 ovVAB3BoWAEpB2yQVQIDAQAB\
 -----END PUBLIC KEY-----'
 
+function setCookie(c_name,value,expiredays)
+{
+    var exdate = new Date();
+    exdate.setDate(exdate.getDate() + expiredays);
+    document.cookie = c_name + "=" + escape(value) + ((expiredays==null) ? "" : ";expires=" + exdate.toGMTString())
+}
 function getCookie(name) {
     var c = document.cookie.match("\\b" + name + "=([^;]*)\\b");
     return c ? c[1] : undefined;
