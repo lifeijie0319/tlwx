@@ -22,26 +22,27 @@ $(function(){
         $(this).removeClass('clause_btn_visible');
     });
 
-    /*回显首页填入数据
-    data = JSON.parse(localStorage.getItem('ccrd_online_apply_data'));
-    console.log(typeof data, data);
-    $('input[name="name"]').val(data.name).attr('disabled', true);
-    $('input[name="idno"]').val(data.idno).attr('disabled', true);
-    $('input[name="cel"]').val(data.cel).attr('disabled', true);*/
-    $.get('./base_info', function(resp){
-        $('input[name="name"]').val(resp.name);
-        $('input[name="idno"]').val(resp.idno);
-        $('input[name="cellphone"]').val(resp.cellphone);
-    });
-    /*$('#send_vcode').on('click', function () {
-         sendVcode($(this), $('input[name="cel"]'));
-    });*/
     $('#submit3').on('click', function(){
         validate_res = false;
         $('#form3').validate(function(error){
             if(!error) validate_res = true;
         });
         if (!validate_res) return false;
-        window.location.href = '4';
+
+        id_start_date = $('input[name="id_start_date"]').val();
+        id_last_date = $('input[name="id_last_date"]').val();
+        if(id_start_date > id_last_date){
+            $.toptips('证件有效期（起始日）大于证件有效期（到期日）');
+            return false;
+        }
+        data = $('#form3').serializeForm();
+        $.post('', data, function(resp){
+            console.log(resp);
+            if(resp.success){
+                window.location.href = './job_info';
+            }else{
+                $.toptips(resp.msg);
+            }
+        });
     });
 });

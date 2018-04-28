@@ -15,6 +15,16 @@ $(function(){
         }
     });
 
+    $('#skip').on('click', function(resp){
+        $.post('', function(resp){
+            if(resp.success){
+                window.location.href = './profile';
+            }else{
+                $.toptips('记录状态更新失败');
+            }
+        });
+    });
+
     $('#ensure').on('click', function(){
         front_id = $('#front_id').attr('mediaid');
         back_id = $('#back_id').attr('mediaid');

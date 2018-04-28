@@ -19,7 +19,7 @@
     <script src="{{ static_url('asset/photoswipe/photoswipe-ui-default.min.js') }}"></script>
     <script src="{{ static_url('asset/popup.js') }}"></script>
     <script src="{{ static_url('js/tool.js') }}"></script>
-    <script src="{{ static_url('js/ccrd/online_apply3.js') }}"></script>
+    <script src="{{ static_url('js/ccrd/online_apply/main_profile.js') }}"></script>
     <script>
         $(function() {
             $("#date").datetimePicker({
@@ -29,9 +29,6 @@
             $("#date2").datetimePicker({
                 title: "证件有效期（到期日）",
                 m: 1
-            });
-            $("#ssx").cityPicker({
-                title: "签发机关"
             });
         });
     </script>
@@ -71,7 +68,8 @@
                     <label>申请人姓名</label>
                 </div>
                 <div class="ys_cell_bd">
-                    <input name="name" class="ys_input" type="text" placeholder="请输入申请人姓名" emptyTips="姓名不能为空" pattern="^[\u4e00-\u9fa5]{2,}$" notMatchTips="姓名必须是中文，至少两个字" required readonly>
+                    <input name="name" class="ys_input" type="text" disabled value="{{ name }}" placeholder="请输入申请人姓名"
+                    emptyTips="姓名不能为空" pattern="^[\u4e00-\u9fa5]{2,}$" notMatchTips="姓名必须是中文，至少两个字" required>
                 </div>
             </div>
             <div class="ys_cell">
@@ -79,24 +77,26 @@
                     <label>身份证号码</label>
                 </div>
                 <div class="ys_cell_bd">
-                    <input name="idno" class="ys_input" type="number" placeholder="请输入身份证号码" pattern="(^\d{18}$)|(^\d{17}(\d|X|x)$)" emptyTips="身份证号码不能为空" notMatchTips="请输入正确的18位身份证号码" required readonly>
+                    <input name="id_no" class="ys_input" type="number" disabled value="{{ id_no }}" placeholder="请输入身份证号码"
+                    pattern="(^\d{18}$)|(^\d{17}(\d|X|x)$)" emptyTips="身份证号码不能为空"
+                    notMatchTips="请输入正确的18位身份证号码" required>
                 </div>
             </div>
             <div class="ys_cell">
                 <div class="ys_cell_hd">
-                    <label>签发机关</label>
+                    <label>签发机关（选填）</label>
                 </div>
                 <div class="ys_cell_bd">
-                    <input id="ssx" class="ys_input" type="text" placeholder="请选择省市县" emptyTips="签发机关不能为空" required>
+                    <input name="id_issuer_address" class="ys_input" type="text" placeholder="请填写证件签发机关地址">
                 </div>
             </div>
-            <label class="ys_cell ys_cell_checkbox" for="c3">
+            <label class="ys_cell ys_cell_checkbox" for="if_serve_ever">
                 <div class="ys_cell_bd">
                     证件永久有效？
                 </div>
                 <div>是</div>
                 <div class="ys_cell_ft">
-                    <input class="ys_checkbox" id="c3" type="checkbox" name="checkbox4" checked="">
+                    <input name="if_serve_ever" id="if_serve_ever" class="ys_checkbox" type="checkbox" checked>
                     <i class="iconfont icon-c-radio-none"></i>
                 </div>
             </label>
@@ -105,7 +105,8 @@
                     <label>证件有效期（起始日）</label>
                 </div>
                 <div class="ys_cell_bd">
-                    <input id="date" class="ys_input" type="text" placeholder="证件有效期" emptyTips="证件有效期不能为空" required>
+                    <input name="id_start_date" class="ys_input" type="date" placeholder="证件有效期"
+                    emptyTips="证件有效期不能为空" required>
                 </div>
             </div>
             <div class="ys_cell">
@@ -113,7 +114,8 @@
                     <label>证件有效期（到期日）</label>
                 </div>
                 <div class="ys_cell_bd">
-                    <input id="date2" class="ys_input" type="text" placeholder="证件有效期" emptyTips="证件有效期不能为空" required>
+                    <input name="id_last_date" class="ys_input" type="date" placeholder="证件有效期"
+                    emptyTips="证件有效期不能为空" required>
                 </div>
             </div>
             <div class="ys_cell ys_cell_select">
@@ -121,7 +123,7 @@
                     <label>税收居民声明</label>
                 </div>
                 <div class="ys_cell_bd">
-                    <select class="ys_select" name="select">
+                    <select class="ys_select">
                         <option selected value="1">仅为中国税收居民</option>
                         <option value="2">仅为非居民</option>
                         <option value="6">既是中国税收居民又是其他国家（地区）居民</option>
@@ -209,37 +211,17 @@
                     <label>手机号码</label>
                 </div>
                 <div class="ys_cell_bd">
-                    <input class="ys_input" type="number" name="cellphone" placeholder="请输入手机号码" pattern="^[0-9]{11}$" emptyTips="手机号不能为空" notMatchTips="请输入正确的手机号" required readonly>
+                    <input class="ys_input" type="cellphone" name="cellphone" value="{{ cellphone }}" disabled
+                    placeholder="请输入手机号码" pattern="^[0-9]{11}$" emptyTips="手机号不能为空"
+                    notMatchTips="请输入正确的手机号" required>
                 </div>
             </div>
-<!--
-            <div class="ys_cell ys_cell_vcode">
-                <div class="ys_cell_hd">
-                    <label>验证码</label>
-                </div>
-                <div class="ys_cell_bd">
-                    <input class="ys_input" type="text" type="number" placeholder="短信验证码" pattern="[0-9]{6}" emptyTips="验证码不
-能为空" notMatchTips="验证码格式不正确" required>
-                </div>
-                <div class="ys_cell_ft">
-                    <a class="ys_input_btn" href="javascript:;" id="send_vcode">获取验证码</a>
-                </div>
-            </div>
--->
-            <label class="ys_cell ys_cell_checkbox" for="c4">
-                <div class="ys_cell_bd">是否卡片寄送</div>
-                <div>是</div>
-                <div class="ys_cell_ft">
-                    <input class="ys_checkbox" id="c4" type="checkbox" name="checkbox" checked>
-                    <i class="iconfont icon-c-radio-none"></i>
-                </div>
-            </label>
             <div class="ys_cell">
                 <div class="ys_cell_hd">
                     <label>推荐码（选填）</label>
                 </div>
                 <div class="ys_cell_bd">
-                    <input class="ys_input" type="number" placeholder="请输入推荐码">
+                    <input name="ref_no" class="ys_input" type="number" placeholder="请输入推荐码">
                 </div>
             </div>
         </div>

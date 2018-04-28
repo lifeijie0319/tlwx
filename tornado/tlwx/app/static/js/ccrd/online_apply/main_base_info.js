@@ -1,4 +1,5 @@
 $(function(){
+    $('select[name="id_type"]').val('I');
     $('#form1').form();
 
     $('#send_vcode').on('click', function(){
@@ -16,7 +17,7 @@ $(function(){
         $.post('./base_info', data, function(resp){
             console.log(resp);
             if(resp.success){
-                window.location.href = '2';
+                window.location.href = './id_card';
             }else{
                 $.toptips(resp.msg);
             }

@@ -14,14 +14,7 @@
     <script src="{{ static_url('asset/picker-city.js') }}"></script>
     <script src="{{ static_url('asset/popup.js') }}"></script>
     <script src="{{ static_url('js/tool.js') }}"></script>
-    <script src="{{ static_url('js/ccrd/online_apply6.js?v=20180321') }}"></script>
-    <script>
-        $(function() {
-            $("#ssx").cityPicker({
-                title: "单位所在省市县（区）"
-            });
-        });
-    </script>
+    <script src="{{ static_url('js/ccrd/online_apply/main_other_info.js') }}"></script>
 </head>
 <body ontouchstart>
 	<div class="container">
@@ -58,11 +51,11 @@
                     <label>婚姻状况</label>
                 </div>
                 <div class="ys_cell_bd">
-                    <select class="ys_select" name="select">
-                        <option selected="">请选择</option>
-                        <option>已婚</option>
-                        <option>未婚</option>
-                        <option>其他</option>
+                    <select name="marital_status" class="ys_select" emptyTips="婚姻状况不能为空" required>
+                        <option value="">请选择</option>
+                        {% for key, value in marital_statuses.items() %}
+                        <option value="{{ key }}">{{ value }}</option>
+                        {% end %}
                     </select>
                 </div>
             </div>
@@ -71,13 +64,11 @@
                     <label>教育程度</label>
                 </div>
                 <div class="ys_cell_bd">
-                    <select class="ys_select" name="select">
-                        <option selected="">请选择</option>
-                        <option>博士及以上</option>
-                        <option>硕士</option>
-                        <option>大学本科</option>
-                        <option>大专</option>
-                        <option>高中/中专及以下</option>
+                    <select name="qualification" class="ys_select" emptyTips="教育程度不能为空" required>
+                        <option value="">请选择</option>
+                        {% for key, value in qualifications.items() %}
+                        <option value="{{ key }}">{{ value }}</option>
+                        {% end %}
                     </select>
                 </div>
             </div>
@@ -86,7 +77,9 @@
                     <label>电子邮箱</label>
                 </div>
                 <div class="ys_cell_bd">
-                    <input class="ys_input" type="text" placeholder="请输入电子邮箱" pattern="^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$" emptyTips="电子邮箱不能为空" notMatchTips="电子邮箱的格式不正确" required>
+                    <input name="email" class="ys_input" type="text" placeholder="请输入电子邮箱"
+                    pattern="^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$" notMatchTips="电子邮箱的格式不正确"
+                    emptyTips="电子邮箱不能为空" required>
                 </div>
             </div>
             <div class="ys_cell ys_cell_select">
@@ -94,22 +87,11 @@
                     <label>账单类型</label>
                 </div>
                 <div class="ys_cell_bd">
-                    <select class="ys_select" name="select">
-                        <option selected="">请选择</option>
-                        <option>电子邮箱寄送账单</option>
-                        <option>不寄送账单</option>
-                    </select>
-                </div>
-            </div>
-            <div class="ys_cell ys_cell_select">
-                <div class="ys_cell_hd">
-                    <label>卡片寄送地址</label>
-                </div>
-                <div class="ys_cell_bd">
-                    <select class="ys_select" name="select">
-                        <option selected="">请选择</option>
-                        <option>单位地址</option>
-                        <option>住宅地址</option>
+                    <select name="stmt_media_type" class="ys_select" emptyTips="账单类型不能为空" required>
+                        <option value="">请选择</option>
+                        {% for key, value in stmt_media_types.items() %}
+                        <option value="{{ key }}">{{ value }}</option>
+                        {% end %}
                     </select>
                 </div>
             </div>
@@ -118,38 +100,34 @@
                     <label>卡片寄送方式</label>
                 </div>
                 <div class="ys_cell_bd">
-                    <select class="ys_select" name="select">
-                        <option selected="">网点领取</option>
-                        <option>邮件递送</option>
-                        <option>加急邮寄</option>
+                    <select name="card_fetch_method" class="ys_select" emptyTips="卡片寄送方式不能为空" required>
+                        <option value="">请选择</option>
+                        {% for key, value in card_fetch_methods.items() %}
+                        <option value="{{ key }}">{{ value }}</option>
+                        {% end %}
                     </select>
                 </div>
             </div>
-            <div class="ys_cell">
+            <div class="ys_cell ys_cell_select">
                 <div class="ys_cell_hd">
-                    <label>申请卡种</label>
+                    <label>卡片寄送地址</label>
                 </div>
                 <div class="ys_cell_bd">
-                    <input class="ys_input" type="text" placeholder="银联标准普卡" emptyTips="申请卡种不能为空" required>
+                    <select name="card_mailer_ind" class="ys_select" emptyTips="卡片寄送地址不能为空" required>
+                        <option value="">请选择</option>
+                        {% for key, value in card_mailer_inds.items() %}
+                        <option value="{{ key }}">{{ value }}</option>
+                        {% end %}
+                    </select>
                 </div>
             </div>
-            <label class="ys_cell ys_cell_checkbox" for="c1">
+            <label class="ys_cell ys_cell_checkbox" for="sm_amt_verify_ind">
                 <div class="ys_cell_bd">
                     开通小额免密免签
                 </div>
                 <div>是</div>
                 <div class="ys_cell_ft">
-                    <input class="ys_checkbox" id="c1" type="checkbox" name="checkbox" checked="">
-                    <i class="iconfont icon-c-radio-none"></i>
-                </div>
-            </label>
-            <label class="ys_cell ys_cell_checkbox" for="c2">
-                <div class="ys_cell_bd">
-                    申请借记卡，同时开通人民币自动还款功能
-                </div>
-                <div>是</div>
-                <div class="ys_cell_ft">
-                    <input class="ys_checkbox" id="c2" type="checkbox" name="checkbox2">
+                    <input name="sm_amt_verify_ind" id="sm_amt_verify_ind" class="ys_checkbox" type="checkbox" checked>
                     <i class="iconfont icon-c-radio-none"></i>
                 </div>
             </label>

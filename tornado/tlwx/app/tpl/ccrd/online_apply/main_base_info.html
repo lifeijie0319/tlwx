@@ -10,7 +10,7 @@
     <script src="{{ static_url('asset/jquery.min.js') }}"></script>
     <script src="{{ static_url('asset/validate.js') }}"></script>
     <script src="{{ static_url('js/tool.js') }}"></script>
-    <script src="{{ static_url('js/ccrd/online_apply1.js') }}"></script>
+    <script src="{{ static_url('js/ccrd/online_apply/main_base_info.js') }}"></script>
 </head>
 <body ontouchstart>
 	<div class="container">
@@ -30,7 +30,9 @@
                 </div>
                 <div class="ys_cell_bd">
                     <select class="ys_select" name="id_type" emptyTips="证件类型不能为空" required>
-                        <option value="I" selected>身份证</option>
+                        {% for key, value in id_types.items() %}
+                        <option value="{{ key }}" selected>{{ value }}</option>
+                        {% end %}
                     </select>
                 </div>
             </div>
@@ -39,7 +41,7 @@
                     <label>证件号码</label>
                 </div>
                 <div class="ys_cell_bd">
-                    <input name="idno" class="ys_input" type="text" placeholder="请输入证件号码" pattern="(^\d{18}$)|(^\d{17}(\d|X|x)$)" emptyTips="证件号不能为空" notMatchTips="请输入正确的证件号" required>
+                    <input name="id_no" class="ys_input" type="text" placeholder="请输入证件号码" pattern="(^\d{18}$)|(^\d{17}(\d|X|x)$)" emptyTips="证件号不能为空" notMatchTips="请输入正确的证件号" required>
                 </div>
             </div>
             <div class="ys_cell">
