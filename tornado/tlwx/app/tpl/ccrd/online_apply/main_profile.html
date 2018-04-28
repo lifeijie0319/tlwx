@@ -118,6 +118,7 @@
                     emptyTips="证件有效期不能为空" required>
                 </div>
             </div>
+            <!--
             <div class="ys_cell ys_cell_select">
                 <div class="ys_cell_hd">
                     <label>税收居民声明</label>
@@ -138,6 +139,7 @@
                     <input class="ys_input" type="text" placeholder="请输入车牌号" pattern="^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]{1}[A-Z]{1}[A-Z0-9]{4}[A-Z0-9挂学警港澳]{1}$" notMatchTips="车牌号格式不正确" required>
                 </div>
             </div>
+            -->
             <div class="ys_cell ys_cell_vcode">
                 <div class="ys_cell_hd">
                     <label>行驶证（选填）</label>
@@ -211,7 +213,7 @@
                     <label>手机号码</label>
                 </div>
                 <div class="ys_cell_bd">
-                    <input class="ys_input" type="cellphone" name="cellphone" value="{{ cellphone }}" disabled
+                    <input name="cellphone" class="ys_input" type="cellphone" value="{{ cellphone }}" disabled
                     placeholder="请输入手机号码" pattern="^[0-9]{11}$" emptyTips="手机号不能为空"
                     notMatchTips="请输入正确的手机号" required>
                 </div>

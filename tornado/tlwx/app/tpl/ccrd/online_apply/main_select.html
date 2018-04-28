@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>信用卡申请</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <link href="{{ static_url('css/yinsho.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('css/swiper.min.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('css/main.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('font/iconfont.css') }}" rel="stylesheet"/>
+    <script src="{{ static_url('asset/jquery.min.js') }}"></script>
+    <script src="{{ static_url('asset/validate.js') }}"></script>
+    <script src="{{ static_url('js/tool.js') }}"></script>
+    <script src="{{ static_url('js/ccrd/online_apply/main_select.js') }}"></script>
+</head>
+<body ontouchstart>
+	<div class="container">
+        <div class="ys_cells_title">进行中</div>
+        <div class="ys_cells">
+            {% for item in items %}
+            <a name="continue" product_cd="{{ item.product_cd }}" class="ys_cell" href="./{{ item.step }}">
+                <div class="ys_cell_bd">
+                    <div class="ys_cell_title">卡类型：{{ item.product_cd }}</div>
+                    <div class="ys_cell_label">步骤：{{ mapper[item.step] }}</div>
+                </div>
+                <div class="ys_cell_ft">继续</div>
+            </a>
+            {% end %}
+        </div>
+        <div class="ys_cells_title">新申请</div>
+        <div class="ys_cells">
+            <a class="ys_cell" href="./choice">
+                <div class="ys_cell_bd">重新申请新信用卡</div>
+                <div class="ys_cell_ft"></div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

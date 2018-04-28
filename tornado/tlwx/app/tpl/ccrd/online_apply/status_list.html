@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>信用卡申请状态查询</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <link href="{{ static_url('css/yinsho.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('css/main.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('font/iconfont.css') }}" rel="stylesheet"/>
+    <script src="{{ static_url('asset/jquery.min.js') }}"></script>
+    <script src="{{ static_url('asset/validate.js') }}"></script>
+    <script src="{{ static_url('js/tool.js') }}"></script>
+    <script src="{{ static_url('js/ccrd/bill.js') }}"></script>
+</head>
+<body ontouchstart>
+	<div class="container">
+        <div class="ys_panel">
+            <a class="ys_cell" href="javascript:;">
+                <div class="ys_cell_bd">信用卡申请状态列表</div>
+            </a>
+            {% for item in items %}
+            <a class="ys_item_media" href="./detail?app_no={{ item['APP_NO'] }}">
+                <div class="ys_item_bd">
+                    <h4>{{ item['PRODUCT_NAME']}}</h4>
+                    <p class="ys_item_p">编号：{{ item['APP_NO'] }}</p>
+                </div>
+            </a>
+            {% end %}
+        </div>
+    </div>
+</body>
+</html>

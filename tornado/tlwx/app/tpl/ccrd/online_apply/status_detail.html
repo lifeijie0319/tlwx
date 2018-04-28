@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>查询办卡进度</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <link href="{{ static_url('css/yinsho.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('css/main.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('font/iconfont.css') }}" rel="stylesheet"/>
+</head>
+<body ontouchstart style="background: #fff;">
+	<div class="container">
+        <div class="status">
+            当前申请状态：<span>{{ STATUS }}</span>
+        </div>
+        <ul class="timeline">
+            <li class="timeline_item">
+                <div class="timeline_time">
+                    <time>{{ APPLY_DATE[:4] }}</time>
+                    <small>{{ APPLY_DATE[4:6] }}-{{ APPLY_DATE[6:] }}</small>
+                </div>
+                <div class="timeline_point">
+                    <i class="iconfont icon-c-check-fill"></i>
+                </div>
+                <div class="timeline_content ys_bbottom">
+                    <h4>申请已受理</h4>
+                    <div class="progress_details">
+                        <div class="progress_details_list">
+                            <label>申请卡产品名称</label>
+                            <span>{{ PRODUCT_NAME }}</span>
+                            <label>申请件编号</label>
+                            <span>{{ APP_NO }}</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            {% if STATUS == '成功申请' %}
+            <li class="timeline_item">
+                <div class="timeline_time">
+                    <!--
+                    <time>2017</time>
+                    <small>10-23</small>
+                    -->
+                </div>
+                <div class="timeline_point">
+                    <i class="iconfont icon-radio-fill"></i>
+                </div>
+                <div class="timeline_content ys_bbottom">
+                    <h4>{{ STATUS }}</h4>
+                </div>
+            </li>
+            {% elif STATUS == '失败申请' %}
+            <li class="timeline_item">
+                <div class="timeline_time">
+                    <!--
+                    <time>2017</time>
+                    <small>10-23</small>
+                    -->
+                </div>
+                <div class="timeline_point">
+                    <i class="iconfont icon-time-fill"></i>
+                </div>
+                <div class="timeline_content ys_bbottom">
+                    <h4>{{ STATUS }}</h4>
+                    <div class="progress_details">
+                        <div class="progress_details_list">
+                            <label>失败原因</label>
+                            <span>{{ REFUSE_CODE }}</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            {% else %}
+            <li class="timeline_item">
+                <div class="timeline_time">
+                    <!--
+                    <time>2017</time>
+                    <small>10-23</small>
+                    -->
+                </div>
+                <div class="timeline_point">
+                    <i class="iconfont icon-time-fill"></i>
+                </div>
+                <div class="timeline_content ys_bbottom">
+                    <h4>{{ STATUS }}</h4>
+                </div>
+            </li>
+            {% end %}
+        </ul>
+	</div>
+</body>
+</html>
