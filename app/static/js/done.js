@@ -25,6 +25,12 @@ $(function(){
         case 'installment_bill':
             $('#content').html('您的账单分期申请已成功');
             break;
+        case 'installment_cash':
+            $('#content').html('您的现金分期申请已成功');
+            break;
+        case 'installment_lg_cash':
+            $('#content').html('您的大额现金分期申请已成功');
+            break;
         case 'installment_consumption':
             $('#content').html('消费分期申请成功');
             break;

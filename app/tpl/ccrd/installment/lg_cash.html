@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>现金分期申请</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <link href="{{ static_url('css/yinsho.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('css/main.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('font/iconfont.css') }}" rel="stylesheet"/>
+    <script src="{{ static_url('asset/jquery.min.js') }}"></script>
+    <script src="{{ static_url('asset/popup.js') }}"></script>
+    <script src="{{ static_url('asset/jsencrypt.min.js') }}"></script>
+    <script src="{{ static_url('asset/validate.js') }}"></script>
+    <script src="{{ static_url('js/tool.js') }}"></script>
+    <script src="{{ static_url('js/ccrd/installment/lg_cash.js') }}"></script>
+</head>
+<body ontouchstart>
+	<div class="container">
+        <form>
+            <div class="ys_cells">
+                <div class="ys_cell">
+                    <div class="ys_cell_hd">
+                        <label style="width: 130px">最高可分期金额</label>
+                    </div>
+                    <div class="ys_cell_bd">
+                        <input name="max_stage_amt" class="ys_input" readonly>
+                    </div>
+                </div>
+                <div class="ys_cell">
+                    <div class="ys_cell_hd">
+                        <label style="width: 130px">分期金额</label>
+                    </div>
+                    <div class="ys_cell_bd">
+                        <input class="ys_input" type="number" name="total_amt" emptyTips="申请金额不能为空" required>
+                    </div>
+                </div>
+                <div class="ys_cell ys_cell_select">
+                    <div class="ys_cell_hd">
+                        <label style="width: 130px">分期期数</label>
+                    </div>
+                    <div class="ys_cell_bd">
+                        <select class="ys_select" name="num" emptyTips="分期期数不能为空" required>
+                            <option value=""></option>
+                            {% for item in items %}
+                            <option value="{{ item['loan_init_term'] }}" max_amount="{{ item['max_amount'] }}">
+                                {{ item['loan_init_term'] }}
+                            </option>
+                            {% end %}
+                        </select>
+                    </div>
+                </div>
+                <div class="ys_cell ys_cell_select">
+                    <div class="ys_cell_hd">
+                        <label style="width: 130px">手续费收取方式</label>
+                    </div>
+                    <div class="ys_cell_bd">
+                        <select class="ys_select" name="fee_method">
+                            <option value="E">分期收取</option>
+                            <option value="F">一次性收取</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="ys_cells_title">试算结果</div>
+            <div class="ys_cells">
+                <div class="ys_cell">
+                    <div class="ys_cell_hd">
+                        <label style="width: 130px">每期还款金额</label>
+                    </div>
+                    <div class="ys_cell_bd">
+                        <input class="ys_input" name="staging_pay" readonly>
+                    </div>
+                </div>
+                <div class="ys_cell">
+                    <div class="ys_cell_hd">
+                        <label style="width: 130px">总手续费</label>
+                    </div>
+                    <div class="ys_cell_bd">
+                        <input class="ys_input" name="total_fee" readonly>
+                    </div>
+                </div>
+                <div class="ys_cell">
+                    <div class="ys_cell_hd">
+                        <label style="width: 130px">分期手续费</label>
+                    </div>
+                    <div class="ys_cell_bd">
+                        <input class="ys_input" name="stage_fee" readonly>
+                    </div>
+                </div>
+            </div>
+            <div class="ys_agree">
+                <label for="agree">
+                    <input id="agree" name="agree" class="ys_agree_checkbox" type="checkbox">
+                    <span class="ys_agree_text">阅读并同意<a class="ys_agree_clause open-popup" href="javascript:;" data-target="#show_protocol">《相关条款》</a></span>
+                </label>
+            </div>
+            <div class="clause">
+                <h4>温馨提醒：</h4>
+                <p>1、提交需借记卡状态正常。</p>
+            </div>
+            <div class="ys_btns">
+                <button class="ys_btn" id="submit" type="button" disabled>确定</button>
+            </div>
+        </form>
+        <div id="show_protocol" class="ys_page">
+            <div class="ys_content ys_page_y">
+                <div class="ys_btns">
+                    <div class="clause_content">
+                        <h4>河北农信信用卡中心微信服务协议</h4>
+                        <p id="protocol"><pre>{{ protocol }}</pre></p>
+                    </div>
+                    <div class="pb60"></div>
+                </div>
+            </div>
+            <div class="ys_fixed_footer clause_btn">
+                <a class="ys_fixed_btn close-popup" href="javascript:;">继续</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

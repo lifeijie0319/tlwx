@@ -51,6 +51,7 @@ url_patterns = [
     (r'/tlwx/ccrd/point/detail', point.DetailHandler),
     (r'/tlwx/ccrd/installment/bill', installment.BillHandler),
     (r'/tlwx/ccrd/installment/cash', installment.CashHandler),
+    (r'/tlwx/ccrd/installment/lg_cash', installment.LGCashHandler),
     (r'/tlwx/ccrd/installment/consumption', installment.ConsumptionHandler),
     (r'/tlwx/ccrd/installment/consumption/form', installment.ConsumptionFormHandler),
     #(r'/tlwx/ccrd/online_apply/upload_idcard', online_apply.UploadIDCardHandler),

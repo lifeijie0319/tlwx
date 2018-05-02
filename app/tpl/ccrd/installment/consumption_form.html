@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>账单分期申请</title>
+    <title>消费分期</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
     <link href="{{ static_url('css/yinsho.css') }}" rel="stylesheet"/>
@@ -9,38 +9,37 @@
     <link href="{{ static_url('font/iconfont.css') }}" rel="stylesheet"/>
     <script src="{{ static_url('asset/jquery.min.js') }}"></script>
     <script src="{{ static_url('asset/popup.js') }}"></script>
-    <script src="{{ static_url('asset/jsencrypt.min.js') }}"></script>
     <script src="{{ static_url('asset/validate.js') }}"></script>
     <script src="{{ static_url('js/tool.js') }}"></script>
-    <script src="{{ static_url('js/ccrd/installment_bill.js') }}"></script>
+    <script src="{{ static_url('js/ccrd/installment/consumption_form.js') }}"></script>
 </head>
 <body ontouchstart>
 	<div class="container">
-        <form>
+        <form id="form">
             <div class="ys_cells">
                 <div class="ys_cell">
                     <div class="ys_cell_hd">
-                        <label style="width: 130px">账单金额</label>
+                        <label style="width: 130px">交易金额</label>
                     </div>
                     <div class="ys_cell_bd">
-                        <input class="ys_input" name="bill_amt" value=1200>
+                        <input name="txn_amt" class="ys_input" type="text" value="{{ txn_amt }}" readonly>
                     </div>
                 </div>
                 <div class="ys_cell">
                     <div class="ys_cell_hd">
-                        <label style="width: 130px">最高可分期金额</label>
-                    </div>
+                        <label style="width: 130px">最小分期金额</label>
+                    </div>  
                     <div class="ys_cell_bd">
-                        <input name="max_stage_amt" class="ys_input" value=0 readonly>
-                    </div>
+                        <input name="min_amount" class="ys_input" type="text" readonly>
+                    </div>  
                 </div>
                 <div class="ys_cell">
                     <div class="ys_cell_hd">
-                        <label style="width: 130px">分期金额</label>
-                    </div>
+                        <label style="width: 130px">最大允许分期金额</label>
+                    </div>  
                     <div class="ys_cell_bd">
-                        <input class="ys_input" type="number" name="total_amt" emptyTips="申请金额不能为空" required>
-                    </div>
+                        <input name="max_amount" class="ys_input" type="text" readonly>
+                    </div>  
                 </div>
                 <div class="ys_cell ys_cell_select">
                     <div class="ys_cell_hd">
@@ -49,8 +48,10 @@
                     <div class="ys_cell_bd">
                         <select class="ys_select" name="num" emptyTips="分期期数不能为空" required>
                             <option value=""></option>
-                            {% for item in items %}
-                            <option value={{ item['loan_amt'] }}>{{ item['loan_init_term'] }}</option>
+                            {% for item in items %} 
+                            <option min_amount="{{ item['min_amount'] }}" max_amount="{{ item['max_amount'] }}">
+                                {{ item['loan_init_term'] }}
+                            </option>
                             {% end %}
                         </select>
                     </div>
@@ -74,15 +75,15 @@
                         <label style="width: 130px">每期还款金额</label>
                     </div>
                     <div class="ys_cell_bd">
-                        <input class="ys_input" name="staging_pay" readonly>
+                        <input name="period_pay" class="ys_input" type="text" readonly>
                     </div>
                 </div>
                 <div class="ys_cell">
                     <div class="ys_cell_hd">
                         <label style="width: 130px">总手续费</label>
                     </div>
-                    <div class="ys_cell_bd">
-                        <input class="ys_input" name="total_fee" readonly>
+                    <div class="ys_cell_bd" id="LOAN_INIT_FEE1">
+                        <input name="total_fee" class="ys_input" type="text" readonly>
                     </div>
                 </div>
                 <div class="ys_cell">
@@ -94,19 +95,19 @@
                     </div>
                 </div>
             </div>
-            <div class="ys_agree">
-                <label for="agree">
-                    <input name="agree" class="ys_agree_checkbox" type="checkbox">
-                    <span class="ys_agree_text">阅读并同意<a class="ys_agree_clause open-popup" href="javascript:;" data-target="#show_protocol">《相关条款》</a></span>
-                </label>
-            </div>
             <div class="clause">
                 <h4>温馨提醒：</h4>
                 <p>1、提交申请后无法修改期数和金额。<br>
                     2、若提前还清分期余额需还清本金和手续费并可能产生额外的费用。</p>
             </div>
-            <div class="ys_btns">
-                <button class="ys_btn" id="submit" disabled>确定</button>
+            <div class="ys_agree">
+                <label for="ysagree">
+                    <input name="agree" class="ys_agree_checkbox" type="checkbox"> 
+                    <span class="ys_agree_text">阅读并同意<a class="ys_agree_clause open-popup" href="#javascript:;" data-target="#show_protocol">《相关条款》</a></span>
+                </label>
+            </div>
+            <div class="ys_btns mt30">
+                <button class="ys_btn" type="submit" id="submit" disabled>确定</button>
             </div>
         </form>
         <div id="show_protocol" class="ys_page">
