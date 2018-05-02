@@ -11,6 +11,10 @@ class OP_User(OP_Base):
         user = self.db.query(User).filter(User.openid==openid).one_or_none()
         return user
 
+    def get_by_ccrdno(self, ccrdno):
+        user = self.db.query(User).filter(User.ccrdno==ccrdno).one_or_none()
+        return user
+
     def create(self, data):
         user = User(**data)
         self.db.add(user)

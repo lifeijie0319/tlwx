@@ -3583,3 +3583,21 @@
 [I 180416 15:32:46 tool:43] <class 'app.config.G'>
 [D 180416 15:32:46 selector_events:65] Using selector: EpollSelector
 [D 180425 20:38:25 selector_events:65] Using selector: EpollSelector
+[D 180502 14:12:25 selector_events:65] Using selector: EpollSelector
+[D 180502 14:12:26 selector_events:65] Using selector: EpollSelector
+[D 180502 14:12:26 selector_events:65] Using selector: EpollSelector
+[I 180502 15:00:02 async_wx:23] get_access_token {'access_token': '9_uZmYS4MclbRu7O8vSB8PJJQhxKp7HxyTbeF5mzwyFgRZTAQ4abNr5UMp-g9B1bgsxn8PwNZ7EoorDP1F2fy07pkG9tXr7XX-hkthTjtcM5wFZtwWpr0Ykylp4jaI1D3JcX7mSPbhFIRIX27FNNCbAFAJJY', 'expires_in': 7200}
+[I 180502 15:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpQ7gNjal8cY99Db5FX-IAU3GgofWoSkunPcaAQ-S9Adfg', 'expires_in': 7200}
+[I 180502 15:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 370.63ms
+[I 180502 16:00:02 async_wx:23] get_access_token {'access_token': '9_-LBOjckCxUQDdcyihRc61hjaHZ3v5RVo9ogOZOhtIAQ8UnI8U2ktSUGJkZFKAxIRed_BHXGGtA9sgvPSPsNkTqO5emoWWkx6h6h9dB2se_VS-QX6v3WEm9IWmKZze0P89F3EmvFunolfaf2vNHZgAFADXP', 'expires_in': 7200}
+[I 180502 16:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSJ9t646dnNZYqLkw6j8CKZbdvP5C223im727xAI8Ugiw', 'expires_in': 7200}
+[I 180502 16:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 313.29ms
+[I 180502 17:00:07 async_wx:23] get_access_token {'access_token': '9_Rr4DcLCPo5TaNFrnOL2jjrfwTqKVZjfBZZz_OZEAt05yGELsWiNNw0kgCNXb1sWXEOXVkiOO4cPCO_fRz8RX4POLgXPEEMq4S_DpT39BD2m6xgEPJZxmRjvvOK26IkwW05zap48tOW7h5_wzJPBeAHAQWI', 'expires_in': 7200}
+[I 180502 17:00:07 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSJ9t646dnNZYqLkw6j8CKZbdvP5C223im727xAI8Ugiw', 'expires_in': 7200}
+[I 180502 17:00:07 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 343.30ms
+[D 180502 17:31:53 selector_events:65] Using selector: EpollSelector
+[D 180502 17:31:54 selector_events:65] Using selector: EpollSelector
+[D 180502 17:31:54 selector_events:65] Using selector: EpollSelector
+[I 180502 18:00:02 async_wx:23] get_access_token {'access_token': '9_2iM-cFQfGY4vFpJSYZ5RE195001epwvHLuUKkMSj1Z6_LUoOwFRP1_xC-iwMiIqpoxthzAzvBNZWtjJJwjFovzaXp4MHueBKwm_o8QpLiEny-LiDHai2oyuQCqYKIJjACAECD', 'expires_in': 7200}
+[I 180502 18:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpRP8bOmTtircI61_PELUZtEi8FNjAZxfRwuTT2pDKvRgw', 'expires_in': 7200}
+[I 180502 18:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 344.93ms

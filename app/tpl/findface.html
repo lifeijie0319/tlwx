@@ -15,18 +15,24 @@
 </head>
 <body ontouchstart style="background-color: #fff">
 	<div class="container">
-        <div class="ys_cells">
-            <div class="ys_cell">
-                <div class="ys_cell_hd">
-                    <label>人脸识别</label> 
-                </div>
-                <div class="ys_cell_bd">
+        <div class="ys_cell">
+            <div class="ys_cell_bd">人脸识别</div>
+        </div>
+        <div class="upload_wrapper">
+            <div class="upload_box">
+                <div class="upload_btn">
                     <input id="face" class="ys_input" type="file" capture="camera" accept="image/jpeg,image/gif,image/jpg,image/png">
                 </div>
+                <div class="upload_text">
+                    <div>
+                        <i class="iconfont icon-add"></i>
+                        <p>点击上传图片</p>
+                    </div>
+                </div>
+                <div class="img_upload_box">
+                    <img src="" id="preview">
+                </div>
             </div>
-        </div>
-        <div class="img_upload_box">
-            <img src="" id="preview">
         </div>
         <div class="ys_btns mt30">
             <a class="ys_btn" href="javascript:;" id="upload">本地上传</a>
