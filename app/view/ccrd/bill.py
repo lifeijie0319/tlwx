@@ -22,9 +22,6 @@ class BillHandler(BaseHandler):
         ret = await G.tl_cli.send2tl('12010', data)
         if not ret['success']:
             return self.render('ccrd/bill.html', {'success': False})
-        if ret['DUAL_CURR_IND'] == 'Y':
-            data['CURR_CD'] = ret['DUAL_CURR_CD']
-            ret = await send2tl('12010', data)
         info_keys = ['success', 'QUAL_GRACE_BAL', 'TOT_DUE_AMT', 'CTD_PMT_NOT_AMT']
         context = {key.lower(): value for key, value in ret.items() if key in info_keys}
         currency = Currency(ret['CURR_CD'])
@@ -63,6 +60,7 @@ class BillHandler(BaseHandler):
             } for item in items]
         })
         context = {
+            'success': True,
             'html': html.decode(),
             'nextpage': True if ret['NEXTPAGE_FLG'] == 'Y' else False
         }
@@ -85,6 +83,8 @@ class BillDueHandler(BaseHandler):
             'LASTROW': req_data['lastrow']
         }
         ret = await G.tl_cli.send2tl('13060', tl_data)
+        if not ret['success']:
+            return self.write(ret)
         if not ret.get('TXNS'):
             return self.write({'html': '', 'nextpage': False})
         app_log.debug('BILL_DETAIL: %s\n%s', ret['TXNS']['TXN'], type(ret['TXNS']['TXN']))
@@ -101,6 +101,7 @@ class BillDueHandler(BaseHandler):
             } for item in items]
         })
         context = {
+            'success': True,
             'html': html.decode(),
             'nextpage': True if ret['NEXTPAGE_FLG'] == 'Y' else False
         }

@@ -19,12 +19,18 @@ $(function(){
         });
         if (!validate_res) return false;
 
-        data = $('form').serializeForm();
+        data = JSON.stringify({
+            'ccrdno': $('input[name="ccrdno"]').val(),
+            'expire': $('input[name="expire"]').val(),
+            'cvv2': $('input[name="cvv2"]').val(),
+            'vcode': $('input[name="vcode"]').val()
+        });
+        console.log(data, data.length, PUB_KEY.length);
         var encrypt = new JSEncrypt();
         encrypt.setPublicKey(PUB_KEY);
         data = encrypt.encrypt(data);
 
-        $.post(BASE_URL + '/ccrd/activate', data, function(resp){
+        $.post('', data, function(resp){
             if(resp.success){
                 window.location.href = BASE_URL + '/staticfile/done.html?from=activate';
             }else{

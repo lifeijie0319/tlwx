@@ -47,8 +47,11 @@ class DetailHandler(BaseHandler):
             'LASTROW': req_data['lastrow']
         }
         ret = await G.tl_cli.send2tl('17011', tl_data)
+        app_log.info('SUCCESS: %s', ret['success'])
+        if not ret['success']:
+            return self.write(ret)
         if not ret.get('TXN_POINTS'):
-            return self.write({'html': '', 'nextpage': False})
+            return self.write({'success': True, 'html': '', 'nextpage': False})
         items = ret['TXN_POINTS']['TXN_POINT']
         if not isinstance(items, list):
             items = [items]
@@ -62,6 +65,7 @@ class DetailHandler(BaseHandler):
             } for item in items]
         })
         context = {
+            'success': True,
             'html': html.decode(),
             'nextpage': True if ret['NEXTPAGE_FLG'] == 'Y' else False
         }

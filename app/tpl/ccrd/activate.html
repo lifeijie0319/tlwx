@@ -20,22 +20,6 @@
 	<div class="container">
         <form>
             <div class="ys_cells">
-                <div class="ys_cell">
-                    <div class="ys_cell_hd">
-                        <label>卡号</label>
-                    </div>
-                    <div class="ys_cell_bd">
-                        <input name="ccrdno" class="ys_input" type="number" pattern="^\d{16,19}$" placeholder="请输入卡号" emptyTips="卡号不能为空" notMatchTips="请输入正确的16-19位卡号" required>
-                    </div>
-                </div>
-                <div class="ys_cell">
-                    <div class="ys_cell_hd">
-                        <label>有效期</label>
-                    </div>
-                    <div class="ys_cell_bd">
-                        <input name="expire" class="ys_input" type="text" pattern="^\d{4}$" placeholder="有效期格式为4位数字:年年月月" emptyTips="有效期不能为空" notMatchTips="有效期格式不匹配" required>
-                    </div>
-                </div>
                 <div class="ys_cell ys_cell_select">
                     <div class="ys_cell_hd">
                         <label>证件类型</label>
@@ -58,10 +42,26 @@
                 </div>
                 <div class="ys_cell">
                     <div class="ys_cell_hd">
+                        <label>卡号</label>
+                    </div>
+                    <div class="ys_cell_bd">
+                        <input name="ccrdno" class="ys_input" type="number" pattern="^\d{16,19}$" placeholder="请输入卡号" emptyTips="卡号不能为空" notMatchTips="请输入正确的16-19位卡号" required>
+                    </div>
+                </div>
+                <div class="ys_cell">
+                    <div class="ys_cell_hd">
                         <label>CVV2</label>
                     </div>
                     <div class="ys_cell_bd">
                         <input name="cvv2" class="ys_input" type="number" pattern="^\d{3}$" placeholder="请输入签名栏末三位" emptyTips="cvv2不能为空" notMatchTips="请输入正确的cvv2数字串" required>
+                    </div>
+                </div>
+                <div class="ys_cell">
+                    <div class="ys_cell_hd">
+                        <label>有效期</label>
+                    </div>
+                    <div class="ys_cell_bd">
+                        <input name="expire" class="ys_input" type="text" pattern="^\d{4}$" placeholder="有效期格式为4位数字:年年月月" emptyTips="有效期不能为空" notMatchTips="有效期格式不匹配" required>
                     </div>
                 </div>
                 <div class="ys_cell ys_cell_vcode">

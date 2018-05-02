@@ -17,7 +17,8 @@ $(function(){
 
     $('form').form();
     $('select[name="num"]').on('change', function(){
-        $('input[name="max_stage_amt"]').val($(this).val());
+        max_stage_amt = $(this).find('option:selected').attr('loan_amt');
+        $('input[name="max_stage_amt"]').val(max_stage_amt);
         total_amt = $('input[name="total_amt"]');
         validate_res = false;
         total_amt.parents('.ys_cell').validate(function(error){
@@ -28,7 +29,7 @@ $(function(){
             return false;
         }
         total_amt_val = parseInt(total_amt.val());
-        max_stage_amt = parseInt($(this).val());
+        max_stage_amt = parseInt(max_stage_amt);
         if(total_amt_val > max_stage_amt){
             $.toptips('分期金额不能大于最高可分期金额');
             $(this).val('');
@@ -49,6 +50,7 @@ $(function(){
                 $('input[name="stage_fee"]').val(resp.loan_fixed_fee1);
             }else{
                 $.toptips(resp.msg);
+                $('select[name="num"]').val('');
             }
         });
     });

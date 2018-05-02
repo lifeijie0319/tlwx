@@ -9,7 +9,8 @@ tornado_settings = {
     'xsrf_cookies': True,
     'debug': True,
 }
-BASE_URL = 'https://hz.wx.yinsho.com/tlwx'
+#BASE_URL = 'https://hz.wx.yinsho.com/tlwx'
+BASE_URL = 'http://10.252.22.131:8002/tlwx'
 URL_PREFIX = '/tlwx'
 TOKEN = 'yinshowxtoken'
 APPID = 'wx6290daffb81416ac'
@@ -19,12 +20,14 @@ JSAPI_TICKET_KEY = 'tl_jsapi_ticket'
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MEDIA_URL = BASE_URL + '/media'
 MEDIA_PATH = os.path.join(os.path.dirname(__file__), 'media')
+DB2_DIALECT = 'ibm_db_sa://py3:qwe123@127.0.0.1:50000/wxbank'
+DB2_SCHEMA = 'tlwx'
 REDIS = {
     'HOST': 'localhost',
     'PORT': '6379',
 }
-TL_HOST = '127.0.0.1'
-TL_PORT = '8001'
+TL_HOST = '10.250.1.166'
+TL_PORT = '15777'
 BILL_TPL_ID = 'z4QouwVQpchy1tNSe-SCk4J2BoAa0y8NXR3HcWp8kmE'
 TRADE_TPL_ID = 'dIKccSFgM7gi7zwzd2t960_4Akm-JORICZNwZCAoS1s'
 REPAY_TPL_ID = '5xk75tSL9ghjMC3-EijPbB3e_mI6QEFmqLlGm_78sHY'

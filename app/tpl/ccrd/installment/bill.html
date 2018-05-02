@@ -23,7 +23,7 @@
                         <label style="width: 130px">账单金额</label>
                     </div>
                     <div class="ys_cell_bd">
-                        <input class="ys_input" name="bill_amt" value=1200>
+                        <input class="ys_input" name="bill_amt" value="{{ qual_grace_bal }}">
                     </div>
                 </div>
                 <div class="ys_cell">
@@ -50,7 +50,9 @@
                         <select class="ys_select" name="num" emptyTips="分期期数不能为空" required>
                             <option value=""></option>
                             {% for item in items %}
-                            <option value={{ item['loan_amt'] }}>{{ item['loan_init_term'] }}</option>
+                            <option value="{{ item['loan_init_term'] }}" loan_amt="{{ item['loan_amt'] }}">
+                                {{ item['loan_init_term'] }}
+                            </option>
                             {% end %}
                         </select>
                     </div>
