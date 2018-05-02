@@ -7,17 +7,19 @@ $(function(){
     });
 
     $('input[name="agree"]').on('change', function(){
-        //console.log($(this).prop('checked'));
+        console.log($(this).prop('checked'));
         if($(this).prop('checked')){
             $('#submit').prop('disabled', false);
         }else{
             $('#submit').prop('disabled', true);
         }
-    });
+    }).trigger('change');
 
     $('form').form();
     $('select[name="num"]').on('change', function(){
-        $('input[name="max_stage_amt"]').val($(this).val());
+        max_stage_amt = $(this).find('option:selected').attr('max_amount');
+        console.log('max_stage_amt', max_stage_amt);
+        $('input[name="max_stage_amt"]').val(max_stage_amt);
         total_amt = $('input[name="total_amt"]');
         validate_res = false;
         total_amt.parents('.ys_cell').validate(function(error){
@@ -28,7 +30,6 @@ $(function(){
             return false;
         }
         total_amt_val = parseInt(total_amt.val());
-        max_stage_amt = parseInt($(this).val());
         if(total_amt_val > max_stage_amt){
             $.toptips('分期金额不能大于最高可分期金额');
             $(this).val('');
@@ -36,12 +37,12 @@ $(function(){
         }
         data = JSON.stringify({
             'CURR_CD': '156',
-            'LOAN_INIT_TERM': $('select[name="num"]').val(),
-            'CASH_AMT': total_amt.val(),
+            'LOAN_AMOUNT': total_amt.val(),
+            'LOAN_TERM': $('select[name="num"]').val(),
             'LOAN_FEE_METHOD': $('select[name="fee_method"]').val(),
             'OPT': '0',
         });
-        $.post(BASE_URL + '/ccrd/installment/cash', data, function(resp){
+        $.post('', data, function(resp){
             console.log(resp);
             if(resp.success){
                 $('input[name="staging_pay"]').val(resp.loan_fixed_pmt_prin);
@@ -63,15 +64,14 @@ $(function(){
         }
         data = JSON.stringify({
             'CURR_CD': '156',
-            'LOAN_INIT_TERM': $('select[name="num"]').val(),
-            'CASH_AMT':  $('input[name="total_amt"]').val(),
+            'LOAN_AMOUNT': total_amt.val(),
+            'LOAN_TERM': $('select[name="num"]').val(),
             'LOAN_FEE_METHOD': $('select[name="fee_method"]').val(),
             'OPT': '1',
         });
-        $.post(BASE_URL + '/ccrd/installment/cash', data, function(resp){
-            console.log(resp);
+        $.post('', data, function(resp){
             if(resp.success){
-                window.location.href = BASE_URL + '/staticfile/done.html?from=installment_cash';
+                window.location.href = BASE_URL + '/staticfile/done.html?from=installment_lg_cash';
             }else{
                 $.toptips(resp.msg);
             }
