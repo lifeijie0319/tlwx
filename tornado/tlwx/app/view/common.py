@@ -158,17 +158,9 @@ class InfoCheckHandler(BaseHandler):
 
 class TestHandler(BaseHandler):
     async def get(self, action):
-        #ccrdno = '6283650040003441'
-        #data = {
-        #    'CARD_NO': ccrdno,
-        #    'CURR_CD': '156',
-        #    'STMT_DATE': '000000',
-        #}
-        #ret = await G.tl_cli.send2tl('12010', data)
-        #app_log.info('RET: %s', ret)
-        data = {
-            'date': '2018-3-24',
-            'amt': 5000,
-            'ccrdno_tail': '2400',
-        }
-        TPL.repay(self.openid, data)
+        with open(config.BASE_DIR + '/app/tpl/xml/91000_REQ.xml') as f:
+            xml = f.read()
+        app_log.debug('%s %s', xml, type(xml))
+        ret = await G.tl_cli.send(xml.encode('utf-8'))
+        app_log.debug(ret)
+        return self.write(ret)
