@@ -13,12 +13,16 @@ $(function(){
         loading = true;
         $("#loading").html('<i class="ys_loading"></i><span class="ys_more_tips">正在加载</span>');
         $.post(BASE_URL + '/ccrd/installment/consumption', data, function(resp){
-            $('#content').append(resp.html);
-            nextpage = resp.nextpage;
-            if(resp.nextpage){
-                $("#loading").html('<span class= "ys_more_tips">下拉加载更多</span>');
+            if(resp.success){
+                $('#content').append(resp.html);
+                nextpage = resp.nextpage;
+                if(resp.nextpage){
+                    $("#loading").html('<span class= "ys_more_tips">下拉加载更多</span>');
+                }else{
+                    $("#loading").html("<span class = 'ys_more_tips'>无更多记录</span>");
+                }
             }else{
-                $("#loading").html("<span class = 'ys_more_tips'>无更多记录</span>");
+                $("#loading").html('<span class= "ys_more_tips">' + resp.msg + '</span>');
             }
             loading = false;
         });

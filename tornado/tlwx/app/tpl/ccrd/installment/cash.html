@@ -12,7 +12,7 @@
     <script src="{{ static_url('asset/jsencrypt.min.js') }}"></script>
     <script src="{{ static_url('asset/validate.js') }}"></script>
     <script src="{{ static_url('js/tool.js') }}"></script>
-    <script src="{{ static_url('js/ccrd/installment_cash.js') }}"></script>
+    <script src="{{ static_url('js/ccrd/installment/cash.js') }}"></script>
 </head>
 <body ontouchstart>
 	<div class="container">
@@ -42,7 +42,9 @@
                         <select class="ys_select" name="num" emptyTips="分期期数不能为空" required>
                             <option value=""></option>
                             {% for item in items %}
-                            <option value={{ item['loan_amt'] }}>{{ item['loan_init_term'] }}</option>
+                            <option value="{{ item['loan_init_term'] }}" loan_amt="{{ item['loan_amt'] }}">
+                                {{ item['loan_init_term'] }}
+                            </option>
                             {% end %}
                         </select>
                     </div>
@@ -97,7 +99,7 @@
                 <p>1、提交需借记卡状态正常。</p>
             </div>
             <div class="ys_btns">
-                <button class="ys_btn" id="submit" disabled>确定</button>
+                <button type="button" class="ys_btn" id="submit" disabled>确定</button>
             </div>
         </form>
         <div id="show_protocol" class="ys_page">

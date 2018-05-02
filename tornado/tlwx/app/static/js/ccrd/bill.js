@@ -18,9 +18,9 @@ $(function(){
             lastrow = firstrow + load_num;
             nextpage = resp.nextpage;
             if(resp.nextpage){
-                $("#loading").html('<span class= "ys_more_tips">下拉加载更多</span>');
+                $("#loading").html('<span class="ys_more_tips">下拉加载更多</span>');
             }else{
-                $("#loading").html("<span class = 'ys_more_tips'>无更多记录</span>");
+                $("#loading").html("<span class='ys_more_tips'>无更多记录</span>");
             }
             loading = false;
         });

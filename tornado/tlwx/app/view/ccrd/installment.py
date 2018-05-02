@@ -15,21 +15,32 @@ class BillHandler(BaseHandler):
     @need_bind
     async def get(self):
         user = OP_User(self.db).get(self.openid)
-        data = {
+        data1 = {
+            'CARD_NO': user.ccrdno,
+            'CURR_CD': '156',
+            'STMT_DATE': '000000',
+        }
+        ret1 = await G.tl_cli.send2tl('12010', data1)
+        if not ret1['success']:
+            url = config.BASE_URL + '/staticfile/done.html?from=error'
+            url += '&' + urlencode({'error_msg': ret1['msg']})
+            app_log.debug('URL: %s', url)
+            return self.redirect(url)
+        data2 = {
             'CARD_NO': user.ccrdno,
             'CURR_CD': '156'
         }
-        ret = await G.tl_cli.send2tl('13110', data)
-        if not ret['success']:
+        ret2 = await G.tl_cli.send2tl('13110', data2)
+        if not ret2['success']:
             url = config.BASE_URL + '/staticfile/done.html?from=error'
-            url += '&' + urlencode({'error_msg': ret['msg']})
+            url += '&' + urlencode({'error_msg': ret2['msg']})
             app_log.debug('URL: %s', url)
             return self.redirect(url)
-        app_log.info('账单可分期金额查询: %s', ret.items())
         info_keys = ['LOAN_INIT_TERM', 'LOAN_AMT']
-        items = ret['TERMS']['TERM']
+        items = ret2['TERMS']['TERM']
         app_log.info('items: %s', items)
         context = {
+            'qual_grace_bal': ret1['QUAL_GRACE_BAL'],
             'items': [{key.lower(): value for key, value in item.items() if key in info_keys} for item in items],
             'protocol': get_doc('protocol.txt')
         }
@@ -101,7 +112,7 @@ class LGCashHandler(BaseHandler):
             app_log.debug('URL: %s', url)
             return self.redirect(url)
         info_keys = ['LOAN_INIT_TERM', 'MAX_AMOUNT']
-        items = ret['TERMS']['TERM']
+        items = ret['LOANFEEDEFS']['LOANFEEDEF']
         context = {
             'items': [{key.lower(): value for key, value in item.items() if key in info_keys} for item in items],
             'protocol': get_doc('protocol.txt')
@@ -138,6 +149,10 @@ class ConsumptionHandler(BaseHandler):
             'LASTROW': req_data['lastrow']
         }
         ret = await G.tl_cli.send2tl('13081', tl_data)
+        if not ret['success']:
+            return self.write(ret)
+        if not ret.get('TXNS'):
+            return self.write({'success': True, 'html': '', 'nextpage': False})
         html = self.render_string('ccrd/installment/consumption_list.html', **{
             'items':[{
                 'txn_curr_cd': Currency(item['TXN_CURR_CD']).symbol,
@@ -150,6 +165,7 @@ class ConsumptionHandler(BaseHandler):
             } for item in ret['TXNS']['TXN']]
         })
         context = {
+            'success': True,
             'html': html.decode(),
             'nextpage': True if ret['NEXTPAGE_FLG'] == 'Y' else False
         }
