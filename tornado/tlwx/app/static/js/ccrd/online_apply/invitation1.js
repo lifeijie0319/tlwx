@@ -7,7 +7,7 @@ $(function(){
         });
         if (!validate_res) return false;
         data = JSON.parse($('#form1').serializeForm());
-        window.location.href = 'online_apply_invitation2.html?name=' +
+        window.location.href = 'invitation2.html?name=' +
             data.name + '&employee_id=' + data.employee_id;
     });
 })

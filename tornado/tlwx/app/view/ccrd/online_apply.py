@@ -244,6 +244,11 @@ class StatusHandler(BaseHandler):
 
     async def post(self, action):
         data = json.loads(self.request.body)
+        pic_vcode = data.pop('pic_vcode')
+        real_pic_vcode = self.get_secure_cookie('pic_vcode').decode()
+        app_log.debug('PIC_VCODE_COMPARE: %s %s', pic_vcode, real_pic_vcode)
+        if pic_vcode != real_pic_vcode:
+            return self.write({'success': False, 'msg': '图片验证码错误'})
         ret = await G.tl_cli.send2tl('11000', data)
         if not ret.get('APPLYS'):
             return self.write({'success': False, 'msg': '没有数据'})

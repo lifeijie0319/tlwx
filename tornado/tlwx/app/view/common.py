@@ -117,7 +117,9 @@ class RefreshPicVcodeHandler(BaseHandler):
     async def get(self):
         generator = VerifyCode()
         img, code = generator.createCodeImage()
+        app_log.info('PIC_VCODE: %s', code)
         img.save(config.MEDIA_PATH + '/pic_vcode/' + self.openid + '.jpg','JPEG')
+        self.set_secure_cookie('pic_vcode', code)
         self.write({'success': True, 'url': config.MEDIA_URL + '/pic_vcode/' + self.openid + '.jpg'})
 
 
