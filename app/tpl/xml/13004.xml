@@ -20,32 +20,32 @@
         <RESPONSE>
             <CARD_NO>198138949998232</CARD_NO>
             <CURR_CD>156</CURR_CD>
-            <TERMS>
-                <TERM>
+            <LOANFEEDEFS>
+                <LOANFEEDEF>
                   <LOAN_INIT_TERM>3</LOAN_INIT_TERM>
                   <MAX_AMOUNT>200</MAX_AMOUNT>
-                 </TERM>
-                <TERM>
+                 </LOANFEEDEF>
+                <LOANFEEDEF>
                  <LOAN_INIT_TERM>6</LOAN_INIT_TERM>
                  <MAX_AMOUNT>200</MAX_AMOUNT>
-                </TERM>
-                <TERM>
+                </LOANFEEDEF>
+                <LOANFEEDEF>
                  <LOAN_INIT_TERM>9</LOAN_INIT_TERM>
                  <MAX_AMOUNT>200</MAX_AMOUNT>
-                </TERM>
-                <TERM>
+                </LOANFEEDEF>
+                <LOANFEEDEF>
                  <LOAN_INIT_TERM>12</LOAN_INIT_TERM>
                  <MAX_AMOUNT>200</MAX_AMOUNT>
-                </TERM>
-                <TERM>
+                </LOANFEEDEF>
+                <LOANFEEDEF>
                  <LOAN_INIT_TERM>24</LOAN_INIT_TERM>
                  <MAX_AMOUNT>200</MAX_AMOUNT>
-                </TERM>
-                <TERM>
+                </LOANFEEDEF>
+                <LOANFEEDEF>
                  <LOAN_INIT_TERM>36</LOAN_INIT_TERM>
                  <MAX_AMOUNT>1200</MAX_AMOUNT>
-                </TERM>
-            </TERMS>
+                </LOANFEEDEF>
+            </LOANFEEDEFS>
         </RESPONSE>
     </SERVICE_BODY>
 </SERVICE>

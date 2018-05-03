@@ -102,25 +102,58 @@ class XML:
         ret = {
             'to_user': openid,
             'from_user': serverid,
-            'count': 3,
+            'count': 4,
             'items': [
                 {
                     'title': '在线申请信用卡',
-                    'description': '',
                     'picurl': config.BASE_URL + '/static/img/ccrd/mes_apply1.jpg',
-                    'url': get_oauth_url('/ccrd/online_apply/1'),
+                    'url': get_oauth_url('/ccrd/online_apply/select'),
                 },
                 {
-                    'title': '在线申请信用卡',
-                    'description': '',
+                    'title': '推荐他人办卡',
                     'picurl': config.BASE_URL + '/static/img/ccrd/mes_apply2.png',
-                    'url': get_oauth_url('/ccrd/online_apply/1'),
+                    'url': get_oauth_url('/staticfile/ccrd/online_apply/invitation1.html'),
                 },
                 {
                     'title': '信用卡申请进度查询',
-                    'description': '',
                     'picurl': config.BASE_URL + '/static/img/ccrd/mes_progress.png',
-                    'url': get_oauth_url('/ccrd/online_apply/status/1'),
+                    'url': get_oauth_url('/ccrd/online_apply/status/form'),
+                },
+                {   
+                    'title': '信用卡激活',
+                    'picurl': config.BASE_URL + '/static/img/ccrd/mes_progress.png',
+                    'url': get_oauth_url('/ccrd/activate'),
+                },
+            ],
+        }
+        return ret
+
+    @staticmethod
+    def installment(openid, serverid):
+        ret = {
+            'to_user': openid,
+            'from_user': serverid,
+            'count': 4,
+            'items': [
+                {
+                    'title': '账单分期',
+                    'picurl': config.BASE_URL + '/static/img/ccrd/mes_apply1.jpg',
+                    'url': get_oauth_url('/ccrd/installment/bill'),
+                },
+                {
+                    'title': '消费分期',
+                    'picurl': config.BASE_URL + '/static/img/ccrd/mes_apply2.png',
+                    'url': get_oauth_url('/ccrd/installment/consumption'),
+                },
+                {
+                    'title': '现金分期',
+                    'picurl': config.BASE_URL + '/static/img/ccrd/mes_progress.png',
+                    'url': get_oauth_url('/ccrd/installment/cash'),
+                },
+                {
+                    'title': '大额现金分期',
+                    'picurl': config.BASE_URL + '/static/img/ccrd/mes_progress.png',
+                    'url': get_oauth_url('/ccrd/installment/lg_cash'),
                 },
             ],
         }
