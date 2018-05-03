@@ -48,7 +48,7 @@ class RootHandler(BaseHandler):
         serverid = root.find('ToUserName').text
         send_text = root.find('Content').text
         binded = OP_User(self.db).check_bind(openid)
-        if send_text in ('jcbd'):
+        if send_text in ('解除绑定', 'JCBD', 'jcbd'):
             if binded:
                 url = get_oauth_url('/ccrd/unbind')
                 reply_text = '解绑信用卡，<a href="' + url + '">点击这里</a>。'
@@ -115,8 +115,22 @@ class RootHandler(BaseHandler):
             return
         elif send_text in ('优惠', 'yh', 'YH'):
             return
+        elif send_text in ('办卡', '推荐', '申请进度', '激活'):
+            context = XML.ccrd_news(openid, serverid)
+            return self.render('xml/news.xml', **context)
+        elif send_text == '分期':
+            context = XML.installment(openid, serverid)
+            return self.render('xml/news.xml', **context)
         else:
-            reply_text = '''1、输入“图片”返回默认图片。\n2、这是一个<a href="http://www.baidu.com/">百度链接</a>。'''
+            reply_text = ('1、查询账单，请输入“账单”/“ZD”/“zd”。\n'
+                '2、查询额度，请输入“额度”/“ED”/“ed”。\n'
+                '3、查询积分，请输入“积分”/“JF”/“jf”。\n'
+                '4、解除绑定，请输入”解除绑定“/”JCBD“/”jcbd“。\n'
+                '5、需要申请信用卡，请输入“办卡”。\n'
+                '6、需要推荐他人办卡，请输入“推荐”。\n'
+                '7、需要查看信用卡申请进度，请输入“申请进度”。\n'
+                '8、需要激活信用卡，请输入“激活”。\n'
+                '9、进入分期，请输入“分期”。')
             ret = {'to_user': openid, 'from_user': serverid, 'content': reply_text}
             return self.render('xml/text.xml', **ret)
 

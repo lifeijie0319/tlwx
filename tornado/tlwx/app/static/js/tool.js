@@ -29,6 +29,10 @@ $.ajaxSetup({
         if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
             xhr.setRequestHeader("X-XSRFToken", csrftoken);
         }
+        $.showLoading();
+    },
+    complete: function(){
+        $.hideLoading();
     },
     error: function(){
         $.toptips('服务器错误');
@@ -224,3 +228,37 @@ function wxUploadImg(img_dom, source_type=['album']){
         });
     }
 })(jQuery);
+
+//toast
++ function($) {
+  "use strict";
+
+  var defaults;
+
+  var show = function(html, className) {
+    className = className || "";
+    var mask = $("<div class='ys_mask_transparent'></div>").appendTo(document.body);
+
+    var tpl = '<div class="ys_toast ' + className + '">' + html + '</div>';
+    var dialog = $(tpl).appendTo(document.body);
+
+    dialog.show();
+    dialog.addClass("ys_toast_visible");
+  };
+
+  var hide = function() {
+    $(".ys_mask_transparent").remove();
+    $(".ys_toast_visible").remove();
+  }
+
+  $.showLoading = function(text) {
+    var html = '<div class="ys_loader"></div>';
+    html += '<p class="ys_toast_content">' + (text || "加载中") + '</p>';
+    show(html, 'ys_toast_icontext');
+  }
+
+  $.hideLoading = function() {
+    hide();
+  }
+
+}($);
