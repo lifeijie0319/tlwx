@@ -3601,3 +3601,505 @@
 [I 180502 18:00:02 async_wx:23] get_access_token {'access_token': '9_2iM-cFQfGY4vFpJSYZ5RE195001epwvHLuUKkMSj1Z6_LUoOwFRP1_xC-iwMiIqpoxthzAzvBNZWtjJJwjFovzaXp4MHueBKwm_o8QpLiEny-LiDHai2oyuQCqYKIJjACAECD', 'expires_in': 7200}
 [I 180502 18:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpRP8bOmTtircI61_PELUZtEi8FNjAZxfRwuTT2pDKvRgw', 'expires_in': 7200}
 [I 180502 18:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 344.93ms
+[D 180503 17:31:17 selector_events:65] Using selector: EpollSelector
+[D 180503 17:31:17 selector_events:65] Using selector: EpollSelector
+[I 180503 17:31:37 root:152] EVENT
+[I 180503 17:31:37 web:2106] 200 POST /tlwx?signature=28b1538aeda19ff1593a9be82a0f3ebaf85aec51&timestamp=1525339965&nonce=1868726191&openid=oSDTiwq1vFtLARyBeBGhRpNeXczA (192.168.100.52) 3.27ms
+[D 180503 17:31:38 common:36] FUNC: <function need_bind.<locals>.wrapper at 0x7fbdeea64ea0>
+[D 180503 17:31:41 tl_api:34] XML TYPE: <class 'str'>
+[I 180503 17:31:41 tl_api:62] [S]: b'000522<?xml version="1.0" encoding="UTF-8" ?><SERVICE xmlns="http://www.allinfinance.com/dataspec/"><SERVICE_HEADER><SERVICE_SN>20180503173141605</SERVICE_SN><SERVICE_ID>12010</SERVICE_ID><ORG>000069411200</ORG><CHANNEL_ID>07</CHANNEL_ID><OP_ID></OP_ID><REQUST_TIME>20180503173141</REQUST_TIME><VERSION_ID>01</VERSION_ID><MAC></MAC></SERVICE_HEADER><SERVICE_BODY><EXT_ATTRIBUTES></EXT_ATTRIBUTES><REQUEST><CARD_NO>330721199403195410</CARD_NO><CURR_CD>156</CURR_CD><STMT_DATE>000000</STMT_DATE></REQUEST></SERVICE_BODY></SERVICE>'
+[I 180503 17:31:41 tl_api:65] [R]: b'001047'
+[I 180503 17:31:41 tl_api:67] [R]: <?xml version="1.0" encoding="UTF-8"?>
+    <SERVICE xmlns="http://www.allinfinance.com/dataspec/">
+        <SERVICE_HEADER>
+            <SERVICE_SN>19823471237417412748</SERVICE_SN>
+            <SERVICE_ID>12010</SERVICE_ID>
+            <REQUESTER_ID>0004</REQUESTER_ID>
+            <CHANNEL_ID>070711</CHANNEL_ID>
+            <SERVICE_DATE>20050621</SERVICE_DATE>
+            <SERVICE_TIME>123000</SERVICE_TIME>
+            <VERSION_ID>02</VERSION_ID>
+            <SERV_RESPONSE>
+                <STATUS>S</STATUS>
+                <CODE></CODE>
+                <DESC></DESC>
+            </SERV_RESPONSE>
+        </SERVICE_HEADER>
+        <SERVICE_BODY>
+            <EXT_ATTRIBUTES>
+            </EXT_ATTRIBUTES>
+            <RESPONSE>
+                <DUAL_CURR_IND>N</DUAL_CURR_IND>
+                <CURR_CD>158</CURR_CD>
+                <QUAL_GRACE_BAL>10100.00</QUAL_GRACE_BAL>
+                <TOT_DUE_AMT>1000.00</TOT_DUE_AMT>
+                <CTD_PMT_NOT_AMT>4000.00</CTD_PMT_NOT_AMT>
+                <BILLING_DATE>20151110</BILLING_DATE>
+                <PMT_DUE_DATE>20151205</PMT_DUE_DATE>
+            </RESPONSE>
+        </SERVICE_BODY>
+    </SERVICE>
+    
+[I 180503 17:31:41 web:2106] 200 GET /tlwx/ccrd/bill?code=081svkIa0dTrPw1EbkEa0yPeIa0svkId&state=1 (192.168.100.52) 2952.55ms
+[I 180503 17:31:48 root:152] EVENT
+[I 180503 17:31:48 web:2106] 200 POST /tlwx?signature=3ad0783574da56a6c75f34f30b4aa7f80d1768e9&timestamp=1525339976&nonce=222929956&openid=oSDTiwq1vFtLARyBeBGhRpNeXczA (192.168.100.52) 2.73ms
+[I 180503 17:31:49 web:2106] 200 GET /tlwx/staticfile/ccrd/online_apply/invitation1.html?code=0015HWcW0PMxZV1WQRfW01qTcW05HWcI&state=1 (192.168.100.52) 5.13ms
+[I 180503 17:31:52 root:152] EVENT
+[I 180503 17:31:52 web:2106] 200 POST /tlwx?signature=dd45a06cca5b4bea73ec4b36e3242ec54ccce333&timestamp=1525339980&nonce=1137160522&openid=oSDTiwq1vFtLARyBeBGhRpNeXczA (192.168.100.52) 2.82ms
+[D 180503 17:31:52 common:36] FUNC: <function need_bind.<locals>.wrapper at 0x7fbdeea64ea0>
+[D 180503 17:31:52 tl_api:34] XML TYPE: <class 'str'>
+[I 180503 17:31:52 tl_api:62] [S]: b'000522<?xml version="1.0" encoding="UTF-8" ?><SERVICE xmlns="http://www.allinfinance.com/dataspec/"><SERVICE_HEADER><SERVICE_SN>20180503173152606</SERVICE_SN><SERVICE_ID>12010</SERVICE_ID><ORG>000069411200</ORG><CHANNEL_ID>07</CHANNEL_ID><OP_ID></OP_ID><REQUST_TIME>20180503173152</REQUST_TIME><VERSION_ID>01</VERSION_ID><MAC></MAC></SERVICE_HEADER><SERVICE_BODY><EXT_ATTRIBUTES></EXT_ATTRIBUTES><REQUEST><CARD_NO>330721199403195410</CARD_NO><CURR_CD>156</CURR_CD><STMT_DATE>000000</STMT_DATE></REQUEST></SERVICE_BODY></SERVICE>'
+[I 180503 17:31:52 tl_api:65] [R]: b'001047'
+[I 180503 17:31:52 tl_api:67] [R]: <?xml version="1.0" encoding="UTF-8"?>
+    <SERVICE xmlns="http://www.allinfinance.com/dataspec/">
+        <SERVICE_HEADER>
+            <SERVICE_SN>19823471237417412748</SERVICE_SN>
+            <SERVICE_ID>12010</SERVICE_ID>
+            <REQUESTER_ID>0004</REQUESTER_ID>
+            <CHANNEL_ID>070711</CHANNEL_ID>
+            <SERVICE_DATE>20050621</SERVICE_DATE>
+            <SERVICE_TIME>123000</SERVICE_TIME>
+            <VERSION_ID>02</VERSION_ID>
+            <SERV_RESPONSE>
+                <STATUS>S</STATUS>
+                <CODE></CODE>
+                <DESC></DESC>
+            </SERV_RESPONSE>
+        </SERVICE_HEADER>
+        <SERVICE_BODY>
+            <EXT_ATTRIBUTES>
+            </EXT_ATTRIBUTES>
+            <RESPONSE>
+                <DUAL_CURR_IND>N</DUAL_CURR_IND>
+                <CURR_CD>158</CURR_CD>
+                <QUAL_GRACE_BAL>10100.00</QUAL_GRACE_BAL>
+                <TOT_DUE_AMT>1000.00</TOT_DUE_AMT>
+                <CTD_PMT_NOT_AMT>4000.00</CTD_PMT_NOT_AMT>
+                <BILLING_DATE>20151110</BILLING_DATE>
+                <PMT_DUE_DATE>20151205</PMT_DUE_DATE>
+            </RESPONSE>
+        </SERVICE_BODY>
+    </SERVICE>
+    
+[I 180503 17:31:52 web:2106] 200 GET /tlwx/ccrd/bill?code=0713m0g10TmooG1LKdf106n3g103m0gi&state=1 (192.168.100.52) 23.09ms
+[I 180503 17:31:54 root:152] EVENT
+[I 180503 17:31:54 web:2106] 200 POST /tlwx?signature=1743110f1586dcbe957c125f8602b86191546e1c&timestamp=1525339982&nonce=1139135000&openid=oSDTiwq1vFtLARyBeBGhRpNeXczA (192.168.100.52) 2.12ms
+[D 180503 17:31:55 common:36] FUNC: <function need_bind.<locals>.wrapper at 0x7fbdeea71510>
+[D 180503 17:31:55 tl_api:34] XML TYPE: <class 'str'>
+[I 180503 17:31:55 tl_api:62] [S]: b'000493<?xml version="1.0" encoding="UTF-8" ?><SERVICE xmlns="http://www.allinfinance.com/dataspec/"><SERVICE_HEADER><SERVICE_SN>20180503173155607</SERVICE_SN><SERVICE_ID>15020</SERVICE_ID><ORG>000069411200</ORG><CHANNEL_ID>07</CHANNEL_ID><OP_ID></OP_ID><REQUST_TIME>20180503173155</REQUST_TIME><VERSION_ID>01</VERSION_ID><MAC></MAC></SERVICE_HEADER><SERVICE_BODY><EXT_ATTRIBUTES></EXT_ATTRIBUTES><REQUEST><CARD_NO>330721199403195410</CARD_NO><CURR_CD>156</CURR_CD></REQUEST></SERVICE_BODY></SERVICE>'
+[I 180503 17:31:55 tl_api:65] [R]: b'000877'
+[I 180503 17:31:55 tl_api:67] [R]: <?xml version="1.0" encoding="UTF-8"?>
+    <SERVICE xmlns="http://www.allinfinance.com/dataspec/">
+        <SERVICE_HEADER>
+            <SERVICE_SN>19823471237417412748</SERVICE_SN>
+            <SERVICE_ID>15020</SERVICE_ID>
+            <REQUESTER_ID>0004</REQUESTER_ID>
+            <CHANNEL_ID>070711</CHANNEL_ID>
+            <SERVICE_DATE>20050621</SERVICE_DATE>
+            <SERVICE_TIME>123000</SERVICE_TIME>
+            <VERSION_ID>02</VERSION_ID>
+            <SERV_RESPONSE>
+                <STATUS>S</STATUS>
+                <CODE></CODE>
+                <DESC></DESC>
+            </SERV_RESPONSE>
+        </SERVICE_HEADER>
+        <SERVICE_BODY>
+            <EXT_ATTRIBUTES>
+            </EXT_ATTRIBUTES>
+            <RESPONSE>
+                <CURR_CD>158</CURR_CD>
+                <ACCT_LIMIT>100</ACCT_LIMIT>
+                <ACCT_OTB>100.00</ACCT_OTB>
+                <ACCT_CASH_OTB>199.00</ACCT_CASH_OTB>
+            </RESPONSE>
+        </SERVICE_BODY>
+    </SERVICE>
+    
+[I 180503 17:31:55 web:2106] 200 GET /tlwx/ccrd/limit?code=071D3J620aAExF1mzJ6207KD620D3J6x&state=1 (192.168.100.52) 18.42ms
+[I 180503 18:00:02 async_wx:23] get_access_token {'access_token': '9_xziQ-PuYQGmzaKx-CK36efCo7Y7x9GkyQbu_0T8Oic8oxquIHXkDV9P4N_GE_Zfnr2yIGQX8hib3BdVk6st3_qrVUdC9yqlrxdK4H2S7XHn1NvzH_GOYnJmzJK2TIfhgjYoaGORozAlClcqzKFZgADACXR', 'expires_in': 7200}
+[I 180503 18:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpTs7mgcnIQSn2IQMzuyPhn21L_nmqqTZgYXQ7yd5e1lEw', 'expires_in': 7200}
+[I 180503 18:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 357.56ms
+[I 180503 19:00:02 async_wx:23] get_access_token {'access_token': '9_fy3XyJOGf6XQweIISB8PJJQhxKp7HxyTbeF5m0zNFuw4MlInU4I2UTLOrxZehEqf3ebZRfl6YeRzGsaztRP5RxUXWEZ2_cwFo-e0dFVwZAYDltqTyJBdFR2RusDRG66A8DiKaGLJJCxQ4kgFCBUhACAPOH', 'expires_in': 7200}
+[I 180503 19:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpTs7mgcnIQSn2IQMzuyPhn21L_nmqqTZgYXQ7yd5e1lEw', 'expires_in': 7200}
+[I 180503 19:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 331.44ms
+[I 180503 20:00:02 async_wx:23] get_access_token {'access_token': '9_C8KqwgaZ0pM2aJaFj_JJTDtPRHVu4ib095tbTE69Nc-wUvcjgOavKnW8lGQIYW6OGQF1Z2fv-ZbkXBV8efU5Nmx03b_3JdrgKCp_VwZy42uYDCHjy5dV2qcFILSEFybhKNnoSs1MOpIooNBSWKCiAJALZR', 'expires_in': 7200}
+[I 180503 20:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpQg7SqIt-l6K1J8e2Grc1dEOU8lNiyXkblSWHYus73GGA', 'expires_in': 7200}
+[I 180503 20:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 345.63ms
+[I 180503 21:00:02 async_wx:23] get_access_token {'access_token': '9_W2XCCz4mBY1qiXTmpGiFfmkO6dcxFDe_zFroT5mmaZHs1WgNvlNuw8FOOZjnQlIn3xwsbeJHUN7KcX9px7P1EewbiQqCO1aq52fBy4Rd_fcN_do-M_k6ySfiUTVXzvCCdjCiT9JYuPfvWULjLTCjAJACKT', 'expires_in': 7200}
+[I 180503 21:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpQg7SqIt-l6K1J8e2Grc1dEOU8lNiyXkblSWHYus73GGA', 'expires_in': 7200}
+[I 180503 21:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 369.06ms
+[I 180503 22:00:07 async_wx:23] get_access_token {'access_token': '9_aYoD-yNLSLmBq2C4r-yP_kjrLO8zc0xcRtJK1IvqFwi_oWVsGoFP2O7Vuh7Z0JqJgJYKbxghkcwSPuZMzH06kTeCJzwTY9ttgdOWbCjsp3DSQ5vvyGxPOA0h4VFR4bX3-VB_6uHWGPKGFaEtWZVgAAADGC', 'expires_in': 7200}
+[I 180503 22:00:07 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpRNNg0j4MIX1w15vsAxqMRjt9WwzVPQ5hzx7trY7maElQ', 'expires_in': 7200}
+[I 180503 22:00:07 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 341.00ms
+[I 180503 23:00:07 async_wx:23] get_access_token {'access_token': '9_zfHDs-CAl0BLo21X7IbhBFpVqAJzJGOwPyYbp79KYviFM8J-U6pfTTv2H4Z7Xc9QP24yHK-Tpj6d7kB3ZI6ZcvNQviJyCh5ICxpis45Llao0UXhEZ4CFteRJmfrrQDMAXSMMD3sUv1sg0R5MVEPiAIAYHS', 'expires_in': 7200}
+[I 180503 23:00:07 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpRNNg0j4MIX1w15vsAxqMRjt9WwzVPQ5hzx7trY7maElQ', 'expires_in': 7200}
+[I 180503 23:00:07 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 333.25ms
+[I 180504 00:00:02 async_wx:23] get_access_token {'access_token': '9_KXTjlVjiLaxMlUX0lYTLWgTPHbBiqYnsC0kUnvn3FMA5GhCdDm2_QRMCo3Wwd8jZdQx_3wMKn0cqMg5aPdcLdICDUeSUSdDYxnDiLp5GwNfy0MMS80EfhShCpvQYSEbAEAJDP', 'expires_in': 7200}
+[I 180504 00:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSJ7mHPGA0fLszZ6JD-4bRFl79musVphrV_z3tt4oMn3g', 'expires_in': 7200}
+[I 180504 00:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 364.10ms
+[I 180504 01:00:02 async_wx:23] get_access_token {'access_token': '9_4XwgO3JoSLXVolpOkY15XgqQhMQz3QRTj37ZhbBrRVosthzINcWJPFH3ypz2lCd5Ogc_zrn2KifdyYJJeuT3NQlbvNGR6c04UqnyS2f24uVcJjXgIV2Bg8wSmzwAWAgAFAQMQ', 'expires_in': 7200}
+[I 180504 01:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSJ7mHPGA0fLszZ6JD-4bRFl79musVphrV_z3tt4oMn3g', 'expires_in': 7200}
+[I 180504 01:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 310.96ms
+[I 180504 02:00:02 async_wx:23] get_access_token {'access_token': '9_19h8ugfui61D6pwZDfkmt0DI9W7RP1K0u80ahv7ZN2yLZweza1DEaIgncqtELyZom7SbnasOZ4LrKqRdgfs1DrGKKjlXSdSJvSzE-a21xRf5goImV1U2D70Z9nhJVFME3lsybA3IyHSqv4wXCSQhAJAGWU', 'expires_in': 7200}
+[I 180504 02:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpTCp5NtDp0hhyRdBtKQPe_pY1MDaIZoz3-_hXM_RzVsrg', 'expires_in': 7200}
+[I 180504 02:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 309.59ms
+[I 180504 03:00:02 async_wx:23] get_access_token {'access_token': '9_Q448ns1lzzbTn-udDbMOJtlaAxGN6yAnJwvJfoa1tXCLeZaPC51sdtw2jevTroQffOMIQbxy7aOe8c3sJ5wQ7EwVxr8T9CkXnYZhhsqQse3wis01QxQvF6Kl7iABFSbACAKOB', 'expires_in': 7200}
+[I 180504 03:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpTCp5NtDp0hhyRdBtKQPe_pY1MDaIZoz3-_hXM_RzVsrg', 'expires_in': 7200}
+[I 180504 03:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 329.25ms
+[I 180504 04:00:07 async_wx:23] get_access_token {'access_token': '9_FeLP0T1yO3_lF16_Y2ZmEj1UFxReqF5Bp8WdsRjeRLpteumh8ZE3IzdEEiGgaoChXDjcbZo9gvJuPibYpRWmFORLdOkNPp7iUrDAWAZMA1gBxuuORfPrHsNgm1UoKG-ia7JLtirRAR4CaS5CYFHaAIASZB', 'expires_in': 7200}
+[I 180504 04:00:07 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpQC8jVtyi-EK1KJ-C2JcGV5cHBcYLXD2cV3J1r9iNbrZw', 'expires_in': 7200}
+[I 180504 04:00:07 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 303.32ms
+[I 180504 05:00:07 async_wx:23] get_access_token {'access_token': '9_bhqWc1a7eRoi--h4cB6z7MDKArc7bWzdmW_nPxQIkmW_h1i1T1ZTsRfA63KeeWDdQ2N0w2wbuBCJi5NfxcoiQ4M9l2kB4FRGVNNr7YSzVQrjySa-9wOKjavPyJnz7jGgGDiN2lvm8w4_zLhbOXWgAIAVED', 'expires_in': 7200}
+[I 180504 05:00:07 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpQC8jVtyi-EK1KJ-C2JcGV5cHBcYLXD2cV3J1r9iNbrZw', 'expires_in': 7200}
+[I 180504 05:00:07 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 304.79ms
+[I 180504 06:00:01 async_wx:23] get_access_token {'access_token': '9_5Ti4a8kHN-MYKWbODOJoOcW634y93aMGjm62goq7KfzHjzkYV8f_uevFmayqMHT_B-cX0kMTeu_z2EMqtIC-BR7q_OL7c20f65BJmsdcqsRHo1ZaSwuWxcxJrL80qMKXwJ8-XGl1FYCUT_WnXQSaABADWY', 'expires_in': 7200}
+[I 180504 06:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpTGImPQ_vqw3d59gWHba8oz4ZhmZn1lq5FKeOrITvnzgw', 'expires_in': 7200}
+[I 180504 06:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 322.18ms
+[I 180504 07:00:07 async_wx:23] get_access_token {'access_token': '9_k0jc-Hqqk4fBDKeZDfkmt0DI9W7RP1K0u80ahrHuykEo3toWHIRWtVvJwMLReBSzCJYwAtFXBCaIX19GzWR7SWODM7EoWubduO4u9O5b5RomMIHEiJQd3LRM4EdpRJ86H2eeNV7APQKpI_kgYCIbAAAQUA', 'expires_in': 7200}
+[I 180504 07:00:07 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpTGImPQ_vqw3d59gWHba8oz4ZhmZn1lq5FKeOrITvnzgw', 'expires_in': 7200}
+[I 180504 07:00:07 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 310.17ms
+[I 180504 08:00:02 async_wx:23] get_access_token {'access_token': '9_l_cfwcS3ENRnpCOgjbCZeLqycvf4J1J_aYlWyxDhnCaRGWy56DajBH5vsxJxBWmWkRy0ygzoufH1OSLBa1E9sVsQdY0v0kq8Fhi1IdSl8r6iT-3ctl7EA9miHSHjWx0Uj93ncMwGBxPmDIJUZWCjAIAJGM', 'expires_in': 7200}
+[I 180504 08:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpS0I23Nbuziv93Zk5xjoVWmH1rPWzIRtGFPpLhMRa5U-w', 'expires_in': 7200}
+[I 180504 08:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 300.43ms
+[I 180504 09:00:02 async_wx:23] get_access_token {'access_token': '9_6ZMDNtb4mgffVTTQySxOfFEdhABJfDeIzvr-kG4HsUUroTatVSQ-DgB8yeYYESOuKwKr4zl4uVrJCupU8GI9Qb0soRSkPnAGYDsAR4cOWHial2vEg_XR1omK-c9p_KzMSdOILHDy3a6qOtnXBDPaAGAIKW', 'expires_in': 7200}
+[I 180504 09:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpS0I23Nbuziv93Zk5xjoVWmH1rPWzIRtGFPpLhMRa5U-w', 'expires_in': 7200}
+[I 180504 09:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 347.45ms
+[I 180504 10:00:02 async_wx:23] get_access_token {'access_token': '9_ROa8u8D_R08futQ4ySxOfFEdhABJfDeIzvr-kDAPnxKfm10GjHn-mDon1ZhPWu7-0u1YAKYPZNGr9lc1JShvDlKvwsGSwOzCcVtykDmFIVgVCBzIq-LfpMn4Yg8U0Xmz6lBYqUqlCX3g6rfGZPTcABAJZD', 'expires_in': 7200}
+[I 180504 10:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpQuoSQpeent9Cyn7Yma65D8d9N1Irn9F9Bl44-pBn1R-w', 'expires_in': 7200}
+[I 180504 10:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 346.93ms
+[I 180504 11:00:02 async_wx:23] get_access_token {'access_token': '9_-9tTncUogypQyNIvV5t53R6Vtl0hqfxMopOPtxkkr1obVs2LZ4aBgTPMiClUDCYoWK9LXNHNcDt9ii4tWZjDqF4sqBxHeLYntfpMHrEbxr59NLB9AJt8sQegu3ZnGfATfiH7kcAsA0Y6qnYhVTKbAJAMKB', 'expires_in': 7200}
+[I 180504 11:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpQuoSQpeent9Cyn7Yma65D8d9N1Irn9F9Bl44-pBn1R-w', 'expires_in': 7200}
+[I 180504 11:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 366.23ms
+[I 180504 12:00:01 async_wx:23] get_access_token {'access_token': '9_Iy4wsnraYrWjsIJ5eTw-pGPeRabgG9CCeeadUeZgnvwToHctwlVM2OD_YrulgJGjFueFqWeYKe-nh-VE8vVMu6543VkFthOiij2v9i9LfQTQE53F0NdGqYre61HeYX-YE22_aC-oD3wdVJ5fACJcABAOQX', 'expires_in': 7200}
+[I 180504 12:00:01 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSbZ_xGG_7-8LPU5e-X7yG5J2WEI4w0JkKZlFpeAuZCrA', 'expires_in': 7200}
+[I 180504 12:00:01 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 343.11ms
+[I 180504 13:00:07 async_wx:23] get_access_token {'access_token': '9_ExC2V14SiGBOL-DhDOJoOcW634y93aMGjm62guMmbZ0usJmji6s9vZutQCNUijsaRG3eEf4AtDh2xhQoEimTmEvdZAPVT9zgj8MqQ1g4aT5muB-iQFnlTA_5ancxJ5ChJ6l2k0knql8xF7BqSBWgAEAZID', 'expires_in': 7200}
+[I 180504 13:00:07 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSbZ_xGG_7-8LPU5e-X7yG5J2WEI4w0JkKZlFpeAuZCrA', 'expires_in': 7200}
+[I 180504 13:00:07 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 334.28ms
+[I 180504 14:00:02 async_wx:23] get_access_token {'access_token': '9_k1c3YQ_M45nrqS-J5vcYH6Iy05SaKWVVjwFofqqAthojMmIQA9gORCfUXiX1eaqO_d-cdegbhmItsP1-vhCMrBVZr3ey5NTjNaOmKFpPwdvE4cbqq9lUjy2vmLeWLf_PRWgLweg_StrFpQYGPSJjAHAILC', 'expires_in': 7200}
+[I 180504 14:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSvueCpyGedDEwqmVBreQtIXpr5QpTVzAU8ubdFu3S1Pg', 'expires_in': 7200}
+[I 180504 14:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 349.95ms
+[I 180504 15:00:02 async_wx:23] get_access_token {'access_token': '9_ZnoQvM3VcFsdrEIK_ybyCiuBhIl24-FQbhNg6-ZZ3p7CytfFG39bUfTyUIElPiOVu7NxC_4ig_vuVKcYKafrZYBqo4JGGeUdfD4SkBPwXneBXUntEjyA1Crzjw8BGOaAAAJOW', 'expires_in': 7200}
+[I 180504 15:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSvueCpyGedDEwqmVBreQtIXpr5QpTVzAU8ubdFu3S1Pg', 'expires_in': 7200}
+[I 180504 15:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 348.69ms
+[I 180504 16:00:02 async_wx:23] get_access_token {'access_token': '9_OUegJG8xqfVXxnSoeTw-pGPeRabgG9CCeeadUb9eyQd9KrVf7uLrE8ZNIrvDImWRqB1JVYifVhHNi45GISvcE8RVSORMHq25iVtACoKnCAybaHnv7vXms1ZCKCxS4EGRwc2hRAB1VadyqUf0AAWeAAAUUQ', 'expires_in': 7200}
+[I 180504 16:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSfKr2Ucd3qFscPdWNTwOd_6vPVTHxiHSe62XoSAsBuvQ', 'expires_in': 7200}
+[I 180504 16:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 434.19ms
+[I 180504 17:00:07 async_wx:23] get_access_token {'access_token': '9_lk12zUL1E_buKHr2YSHwBydTvE1e5vyQp522s47F9gcTy7nXK5DUQ20fDC3qiUKYt3VqGWYHj_igFPdyS2d0sEB4LQJDJ7zSf3fygmjoOEd9g3JMNRQ1oEinDNgOUGPLgPNPYBz096HhckHxNWKiAGAUDR', 'expires_in': 7200}
+[I 180504 17:00:07 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSfKr2Ucd3qFscPdWNTwOd_6vPVTHxiHSe62XoSAsBuvQ', 'expires_in': 7200}
+[I 180504 17:00:07 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 335.79ms
+[I 180504 18:00:07 async_wx:23] get_access_token {'access_token': '9_xcPzMst83xWN9yAOvRd5yTzkcLN45DhBlD1O26ndUm69DbY0KDSGXRANwS4e5T2Y15Zz9EVC7McUn6tp1TJr0E1-xH8NSz9cPR9EBU3ofIz_kaRxhHTHOt6N7fzGSP2a-9XP2GGLdPKLNKfFMUBjAJASAH', 'expires_in': 7200}
+[I 180504 18:00:07 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpTEWDyRVGKU2lc-UJIiinB6Yw8AXX-y1YXDBXDlZCYp3A', 'expires_in': 7200}
+[I 180504 18:00:07 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 500.66ms
+[I 180504 19:00:07 async_wx:23] get_access_token {'access_token': '9_O1wqufFOTimvMzOO84BDGzq3lQwZ5jaBDHX-xzp1zduJcRMYw_twjohpp7GGPQVBbzNk3LWHQ8cqIx3xdGLGvViCjcecmfy9pF71ptQTEl3sU4_RwO7r16q27nZKOutfvPXdN_8BR102G7fyEKBeAJAPVM', 'expires_in': 7200}
+[I 180504 19:00:07 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpTEWDyRVGKU2lc-UJIiinB6Yw8AXX-y1YXDBXDlZCYp3A', 'expires_in': 7200}
+[I 180504 19:00:07 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 409.68ms
+[I 180504 20:00:07 async_wx:23] get_access_token {'access_token': '9_YrQCXlZcPCLYj-2Wxzli8BEa7r3m_5Ag3SXDV2MZFZF7XTwlzqdGy9lelSikoKY1y5rcnk2B4tjvHDXUUXkYNVy-HOZDHfySxsqLVe6WS4uvrJr6iusFHltggS1D4MiIrCt6Z-QA0yoyP-8NNMSbAEAEDJ', 'expires_in': 7200}
+[I 180504 20:00:07 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpQ1SmmItqLtnNIdbLmjn9wAKnVQhMMNlmR_gcQu3SsrBA', 'expires_in': 7200}
+[I 180504 20:00:07 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 345.10ms
+[I 180504 21:00:02 async_wx:23] get_access_token {'access_token': '9_cviSctpgPpGt29J9YRyZsyK-c5uetyv6Sxk6RpS2Rn2alMq90uvNbgeVfbxA33SghLFds5B1Z4FZiRU_YrlgGngAkBRdGG1RezOfwQv2lG8hSGAIAbghhhchE6M4HmzXJjicVV6AN1rvlCXzKVAiABANYD', 'expires_in': 7200}
+[I 180504 21:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpQ1SmmItqLtnNIdbLmjn9wAKnVQhMMNlmR_gcQu3SsrBA', 'expires_in': 7200}
+[I 180504 21:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 450.46ms
+[I 180504 22:00:07 async_wx:23] get_access_token {'access_token': '9_D5lut4ASON2YbpcDeTw-pGPeRabgG9CCeeadUYEpEjQUSnSSgWkBR_W0g73IPZ_SFC7w07DVzgeBRAZqKG6qHkSz4SOnEhDa3bK5NMCX9VBmiX1jEAAgireCGRcIVRgABACPL', 'expires_in': 7200}
+[I 180504 22:00:07 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpRFajvLj0BGxS88jkdkjiOySrkxbKrSemUOpqjZ8e_6VQ', 'expires_in': 7200}
+[I 180504 22:00:07 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 419.03ms
+[I 180504 23:00:01 async_wx:23] get_access_token {'access_token': '9_RVqCotnKmoQfzvF22OKPKX4wqyZNb_4IPqF7easTdSkNu12q6CLERHaAu2bxzNqsIiEC13s49zOt3AdhCG-uTGdgSL4olaozpbc2pnAfjjxcEJ92DhaXWkr3GU8WQAbAFAMGQ', 'expires_in': 7200}
+[I 180504 23:00:01 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpRFajvLj0BGxS88jkdkjiOySrkxbKrSemUOpqjZ8e_6VQ', 'expires_in': 7200}
+[I 180504 23:00:01 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 336.93ms
+[I 180505 00:00:07 async_wx:23] get_access_token {'access_token': '9_G8jSBpmeZWyaeRXGDbMOJtlaAxGN6yAnJwvJfq3lpJj__mb3iFqy0lsWeQysnAVw8HwLkXuxwPj5iovNNfDHW76rW1z2PZtHGv8SzjETbF1KOWzbsXoN1AtKUma_nIXHU-IIcOdmHlODQyR-VCWjACABIC', 'expires_in': 7200}
+[I 180505 00:00:07 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSTwODKU0bjPVdq8TKWJE--6UIijcktNhoJIr7IGCo-gg', 'expires_in': 7200}
+[I 180505 00:00:07 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 346.00ms
+[I 180505 01:00:02 async_wx:23] get_access_token {'access_token': '9_Bzc3ohRwA49buNAyReiD8MoEq1FBDUh_vBYkf2R9jHaqMfhgDhZWH5spQelMoEGJgmK8fo9cAbhfw7hdNcB6IlAAfeqcxoLuh6-u7QDOb1k1nJGXM8W_tO-NgSaUcyRDSC_RkxNULjIKxKgvSXKjABAZER', 'expires_in': 7200}
+[I 180505 01:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSTwODKU0bjPVdq8TKWJE--6UIijcktNhoJIr7IGCo-gg', 'expires_in': 7200}
+[I 180505 01:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 311.69ms
+[I 180505 02:00:14 async_wx:23] get_access_token {'access_token': '9_SjFajKOUzObNaVwZ8yqQhXOdCRuj-iibj3pzKjTxf3J7YwE4YoP1W8h50yaOeIffUIETKNvChJGwhxbFEPTmuxb1DACBOq6kRwE8mlfnVqg0RTV8CXqXlU4RfMd9S3kwdvSsloe--gqcIzzgNOWeAGADEM', 'expires_in': 7200}
+[I 180505 02:00:14 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSpV_KBoni9VFxfNXAkNcYJ93AXeRooya-x-GgYI1oNfw', 'expires_in': 7200}
+[I 180505 02:00:14 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 6772.78ms
+[I 180505 03:00:07 async_wx:23] get_access_token {'access_token': '9_CMR-gWYA2c2lKiZjsQ5Luu4p77RjqCQNXHn8alUZFIIpXRHChftrKFBHJ2o2Ap3n9m4DTFFOM5zFGeRxsRK8OiK8U3GQm77-C92WpfC0p8v_C7KFxu0evCYSqBuWnzLkNrtGhu1_FE8jjv0iQMTfAEAHDK', 'expires_in': 7200}
+[I 180505 03:00:07 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSpV_KBoni9VFxfNXAkNcYJ93AXeRooya-x-GgYI1oNfw', 'expires_in': 7200}
+[I 180505 03:00:07 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 307.81ms
+[I 180505 04:00:02 async_wx:23] get_access_token {'access_token': '9_tK8zX83nC-You2d2gbv9eueabHO7rjin9rLVJCmd9DFRuvczdrXErd38587nefHYSSPUz2vYwaEcwNzQKB8sxP_DPWpweUBAxwW6xbEk2NLlVq3H1EsGTYnCLiFlw19jZGPheeVu5F6ZH3N7EMXhABAVDO', 'expires_in': 7200}
+[I 180505 04:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSdaWrIf5lnkuYlTTkfa-_GdXLAaXyFK9L_pRZ_1OsMDg', 'expires_in': 7200}
+[I 180505 04:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 325.84ms
+[I 180505 05:00:02 async_wx:23] get_access_token {'access_token': '9_GFvbcFi7vZPe6rhYaJodQtiLhtFbO3iCPJ8v-YOBwTv1JxWyQYpa77_PsxNH94p_PF2lzLYhxIfQ7d4ExeZ7_0FBgzFhgy6l3LLrN7-07GTuXQhhMOd_LA9V_h5gvSSqMxmiT7oQfgsjItTJHHVfAIAKKY', 'expires_in': 7200}
+[I 180505 05:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSdaWrIf5lnkuYlTTkfa-_GdXLAaXyFK9L_pRZ_1OsMDg', 'expires_in': 7200}
+[I 180505 05:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 431.35ms
+[I 180505 06:00:01 async_wx:23] get_access_token {'access_token': '9_MOUExc191eV69A64DOJoOcW634y93aMGjm62gpmFAZowSbSErUYokR7_C8LDzNpGncS00RdxXkmBgimksCu-uh87DdJSnbnjTtZeazCqeGhXhlq2FbsBPoVumzkARQeAHAQHG', 'expires_in': 7200}
+[I 180505 06:00:01 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpTIyJnfRvp72qMQlr5Yk8Q2H7V89eBzFfZWHOx2fN5gsQ', 'expires_in': 7200}
+[I 180505 06:00:01 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 304.74ms
+[I 180505 07:00:07 async_wx:23] get_access_token {'access_token': '9_TNaNC-dVwq_im94ZekH5TFajl5l41cKao6TB8D8BGuf8R1oA59XehyCDGopMIzVEHmr1L_NiludArP1X5rAK6UPHKroyoW9hvTb9h5OmPt5pe1vZAzuRdNRymewHZIaAHAXPY', 'expires_in': 7200}
+[I 180505 07:00:07 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpTIyJnfRvp72qMQlr5Yk8Q2H7V89eBzFfZWHOx2fN5gsQ', 'expires_in': 7200}
+[I 180505 07:00:07 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 341.69ms
+[I 180505 08:00:07 async_wx:23] get_access_token {'access_token': '9_magL06WwHjmoLwkXCRvKhda6AZ-FhBBym0oDEJ5KvRjXnaDK5IbJ9OkrEGjnpbgaYuw2SuIeA7lmKBzbzYKI0bqIMgZ3C0r0PFmv6nNsGdavO_vp_I1RcoxJencl1P01otNXjZTRrJHabBS_OCUcAJABPH', 'expires_in': 7200}
+[I 180505 08:00:07 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSAp-uxt3jBzC3G92UAzUw9Y334JCCcLQD_ouSuuIAchg', 'expires_in': 7200}
+[I 180505 08:00:07 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 341.63ms
+[I 180505 09:00:08 async_wx:23] get_access_token {'access_token': '9_2JteDDhUagGF759lxx6N-CgamtKGzruoVeiFyDT7BmENBPdih7pswGQy1RJD5qKS5_uyjKJKYDsa21UI8tqO8YsobIveer6O7zoZHubwQaWsn2vpBtsEaWcl2HMYEFkkgJ8wDM4ndD8XBFpJKGIgADAQMO', 'expires_in': 7200}
+[I 180505 09:00:08 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSAp-uxt3jBzC3G92UAzUw9Y334JCCcLQD_ouSuuIAchg', 'expires_in': 7200}
+[I 180505 09:00:08 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 396.61ms
+[I 180505 10:00:01 async_wx:23] get_access_token {'access_token': '9_3DPbbXkPeHhO_WohkY15XgqQhMQz3QRTj37ZhdBExcbaVUhgCMku8Jy2xQ9LkWo1qPtrVBEl7gzj3XO89fTJ30ttgFGqpxlhWKX_xNqjCXd2giCwzpqqHCzTM-994fdkEjbvw8BJG_OdS41WXWPiAIASRK', 'expires_in': 7200}
+[I 180505 10:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpS2wiJ_FjJVazSOWF5MH2fhkGC1yYkRsKX1mTYAdqT3-A', 'expires_in': 7200}
+[I 180505 10:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 373.99ms
+[I 180505 11:00:01 async_wx:23] get_access_token {'access_token': '9_qLzX91DKXm5_UkHtA5G2zb-5Dh4q-JFomn1LX4Tia_OijcdcAL3SkfkdH3pv2IJTFbbDNVLy21WlxxlDKFsaOM3Z4sabZJxpRa3MM8fed2V4u0Vo0nC3U9MZiR9JfBBOVctrCX31G_EbQB-VPOMdAIAIHF', 'expires_in': 7200}
+[I 180505 11:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpS2wiJ_FjJVazSOWF5MH2fhkGC1yYkRsKX1mTYAdqT3-A', 'expires_in': 7200}
+[I 180505 11:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 345.81ms
+[I 180505 11:36:55 web:2106] 200 GET /tlwx/static/img/icon_tabbar.png (192.168.100.52) 5.82ms
+[W 180505 11:36:55 web:2106] 404 GET /tlwx/static/img/credit_card/mes_apply2.png (192.168.100.52) 3.77ms
+[W 180505 11:36:55 web:2106] 404 GET /tlwx/static/img/credit_card/mes_progress.png (192.168.100.52) 0.90ms
+[W 180505 11:36:55 web:2106] 404 GET /tlwx/static/img/credit_card/mes_apply1.jpg (192.168.100.52) 0.97ms
+[I 180505 11:36:55 web:2106] 200 GET /tlwx/static/img/icon_tabbar.png (192.168.100.52) 8.35ms
+[I 180505 11:36:55 web:2106] 200 GET /tlwx/static/img/icon_tabbar.png (192.168.100.52) 4.50ms
+[I 180505 12:00:02 async_wx:23] get_access_token {'access_token': '9_5_hzxgoO9sKrdwbMgbv9eueabHO7rjin9rLVJHGVkIanHmhRtleA5fMK1U_hYxZi43bANNyTbDPn93yEVRPal231sjR6ZPgb59HJGa_CBmSXVM-XWNSA5jaT7CLoKiHKVdiby91xktvDE4EPVCHfAAAYFK', 'expires_in': 7200}
+[I 180505 12:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpQG-UFfQ6DlRD85l-ueQ0MELbiKWbFXsX6i5iRzQdVufw', 'expires_in': 7200}
+[I 180505 12:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 553.23ms
+[I 180505 13:00:02 async_wx:23] get_access_token {'access_token': '9_L_G0d6H1PLauCLKbObYp8yYqYcst_kZJ8UgXYlrbFAteaJtNK3v9P9zWC4zlLXCZ_A_G6SZAX16eSpP7SIfQQR151MR3m9cNHvxW5fBAZhlR94hjjH8wHzj1J0F2zjkfRL2dMKWIJzHXy8CEXXKfADANNA', 'expires_in': 7200}
+[I 180505 13:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpQG-UFfQ6DlRD85l-ueQ0MELbiKWbFXsX6i5iRzQdVufw', 'expires_in': 7200}
+[I 180505 13:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 475.42ms
+[I 180505 14:00:02 async_wx:23] get_access_token {'access_token': '9_b5TAl38BISviXV64DwpPGiUvTTMa8HwiXNK2YMnwZe_nbY3DRILZdIuM1DQULD8WO-Ubz62FnajIPuDazXZh9NfKZhvAQwE9_LdOzxkGgxceDe887HlNrhvz76ihOxdCfRNwu78_oXxgSJU3FGKiAIATUY', 'expires_in': 7200}
+[I 180505 14:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpTuSCmPJEba9KVJi2Hkd-HEKmtcw4mokuWGuoLA-wVZ1w', 'expires_in': 7200}
+[I 180505 14:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 342.34ms
+[I 180505 15:00:02 async_wx:23] get_access_token {'access_token': '9_9PjLjXm7Bk49Lza1A0pSl_GI7ceMqmmxGPgo9Ig5Hyp6JowbfB-Lk5pau7qgbhQj6SjZGBBapcBl7f6jr3Xy0oPaUC-saggTJG0eTzyatg8ZJ9aOcHpR8oApl8wdtoUgj7mu77jIllhFf3_-NYSfACABMG', 'expires_in': 7200}
+[I 180505 15:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpTuSCmPJEba9KVJi2Hkd-HEKmtcw4mokuWGuoLA-wVZ1w', 'expires_in': 7200}
+[I 180505 15:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 337.68ms
+[I 180505 16:00:02 async_wx:23] get_access_token {'access_token': '9_KO-lW5fPyGUeG3k-7yveLK341lYMQUYG88Am-__Mmj-3rfODggYMxoHMD-94I1LVzDKVsE7jquggjby86kdp-GIwj2M57GpsuSa7leD7QGK_MelgL9eTbre4r186E6EJ8K4JtgKT0SSld4T2MMKgAHADDB', 'expires_in': 7200}
+[I 180505 16:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpQ1qMF1WoEyevf_0kRuUC04XNsKwkjJmeZ9AM-5p6Efbw', 'expires_in': 7200}
+[I 180505 16:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 339.39ms
+[I 180505 17:00:02 async_wx:23] get_access_token {'access_token': '9_acPA0BPqcMyeNyng2u89-4fKHqPCXsTdrihKxeUCoFO1MDnCIccB_-8sy0H8Bjnzc_bnLyJSH0qBXIZ96UtBw0GRO-IAMbeqPKnI2_btTdjYC-IMljVgH-uyWsZrWpOmSdsIqfAYkujAqvn9NYHcAEAUFO', 'expires_in': 7200}
+[I 180505 17:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpQ1qMF1WoEyevf_0kRuUC04XNsKwkjJmeZ9AM-5p6Efbw', 'expires_in': 7200}
+[I 180505 17:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 329.01ms
+[I 180505 18:00:02 async_wx:23] get_access_token {'access_token': '9_MEYUx3H7PnlfZftPHds7kKoMCDqZJT7Y4gc3q_d929TtYTgjT18DIMJrlyNWxBZGIasogyU6GFwRw0nwEXaLq3HsH2cWeZ510pNJfzkraqSPMIk_XLx1L61IAVi73DouOeXHOz3k4a5ueDxnNFDbAEACUS', 'expires_in': 7200}
+[I 180505 18:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpScgTaQI5dc302Wf46x2NFlEqkD1EH_h9geDHmjaWyiAw', 'expires_in': 7200}
+[I 180505 18:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 362.62ms
+[I 180505 19:00:02 async_wx:23] get_access_token {'access_token': '9_4mVxt1j9twWExJiOKEr-Lh2zuvIwJn-J36wSMAkCfWTSEWLoON-5h1UI-kWI9QoRQ-Xe0pDPeu8KFV-NZboycGlRvpTSwheWrferClbGYgzDW9SgvWEfGCv16oz_zFxNFWN2Yk_xHrhruicATKRdAGAPGN', 'expires_in': 7200}
+[I 180505 19:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpScgTaQI5dc302Wf46x2NFlEqkD1EH_h9geDHmjaWyiAw', 'expires_in': 7200}
+[I 180505 19:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 470.25ms
+[I 180505 20:00:02 async_wx:23] get_access_token {'access_token': '9_hPfSS8PfvLS_8RfQDOJoOcW634y93aMGjm62gijH0X8kOLogbcktznIdIsZQEwqD1UAPdQo1fjmMnnrm-KKiv6040Bx3pCz3T-GabAc6E0COIFzK-oQktJBRIdhkNSAqM4q1TuZ7jWhjsKNzHYUaAHABSO', 'expires_in': 7200}
+[I 180505 20:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSbrGYVDRutQc0xjs1sIYst9MqdhsFtwaqmW2IAgpHErg', 'expires_in': 7200}
+[I 180505 20:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 600.43ms
+[I 180505 21:00:07 async_wx:23] get_access_token {'access_token': '9_R7bnGi82Al5ReoT1Bgbp_CQkKINQibazAzyoHXNnvTq2FIhReDPOBAMW42QFDC_zaqEbAlP1RubavxZDja44ALyVgiayOyVYuPLtSBF4oEaZYcVjQ9PTf07m95kkUTCafDC4o7Ki2zmhMyjhACIeADAIKQ', 'expires_in': 7200}
+[I 180505 21:00:07 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSbrGYVDRutQc0xjs1sIYst9MqdhsFtwaqmW2IAgpHErg', 'expires_in': 7200}
+[I 180505 21:00:07 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 365.94ms
+[I 180505 22:00:02 async_wx:23] get_access_token {'access_token': '9_Cda_xITUOxmH1Fz3AFYISliXq9odB29mfx5nB2-lpXBOA5K22PwItpAu81Vbp26HcETA98oj_Wb8kzU8Yz410SCa6fGBts7PeLrXMyZ-EgBRJndQYHJOGDuqg2VPZet7uknpx2YOOSafU0UcPUJfAEAYDS', 'expires_in': 7200}
+[I 180505 22:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSJ0CuDxgTzkY7z11BiqCnaqbrLu0FIeIigUgATKineeg', 'expires_in': 7200}
+[I 180505 22:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 668.85ms
+[I 180505 23:00:02 async_wx:23] get_access_token {'access_token': '9_pOamV6XJgllAO_pUDwpPGiUvTTMa8HwiXNK2YOrpuvjsyASSmfMCDA-co97Y9FOZg7Mwpi5LdKmUwcBkiuU37nm3OnrX5y8ssBlT3fc7Oqj2XhUMYED_3FIOcVdtrPJV-AhxpdDPMBBIJk_pYPKeAGAGXS', 'expires_in': 7200}
+[I 180505 23:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSJ0CuDxgTzkY7z11BiqCnaqbrLu0FIeIigUgATKineeg', 'expires_in': 7200}
+[I 180505 23:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 322.19ms
+[I 180506 00:00:07 async_wx:23] get_access_token {'access_token': '9_rqRio8-4sGXdz0Hw5jpCVAYX8jdRbN1DtunrkPd_NwTb2bZlZLILEsJ447KOZYIsDxXRrbhMGjByKCtwWpZPsrmhqmUH1um93GXYudj0l3YMl5B1QGqOgpcIHSjqMKpkD1lgemfilRlnN34TTJZfAIAFVL', 'expires_in': 7200}
+[I 180506 00:00:07 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSRCpQOnhwQp6vm2F2M_Hmgz5XfHjMDxNn1DIHZ9uuEnQ', 'expires_in': 7200}
+[I 180506 00:00:07 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 359.59ms
+[I 180506 01:00:01 async_wx:23] get_access_token {'access_token': '9_YUU1Xz-g8FNojyBtKLK57yrns4BPo7GWDNw2BY28ZpOBCSAeSsxMeXnxzQHlzNmNdTKhWtn9-0VwuNyHWiQdBlPPlguOI9BGr1iBS-DKj5eHxhfwPTHshIZfVjFU7N3q8H8RwttLt7cumiTiRETdADABOD', 'expires_in': 7200}
+[I 180506 01:00:01 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSRCpQOnhwQp6vm2F2M_Hmgz5XfHjMDxNn1DIHZ9uuEnQ', 'expires_in': 7200}
+[I 180506 01:00:01 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 381.45ms
+[I 180506 02:00:01 async_wx:23] get_access_token {'access_token': '9_oi9WB0AuxTSbbtBBUpvq7Qx7X5PVK9EtfNtkv7prsXlWIZ__k8UutXlhJNMgV3ShjdzpYFWmOLJCiplkUqpxzgrrD2cFqga_ojzLmNOfFa7LHUdOya5l8Jqz7EcVGViAIARCR', 'expires_in': 7200}
+[I 180506 02:00:01 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpQvNh8QVgEQUUxMxg0AhPByCj5jub_41zpAOx2nVdJPeQ', 'expires_in': 7200}
+[I 180506 02:00:01 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 319.79ms
+[I 180506 03:00:01 async_wx:23] get_access_token {'access_token': '9_eRu63462GcEuJ8Fpdohuu2DT-vLJVPB6W61nWCJXYLHB-TNZHKaaBpPNZ3mnu60HFAbOCvNTA6NXtpXiCxqYGMQkAmSbqhWQBkUQ3aR7a9H1ISVfbftubnsQAOd-q-dPNlE2YTDEpm5Xly7uODTdAIAUJZ', 'expires_in': 7200}
+[I 180506 03:00:01 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpQvNh8QVgEQUUxMxg0AhPByCj5jub_41zpAOx2nVdJPeQ', 'expires_in': 7200}
+[I 180506 03:00:01 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 317.64ms
+[I 180506 04:00:01 async_wx:23] get_access_token {'access_token': '9_LEJZ9MbV7IWhJe2ypGiFfmkO6dcxFDe_zFroT8IqZEw4Onr8VVBD_-BrSO-1Yu2vhCliCGTHrYI4SKjRg41cVFo_O4BFpjWJ0xmECr4qKasrK0i1j3OtEfjXTw4NGPbAJADWF', 'expires_in': 7200}
+[I 180506 04:00:01 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSZM8y5DPCtIxNHoSgLntNfSFkeiP2gbHqCXjPa1PlmFw', 'expires_in': 7200}
+[I 180506 04:00:01 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 298.55ms
+[I 180506 05:00:01 async_wx:23] get_access_token {'access_token': '9_ARkJnC9w25dydTWP27hCkuy_TPuC_x3DTc461eYLJgtby7VLLSOZ6pww9OlfQwO3X8bzMlzrsuk6SBRGLhuERnSiJnAj3ARuvjH5JflmbXuqwH9OEAD_N2eBN6QZNXfAGAOCM', 'expires_in': 7200}
+[I 180506 05:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSZM8y5DPCtIxNHoSgLntNfSFkeiP2gbHqCXjPa1PlmFw', 'expires_in': 7200}
+[I 180506 05:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 307.72ms
+[I 180506 06:00:01 async_wx:23] get_access_token {'access_token': '9_EaepB9Mtvb5KTRTOujnH_UpCc9paRYAxZ9bm6Zt6l-EA3sj9IdQvkBlJlXFo9LBv5RWDMkiTGqUXYFIxJFsv0ucufhzKEA6VOI1MOYhUdgA3FA10yDhO3aQsmlnDs6kHCMwwZ7-K_aYk45_MIPLcAAAELH', 'expires_in': 7200}
+[I 180506 06:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSqGB4wH7Gr8k9nFk4QH6V_LPRulcu_h3NE73TU2bjJVQ', 'expires_in': 7200}
+[I 180506 06:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 331.82ms
+[I 180506 07:00:01 async_wx:23] get_access_token {'access_token': '9_A0pDFnj2f-CH62aLxzli8BEa7r3m_5Ag3SXDV5TOFSYgMIxia2ZH7ctbFuaiRd3yBIkItRaKhzTdZLrnh3sw4y6k2-t2UJk5teZfDztZ0gRJSt0Pe3SfYBEJiDLf3eLLSxZiBn5ED0wgQoK4BJZfAIANVL', 'expires_in': 7200}
+[I 180506 07:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSqGB4wH7Gr8k9nFk4QH6V_LPRulcu_h3NE73TU2bjJVQ', 'expires_in': 7200}
+[I 180506 07:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 473.85ms
+[I 180506 08:00:02 async_wx:23] get_access_token {'access_token': '9_NmtOOrcz5rjFhF-6F0Sg8Ntq_0Fnm3CIxDfv_4L04sWToce8sBOcYqackrncQfPeC3_XDXtOBZdAM2RSWaHmAcQ6zSQlCaIskRyaERd0xpDkU4mx9MoofYOrPOqH-HkWj0Bo9yVvpS3v4vFVOATbAIAZLE', 'expires_in': 7200}
+[I 180506 08:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpRzcNHDzla1qRdP5czvotgBCdwdmmlWMb-oSfD0PAYNvw', 'expires_in': 7200}
+[I 180506 08:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 552.44ms
+[I 180506 09:00:02 async_wx:23] get_access_token {'access_token': '9_9iQ9Jk85c_JJuTPfA0pSl_GI7ceMqmmxGPgo9MQ7dfGoHdRD0ztBSIzpMDVJAG10FUaPHUgyg9lBT5NSvxFfT1XtJaK8Wat9950EMM2gDCpz50HqRlSsYd3Sc-8YlNV1w2DJiSKiEWKljm8SWQNdAHARLI', 'expires_in': 7200}
+[I 180506 09:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpRzcNHDzla1qRdP5czvotgBCdwdmmlWMb-oSfD0PAYNvw', 'expires_in': 7200}
+[I 180506 09:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 420.98ms
+[I 180506 10:00:07 async_wx:23] get_access_token {'access_token': '9_AUcD6owZcPpoK8aZBj8I69rHm8NGJvmftXYGS06Ja-Zf6IjCYwwQqmGWk5kicyJE7XoHafJV68A6bRP_LscKI1x3_Af4_dI2H-9OvdmCCbdKWpiAgX_fLy7toT0MLXhACAAZL', 'expires_in': 7200}
+[I 180506 10:00:07 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpT_HL9IDLlz6nZUMvhelSL0rCNmwT4orm9RVQmTLOUF4Q', 'expires_in': 7200}
+[I 180506 10:00:07 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 359.21ms
+[I 180506 11:00:02 async_wx:23] get_access_token {'access_token': '9_gdC3dcHD_PYWRxUA8yqQhXOdCRuj-iibj3pzKjWZd0nMxOs0rTZtJs5YqtO1GOSv22mcLFsNBRuxJgYldE-ZMP_OypC-WLV_kYx2L2Zs4b-UTviSDGg1T_4CycdMJ_olIuzjV_iwB8msZ6SvPILiACAXQT', 'expires_in': 7200}
+[I 180506 11:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpT_HL9IDLlz6nZUMvhelSL0rCNmwT4orm9RVQmTLOUF4Q', 'expires_in': 7200}
+[I 180506 11:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 414.23ms
+[I 180506 12:00:02 async_wx:23] get_access_token {'access_token': '9_B18dsHxjwUUmm402Bgbp_CQkKINQibazAzyoHdVnM6PylT2AMqjQM5B4C_Uvnb9Hyq-RCsEyzdUPpm8AFFxmvR6geYQ_E6KbTojV3mHe7OmSagIkQuGATRKCNA8QCVaADAYKD', 'expires_in': 7200}
+[I 180506 12:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpRs4IiaVljWslwxXqGrQLDNe99l5ofFrfy4bqWqMHGTYw', 'expires_in': 7200}
+[I 180506 12:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 363.26ms
+[I 180506 13:00:08 async_wx:23] get_access_token {'access_token': '9_7WANAl1GabLgOPtR7yveLK341lYMQUYG88Am-4djsklXOf7lK4vTwlcfhRRglL0FVYUjmlYUneLTPiYK5I257erpSmgwjVBfmzvFfgWkwGOtHYkMwGQLy8aCdacfSylYgzFv6SkBnzzJX6FvNXHeAEATDN', 'expires_in': 7200}
+[I 180506 13:00:08 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpRs4IiaVljWslwxXqGrQLDNe99l5ofFrfy4bqWqMHGTYw', 'expires_in': 7200}
+[I 180506 13:00:08 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 328.35ms
+[I 180506 14:00:07 async_wx:23] get_access_token {'access_token': '9_eM1jX6h4_Y-7iu56Bgbp_CQkKINQibazAzyoHRGQNKso3CudR1qPH5VXT46shS-a9UpKtH8xFg0cqn7h6QGxm2LkSYAkqKYe-leFl2lxBv9XbmRRe4tq_xzZXcPOAI-WQWBQVZSZOle_hogYWHJgACAKVX', 'expires_in': 7200}
+[I 180506 14:00:07 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpQE_dcLdUJF8ec_0SMmwgjv1noWFDAC9UvlKjFpjlNPNw', 'expires_in': 7200}
+[I 180506 14:00:07 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 343.19ms
+[I 180506 15:00:02 async_wx:23] get_access_token {'access_token': '9_oSgng9PCF7DAEACP9qmKlm4duuDcLnfZspgmibgqi1w5mjRlQf8pvyFYvEsSKSEkVVxUriDoyfxgT613xIyCPV91gl_44RSA_nQvf9niDiwCYxPQiWwODzVUghr_vkgLMBwgiTCJj3IJYds4XWHhABADCN', 'expires_in': 7200}
+[I 180506 15:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpQE_dcLdUJF8ec_0SMmwgjv1noWFDAC9UvlKjFpjlNPNw', 'expires_in': 7200}
+[I 180506 15:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 347.85ms
+[I 180506 16:00:07 async_wx:23] get_access_token {'access_token': '9_ndCTOQ4e73qsGtzx8yqQhXOdCRuj-iibj3pzKjkA4imJTnsGos6K0p0mTCxt3fvfM_r3jtkueiobHDaO0gZA5caukyG1gucrAM2hNmOwxFGDAxAB6vxPeZflqYlDyN4YMprGRK-WPT9ijUs6CSHcAFAVLA', 'expires_in': 7200}
+[I 180506 16:00:07 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpToU3uz1b1zR4qAP01w-4nHDNEm3VgQ6-wUBBbqeZHg9g', 'expires_in': 7200}
+[I 180506 16:00:07 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 343.52ms
+[I 180506 17:00:01 async_wx:23] get_access_token {'access_token': '9_ayjsvC_UjEvySA81wUuS2f2b9E94S0k_T0Q5TdZZQnBHnPmBMeoQF6cEEy04JDn60dzSS48opcrDlAEvLC9_RFOuFdW4g2F37D1Z7rs3TPB0g_7j8703YXMC7g60VG4IcOfkHZcMlMueVbX8BXRiAAAHDX', 'expires_in': 7200}
+[I 180506 17:00:01 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpToU3uz1b1zR4qAP01w-4nHDNEm3VgQ6-wUBBbqeZHg9g', 'expires_in': 7200}
+[I 180506 17:00:01 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 323.17ms
+[I 180506 18:00:01 async_wx:23] get_access_token {'access_token': '9_gdiXCru73qCINTNiF0Sg8Ntq_0Fnm3CIxDfv_1bLq-oL2xmj2vtyumz4k5QzfhKAilIGfdYSnADC0oAsXBOCc1FBa6tGOJN2D7C9rE4Z6O4a7iCAmSXfIiPDCVmeDXEZ7YMvOegMmYVG1TRoCXAhABAJEH', 'expires_in': 7200}
+[I 180506 18:00:01 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpQCvTSrZo6E8wuZpbwpuD1SqluTTmut9gsBPEWvFtoGPw', 'expires_in': 7200}
+[I 180506 18:00:01 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 409.32ms
+[I 180506 19:00:01 async_wx:23] get_access_token {'access_token': '9_wjCY92FfwbftHrYzxzli8BEa7r3m_5Ag3SXDV0vQWWf9mYDYV59ZOIMqVT2CQLI_CIcZo3pT1sADwzX9qNB8LWH_druEoL-4yqNC4BFk8SpQYzet8LPhUf6VoQK5i6O3bLbteVJUSIVcD-c2RSUfAEAIJL', 'expires_in': 7200}
+[I 180506 19:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpQCvTSrZo6E8wuZpbwpuD1SqluTTmut9gsBPEWvFtoGPw', 'expires_in': 7200}
+[I 180506 19:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 382.27ms
+[I 180506 20:00:01 async_wx:23] get_access_token {'access_token': '9_Q8EVND4-s4Rs4_G0zHg5KGGo-T-OLUQYuhsiZU-nkKVbSN67JMsUhV14d_rJA9sYJ8nE4nMoyAUVr_nlJ3y_J3qbYqBlQddZdIkC26T-yHf7C8PNQAKLEk6vGPFV64mtoLp8vZX0JCYgze_4DDZcAJAKKG', 'expires_in': 7200}
+[I 180506 20:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpRgUkqKonDv1mDpleIc8s7P6BllAouMxkMDP2V43yaChw', 'expires_in': 7200}
+[I 180506 20:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 404.09ms
+[I 180506 21:00:07 async_wx:23] get_access_token {'access_token': '9_V0kgLOCM3RPJEVFMx4mtE9rVR-cIKqsAHNqBMICyrvbsJQLH3ugC6mgeYwnFlBlD5iES4aoTvIIRKWx3fhy4hdu28BDmGOAPcCSooiqCiIPidc13sfoTcJuEqZzIrHwyUJ6j-KfqEofE-1VPQCPaAHAUGT', 'expires_in': 7200}
+[I 180506 21:00:07 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpRgUkqKonDv1mDpleIc8s7P6BllAouMxkMDP2V43yaChw', 'expires_in': 7200}
+[I 180506 21:00:07 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 384.13ms
+[I 180506 22:00:02 async_wx:23] get_access_token {'access_token': '9_hPhCweMQ5e9ZzI7nekH5TFajl5l41cKao6TB8KU2P-NHen5nTlJB-n4yVfxwHNvge_GCOXhrDLwltnvXW3tVv5IcqN0YO2TKaAe7oVolU8xd-R4QsF-M1zhqMver2FW8o3Z9634cNadYoIV6HELiAFAROV', 'expires_in': 7200}
+[I 180506 22:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpR1qGVv9WkegMWpCStai15PN-99p0ypU8klQzbqwWhqOg', 'expires_in': 7200}
+[I 180506 22:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 604.72ms
+[I 180506 23:00:02 async_wx:23] get_access_token {'access_token': '9_KGbrUdRTsQXOsHtaDfkmt0DI9W7RP1K0u80ahsaA2mN748oERBjFbTenVrAKJ1nwYbr0sWDTfVeL7h2X5MTt_RQYkhruSg-3Brcw7yMfxt5FUKcQ21923PgT6vPzpup8ghqE3XtTRV7cABGeEYYbAIAVPP', 'expires_in': 7200}
+[I 180506 23:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpR1qGVv9WkegMWpCStai15PN-99p0ypU8klQzbqwWhqOg', 'expires_in': 7200}
+[I 180506 23:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 342.14ms
+[I 180507 00:00:07 async_wx:23] get_access_token {'access_token': '9_nMnQYoQeBXJi4VjgF0Sg8Ntq_0Fnm3CIxDfv_-TA2G76m1hnBsqBmxuXLiXiuMEKOqyXYbU4U9VwoddLQHYFVCIKJwcvoB8cogBZzpP9SqcVu9X4PLolrBUsElFgzJgTsoM1PGaeMM9Nynt9TEKbAIACNT', 'expires_in': 7200}
+[I 180507 00:00:07 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpTlD4EKU-nw-YQGAodCTDlR4L-gLRP9Y3YSvA-uI20iHA', 'expires_in': 7200}
+[I 180507 00:00:07 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 332.80ms
+[I 180507 01:00:01 async_wx:23] get_access_token {'access_token': '9_YAkmyVUbBAfH8uxvsoGf4wi7hUwfNtpeNVRhzzn8VTSTxlPOHppPlG_CT1sWkjGe_m3KDDQQ8wbxgGjcefKwfhQgHVF8NdBW90gJkD82uYXhB8NOMi_-fPrRTCPWAbvJ-5Qdy2LUn-LAzTAEEVVjACAQHH', 'expires_in': 7200}
+[I 180507 01:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpTlD4EKU-nw-YQGAodCTDlR4L-gLRP9Y3YSvA-uI20iHA', 'expires_in': 7200}
+[I 180507 01:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 328.79ms
+[I 180507 02:00:07 async_wx:23] get_access_token {'access_token': '9_uzgiKlNPBam8T_iFQuUwHPyhB6D7p6dm4P03yw_wUG1vEbf8TQh4BcF0_vRRYNBFcbtZxEXKAYXArf7q1Fh5sqd50AsxGwpbRnb2_qFYGfPixYI87bTrQlKMuoo-_Xcq0g1ipTs03u5kI1cGYWMaAHAMKA', 'expires_in': 7200}
+[I 180507 02:00:07 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpTM5CEnMQ_2QGhRFaXNq7nYZT_l64rWlRi6nE21vnC1zA', 'expires_in': 7200}
+[I 180507 02:00:07 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 305.27ms
+[I 180507 03:00:07 async_wx:23] get_access_token {'access_token': '9_-SLGn0jQl1JcgEz05n0_9f0Iw9dSlWaVp1j-kEm4P2sn8jLHdgsKQ2bfmdWqOsEPNdtsIdGzXgD3rFTAhY168W3eUXVOmM2YXTlzgOH7FuXbXey0XX1lwAtINjv_MrkyBEgBkscizjRzwS0wSBKdAGAVEN', 'expires_in': 7200}
+[I 180507 03:00:07 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpTM5CEnMQ_2QGhRFaXNq7nYZT_l64rWlRi6nE21vnC1zA', 'expires_in': 7200}
+[I 180507 03:00:07 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 290.94ms
+[I 180507 04:00:07 async_wx:23] get_access_token {'access_token': '9_UFX1D2yL9Bvyd4YtdjFAofNVGN5sp9zjwFRHGnJY_KId5YU9wLAe1InX-bsSsbr5m1-BdW31BjrHIr2paXfEocO0_hmS2-M-NYovFwL8O5TpWrH_LD63ypRmpkOJeDLtY-6dFnUEoh_db4kNSAEaAEAMUY', 'expires_in': 7200}
+[I 180507 04:00:07 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpR527rLVoHArjG4-DZNOIHm5DI2-QdvfsGaFzlgOFpXjw', 'expires_in': 7200}
+[I 180507 04:00:07 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 313.40ms
+[I 180507 05:00:02 async_wx:23] get_access_token {'access_token': '9_gS-3fKg4Lzutm02YpMkARYGIGa99Jv1FVSMY0XxpjF_jbCL_8SDtTBnakDCUmrwBMLwHtgk8ao4MR2sLIMYqAgXQdR7ahJuAh9CWhibby8SPepGX5lmCb47xf20PZVeACAXHD', 'expires_in': 7200}
+[I 180507 05:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpR527rLVoHArjG4-DZNOIHm5DI2-QdvfsGaFzlgOFpXjw', 'expires_in': 7200}
+[I 180507 05:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 297.78ms
+[I 180507 06:00:07 async_wx:23] get_access_token {'access_token': '9_t7KZLqLAojjilsFR_ybyCiuBhIl24-FQbhNg644eam7Gsk6BLgcPp-1g6fJl7RPXN8gGbKXFPhNb6gTRDlrgRGWayvwB4ADERY8VBFmYVEB6_2dInvgrRQSkN7WibVb2idQaY2ABFx_zNIGzRKFiAAAKDY', 'expires_in': 7200}
+[I 180507 06:00:07 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpRIpOB14myZDwz5CNqNiVZ0s6N5FXsu1ZQ_34uGjXbjcw', 'expires_in': 7200}
+[I 180507 06:00:07 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 323.83ms
+[I 180507 07:00:02 async_wx:23] get_access_token {'access_token': '9_peSDpfCbQN5nzjCnPdeiPlvdRZ9HY9VvBChc2_V2ySy9fHNYvVLdAZE8mwPy-9N0hUKRScqa-ELNMogovwtln3n7s-OvpoHxw68-VaFs37BIVv7GjxdZKh029faAoXJ4Utp8MF596NWWZcmGSHUdAHAWLY', 'expires_in': 7200}
+[I 180507 07:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpRIpOB14myZDwz5CNqNiVZ0s6N5FXsu1ZQ_34uGjXbjcw', 'expires_in': 7200}
+[I 180507 07:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 323.48ms
+[I 180507 08:00:01 async_wx:23] get_access_token {'access_token': '9_gk9xRHBfQifRbbwKx4mtE9rVR-cIKqsAHNqBMPatbuwfkeHjxvYV1IRJbjD9_bsRMxGF77uf-nDOmUgl3VMCHK724Csbbf-fBesTVAXVxkHdCvDqH2RuiW3iM7skWmpZpLpEwbUU8M3vdAUSRWBeAFAZEJ', 'expires_in': 7200}
+[I 180507 08:00:01 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSe5yqXrgQ6O2Y4DzJf-xxPLnZy9EOxvPF4MHwSo2S3JQ', 'expires_in': 7200}
+[I 180507 08:00:01 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 372.02ms
+[I 180507 09:00:07 async_wx:23] get_access_token {'access_token': '9_lBOl38AmFemJoLrshJosDH_DqahaY--PGAZPlL-XkMicf2FCTZPLOfDfyqtCAN4ir6mYGlYRVzk7VyU2sQA3orJyIh6powHub1SSBZRQFIAYRzQzqrC7GxDUe4ThYkgGZto2URWT6GtAK1-CADGeABASVY', 'expires_in': 7200}
+[I 180507 09:00:07 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSe5yqXrgQ6O2Y4DzJf-xxPLnZy9EOxvPF4MHwSo2S3JQ', 'expires_in': 7200}
+[I 180507 09:00:07 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 339.50ms
+[I 180507 09:07:54 root:152] EVENT
+[I 180507 09:07:54 web:2106] 200 POST /tlwx?signature=a63f5f3689a6b1c14df11b408a7b4fd960929466&timestamp=1525655345&nonce=574834375&openid=oSDTiwq1vFtLARyBeBGhRpNeXczA (192.168.100.52) 4.95ms
+[D 180507 09:07:56 common:36] FUNC: <function need_bind.<locals>.wrapper at 0x7fbdeea64ea0>
+[D 180507 09:07:56 tl_api:34] XML TYPE: <class 'str'>
+[E 180507 09:07:56 web:1621] Uncaught exception GET /tlwx/ccrd/bill?code=071cj4kl0W1BVj1ktTil0agZjl0cj4kX&state=1 (192.168.100.52)
+    HTTPServerRequest(protocol='http', host='192.168.100.140:8002', method='GET', uri='/tlwx/ccrd/bill?code=071cj4kl0W1BVj1ktTil0agZjl0cj4kX&state=1', version='HTTP/1.0', remote_ip='192.168.100.52')
+    Traceback (most recent call last):
+      File "/home/tonglian/py3venv/lib/python3.6/site-packages/tornado/web.py", line 1543, in _execute
+        result = yield result
+      File "/home/tonglian/py3venv/lib/python3.6/site-packages/tornado/gen.py", line 1099, in run
+        value = future.result()
+      File "/home/tonglian/tlwx/app/view/common.py", line 37, in wrapper
+        await func(self, *args, **kwargs)
+      File "/home/tonglian/tlwx/app/view/common.py", line 55, in wrapper
+        await func(self, *args, **kwargs)
+      File "/home/tonglian/tlwx/app/view/ccrd/bill.py", line 22, in get
+        ret = await G.tl_cli.send2tl('12010', data)
+      File "/home/tonglian/tlwx/app/service/tl_api.py", line 44, in send2tl
+        ret = await self.send(data)
+      File "/home/tonglian/tlwx/app/service/tl_api.py", line 60, in send
+        tl_cli = await TCPClient().connect(self.host, self.port)
+      File "/home/tonglian/py3venv/lib/python3.6/site-packages/tornado/gen.py", line 1107, in run
+        yielded = self.gen.throw(*exc_info)
+      File "/home/tonglian/py3venv/lib/python3.6/site-packages/tornado/tcpclient.py", line 232, in connect
+        af, addr, stream = yield connector.start(connect_timeout=timeout)
+      File "/home/tonglian/py3venv/lib/python3.6/site-packages/tornado/gen.py", line 1099, in run
+        value = future.result()
+      File "/home/tonglian/py3venv/lib/python3.6/site-packages/tornado/tcpclient.py", line 112, in on_connect_done
+        stream = future.result()
+    tornado.iostream.StreamClosedError: Stream is closed
+[E 180507 09:07:56 web:2106] 500 GET /tlwx/ccrd/bill?code=071cj4kl0W1BVj1ktTil0agZjl0cj4kX&state=1 (192.168.100.52) 22.96ms
+[I 180507 09:08:00 root:152] EVENT
+[I 180507 09:08:00 web:2106] 200 POST /tlwx?signature=91bd573a9bb2487ba6fe9e3d0f86648cab1813a1&timestamp=1525655352&nonce=1833573372&openid=oSDTiwq1vFtLARyBeBGhRpNeXczA (192.168.100.52) 2.76ms
+[D 180507 09:08:01 common:36] FUNC: <function SelectHandler.get at 0x7fbdeea716a8>
+[I 180507 09:08:01 online_apply:46] items: [<app.db.model.ccrd.CCRDOnlineApply object at 0x7fbdeaa48978>]
+[I 180507 09:08:01 web:2106] 200 GET /tlwx/ccrd/online_apply/select?code=071QpSi80KwvrI1VHPj80DQhj80QpSiv&state=1 (192.168.100.52) 50.38ms
+[I 180507 09:08:04 root:152] EVENT
+[I 180507 09:08:04 web:2106] 200 POST /tlwx?signature=4a729b2f7a68ae8ccd635d40357784e576c2f544&timestamp=1525655355&nonce=386837281&openid=oSDTiwq1vFtLARyBeBGhRpNeXczA (192.168.100.52) 2.31ms
+[D 180507 09:08:05 common:36] FUNC: <function need_bind.<locals>.wrapper at 0x7fbdeea64ea0>
+[D 180507 09:08:05 tl_api:34] XML TYPE: <class 'str'>
+[E 180507 09:08:05 web:1621] Uncaught exception GET /tlwx/ccrd/bill?code=071nlA8m1t8Lfj0tkJ8m14IF8m1nlA89&state=1 (192.168.100.52)
+    HTTPServerRequest(protocol='http', host='192.168.100.140:8002', method='GET', uri='/tlwx/ccrd/bill?code=071nlA8m1t8Lfj0tkJ8m14IF8m1nlA89&state=1', version='HTTP/1.0', remote_ip='192.168.100.52')
+    Traceback (most recent call last):
+      File "/home/tonglian/py3venv/lib/python3.6/site-packages/tornado/web.py", line 1543, in _execute
+        result = yield result
+      File "/home/tonglian/py3venv/lib/python3.6/site-packages/tornado/gen.py", line 1099, in run
+        value = future.result()
+      File "/home/tonglian/tlwx/app/view/common.py", line 37, in wrapper
+        await func(self, *args, **kwargs)
+      File "/home/tonglian/tlwx/app/view/common.py", line 55, in wrapper
+        await func(self, *args, **kwargs)
+      File "/home/tonglian/tlwx/app/view/ccrd/bill.py", line 22, in get
+        ret = await G.tl_cli.send2tl('12010', data)
+      File "/home/tonglian/tlwx/app/service/tl_api.py", line 44, in send2tl
+        ret = await self.send(data)
+      File "/home/tonglian/tlwx/app/service/tl_api.py", line 60, in send
+        tl_cli = await TCPClient().connect(self.host, self.port)
+      File "/home/tonglian/py3venv/lib/python3.6/site-packages/tornado/gen.py", line 1107, in run
+        yielded = self.gen.throw(*exc_info)
+      File "/home/tonglian/py3venv/lib/python3.6/site-packages/tornado/tcpclient.py", line 232, in connect
+        af, addr, stream = yield connector.start(connect_timeout=timeout)
+      File "/home/tonglian/py3venv/lib/python3.6/site-packages/tornado/gen.py", line 1099, in run
+        value = future.result()
+      File "/home/tonglian/py3venv/lib/python3.6/site-packages/tornado/tcpclient.py", line 112, in on_connect_done
+        stream = future.result()
+    tornado.iostream.StreamClosedError: Stream is closed
+[E 180507 09:08:05 web:2106] 500 GET /tlwx/ccrd/bill?code=071nlA8m1t8Lfj0tkJ8m14IF8m1nlA89&state=1 (192.168.100.52) 16.00ms
+[D 180507 09:09:11 selector_events:65] Using selector: EpollSelector
+[I 180507 09:09:22 root:152] EVENT
+[I 180507 09:09:22 web:2106] 200 POST /tlwx?signature=255e8614ff2fe888143c1a586ddf281791eefbb0&timestamp=1525655434&nonce=600480441&openid=oSDTiwq1vFtLARyBeBGhRpNeXczA (192.168.100.52) 3.14ms
+[D 180507 09:09:23 common:36] FUNC: <function need_bind.<locals>.wrapper at 0x7fbdeea64ea0>
+[D 180507 09:09:23 tl_api:34] XML TYPE: <class 'str'>
+[I 180507 09:09:23 tl_api:62] [S]: b'000522<?xml version="1.0" encoding="UTF-8" ?><SERVICE xmlns="http://www.allinfinance.com/dataspec/"><SERVICE_HEADER><SERVICE_SN>20180507090923610</SERVICE_SN><SERVICE_ID>12010</SERVICE_ID><ORG>000069411200</ORG><CHANNEL_ID>07</CHANNEL_ID><OP_ID></OP_ID><REQUST_TIME>20180507090923</REQUST_TIME><VERSION_ID>01</VERSION_ID><MAC></MAC></SERVICE_HEADER><SERVICE_BODY><EXT_ATTRIBUTES></EXT_ATTRIBUTES><REQUEST><CARD_NO>330721199403195410</CARD_NO><CURR_CD>156</CURR_CD><STMT_DATE>000000</STMT_DATE></REQUEST></SERVICE_BODY></SERVICE>'
+[I 180507 09:09:23 xmlserver:31] Connection from peer: ('127.0.0.1', 44031)
+[I 180507 09:09:23 xmlserver:36] b'000522'
+[I 180507 09:09:23 xmlserver:38] [R] b'<?xml version="1.0" encoding="UTF-8" ?><SERVICE xmlns="http://www.allinfinance.com/dataspec/"><SERVICE_HEADER><SERVICE_SN>20180507090923610</SERVICE_SN><SERVICE_ID>12010</SERVICE_ID><ORG>000069411200</ORG><CHANNEL_ID>07</CHANNEL_ID><OP_ID></OP_ID><REQUST_TIME>20180507090923</REQUST_TIME><VERSION_ID>01</VERSION_ID><MAC></MAC></SERVICE_HEADER><SERVICE_BODY><EXT_ATTRIBUTES></EXT_ATTRIBUTES><REQUEST><CARD_NO>330721199403195410</CARD_NO><CURR_CD>156</CURR_CD><STMT_DATE>000000</STMT_DATE></REQUEST></SERVICE_BODY></SERVICE>'
+[I 180507 09:09:23 xmlserver:49] OrderedDict([('SERVICE', OrderedDict([('@xmlns', 'http://www.allinfinance.com/dataspec/'), ('SERVICE_HEADER', OrderedDict([('SERVICE_SN', '20180507090923610'), ('SERVICE_ID', '12010'), ('ORG', '000069411200'), ('CHANNEL_ID', '07'), ('OP_ID', None), ('REQUST_TIME', '20180507090923'), ('VERSION_ID', '01'), ('MAC', None)])), ('SERVICE_BODY', OrderedDict([('EXT_ATTRIBUTES', None), ('REQUEST', OrderedDict([('CARD_NO', '330721199403195410'), ('CURR_CD', '156'), ('STMT_DATE', '000000')]))]))]))])
+[D 180507 09:09:23 xmlserver:52] service_id 12010
+[I 180507 09:09:23 xmlserver:41] [S] b'001047<?xml version="1.0" encoding="UTF-8"?>\n<SERVICE xmlns="http://www.allinfinance.com/dataspec/">\n    <SERVICE_HEADER>\n        <SERVICE_SN>19823471237417412748</SERVICE_SN>\n        <SERVICE_ID>12010</SERVICE_ID>\n        <REQUESTER_ID>0004</REQUESTER_ID>\n        <CHANNEL_ID>070711</CHANNEL_ID>\n        <SERVICE_DATE>20050621</SERVICE_DATE>\n        <SERVICE_TIME>123000</SERVICE_TIME>\n        <VERSION_ID>02</VERSION_ID>\n        <SERV_RESPONSE>\n            <STATUS>S</STATUS>\n            <CODE></CODE>\n            <DESC></DESC>\n        </SERV_RESPONSE>\n    </SERVICE_HEADER>\n    <SERVICE_BODY>\n        <EXT_ATTRIBUTES>\n        </EXT_ATTRIBUTES>\n        <RESPONSE>\n            <DUAL_CURR_IND>N</DUAL_CURR_IND>\n            <CURR_CD>158</CURR_CD>\n            <QUAL_GRACE_BAL>10100.00</QUAL_GRACE_BAL>\n            <TOT_DUE_AMT>1000.00</TOT_DUE_AMT>\n            <CTD_PMT_NOT_AMT>4000.00</CTD_PMT_NOT_AMT>\n            <BILLING_DATE>20151110</BILLING_DATE>\n            <PMT_DUE_DATE>20151205</PMT_DUE_DATE>\n        </RESPONSE>\n    </SERVICE_BODY>\n</SERVICE>\n'
+[I 180507 09:09:23 tl_api:65] [R]: b'001047'
+[I 180507 09:09:23 tl_api:67] [R]: <?xml version="1.0" encoding="UTF-8"?>
+    <SERVICE xmlns="http://www.allinfinance.com/dataspec/">
+        <SERVICE_HEADER>
+            <SERVICE_SN>19823471237417412748</SERVICE_SN>
+            <SERVICE_ID>12010</SERVICE_ID>
+            <REQUESTER_ID>0004</REQUESTER_ID>
+            <CHANNEL_ID>070711</CHANNEL_ID>
+            <SERVICE_DATE>20050621</SERVICE_DATE>
+            <SERVICE_TIME>123000</SERVICE_TIME>
+            <VERSION_ID>02</VERSION_ID>
+            <SERV_RESPONSE>
+                <STATUS>S</STATUS>
+                <CODE></CODE>
+                <DESC></DESC>
+            </SERV_RESPONSE>
+        </SERVICE_HEADER>
+        <SERVICE_BODY>
+            <EXT_ATTRIBUTES>
+            </EXT_ATTRIBUTES>
+            <RESPONSE>
+                <DUAL_CURR_IND>N</DUAL_CURR_IND>
+                <CURR_CD>158</CURR_CD>
+                <QUAL_GRACE_BAL>10100.00</QUAL_GRACE_BAL>
+                <TOT_DUE_AMT>1000.00</TOT_DUE_AMT>
+                <CTD_PMT_NOT_AMT>4000.00</CTD_PMT_NOT_AMT>
+                <BILLING_DATE>20151110</BILLING_DATE>
+                <PMT_DUE_DATE>20151205</PMT_DUE_DATE>
+            </RESPONSE>
+        </SERVICE_BODY>
+    </SERVICE>
+    
+[I 180507 09:09:23 web:2106] 200 GET /tlwx/ccrd/bill?code=081aDyxU0U1cEX15mFwU0o2HxU0aDyxh&state=1 (192.168.100.52) 26.23ms
+[I 180507 09:12:48 xmlserver:45] ('127.0.0.1', 44031) disconnected
+[D 180507 09:12:49 selector_events:65] Using selector: EpollSelector
+[D 180507 09:12:49 selector_events:65] Using selector: EpollSelector
+[D 180507 09:12:49 selector_events:65] Using selector: EpollSelector
