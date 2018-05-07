@@ -48,6 +48,7 @@ class RootHandler(BaseHandler):
         serverid = root.find('ToUserName').text
         send_text = root.find('Content').text
         binded = OP_User(self.db).check_bind(openid)
+        user = OP_User(self.db).get(openid)
         if send_text in ('解除绑定', 'JCBD', 'jcbd'):
             if binded:
                 url = get_oauth_url('/ccrd/unbind')
@@ -58,14 +59,12 @@ class RootHandler(BaseHandler):
             ret = {'to_user': openid, 'from_user': serverid, 'content': reply_text}
             self.render('xml/text.xml', **ret)
             return
-        user = OP_User(self.db).get(openid)
-        if not binded:
-            url = get_oauth_url('/ccrd/bind')
-            reply_text = '尚未绑定信用卡，绑定<a href="' + url + '">点击这里</a>。'
-            ret = {'to_user': openid, 'from_user': serverid, 'content': reply_text}
-            self.render('xml/text.xml', **ret)
-            return
         elif send_text in ('账单', 'ZD', 'zd'):
+            if not binded:
+                url = get_oauth_url('/ccrd/bind')
+                reply_text = '尚未绑定信用卡，绑定<a href="' + url + '">点击这里</a>。'
+                ret = {'to_user': openid, 'from_user': serverid, 'content': reply_text}
+                return self.render('xml/text.xml', **ret)
             data = {
                 'CARD_NO': user.ccrdno,
                 'CURR_CD': '156',
@@ -88,6 +87,11 @@ class RootHandler(BaseHandler):
             CustomMessage.news(openid, articles)
             return
         elif send_text in ('额度', 'ED', 'ed'):
+            if not binded:
+                url = get_oauth_url('/ccrd/bind')
+                reply_text = '尚未绑定信用卡，绑定<a href="' + url + '">点击这里</a>。'
+                ret = {'to_user': openid, 'from_user': serverid, 'content': reply_text}
+                return self.render('xml/text.xml', **ret)
             data = {
                 'CARD_NO': user.ccrdno,
                 'CURR_CD': '156',
@@ -102,6 +106,11 @@ class RootHandler(BaseHandler):
             CustomMessage.news(openid, articles)
             return
         elif send_text in ('积分', 'JF', 'jf'):
+            if not binded:
+                url = get_oauth_url('/ccrd/bind')
+                reply_text = '尚未绑定信用卡，绑定<a href="' + url + '">点击这里</a>。'
+                ret = {'to_user': openid, 'from_user': serverid, 'content': reply_text}
+                return self.render('xml/text.xml', **ret)
             data = {
                 'CARD_NO': user.ccrdno,
             }
@@ -119,6 +128,11 @@ class RootHandler(BaseHandler):
             context = XML.ccrd_news(openid, serverid)
             return self.render('xml/news.xml', **context)
         elif send_text == '分期':
+            if not binded:
+                url = get_oauth_url('/ccrd/bind')
+                reply_text = '尚未绑定信用卡，绑定<a href="' + url + '">点击这里</a>。'
+                ret = {'to_user': openid, 'from_user': serverid, 'content': reply_text}
+                return self.render('xml/text.xml', **ret)
             context = XML.installment(openid, serverid)
             return self.render('xml/news.xml', **context)
         else:
