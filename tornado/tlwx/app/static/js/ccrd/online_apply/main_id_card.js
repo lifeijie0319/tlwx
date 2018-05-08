@@ -44,7 +44,7 @@ $(function(){
                 $.toptips('图片存储成功', 'success');
                 window.location.href = './profile';
             }else{
-                $.toptips('图片存储失败');
+                $.toptips(resp.msg);
             }
         }).error(function(){
             $.toptips('服务器错误');

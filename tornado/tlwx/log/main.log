@@ -1,0 +1,1518 @@
+[D 180507 09:13:19 selector_events:65] Using selector: EpollSelector
+[D 180507 09:13:19 selector_events:65] Using selector: EpollSelector
+[I 180507 09:13:35 root:152] EVENT
+[I 180507 09:13:35 web:2106] 200 POST /tlwx?signature=cdeb8a5d4d5af9f249b2298d90d4e3a02b3027ee&timestamp=1525655686&nonce=1934788368&openid=oSDTiwq1vFtLARyBeBGhRpNeXczA (192.168.100.52) 3.69ms
+[D 180507 09:13:36 common:36] FUNC: <function need_bind.<locals>.wrapper at 0x7fd52bb5aea0>
+[D 180507 09:13:36 tl_api:34] XML TYPE: <class 'str'>
+[I 180507 09:13:36 tl_api:62] [S]: b'000522<?xml version="1.0" encoding="UTF-8" ?><SERVICE xmlns="http://www.allinfinance.com/dataspec/"><SERVICE_HEADER><SERVICE_SN>20180507091336611</SERVICE_SN><SERVICE_ID>12010</SERVICE_ID><ORG>000069411200</ORG><CHANNEL_ID>07</CHANNEL_ID><OP_ID></OP_ID><REQUST_TIME>20180507091336</REQUST_TIME><VERSION_ID>01</VERSION_ID><MAC></MAC></SERVICE_HEADER><SERVICE_BODY><EXT_ATTRIBUTES></EXT_ATTRIBUTES><REQUEST><CARD_NO>330721199403195410</CARD_NO><CURR_CD>156</CURR_CD><STMT_DATE>000000</STMT_DATE></REQUEST></SERVICE_BODY></SERVICE>'
+[I 180507 09:13:36 tl_api:65] [R]: b'001047'
+[I 180507 09:13:36 tl_api:67] [R]: <?xml version="1.0" encoding="UTF-8"?>
+    <SERVICE xmlns="http://www.allinfinance.com/dataspec/">
+        <SERVICE_HEADER>
+            <SERVICE_SN>19823471237417412748</SERVICE_SN>
+            <SERVICE_ID>12010</SERVICE_ID>
+            <REQUESTER_ID>0004</REQUESTER_ID>
+            <CHANNEL_ID>070711</CHANNEL_ID>
+            <SERVICE_DATE>20050621</SERVICE_DATE>
+            <SERVICE_TIME>123000</SERVICE_TIME>
+            <VERSION_ID>02</VERSION_ID>
+            <SERV_RESPONSE>
+                <STATUS>S</STATUS>
+                <CODE></CODE>
+                <DESC></DESC>
+            </SERV_RESPONSE>
+        </SERVICE_HEADER>
+        <SERVICE_BODY>
+            <EXT_ATTRIBUTES>
+            </EXT_ATTRIBUTES>
+            <RESPONSE>
+                <DUAL_CURR_IND>N</DUAL_CURR_IND>
+                <CURR_CD>158</CURR_CD>
+                <QUAL_GRACE_BAL>10100.00</QUAL_GRACE_BAL>
+                <TOT_DUE_AMT>1000.00</TOT_DUE_AMT>
+                <CTD_PMT_NOT_AMT>4000.00</CTD_PMT_NOT_AMT>
+                <BILLING_DATE>20151110</BILLING_DATE>
+                <PMT_DUE_DATE>20151205</PMT_DUE_DATE>
+            </RESPONSE>
+        </SERVICE_BODY>
+    </SERVICE>
+    
+[I 180507 09:13:36 web:2106] 200 GET /tlwx/ccrd/bill?code=0214kTDS1ig3v61P0lCS1i9VDS14kTDm&state=1 (192.168.100.52) 99.89ms
+[I 180507 09:13:49 root:152] EVENT
+[I 180507 09:13:49 web:2106] 200 POST /tlwx?signature=032972b293c38f4e768f887e23885ff83ca21910&timestamp=1525655701&nonce=1577837353&openid=oSDTiwq1vFtLARyBeBGhRpNeXczA (192.168.100.52) 2.37ms
+[D 180507 09:13:50 common:36] FUNC: <function need_bind.<locals>.wrapper at 0x7fd52bb5aea0>
+[D 180507 09:13:50 tl_api:34] XML TYPE: <class 'str'>
+[I 180507 09:13:50 tl_api:62] [S]: b'000522<?xml version="1.0" encoding="UTF-8" ?><SERVICE xmlns="http://www.allinfinance.com/dataspec/"><SERVICE_HEADER><SERVICE_SN>20180507091350612</SERVICE_SN><SERVICE_ID>12010</SERVICE_ID><ORG>000069411200</ORG><CHANNEL_ID>07</CHANNEL_ID><OP_ID></OP_ID><REQUST_TIME>20180507091350</REQUST_TIME><VERSION_ID>01</VERSION_ID><MAC></MAC></SERVICE_HEADER><SERVICE_BODY><EXT_ATTRIBUTES></EXT_ATTRIBUTES><REQUEST><CARD_NO>330721199403195410</CARD_NO><CURR_CD>156</CURR_CD><STMT_DATE>000000</STMT_DATE></REQUEST></SERVICE_BODY></SERVICE>'
+[I 180507 09:13:50 tl_api:65] [R]: b'001047'
+[I 180507 09:13:50 tl_api:67] [R]: <?xml version="1.0" encoding="UTF-8"?>
+    <SERVICE xmlns="http://www.allinfinance.com/dataspec/">
+        <SERVICE_HEADER>
+            <SERVICE_SN>19823471237417412748</SERVICE_SN>
+            <SERVICE_ID>12010</SERVICE_ID>
+            <REQUESTER_ID>0004</REQUESTER_ID>
+            <CHANNEL_ID>070711</CHANNEL_ID>
+            <SERVICE_DATE>20050621</SERVICE_DATE>
+            <SERVICE_TIME>123000</SERVICE_TIME>
+            <VERSION_ID>02</VERSION_ID>
+            <SERV_RESPONSE>
+                <STATUS>S</STATUS>
+                <CODE></CODE>
+                <DESC></DESC>
+            </SERV_RESPONSE>
+        </SERVICE_HEADER>
+        <SERVICE_BODY>
+            <EXT_ATTRIBUTES>
+            </EXT_ATTRIBUTES>
+            <RESPONSE>
+                <DUAL_CURR_IND>N</DUAL_CURR_IND>
+                <CURR_CD>158</CURR_CD>
+                <QUAL_GRACE_BAL>10100.00</QUAL_GRACE_BAL>
+                <TOT_DUE_AMT>1000.00</TOT_DUE_AMT>
+                <CTD_PMT_NOT_AMT>4000.00</CTD_PMT_NOT_AMT>
+                <BILLING_DATE>20151110</BILLING_DATE>
+                <PMT_DUE_DATE>20151205</PMT_DUE_DATE>
+            </RESPONSE>
+        </SERVICE_BODY>
+    </SERVICE>
+    
+[I 180507 09:13:50 web:2106] 200 GET /tlwx/ccrd/bill?code=001JLJM02gFau010EPL02OiBM02JLJMK&state=1 (192.168.100.52) 20.16ms
+[I 180507 09:34:13 root:152] EVENT
+[I 180507 09:34:13 web:2106] 200 POST /tlwx?signature=1b364a160dcf7e2e3f760f26ceff4d0b004a3234&timestamp=1525656925&nonce=1094248142&openid=oSDTiwgyLLAgOBPWwHsBQxOXd860 (192.168.100.52) 6.35ms
+[D 180507 09:34:14 common:36] FUNC: <function need_bind.<locals>.wrapper at 0x7fd52bb5aea0>
+[D 180507 09:34:15 tl_api:34] XML TYPE: <class 'str'>
+[I 180507 09:34:15 tl_api:62] [S]: b'000522<?xml version="1.0" encoding="UTF-8" ?><SERVICE xmlns="http://www.allinfinance.com/dataspec/"><SERVICE_HEADER><SERVICE_SN>20180507093415613</SERVICE_SN><SERVICE_ID>12010</SERVICE_ID><ORG>000069411200</ORG><CHANNEL_ID>07</CHANNEL_ID><OP_ID></OP_ID><REQUST_TIME>20180507093415</REQUST_TIME><VERSION_ID>01</VERSION_ID><MAC></MAC></SERVICE_HEADER><SERVICE_BODY><EXT_ATTRIBUTES></EXT_ATTRIBUTES><REQUEST><CARD_NO>330721199403195410</CARD_NO><CURR_CD>156</CURR_CD><STMT_DATE>000000</STMT_DATE></REQUEST></SERVICE_BODY></SERVICE>'
+[I 180507 09:34:15 tl_api:65] [R]: b'001047'
+[I 180507 09:34:15 tl_api:67] [R]: <?xml version="1.0" encoding="UTF-8"?>
+    <SERVICE xmlns="http://www.allinfinance.com/dataspec/">
+        <SERVICE_HEADER>
+            <SERVICE_SN>19823471237417412748</SERVICE_SN>
+            <SERVICE_ID>12010</SERVICE_ID>
+            <REQUESTER_ID>0004</REQUESTER_ID>
+            <CHANNEL_ID>070711</CHANNEL_ID>
+            <SERVICE_DATE>20050621</SERVICE_DATE>
+            <SERVICE_TIME>123000</SERVICE_TIME>
+            <VERSION_ID>02</VERSION_ID>
+            <SERV_RESPONSE>
+                <STATUS>S</STATUS>
+                <CODE></CODE>
+                <DESC></DESC>
+            </SERV_RESPONSE>
+        </SERVICE_HEADER>
+        <SERVICE_BODY>
+            <EXT_ATTRIBUTES>
+            </EXT_ATTRIBUTES>
+            <RESPONSE>
+                <DUAL_CURR_IND>N</DUAL_CURR_IND>
+                <CURR_CD>158</CURR_CD>
+                <QUAL_GRACE_BAL>10100.00</QUAL_GRACE_BAL>
+                <TOT_DUE_AMT>1000.00</TOT_DUE_AMT>
+                <CTD_PMT_NOT_AMT>4000.00</CTD_PMT_NOT_AMT>
+                <BILLING_DATE>20151110</BILLING_DATE>
+                <PMT_DUE_DATE>20151205</PMT_DUE_DATE>
+            </RESPONSE>
+        </SERVICE_BODY>
+    </SERVICE>
+    
+[I 180507 09:34:15 web:2106] 200 GET /tlwx/ccrd/bill?code=0014lnm92pjk3S0fkfp9232gm924lnmS&state=1 (192.168.100.52) 150.57ms
+[I 180507 09:34:15 web:2106] 200 GET /tlwx/static/css/yinsho.css?v=0a760b94bee2a0e9f047b1445a320af0 (192.168.100.52) 3.61ms
+[I 180507 09:34:15 web:2106] 200 GET /tlwx/static/css/main.css?v=d05312ccffbff4c30f5711489650c999 (192.168.100.52) 2.19ms
+[I 180507 09:34:15 web:2106] 200 GET /tlwx/static/font/iconfont.css?v=8d895e475d2d71afef3137fbdc52e85a (192.168.100.52) 4.06ms
+[I 180507 09:34:15 web:2106] 200 GET /tlwx/static/asset/jquery.min.js?v=33cabfa15c1060aaa3d207c653afb1ee (192.168.100.52) 3.03ms
+[I 180507 09:34:15 web:2106] 200 GET /tlwx/static/asset/validate.js?v=4606b527e9688c17eb8e5653d71e16d0 (192.168.100.52) 3.73ms
+[I 180507 09:34:15 web:2106] 200 GET /tlwx/static/asset/tab.js?v=4fdbca0d6ae52a0acfb75fa94e831f53 (192.168.100.52) 2.24ms
+[I 180507 09:34:15 web:2106] 200 GET /tlwx/static/js/tool.js?v=df3019152ce182faf07d5e9ee88eca92 (192.168.100.52) 1.64ms
+[I 180507 09:34:15 web:2106] 200 GET /tlwx/static/js/ccrd/bill.js?v=17d29a96a322cdfab655c2ead24e8dc7 (192.168.100.52) 7.78ms
+[D 180507 09:34:19 common:36] FUNC: <function need_bind.<locals>.wrapper at 0x7fd52bb5ac80>
+[I 180507 09:34:19 web:2106] 200 GET /tlwx/ccrd/bill_due (192.168.100.52) 9.33ms
+[I 180507 09:34:20 web:2106] 200 GET /tlwx/static/js/ccrd/bill_due.js?v=35fbae26515b238e4ff64ecad332d752 (192.168.100.52) 3.89ms
+[I 180507 09:34:20 web:2106] 200 GET /tlwx/static/img/ccrd/bill.png?v=2d4be975dcdf106d5ff4ae577ff6ca67 (192.168.100.52) 2.36ms
+[D 180507 09:34:20 tl_api:34] XML TYPE: <class 'str'>
+[I 180507 09:34:20 tl_api:62] [S]: b'000566<?xml version="1.0" encoding="UTF-8" ?><SERVICE xmlns="http://www.allinfinance.com/dataspec/"><SERVICE_HEADER><SERVICE_SN>20180507093420614</SERVICE_SN><SERVICE_ID>13060</SERVICE_ID><ORG>000069411200</ORG><CHANNEL_ID>07</CHANNEL_ID><OP_ID></OP_ID><REQUST_TIME>20180507093420</REQUST_TIME><VERSION_ID>01</VERSION_ID><MAC></MAC></SERVICE_HEADER><SERVICE_BODY><EXT_ATTRIBUTES></EXT_ATTRIBUTES><REQUEST><CARD_NO>330721199403195410</CARD_NO><CURR_CD>156</CURR_CD><SETT_TXN_TYPE></SETT_TXN_TYPE><FIRSTROW>0</FIRSTROW><LASTROW>6</LASTROW></REQUEST></SERVICE_BODY></SERVICE>'
+[I 180507 09:34:20 tl_api:65] [R]: b'002051'
+[I 180507 09:34:20 tl_api:67] [R]: <?xml version="1.0" encoding="UTF-8"?>
+    <SERVICE xmlns="http://www.allinfinance.com/dataspec/">
+        <SERVICE_HEADER>
+            <SERVICE_SN>19823471237417412748</SERVICE_SN>
+            <SERVICE_ID>13060</SERVICE_ID>
+            <REQUESTER_ID>0004</REQUESTER_ID>
+            <CHANNEL_ID>070711</CHANNEL_ID>
+            <SERVICE_DATE>20050621</SERVICE_DATE>
+            <SERVICE_TIME>123000</SERVICE_TIME>
+            <VERSION_ID>02</VERSION_ID>
+            <SERV_RESPONSE>
+                <STATUS>S</STATUS>
+                <CODE></CODE>
+                <DESC></DESC>
+            </SERV_RESPONSE>
+        </SERVICE_HEADER>
+        <SERVICE_BODY>
+            <EXT_ATTRIBUTES>
+            </EXT_ATTRIBUTES>
+            <RESPONSE>
+                <NEXTPAGE_FLG>N</NEXTPAGE_FLG>
+                <TXNS>
+                    <TXN>
+                    <TXN_DATE>2017-02-17</TXN_DATE>
+                    <TXN_AMT>-2000.00</TXN_AMT>
+                    <TXN_CURR_CD>156</TXN_CURR_CD>
+                    <TXN_CARD_NO>12390819878918973</TXN_CARD_NO>
+                    <TXN_SHORT_DESC>支付宝快捷交易</TXN_SHORT_DESC>
+                    </TXN>
+                    <TXN>
+                    <TXN_DATE>2017-02-17</TXN_DATE>
+                    <TXN_AMT>-2000.00</TXN_AMT>
+                    <TXN_CURR_CD>156</TXN_CURR_CD>
+                    <TXN_CARD_NO>12390819878918973</TXN_CARD_NO>
+                    <TXN_SHORT_DESC>支付宝快捷交易</TXN_SHORT_DESC>
+                    </TXN>
+                    <TXN>
+                    <TXN_DATE>2017-02-17</TXN_DATE>
+                    <TXN_AMT>-2000.00</TXN_AMT>
+                    <TXN_CURR_CD>156</TXN_CURR_CD>
+                    <TXN_CARD_NO>12390819878918973</TXN_CARD_NO>
+                    <TXN_SHORT_DESC>支付宝快捷交易</TXN_SHORT_DESC>
+                    </TXN>
+                    <TXN>
+                    <TXN_DATE>2017-02-17</TXN_DATE>
+                    <TXN_AMT>-2000.00</TXN_AMT>
+                    <TXN_CURR_CD>156</TXN_CURR_CD>
+                    <TXN_CARD_NO>12390819878918973</TXN_CARD_NO>
+                    <TXN_SHORT_DESC>大润发支付</TXN_SHORT_DESC>
+                    </TXN>
+                </TXNS>
+            </RESPONSE>
+        </SERVICE_BODY>
+    </SERVICE>
+    
+[D 180507 09:34:20 bill:90] BILL_DETAIL: [OrderedDict([('TXN_DATE', '2017-02-17'), ('TXN_AMT', '-2000.00'), ('TXN_CURR_CD', '156'), ('TXN_CARD_NO', '12390819878918973'), ('TXN_SHORT_DESC', '支付宝快捷交易')]), OrderedDict([('TXN_DATE', '2017-02-17'), ('TXN_AMT', '-2000.00'), ('TXN_CURR_CD', '156'), ('TXN_CARD_NO', '12390819878918973'), ('TXN_SHORT_DESC', '支付宝快捷交易')]), OrderedDict([('TXN_DATE', '2017-02-17'), ('TXN_AMT', '-2000.00'), ('TXN_CURR_CD', '156'), ('TXN_CARD_NO', '12390819878918973'), ('TXN_SHORT_DESC', '支付宝快捷交易')]), OrderedDict([('TXN_DATE', '2017-02-17'), ('TXN_AMT', '-2000.00'), ('TXN_CURR_CD', '156'), ('TXN_CARD_NO', '12390819878918973'), ('TXN_SHORT_DESC', '大润发支付')])]
+    <class 'list'>
+[I 180507 09:34:20 web:2106] 200 POST /tlwx/ccrd/bill_due (192.168.100.52) 17.11ms
+[D 180507 09:34:23 common:36] FUNC: <function need_bind.<locals>.wrapper at 0x7fd52bb5c048>
+[D 180507 09:34:23 tl_api:34] XML TYPE: <class 'str'>
+[I 180507 09:34:23 tl_api:62] [S]: b'000522<?xml version="1.0" encoding="UTF-8" ?><SERVICE xmlns="http://www.allinfinance.com/dataspec/"><SERVICE_HEADER><SERVICE_SN>20180507093423615</SERVICE_SN><SERVICE_ID>12010</SERVICE_ID><ORG>000069411200</ORG><CHANNEL_ID>07</CHANNEL_ID><OP_ID></OP_ID><REQUST_TIME>20180507093423</REQUST_TIME><VERSION_ID>01</VERSION_ID><MAC></MAC></SERVICE_HEADER><SERVICE_BODY><EXT_ATTRIBUTES></EXT_ATTRIBUTES><REQUEST><CARD_NO>330721199403195410</CARD_NO><CURR_CD>156</CURR_CD><STMT_DATE>000000</STMT_DATE></REQUEST></SERVICE_BODY></SERVICE>'
+[I 180507 09:34:23 tl_api:65] [R]: b'001047'
+[I 180507 09:34:23 tl_api:67] [R]: <?xml version="1.0" encoding="UTF-8"?>
+    <SERVICE xmlns="http://www.allinfinance.com/dataspec/">
+        <SERVICE_HEADER>
+            <SERVICE_SN>19823471237417412748</SERVICE_SN>
+            <SERVICE_ID>12010</SERVICE_ID>
+            <REQUESTER_ID>0004</REQUESTER_ID>
+            <CHANNEL_ID>070711</CHANNEL_ID>
+            <SERVICE_DATE>20050621</SERVICE_DATE>
+            <SERVICE_TIME>123000</SERVICE_TIME>
+            <VERSION_ID>02</VERSION_ID>
+            <SERV_RESPONSE>
+                <STATUS>S</STATUS>
+                <CODE></CODE>
+                <DESC></DESC>
+            </SERV_RESPONSE>
+        </SERVICE_HEADER>
+        <SERVICE_BODY>
+            <EXT_ATTRIBUTES>
+            </EXT_ATTRIBUTES>
+            <RESPONSE>
+                <DUAL_CURR_IND>N</DUAL_CURR_IND>
+                <CURR_CD>158</CURR_CD>
+                <QUAL_GRACE_BAL>10100.00</QUAL_GRACE_BAL>
+                <TOT_DUE_AMT>1000.00</TOT_DUE_AMT>
+                <CTD_PMT_NOT_AMT>4000.00</CTD_PMT_NOT_AMT>
+                <BILLING_DATE>20151110</BILLING_DATE>
+                <PMT_DUE_DATE>20151205</PMT_DUE_DATE>
+            </RESPONSE>
+        </SERVICE_BODY>
+    </SERVICE>
+    
+[D 180507 09:34:23 tl_api:34] XML TYPE: <class 'str'>
+[I 180507 09:34:23 tl_api:62] [S]: b'000493<?xml version="1.0" encoding="UTF-8" ?><SERVICE xmlns="http://www.allinfinance.com/dataspec/"><SERVICE_HEADER><SERVICE_SN>20180507093423616</SERVICE_SN><SERVICE_ID>13110</SERVICE_ID><ORG>000069411200</ORG><CHANNEL_ID>07</CHANNEL_ID><OP_ID></OP_ID><REQUST_TIME>20180507093423</REQUST_TIME><VERSION_ID>01</VERSION_ID><MAC></MAC></SERVICE_HEADER><SERVICE_BODY><EXT_ATTRIBUTES></EXT_ATTRIBUTES><REQUEST><CARD_NO>330721199403195410</CARD_NO><CURR_CD>156</CURR_CD></REQUEST></SERVICE_BODY></SERVICE>'
+[I 180507 09:34:23 tl_api:65] [R]: b'001747'
+[I 180507 09:34:23 tl_api:67] [R]: <?xml version="1.0" encoding="UTF-8"?>
+    <SERVICE xmlns="http://www.allinfinance.com/dataspec/">
+        <SERVICE_HEADER>
+            <SERVICE_SN>19823471237417412748</SERVICE_SN>
+            <SERVICE_ID>13110</SERVICE_ID>
+            <REQUESTER_ID>0004</REQUESTER_ID>
+            <CHANNEL_ID>070711</CHANNEL_ID>
+            <SERVICE_DATE>20050621</SERVICE_DATE>
+            <SERVICE_TIME>123000</SERVICE_TIME>
+            <VERSION_ID>02</VERSION_ID>
+            <SERV_RESPONSE>
+                <STATUS>S</STATUS>
+                <CODE>EEE0204</CODE>
+                <DESC>*******</DESC>
+            </SERV_RESPONSE>
+        </SERVICE_HEADER>
+        <SERVICE_BODY>
+            <EXT_ATTRIBUTES>
+            </EXT_ATTRIBUTES>
+            <RESPONSE>
+                <CARD_NO>198138949998232</CARD_NO>
+                <CURR_CD>156</CURR_CD>
+                <STMT_DATE>2017-02-03</STMT_DATE>
+                <TERMS>
+                    <TERM>
+                      <LOAN_INIT_TERM>3</LOAN_INIT_TERM>
+                      <LOAN_AMT>200</LOAN_AMT>
+                     </TERM>
+                    <TERM>
+                     <LOAN_INIT_TERM>6</LOAN_INIT_TERM>
+                     <LOAN_AMT>200</LOAN_AMT>
+                    </TERM>
+                    <TERM>
+                     <LOAN_INIT_TERM>9</LOAN_INIT_TERM>
+                     <LOAN_AMT>200</LOAN_AMT>
+                    </TERM>
+                    <TERM>
+                     <LOAN_INIT_TERM>12</LOAN_INIT_TERM>
+                     <LOAN_AMT>200</LOAN_AMT>
+                    </TERM>
+                    <TERM>
+                     <LOAN_INIT_TERM>24</LOAN_INIT_TERM>
+                     <LOAN_AMT>200</LOAN_AMT>
+                    </TERM>
+                    <TERM>
+                     <LOAN_INIT_TERM>36</LOAN_INIT_TERM>
+                     <LOAN_AMT>1200</LOAN_AMT>
+                    </TERM>
+                </TERMS>
+            </RESPONSE>
+        </SERVICE_BODY>
+    </SERVICE>
+    
+[I 180507 09:34:23 installment:41] items: [OrderedDict([('LOAN_INIT_TERM', '3'), ('LOAN_AMT', '200')]), OrderedDict([('LOAN_INIT_TERM', '6'), ('LOAN_AMT', '200')]), OrderedDict([('LOAN_INIT_TERM', '9'), ('LOAN_AMT', '200')]), OrderedDict([('LOAN_INIT_TERM', '12'), ('LOAN_AMT', '200')]), OrderedDict([('LOAN_INIT_TERM', '24'), ('LOAN_AMT', '200')]), OrderedDict([('LOAN_INIT_TERM', '36'), ('LOAN_AMT', '1200')])]
+[I 180507 09:34:23 web:2106] 200 GET /tlwx/ccrd/installment/bill (192.168.100.52) 31.45ms
+[I 180507 09:34:23 web:2106] 200 GET /tlwx/static/asset/popup.js?v=8fe1003623bb52e7d5938844d9fac4d1 (192.168.100.52) 2.36ms
+[I 180507 09:34:23 web:2106] 200 GET /tlwx/static/asset/jsencrypt.min.js?v=4e97c8d5392930eacf8fd4dfd59ffbc0 (192.168.100.52) 1.97ms
+[I 180507 09:34:23 web:2106] 200 GET /tlwx/static/js/ccrd/installment/bill.js?v=9cd1ffbbad15d446721e17934552ba80 (192.168.100.52) 1.77ms
+[D 180507 09:34:26 common:36] FUNC: <function need_bind.<locals>.wrapper at 0x7fd52bb5aea0>
+[D 180507 09:34:26 tl_api:34] XML TYPE: <class 'str'>
+[I 180507 09:34:26 tl_api:62] [S]: b'000522<?xml version="1.0" encoding="UTF-8" ?><SERVICE xmlns="http://www.allinfinance.com/dataspec/"><SERVICE_HEADER><SERVICE_SN>20180507093426617</SERVICE_SN><SERVICE_ID>12010</SERVICE_ID><ORG>000069411200</ORG><CHANNEL_ID>07</CHANNEL_ID><OP_ID></OP_ID><REQUST_TIME>20180507093426</REQUST_TIME><VERSION_ID>01</VERSION_ID><MAC></MAC></SERVICE_HEADER><SERVICE_BODY><EXT_ATTRIBUTES></EXT_ATTRIBUTES><REQUEST><CARD_NO>330721199403195410</CARD_NO><CURR_CD>156</CURR_CD><STMT_DATE>000000</STMT_DATE></REQUEST></SERVICE_BODY></SERVICE>'
+[I 180507 09:34:26 tl_api:65] [R]: b'001047'
+[I 180507 09:34:26 tl_api:67] [R]: <?xml version="1.0" encoding="UTF-8"?>
+    <SERVICE xmlns="http://www.allinfinance.com/dataspec/">
+        <SERVICE_HEADER>
+            <SERVICE_SN>19823471237417412748</SERVICE_SN>
+            <SERVICE_ID>12010</SERVICE_ID>
+            <REQUESTER_ID>0004</REQUESTER_ID>
+            <CHANNEL_ID>070711</CHANNEL_ID>
+            <SERVICE_DATE>20050621</SERVICE_DATE>
+            <SERVICE_TIME>123000</SERVICE_TIME>
+            <VERSION_ID>02</VERSION_ID>
+            <SERV_RESPONSE>
+                <STATUS>S</STATUS>
+                <CODE></CODE>
+                <DESC></DESC>
+            </SERV_RESPONSE>
+        </SERVICE_HEADER>
+        <SERVICE_BODY>
+            <EXT_ATTRIBUTES>
+            </EXT_ATTRIBUTES>
+            <RESPONSE>
+                <DUAL_CURR_IND>N</DUAL_CURR_IND>
+                <CURR_CD>158</CURR_CD>
+                <QUAL_GRACE_BAL>10100.00</QUAL_GRACE_BAL>
+                <TOT_DUE_AMT>1000.00</TOT_DUE_AMT>
+                <CTD_PMT_NOT_AMT>4000.00</CTD_PMT_NOT_AMT>
+                <BILLING_DATE>20151110</BILLING_DATE>
+                <PMT_DUE_DATE>20151205</PMT_DUE_DATE>
+            </RESPONSE>
+        </SERVICE_BODY>
+    </SERVICE>
+    
+[I 180507 09:34:27 web:2106] 200 GET /tlwx/ccrd/bill?code=0014lnm92pjk3S0fkfp9232gm924lnmS&state=1 (192.168.100.52) 32.62ms
+[D 180507 09:34:28 tl_api:34] XML TYPE: <class 'str'>
+[I 180507 09:34:28 tl_api:62] [S]: b'000564<?xml version="1.0" encoding="UTF-8" ?><SERVICE xmlns="http://www.allinfinance.com/dataspec/"><SERVICE_HEADER><SERVICE_SN>20180507093428618</SERVICE_SN><SERVICE_ID>12011</SERVICE_ID><ORG>000069411200</ORG><CHANNEL_ID>07</CHANNEL_ID><OP_ID></OP_ID><REQUST_TIME>20180507093428</REQUST_TIME><VERSION_ID>01</VERSION_ID><MAC></MAC></SERVICE_HEADER><SERVICE_BODY><EXT_ATTRIBUTES></EXT_ATTRIBUTES><REQUEST><CARD_NO>330721199403195410</CARD_NO><CURR_CD>156</CURR_CD><STMT_DATE>000000</STMT_DATE><FIRSTROW>0</FIRSTROW><LASTROW>4</LASTROW></REQUEST></SERVICE_BODY></SERVICE>'
+[I 180507 09:34:28 tl_api:65] [R]: b'001831'
+[I 180507 09:34:28 tl_api:67] [R]: <?xml version="1.0" encoding="UTF-8"?>
+    <SERVICE xmlns="http://www.allinfinance.com/dataspec/">
+        <SERVICE_HEADER>
+            <SERVICE_SN>19823471237417412748</SERVICE_SN>
+            <SERVICE_ID>12011</SERVICE_ID>
+            <REQUESTER_ID>0004</REQUESTER_ID>
+            <CHANNEL_ID>070711</CHANNEL_ID>
+            <SERVICE_DATE>20050621</SERVICE_DATE>
+            <SERVICE_TIME>123000</SERVICE_TIME>
+            <VERSION_ID>02</VERSION_ID>
+            <SERV_RESPONSE>
+                <STATUS>FAIL</STATUS>
+                <CODE>EEE0204</CODE>
+                <DESC>*******</DESC>
+            </SERV_RESPONSE>
+        </SERVICE_HEADER>
+        <SERVICE_BODY>
+            <EXT_ATTRIBUTES>
+            </EXT_ATTRIBUTES>
+            <RESPONSE>
+                <NEXTPAGE_FLG>N</NEXTPAGE_FLG>
+                <TXNS>
+                    <!--账单信息列表-->
+                    <TXN>
+                        <TXN_DATE>20170202</TXN_DATE>
+                        <TXN_AMT>-2000</TXN_AMT>
+                        <TXN_CURR_CD>156</TXN_CURR_CD>
+                        <TXN_CARD_NO>4000113221020101</TXN_CARD_NO>
+                        <TXN_SHORT_DESC>支付宝交易</TXN_SHORT_DESC>
+                    </TXN>
+                    <TXN>
+                        <TXN_DATE>20170203</TXN_DATE>
+                        <TXN_AMT>-1000</TXN_AMT>
+                        <TXN_CURR_CD>156</TXN_CURR_CD>
+                        <TXN_CARD_NO>4000012312233131</TXN_CARD_NO>
+                        <TXN_SHORT_DESC>快捷支付交易</TXN_SHORT_DESC>
+                    </TXN>
+                    <TXN>
+                        <TXN_DATE>20170205</TXN_DATE>
+                        <TXN_AMT>-2000</TXN_AMT>
+                        <TXN_CURR_CD>156</TXN_CURR_CD>
+                        <TXN_CARD_NO>4222222222222222</TXN_CARD_NO>
+                        <TXN_SHORT_DESC>快捷支付交易</TXN_SHORT_DESC>
+                    </TXN>
+                </TXNS>
+            </RESPONSE>
+        </SERVICE_BODY>
+    </SERVICE>
+    
+    
+[D 180507 09:34:28 bill:47] BILL_DETAIL: OrderedDict([('TXN', [OrderedDict([('TXN_DATE', '20170202'), ('TXN_AMT', '-2000'), ('TXN_CURR_CD', '156'), ('TXN_CARD_NO', '4000113221020101'), ('TXN_SHORT_DESC', '支付宝交易')]), OrderedDict([('TXN_DATE', '20170203'), ('TXN_AMT', '-1000'), ('TXN_CURR_CD', '156'), ('TXN_CARD_NO', '4000012312233131'), ('TXN_SHORT_DESC', '快捷支付交易')]), OrderedDict([('TXN_DATE', '20170205'), ('TXN_AMT', '-2000'), ('TXN_CURR_CD', '156'), ('TXN_CARD_NO', '4222222222222222'), ('TXN_SHORT_DESC', '快捷支付交易')])])])
+    <class 'collections.OrderedDict'>
+[I 180507 09:34:28 web:2106] 200 POST /tlwx/ccrd/bill (192.168.100.52) 17.83ms
+[I 180507 09:34:33 root:152] EVENT
+[I 180507 09:34:33 web:2106] 200 POST /tlwx?signature=33147e4baf37b95f2370feebc7551ffdc2da0540&timestamp=1525656945&nonce=277484253&openid=oSDTiwgyLLAgOBPWwHsBQxOXd860 (192.168.100.52) 2.07ms
+[D 180507 09:34:34 common:36] FUNC: <function need_bind.<locals>.wrapper at 0x7fd52bb65510>
+[D 180507 09:34:34 tl_api:34] XML TYPE: <class 'str'>
+[I 180507 09:34:34 tl_api:62] [S]: b'000493<?xml version="1.0" encoding="UTF-8" ?><SERVICE xmlns="http://www.allinfinance.com/dataspec/"><SERVICE_HEADER><SERVICE_SN>20180507093434619</SERVICE_SN><SERVICE_ID>15020</SERVICE_ID><ORG>000069411200</ORG><CHANNEL_ID>07</CHANNEL_ID><OP_ID></OP_ID><REQUST_TIME>20180507093434</REQUST_TIME><VERSION_ID>01</VERSION_ID><MAC></MAC></SERVICE_HEADER><SERVICE_BODY><EXT_ATTRIBUTES></EXT_ATTRIBUTES><REQUEST><CARD_NO>330721199403195410</CARD_NO><CURR_CD>156</CURR_CD></REQUEST></SERVICE_BODY></SERVICE>'
+[I 180507 09:34:34 tl_api:65] [R]: b'000877'
+[I 180507 09:34:34 tl_api:67] [R]: <?xml version="1.0" encoding="UTF-8"?>
+    <SERVICE xmlns="http://www.allinfinance.com/dataspec/">
+        <SERVICE_HEADER>
+            <SERVICE_SN>19823471237417412748</SERVICE_SN>
+            <SERVICE_ID>15020</SERVICE_ID>
+            <REQUESTER_ID>0004</REQUESTER_ID>
+            <CHANNEL_ID>070711</CHANNEL_ID>
+            <SERVICE_DATE>20050621</SERVICE_DATE>
+            <SERVICE_TIME>123000</SERVICE_TIME>
+            <VERSION_ID>02</VERSION_ID>
+            <SERV_RESPONSE>
+                <STATUS>S</STATUS>
+                <CODE></CODE>
+                <DESC></DESC>
+            </SERV_RESPONSE>
+        </SERVICE_HEADER>
+        <SERVICE_BODY>
+            <EXT_ATTRIBUTES>
+            </EXT_ATTRIBUTES>
+            <RESPONSE>
+                <CURR_CD>158</CURR_CD>
+                <ACCT_LIMIT>100</ACCT_LIMIT>
+                <ACCT_OTB>100.00</ACCT_OTB>
+                <ACCT_CASH_OTB>199.00</ACCT_CASH_OTB>
+            </RESPONSE>
+        </SERVICE_BODY>
+    </SERVICE>
+    
+[I 180507 09:34:34 web:2106] 200 GET /tlwx/ccrd/limit?code=0811VaJT1MhoG713DfLT1M5mJT11VaJc&state=1 (192.168.100.52) 18.82ms
+[I 180507 09:34:42 root:152] EVENT
+[I 180507 09:34:42 web:2106] 200 POST /tlwx?signature=c0df63d9aed7d9884846809998a9d16c90389083&timestamp=1525656954&nonce=1469283092&openid=oSDTiwgyLLAgOBPWwHsBQxOXd860 (192.168.100.52) 2.10ms
+[D 180507 09:34:43 common:36] FUNC: <function need_bind.<locals>.wrapper at 0x7fd52bb6fa60>
+[D 180507 09:34:43 tl_api:34] XML TYPE: <class 'str'>
+[I 180507 09:34:43 tl_api:62] [S]: b'000471<?xml version="1.0" encoding="UTF-8" ?><SERVICE xmlns="http://www.allinfinance.com/dataspec/"><SERVICE_HEADER><SERVICE_SN>20180507093443620</SERVICE_SN><SERVICE_ID>17010</SERVICE_ID><ORG>000069411200</ORG><CHANNEL_ID>07</CHANNEL_ID><OP_ID></OP_ID><REQUST_TIME>20180507093443</REQUST_TIME><VERSION_ID>01</VERSION_ID><MAC></MAC></SERVICE_HEADER><SERVICE_BODY><EXT_ATTRIBUTES></EXT_ATTRIBUTES><REQUEST><CARD_NO>330721199403195410</CARD_NO></REQUEST></SERVICE_BODY></SERVICE>'
+[I 180507 09:34:43 tl_api:65] [R]: b'000804'
+[I 180507 09:34:43 tl_api:67] [R]: <?xml version="1.0" encoding="UTF-8"?>
+    <SERVICE xmlns="http://www.allinfinance.com/dataspec/">
+        <SERVICE_HEADER>
+            <SERVICE_SN>19823471237417412748</SERVICE_SN>
+            <SERVICE_ID>17010</SERVICE_ID>
+            <REQUESTER_ID>0004</REQUESTER_ID>
+            <CHANNEL_ID>070711</CHANNEL_ID>
+            <SERVICE_DATE>20050621</SERVICE_DATE>
+            <SERVICE_TIME>123000</SERVICE_TIME>
+            <VERSION_ID>02</VERSION_ID>
+            <SERV_RESPONSE>
+                <STATUS>S</STATUS>
+                <CODE></CODE>
+                <DESC></DESC>
+            </SERV_RESPONSE>
+        </SERVICE_HEADER>
+        <SERVICE_BODY>
+            <EXT_ATTRIBUTES>
+            </EXT_ATTRIBUTES>
+            <RESPONSE>
+                <POINT_BAL>100</POINT_BAL>
+                <CTD_EARNED_POINTS>10</CTD_EARNED_POINTS>
+            </RESPONSE>
+        </SERVICE_BODY>
+    </SERVICE>
+    
+[I 180507 09:34:43 web:2106] 200 GET /tlwx/ccrd/point?code=071qoDiX0kqjQ12tIdjX0nGziX0qoDiC&state=1 (192.168.100.52) 18.10ms
+[I 180507 09:34:43 web:2106] 200 GET /tlwx/static/img/ccrd/diamonds.png?v=11b8baa51d0a0a445e79d5ec3f1dbf71 (192.168.100.52) 2.20ms
+[I 180507 09:34:46 root:152] EVENT
+[I 180507 09:34:46 web:2106] 200 POST /tlwx?signature=307d0c945bb9010a1e7737feb2ab3e4194cf4c9f&timestamp=1525656957&nonce=1756407362&openid=oSDTiwgyLLAgOBPWwHsBQxOXd860 (192.168.100.52) 2.34ms
+[D 180507 09:34:46 common:36] FUNC: <function need_bind.<locals>.wrapper at 0x7fd52bb6fa60>
+[D 180507 09:34:46 tl_api:34] XML TYPE: <class 'str'>
+[I 180507 09:34:46 tl_api:62] [S]: b'000471<?xml version="1.0" encoding="UTF-8" ?><SERVICE xmlns="http://www.allinfinance.com/dataspec/"><SERVICE_HEADER><SERVICE_SN>20180507093446621</SERVICE_SN><SERVICE_ID>17010</SERVICE_ID><ORG>000069411200</ORG><CHANNEL_ID>07</CHANNEL_ID><OP_ID></OP_ID><REQUST_TIME>20180507093446</REQUST_TIME><VERSION_ID>01</VERSION_ID><MAC></MAC></SERVICE_HEADER><SERVICE_BODY><EXT_ATTRIBUTES></EXT_ATTRIBUTES><REQUEST><CARD_NO>330721199403195410</CARD_NO></REQUEST></SERVICE_BODY></SERVICE>'
+[I 180507 09:34:46 tl_api:65] [R]: b'000804'
+[I 180507 09:34:46 tl_api:67] [R]: <?xml version="1.0" encoding="UTF-8"?>
+    <SERVICE xmlns="http://www.allinfinance.com/dataspec/">
+        <SERVICE_HEADER>
+            <SERVICE_SN>19823471237417412748</SERVICE_SN>
+            <SERVICE_ID>17010</SERVICE_ID>
+            <REQUESTER_ID>0004</REQUESTER_ID>
+            <CHANNEL_ID>070711</CHANNEL_ID>
+            <SERVICE_DATE>20050621</SERVICE_DATE>
+            <SERVICE_TIME>123000</SERVICE_TIME>
+            <VERSION_ID>02</VERSION_ID>
+            <SERV_RESPONSE>
+                <STATUS>S</STATUS>
+                <CODE></CODE>
+                <DESC></DESC>
+            </SERV_RESPONSE>
+        </SERVICE_HEADER>
+        <SERVICE_BODY>
+            <EXT_ATTRIBUTES>
+            </EXT_ATTRIBUTES>
+            <RESPONSE>
+                <POINT_BAL>100</POINT_BAL>
+                <CTD_EARNED_POINTS>10</CTD_EARNED_POINTS>
+            </RESPONSE>
+        </SERVICE_BODY>
+    </SERVICE>
+    
+[I 180507 09:34:46 web:2106] 200 GET /tlwx/ccrd/point?code=011KB3JD1Js4W30KzyHD1cstJD1KB3JX&state=1 (192.168.100.52) 18.52ms
+[D 180507 09:34:47 common:36] FUNC: <function need_bind.<locals>.wrapper at 0x7fd52bb6fbf8>
+[I 180507 09:34:47 web:2106] 200 GET /tlwx/ccrd/point/detail (192.168.100.52) 10.71ms
+[I 180507 09:34:47 web:2106] 200 GET /tlwx/static/js/ccrd/point_detail.js?v=b1ef4bb12d6165a30e1ae6bf153f0958 (192.168.100.52) 2.18ms
+[I 180507 09:34:47 web:2106] 200 GET /tlwx/static/img/ccrd/point.png?v=284d1c1ad6cac188022c6a6c88997ff4 (192.168.100.52) 2.37ms
+[D 180507 09:34:47 point:36] 
+    REQ: {'firstrow': 0, 'lastrow': 4, 'start': None, 'end': None}
+    
+[D 180507 09:34:47 tl_api:34] XML TYPE: <class 'str'>
+[I 180507 09:34:47 tl_api:62] [S]: b'000559<?xml version="1.0" encoding="UTF-8" ?><SERVICE xmlns="http://www.allinfinance.com/dataspec/"><SERVICE_HEADER><SERVICE_SN>20180507093447622</SERVICE_SN><SERVICE_ID>17011</SERVICE_ID><ORG>000069411200</ORG><CHANNEL_ID>07</CHANNEL_ID><OP_ID></OP_ID><REQUST_TIME>20180507093447</REQUST_TIME><VERSION_ID>01</VERSION_ID><MAC></MAC></SERVICE_HEADER><SERVICE_BODY><EXT_ATTRIBUTES></EXT_ATTRIBUTES><REQUEST><CARD_NO>330721199403195410</CARD_NO><START_DATE></START_DATE><END_DATE></END_DATE><FIRSTROW>0</FIRSTROW><LASTROW>4</LASTROW></REQUEST></SERVICE_BODY></SERVICE>'
+[D 180507 09:35:25 common:36] FUNC: <function need_bind.<locals>.wrapper at 0x7fd52bb5c048>
+[D 180507 09:35:25 tl_api:34] XML TYPE: <class 'str'>
+[I 180507 09:35:25 tl_api:62] [S]: b'000522<?xml version="1.0" encoding="UTF-8" ?><SERVICE xmlns="http://www.allinfinance.com/dataspec/"><SERVICE_HEADER><SERVICE_SN>20180507093525623</SERVICE_SN><SERVICE_ID>12010</SERVICE_ID><ORG>000069411200</ORG><CHANNEL_ID>07</CHANNEL_ID><OP_ID></OP_ID><REQUST_TIME>20180507093525</REQUST_TIME><VERSION_ID>01</VERSION_ID><MAC></MAC></SERVICE_HEADER><SERVICE_BODY><EXT_ATTRIBUTES></EXT_ATTRIBUTES><REQUEST><CARD_NO>330721199403195410</CARD_NO><CURR_CD>156</CURR_CD><STMT_DATE>000000</STMT_DATE></REQUEST></SERVICE_BODY></SERVICE>'
+[I 180507 09:35:25 tl_api:65] [R]: b'001047'
+[I 180507 09:35:25 tl_api:67] [R]: <?xml version="1.0" encoding="UTF-8"?>
+    <SERVICE xmlns="http://www.allinfinance.com/dataspec/">
+        <SERVICE_HEADER>
+            <SERVICE_SN>19823471237417412748</SERVICE_SN>
+            <SERVICE_ID>12010</SERVICE_ID>
+            <REQUESTER_ID>0004</REQUESTER_ID>
+            <CHANNEL_ID>070711</CHANNEL_ID>
+            <SERVICE_DATE>20050621</SERVICE_DATE>
+            <SERVICE_TIME>123000</SERVICE_TIME>
+            <VERSION_ID>02</VERSION_ID>
+            <SERV_RESPONSE>
+                <STATUS>S</STATUS>
+                <CODE></CODE>
+                <DESC></DESC>
+            </SERV_RESPONSE>
+        </SERVICE_HEADER>
+        <SERVICE_BODY>
+            <EXT_ATTRIBUTES>
+            </EXT_ATTRIBUTES>
+            <RESPONSE>
+                <DUAL_CURR_IND>N</DUAL_CURR_IND>
+                <CURR_CD>158</CURR_CD>
+                <QUAL_GRACE_BAL>10100.00</QUAL_GRACE_BAL>
+                <TOT_DUE_AMT>1000.00</TOT_DUE_AMT>
+                <CTD_PMT_NOT_AMT>4000.00</CTD_PMT_NOT_AMT>
+                <BILLING_DATE>20151110</BILLING_DATE>
+                <PMT_DUE_DATE>20151205</PMT_DUE_DATE>
+            </RESPONSE>
+        </SERVICE_BODY>
+    </SERVICE>
+    
+[D 180507 09:35:25 tl_api:34] XML TYPE: <class 'str'>
+[I 180507 09:35:25 tl_api:62] [S]: b'000493<?xml version="1.0" encoding="UTF-8" ?><SERVICE xmlns="http://www.allinfinance.com/dataspec/"><SERVICE_HEADER><SERVICE_SN>20180507093525624</SERVICE_SN><SERVICE_ID>13110</SERVICE_ID><ORG>000069411200</ORG><CHANNEL_ID>07</CHANNEL_ID><OP_ID></OP_ID><REQUST_TIME>20180507093525</REQUST_TIME><VERSION_ID>01</VERSION_ID><MAC></MAC></SERVICE_HEADER><SERVICE_BODY><EXT_ATTRIBUTES></EXT_ATTRIBUTES><REQUEST><CARD_NO>330721199403195410</CARD_NO><CURR_CD>156</CURR_CD></REQUEST></SERVICE_BODY></SERVICE>'
+[I 180507 09:35:25 tl_api:65] [R]: b'001747'
+[I 180507 09:35:25 tl_api:67] [R]: <?xml version="1.0" encoding="UTF-8"?>
+    <SERVICE xmlns="http://www.allinfinance.com/dataspec/">
+        <SERVICE_HEADER>
+            <SERVICE_SN>19823471237417412748</SERVICE_SN>
+            <SERVICE_ID>13110</SERVICE_ID>
+            <REQUESTER_ID>0004</REQUESTER_ID>
+            <CHANNEL_ID>070711</CHANNEL_ID>
+            <SERVICE_DATE>20050621</SERVICE_DATE>
+            <SERVICE_TIME>123000</SERVICE_TIME>
+            <VERSION_ID>02</VERSION_ID>
+            <SERV_RESPONSE>
+                <STATUS>S</STATUS>
+                <CODE>EEE0204</CODE>
+                <DESC>*******</DESC>
+            </SERV_RESPONSE>
+        </SERVICE_HEADER>
+        <SERVICE_BODY>
+            <EXT_ATTRIBUTES>
+            </EXT_ATTRIBUTES>
+            <RESPONSE>
+                <CARD_NO>198138949998232</CARD_NO>
+                <CURR_CD>156</CURR_CD>
+                <STMT_DATE>2017-02-03</STMT_DATE>
+                <TERMS>
+                    <TERM>
+                      <LOAN_INIT_TERM>3</LOAN_INIT_TERM>
+                      <LOAN_AMT>200</LOAN_AMT>
+                     </TERM>
+                    <TERM>
+                     <LOAN_INIT_TERM>6</LOAN_INIT_TERM>
+                     <LOAN_AMT>200</LOAN_AMT>
+                    </TERM>
+                    <TERM>
+                     <LOAN_INIT_TERM>9</LOAN_INIT_TERM>
+                     <LOAN_AMT>200</LOAN_AMT>
+                    </TERM>
+                    <TERM>
+                     <LOAN_INIT_TERM>12</LOAN_INIT_TERM>
+                     <LOAN_AMT>200</LOAN_AMT>
+                    </TERM>
+                    <TERM>
+                     <LOAN_INIT_TERM>24</LOAN_INIT_TERM>
+                     <LOAN_AMT>200</LOAN_AMT>
+                    </TERM>
+                    <TERM>
+                     <LOAN_INIT_TERM>36</LOAN_INIT_TERM>
+                     <LOAN_AMT>1200</LOAN_AMT>
+                    </TERM>
+                </TERMS>
+            </RESPONSE>
+        </SERVICE_BODY>
+    </SERVICE>
+    
+[I 180507 09:35:25 installment:41] items: [OrderedDict([('LOAN_INIT_TERM', '3'), ('LOAN_AMT', '200')]), OrderedDict([('LOAN_INIT_TERM', '6'), ('LOAN_AMT', '200')]), OrderedDict([('LOAN_INIT_TERM', '9'), ('LOAN_AMT', '200')]), OrderedDict([('LOAN_INIT_TERM', '12'), ('LOAN_AMT', '200')]), OrderedDict([('LOAN_INIT_TERM', '24'), ('LOAN_AMT', '200')]), OrderedDict([('LOAN_INIT_TERM', '36'), ('LOAN_AMT', '1200')])]
+[I 180507 09:35:25 web:2106] 200 GET /tlwx/ccrd/installment/bill (192.168.100.52) 59.95ms
+[I 180507 09:35:26 web:2106] 200 GET /tlwx/static/asset/jquery.min.js?v=33cabfa15c1060aaa3d207c653afb1ee (192.168.100.52) 10.66ms
+[I 180507 09:35:27 web:2106] 200 GET /tlwx/static/asset/popup.js?v=8fe1003623bb52e7d5938844d9fac4d1 (192.168.100.52) 2.45ms
+[I 180507 09:35:28 web:2106] 200 GET /tlwx/static/asset/jsencrypt.min.js?v=4e97c8d5392930eacf8fd4dfd59ffbc0 (192.168.100.52) 2.58ms
+[I 180507 09:35:28 web:2106] 200 GET /tlwx/static/asset/validate.js?v=4606b527e9688c17eb8e5653d71e16d0 (192.168.100.52) 2.29ms
+[I 180507 09:35:28 web:2106] 200 GET /tlwx/static/js/tool.js?v=df3019152ce182faf07d5e9ee88eca92 (192.168.100.52) 2.39ms
+[I 180507 09:35:30 web:2106] 200 GET /tlwx/static/js/ccrd/installment/bill.js?v=9cd1ffbbad15d446721e17934552ba80 (192.168.100.52) 3.28ms
+[I 180507 09:35:41 root:152] EVENT
+[I 180507 09:35:41 web:2106] 200 POST /tlwx?signature=133ccd0cfd46710ca2de834c94805ae79871e4a1&timestamp=1525657012&nonce=16564232&openid=oSDTiwgyLLAgOBPWwHsBQxOXd860 (192.168.100.52) 2.18ms
+[D 180507 09:35:41 common:36] FUNC: <function need_bind.<locals>.wrapper at 0x7fd52bb5aea0>
+[D 180507 09:35:41 tl_api:34] XML TYPE: <class 'str'>
+[I 180507 09:35:41 tl_api:62] [S]: b'000522<?xml version="1.0" encoding="UTF-8" ?><SERVICE xmlns="http://www.allinfinance.com/dataspec/"><SERVICE_HEADER><SERVICE_SN>20180507093541625</SERVICE_SN><SERVICE_ID>12010</SERVICE_ID><ORG>000069411200</ORG><CHANNEL_ID>07</CHANNEL_ID><OP_ID></OP_ID><REQUST_TIME>20180507093541</REQUST_TIME><VERSION_ID>01</VERSION_ID><MAC></MAC></SERVICE_HEADER><SERVICE_BODY><EXT_ATTRIBUTES></EXT_ATTRIBUTES><REQUEST><CARD_NO>330721199403195410</CARD_NO><CURR_CD>156</CURR_CD><STMT_DATE>000000</STMT_DATE></REQUEST></SERVICE_BODY></SERVICE>'
+[I 180507 09:35:41 tl_api:65] [R]: b'001047'
+[I 180507 09:35:41 tl_api:67] [R]: <?xml version="1.0" encoding="UTF-8"?>
+    <SERVICE xmlns="http://www.allinfinance.com/dataspec/">
+        <SERVICE_HEADER>
+            <SERVICE_SN>19823471237417412748</SERVICE_SN>
+            <SERVICE_ID>12010</SERVICE_ID>
+            <REQUESTER_ID>0004</REQUESTER_ID>
+            <CHANNEL_ID>070711</CHANNEL_ID>
+            <SERVICE_DATE>20050621</SERVICE_DATE>
+            <SERVICE_TIME>123000</SERVICE_TIME>
+            <VERSION_ID>02</VERSION_ID>
+            <SERV_RESPONSE>
+                <STATUS>S</STATUS>
+                <CODE></CODE>
+                <DESC></DESC>
+            </SERV_RESPONSE>
+        </SERVICE_HEADER>
+        <SERVICE_BODY>
+            <EXT_ATTRIBUTES>
+            </EXT_ATTRIBUTES>
+            <RESPONSE>
+                <DUAL_CURR_IND>N</DUAL_CURR_IND>
+                <CURR_CD>158</CURR_CD>
+                <QUAL_GRACE_BAL>10100.00</QUAL_GRACE_BAL>
+                <TOT_DUE_AMT>1000.00</TOT_DUE_AMT>
+                <CTD_PMT_NOT_AMT>4000.00</CTD_PMT_NOT_AMT>
+                <BILLING_DATE>20151110</BILLING_DATE>
+                <PMT_DUE_DATE>20151205</PMT_DUE_DATE>
+            </RESPONSE>
+        </SERVICE_BODY>
+    </SERVICE>
+    
+[I 180507 09:35:41 web:2106] 200 GET /tlwx/ccrd/bill?code=0817yu3g2V75hC0niF1g2PtG3g27yu3f&state=1 (192.168.100.52) 26.40ms
+[I 180507 09:35:51 root:152] EVENT
+[I 180507 09:35:51 web:2106] 200 POST /tlwx?signature=7b998684ccbfe6e59e69bd9376fc5f71e2d630e9&timestamp=1525657022&nonce=613167417&openid=oSDTiwgyLLAgOBPWwHsBQxOXd860 (192.168.100.52) 2.26ms
+[D 180507 09:35:51 common:36] FUNC: <function need_bind.<locals>.wrapper at 0x7fd52bb65510>
+[D 180507 09:35:51 tl_api:34] XML TYPE: <class 'str'>
+[I 180507 09:35:51 tl_api:62] [S]: b'000493<?xml version="1.0" encoding="UTF-8" ?><SERVICE xmlns="http://www.allinfinance.com/dataspec/"><SERVICE_HEADER><SERVICE_SN>20180507093551626</SERVICE_SN><SERVICE_ID>15020</SERVICE_ID><ORG>000069411200</ORG><CHANNEL_ID>07</CHANNEL_ID><OP_ID></OP_ID><REQUST_TIME>20180507093551</REQUST_TIME><VERSION_ID>01</VERSION_ID><MAC></MAC></SERVICE_HEADER><SERVICE_BODY><EXT_ATTRIBUTES></EXT_ATTRIBUTES><REQUEST><CARD_NO>330721199403195410</CARD_NO><CURR_CD>156</CURR_CD></REQUEST></SERVICE_BODY></SERVICE>'
+[I 180507 09:35:51 tl_api:65] [R]: b'000877'
+[I 180507 09:35:51 tl_api:67] [R]: <?xml version="1.0" encoding="UTF-8"?>
+    <SERVICE xmlns="http://www.allinfinance.com/dataspec/">
+        <SERVICE_HEADER>
+            <SERVICE_SN>19823471237417412748</SERVICE_SN>
+            <SERVICE_ID>15020</SERVICE_ID>
+            <REQUESTER_ID>0004</REQUESTER_ID>
+            <CHANNEL_ID>070711</CHANNEL_ID>
+            <SERVICE_DATE>20050621</SERVICE_DATE>
+            <SERVICE_TIME>123000</SERVICE_TIME>
+            <VERSION_ID>02</VERSION_ID>
+            <SERV_RESPONSE>
+                <STATUS>S</STATUS>
+                <CODE></CODE>
+                <DESC></DESC>
+            </SERV_RESPONSE>
+        </SERVICE_HEADER>
+        <SERVICE_BODY>
+            <EXT_ATTRIBUTES>
+            </EXT_ATTRIBUTES>
+            <RESPONSE>
+                <CURR_CD>158</CURR_CD>
+                <ACCT_LIMIT>100</ACCT_LIMIT>
+                <ACCT_OTB>100.00</ACCT_OTB>
+                <ACCT_CASH_OTB>199.00</ACCT_CASH_OTB>
+            </RESPONSE>
+        </SERVICE_BODY>
+    </SERVICE>
+    
+[I 180507 09:35:51 web:2106] 200 GET /tlwx/ccrd/limit?code=011QABxm0Cou7l1BcRum0pRTxm0QABx5&state=1 (192.168.100.52) 17.60ms
+[D 180507 09:35:56 tl_api:34] XML TYPE: <class 'str'>
+[I 180507 09:35:56 tl_api:62] [S]: b'000564<?xml version="1.0" encoding="UTF-8" ?><SERVICE xmlns="http://www.allinfinance.com/dataspec/"><SERVICE_HEADER><SERVICE_SN>20180507093556627</SERVICE_SN><SERVICE_ID>12011</SERVICE_ID><ORG>000069411200</ORG><CHANNEL_ID>07</CHANNEL_ID><OP_ID></OP_ID><REQUST_TIME>20180507093556</REQUST_TIME><VERSION_ID>01</VERSION_ID><MAC></MAC></SERVICE_HEADER><SERVICE_BODY><EXT_ATTRIBUTES></EXT_ATTRIBUTES><REQUEST><CARD_NO>330721199403195410</CARD_NO><CURR_CD>156</CURR_CD><STMT_DATE>000000</STMT_DATE><FIRSTROW>0</FIRSTROW><LASTROW>4</LASTROW></REQUEST></SERVICE_BODY></SERVICE>'
+[I 180507 09:35:56 tl_api:65] [R]: b'001831'
+[I 180507 09:35:56 tl_api:67] [R]: <?xml version="1.0" encoding="UTF-8"?>
+    <SERVICE xmlns="http://www.allinfinance.com/dataspec/">
+        <SERVICE_HEADER>
+            <SERVICE_SN>19823471237417412748</SERVICE_SN>
+            <SERVICE_ID>12011</SERVICE_ID>
+            <REQUESTER_ID>0004</REQUESTER_ID>
+            <CHANNEL_ID>070711</CHANNEL_ID>
+            <SERVICE_DATE>20050621</SERVICE_DATE>
+            <SERVICE_TIME>123000</SERVICE_TIME>
+            <VERSION_ID>02</VERSION_ID>
+            <SERV_RESPONSE>
+                <STATUS>FAIL</STATUS>
+                <CODE>EEE0204</CODE>
+                <DESC>*******</DESC>
+            </SERV_RESPONSE>
+        </SERVICE_HEADER>
+        <SERVICE_BODY>
+            <EXT_ATTRIBUTES>
+            </EXT_ATTRIBUTES>
+            <RESPONSE>
+                <NEXTPAGE_FLG>N</NEXTPAGE_FLG>
+                <TXNS>
+                    <!--账单信息列表-->
+                    <TXN>
+                        <TXN_DATE>20170202</TXN_DATE>
+                        <TXN_AMT>-2000</TXN_AMT>
+                        <TXN_CURR_CD>156</TXN_CURR_CD>
+                        <TXN_CARD_NO>4000113221020101</TXN_CARD_NO>
+                        <TXN_SHORT_DESC>支付宝交易</TXN_SHORT_DESC>
+                    </TXN>
+                    <TXN>
+                        <TXN_DATE>20170203</TXN_DATE>
+                        <TXN_AMT>-1000</TXN_AMT>
+                        <TXN_CURR_CD>156</TXN_CURR_CD>
+                        <TXN_CARD_NO>4000012312233131</TXN_CARD_NO>
+                        <TXN_SHORT_DESC>快捷支付交易</TXN_SHORT_DESC>
+                    </TXN>
+                    <TXN>
+                        <TXN_DATE>20170205</TXN_DATE>
+                        <TXN_AMT>-2000</TXN_AMT>
+                        <TXN_CURR_CD>156</TXN_CURR_CD>
+                        <TXN_CARD_NO>4222222222222222</TXN_CARD_NO>
+                        <TXN_SHORT_DESC>快捷支付交易</TXN_SHORT_DESC>
+                    </TXN>
+                </TXNS>
+            </RESPONSE>
+        </SERVICE_BODY>
+    </SERVICE>
+    
+    
+[D 180507 09:35:56 bill:47] BILL_DETAIL: OrderedDict([('TXN', [OrderedDict([('TXN_DATE', '20170202'), ('TXN_AMT', '-2000'), ('TXN_CURR_CD', '156'), ('TXN_CARD_NO', '4000113221020101'), ('TXN_SHORT_DESC', '支付宝交易')]), OrderedDict([('TXN_DATE', '20170203'), ('TXN_AMT', '-1000'), ('TXN_CURR_CD', '156'), ('TXN_CARD_NO', '4000012312233131'), ('TXN_SHORT_DESC', '快捷支付交易')]), OrderedDict([('TXN_DATE', '20170205'), ('TXN_AMT', '-2000'), ('TXN_CURR_CD', '156'), ('TXN_CARD_NO', '4222222222222222'), ('TXN_SHORT_DESC', '快捷支付交易')])])])
+    <class 'collections.OrderedDict'>
+[I 180507 09:35:56 web:2106] 200 POST /tlwx/ccrd/bill (192.168.100.52) 17.65ms
+[I 180507 09:38:14 root:152] EVENT
+[I 180507 09:38:14 web:2106] 200 POST /tlwx?signature=4922b4f2b3798b0be3fc7ffc8ca1f2cd825af243&timestamp=1525657165&nonce=2045930257&openid=oSDTiwgyLLAgOBPWwHsBQxOXd860 (192.168.100.52) 4.75ms
+[D 180507 09:38:14 common:36] FUNC: <function need_bind.<locals>.wrapper at 0x7fd52bb5cd90>
+[D 180507 09:38:14 tl_api:34] XML TYPE: <class 'str'>
+[I 180507 09:38:14 tl_api:62] [S]: b'000461<?xml version="1.0" encoding="UTF-8" ?><SERVICE xmlns="http://www.allinfinance.com/dataspec/"><SERVICE_HEADER><SERVICE_SN>20180507093814628</SERVICE_SN><SERVICE_ID>13004</SERVICE_ID><ORG>000069411200</ORG><CHANNEL_ID>07</CHANNEL_ID><OP_ID></OP_ID><REQUST_TIME>20180507093814</REQUST_TIME><VERSION_ID>01</VERSION_ID><MAC></MAC></SERVICE_HEADER><SERVICE_BODY><EXT_ATTRIBUTES></EXT_ATTRIBUTES><REQUEST><LOAN_CODE>2005</LOAN_CODE></REQUEST></SERVICE_BODY></SERVICE>'
+[I 180507 09:38:14 tl_api:65] [R]: b'001809'
+[I 180507 09:38:14 tl_api:67] [R]: <?xml version="1.0" encoding="UTF-8"?>
+    <SERVICE xmlns="http://www.allinfinance.com/dataspec/">
+        <SERVICE_HEADER>
+            <SERVICE_SN>19823471237417412748</SERVICE_SN>
+            <SERVICE_ID>13110</SERVICE_ID>
+            <REQUESTER_ID>0004</REQUESTER_ID>
+            <CHANNEL_ID>070711</CHANNEL_ID>
+            <SERVICE_DATE>20050621</SERVICE_DATE>
+            <SERVICE_TIME>123000</SERVICE_TIME>
+            <VERSION_ID>02</VERSION_ID>
+            <SERV_RESPONSE>
+                <STATUS>S</STATUS>
+                <CODE>EEE0204</CODE>
+                <DESC>*******</DESC>
+            </SERV_RESPONSE>
+        </SERVICE_HEADER>
+        <SERVICE_BODY>
+            <EXT_ATTRIBUTES>
+            </EXT_ATTRIBUTES>
+            <RESPONSE>
+                <CARD_NO>198138949998232</CARD_NO>
+                <CURR_CD>156</CURR_CD>
+                <LOANFEEDEFS>
+                    <LOANFEEDEF>
+                      <LOAN_INIT_TERM>3</LOAN_INIT_TERM>
+                      <MAX_AMOUNT>200</MAX_AMOUNT>
+                     </LOANFEEDEF>
+                    <LOANFEEDEF>
+                     <LOAN_INIT_TERM>6</LOAN_INIT_TERM>
+                     <MAX_AMOUNT>200</MAX_AMOUNT>
+                    </LOANFEEDEF>
+                    <LOANFEEDEF>
+                     <LOAN_INIT_TERM>9</LOAN_INIT_TERM>
+                     <MAX_AMOUNT>200</MAX_AMOUNT>
+                    </LOANFEEDEF>
+                    <LOANFEEDEF>
+                     <LOAN_INIT_TERM>12</LOAN_INIT_TERM>
+                     <MAX_AMOUNT>200</MAX_AMOUNT>
+                    </LOANFEEDEF>
+                    <LOANFEEDEF>
+                     <LOAN_INIT_TERM>24</LOAN_INIT_TERM>
+                     <MAX_AMOUNT>200</MAX_AMOUNT>
+                    </LOANFEEDEF>
+                    <LOANFEEDEF>
+                     <LOAN_INIT_TERM>36</LOAN_INIT_TERM>
+                     <MAX_AMOUNT>1200</MAX_AMOUNT>
+                    </LOANFEEDEF>
+                </LOANFEEDEFS>
+            </RESPONSE>
+        </SERVICE_BODY>
+    </SERVICE>
+    
+[I 180507 09:38:14 web:2106] 200 GET /tlwx/ccrd/installment/lg_cash?code=071xXj5l0e41jk1dWo7l0hKo5l0xXj5H&state=1 (192.168.100.52) 29.19ms
+[I 180507 09:38:14 web:2106] 200 GET /tlwx/static/js/ccrd/installment/lg_cash.js?v=96a073c47fea174e23761649fc3a80cc (192.168.100.52) 2.83ms
+[I 180507 09:38:18 root:152] EVENT
+[I 180507 09:38:18 web:2106] 200 POST /tlwx?signature=c7c44fb7db279224c59c24ada7fa874d4f7e234d&timestamp=1525657170&nonce=984912026&openid=oSDTiwgyLLAgOBPWwHsBQxOXd860 (192.168.100.52) 13.12ms
+[D 180507 09:38:19 common:36] FUNC: <function need_bind.<locals>.wrapper at 0x7fd52bb5c048>
+[D 180507 09:38:19 tl_api:34] XML TYPE: <class 'str'>
+[I 180507 09:38:19 tl_api:62] [S]: b'000522<?xml version="1.0" encoding="UTF-8" ?><SERVICE xmlns="http://www.allinfinance.com/dataspec/"><SERVICE_HEADER><SERVICE_SN>20180507093819629</SERVICE_SN><SERVICE_ID>12010</SERVICE_ID><ORG>000069411200</ORG><CHANNEL_ID>07</CHANNEL_ID><OP_ID></OP_ID><REQUST_TIME>20180507093819</REQUST_TIME><VERSION_ID>01</VERSION_ID><MAC></MAC></SERVICE_HEADER><SERVICE_BODY><EXT_ATTRIBUTES></EXT_ATTRIBUTES><REQUEST><CARD_NO>330721199403195410</CARD_NO><CURR_CD>156</CURR_CD><STMT_DATE>000000</STMT_DATE></REQUEST></SERVICE_BODY></SERVICE>'
+[I 180507 09:38:19 tl_api:65] [R]: b'001047'
+[I 180507 09:38:19 tl_api:67] [R]: <?xml version="1.0" encoding="UTF-8"?>
+    <SERVICE xmlns="http://www.allinfinance.com/dataspec/">
+        <SERVICE_HEADER>
+            <SERVICE_SN>19823471237417412748</SERVICE_SN>
+            <SERVICE_ID>12010</SERVICE_ID>
+            <REQUESTER_ID>0004</REQUESTER_ID>
+            <CHANNEL_ID>070711</CHANNEL_ID>
+            <SERVICE_DATE>20050621</SERVICE_DATE>
+            <SERVICE_TIME>123000</SERVICE_TIME>
+            <VERSION_ID>02</VERSION_ID>
+            <SERV_RESPONSE>
+                <STATUS>S</STATUS>
+                <CODE></CODE>
+                <DESC></DESC>
+            </SERV_RESPONSE>
+        </SERVICE_HEADER>
+        <SERVICE_BODY>
+            <EXT_ATTRIBUTES>
+            </EXT_ATTRIBUTES>
+            <RESPONSE>
+                <DUAL_CURR_IND>N</DUAL_CURR_IND>
+                <CURR_CD>158</CURR_CD>
+                <QUAL_GRACE_BAL>10100.00</QUAL_GRACE_BAL>
+                <TOT_DUE_AMT>1000.00</TOT_DUE_AMT>
+                <CTD_PMT_NOT_AMT>4000.00</CTD_PMT_NOT_AMT>
+                <BILLING_DATE>20151110</BILLING_DATE>
+                <PMT_DUE_DATE>20151205</PMT_DUE_DATE>
+            </RESPONSE>
+        </SERVICE_BODY>
+    </SERVICE>
+    
+[D 180507 09:38:19 tl_api:34] XML TYPE: <class 'str'>
+[I 180507 09:38:19 tl_api:62] [S]: b'000493<?xml version="1.0" encoding="UTF-8" ?><SERVICE xmlns="http://www.allinfinance.com/dataspec/"><SERVICE_HEADER><SERVICE_SN>20180507093819630</SERVICE_SN><SERVICE_ID>13110</SERVICE_ID><ORG>000069411200</ORG><CHANNEL_ID>07</CHANNEL_ID><OP_ID></OP_ID><REQUST_TIME>20180507093819</REQUST_TIME><VERSION_ID>01</VERSION_ID><MAC></MAC></SERVICE_HEADER><SERVICE_BODY><EXT_ATTRIBUTES></EXT_ATTRIBUTES><REQUEST><CARD_NO>330721199403195410</CARD_NO><CURR_CD>156</CURR_CD></REQUEST></SERVICE_BODY></SERVICE>'
+[I 180507 09:38:19 tl_api:65] [R]: b'001747'
+[I 180507 09:38:19 tl_api:67] [R]: <?xml version="1.0" encoding="UTF-8"?>
+    <SERVICE xmlns="http://www.allinfinance.com/dataspec/">
+        <SERVICE_HEADER>
+            <SERVICE_SN>19823471237417412748</SERVICE_SN>
+            <SERVICE_ID>13110</SERVICE_ID>
+            <REQUESTER_ID>0004</REQUESTER_ID>
+            <CHANNEL_ID>070711</CHANNEL_ID>
+            <SERVICE_DATE>20050621</SERVICE_DATE>
+            <SERVICE_TIME>123000</SERVICE_TIME>
+            <VERSION_ID>02</VERSION_ID>
+            <SERV_RESPONSE>
+                <STATUS>S</STATUS>
+                <CODE>EEE0204</CODE>
+                <DESC>*******</DESC>
+            </SERV_RESPONSE>
+        </SERVICE_HEADER>
+        <SERVICE_BODY>
+            <EXT_ATTRIBUTES>
+            </EXT_ATTRIBUTES>
+            <RESPONSE>
+                <CARD_NO>198138949998232</CARD_NO>
+                <CURR_CD>156</CURR_CD>
+                <STMT_DATE>2017-02-03</STMT_DATE>
+                <TERMS>
+                    <TERM>
+                      <LOAN_INIT_TERM>3</LOAN_INIT_TERM>
+                      <LOAN_AMT>200</LOAN_AMT>
+                     </TERM>
+                    <TERM>
+                     <LOAN_INIT_TERM>6</LOAN_INIT_TERM>
+                     <LOAN_AMT>200</LOAN_AMT>
+                    </TERM>
+                    <TERM>
+                     <LOAN_INIT_TERM>9</LOAN_INIT_TERM>
+                     <LOAN_AMT>200</LOAN_AMT>
+                    </TERM>
+                    <TERM>
+                     <LOAN_INIT_TERM>12</LOAN_INIT_TERM>
+                     <LOAN_AMT>200</LOAN_AMT>
+                    </TERM>
+                    <TERM>
+                     <LOAN_INIT_TERM>24</LOAN_INIT_TERM>
+                     <LOAN_AMT>200</LOAN_AMT>
+                    </TERM>
+                    <TERM>
+                     <LOAN_INIT_TERM>36</LOAN_INIT_TERM>
+                     <LOAN_AMT>1200</LOAN_AMT>
+                    </TERM>
+                </TERMS>
+            </RESPONSE>
+        </SERVICE_BODY>
+    </SERVICE>
+    
+[I 180507 09:38:19 installment:41] items: [OrderedDict([('LOAN_INIT_TERM', '3'), ('LOAN_AMT', '200')]), OrderedDict([('LOAN_INIT_TERM', '6'), ('LOAN_AMT', '200')]), OrderedDict([('LOAN_INIT_TERM', '9'), ('LOAN_AMT', '200')]), OrderedDict([('LOAN_INIT_TERM', '12'), ('LOAN_AMT', '200')]), OrderedDict([('LOAN_INIT_TERM', '24'), ('LOAN_AMT', '200')]), OrderedDict([('LOAN_INIT_TERM', '36'), ('LOAN_AMT', '1200')])]
+[I 180507 09:38:19 web:2106] 200 GET /tlwx/ccrd/installment/bill?code=0017X0RT0llqtY1qDRRT0pVZQT07X0RX&state=1 (192.168.100.52) 31.96ms
+[I 180507 09:38:25 root:152] EVENT
+[I 180507 09:38:25 web:2106] 200 POST /tlwx?signature=62c992117c4ffe412f4dccc1a294a5caa19e65c6&timestamp=1525657176&nonce=450595342&openid=oSDTiwgyLLAgOBPWwHsBQxOXd860 (192.168.100.52) 3.13ms
+[D 180507 09:38:25 common:36] FUNC: <function need_bind.<locals>.wrapper at 0x7fd52bb5aea0>
+[D 180507 09:38:25 tl_api:34] XML TYPE: <class 'str'>
+[I 180507 09:38:25 tl_api:62] [S]: b'000522<?xml version="1.0" encoding="UTF-8" ?><SERVICE xmlns="http://www.allinfinance.com/dataspec/"><SERVICE_HEADER><SERVICE_SN>20180507093825631</SERVICE_SN><SERVICE_ID>12010</SERVICE_ID><ORG>000069411200</ORG><CHANNEL_ID>07</CHANNEL_ID><OP_ID></OP_ID><REQUST_TIME>20180507093825</REQUST_TIME><VERSION_ID>01</VERSION_ID><MAC></MAC></SERVICE_HEADER><SERVICE_BODY><EXT_ATTRIBUTES></EXT_ATTRIBUTES><REQUEST><CARD_NO>330721199403195410</CARD_NO><CURR_CD>156</CURR_CD><STMT_DATE>000000</STMT_DATE></REQUEST></SERVICE_BODY></SERVICE>'
+[I 180507 09:38:25 tl_api:65] [R]: b'001047'
+[I 180507 09:38:25 tl_api:67] [R]: <?xml version="1.0" encoding="UTF-8"?>
+    <SERVICE xmlns="http://www.allinfinance.com/dataspec/">
+        <SERVICE_HEADER>
+            <SERVICE_SN>19823471237417412748</SERVICE_SN>
+            <SERVICE_ID>12010</SERVICE_ID>
+            <REQUESTER_ID>0004</REQUESTER_ID>
+            <CHANNEL_ID>070711</CHANNEL_ID>
+            <SERVICE_DATE>20050621</SERVICE_DATE>
+            <SERVICE_TIME>123000</SERVICE_TIME>
+            <VERSION_ID>02</VERSION_ID>
+            <SERV_RESPONSE>
+                <STATUS>S</STATUS>
+                <CODE></CODE>
+                <DESC></DESC>
+            </SERV_RESPONSE>
+        </SERVICE_HEADER>
+        <SERVICE_BODY>
+            <EXT_ATTRIBUTES>
+            </EXT_ATTRIBUTES>
+            <RESPONSE>
+                <DUAL_CURR_IND>N</DUAL_CURR_IND>
+                <CURR_CD>158</CURR_CD>
+                <QUAL_GRACE_BAL>10100.00</QUAL_GRACE_BAL>
+                <TOT_DUE_AMT>1000.00</TOT_DUE_AMT>
+                <CTD_PMT_NOT_AMT>4000.00</CTD_PMT_NOT_AMT>
+                <BILLING_DATE>20151110</BILLING_DATE>
+                <PMT_DUE_DATE>20151205</PMT_DUE_DATE>
+            </RESPONSE>
+        </SERVICE_BODY>
+    </SERVICE>
+    
+[I 180507 09:38:25 web:2106] 200 GET /tlwx/ccrd/bill?code=0812XOZH0iV79h2Eo0WH0HWqZH02XOZC&state=1 (192.168.100.52) 24.88ms
+[D 180507 09:38:27 common:36] FUNC: <function need_bind.<locals>.wrapper at 0x7fd52bb5ac80>
+[I 180507 09:38:27 web:2106] 200 GET /tlwx/ccrd/bill_due (192.168.100.52) 8.77ms
+[D 180507 09:38:27 tl_api:34] XML TYPE: <class 'str'>
+[I 180507 09:38:27 tl_api:62] [S]: b'000566<?xml version="1.0" encoding="UTF-8" ?><SERVICE xmlns="http://www.allinfinance.com/dataspec/"><SERVICE_HEADER><SERVICE_SN>20180507093827632</SERVICE_SN><SERVICE_ID>13060</SERVICE_ID><ORG>000069411200</ORG><CHANNEL_ID>07</CHANNEL_ID><OP_ID></OP_ID><REQUST_TIME>20180507093827</REQUST_TIME><VERSION_ID>01</VERSION_ID><MAC></MAC></SERVICE_HEADER><SERVICE_BODY><EXT_ATTRIBUTES></EXT_ATTRIBUTES><REQUEST><CARD_NO>330721199403195410</CARD_NO><CURR_CD>156</CURR_CD><SETT_TXN_TYPE></SETT_TXN_TYPE><FIRSTROW>0</FIRSTROW><LASTROW>6</LASTROW></REQUEST></SERVICE_BODY></SERVICE>'
+[I 180507 09:38:27 tl_api:65] [R]: b'002051'
+[I 180507 09:38:27 tl_api:67] [R]: <?xml version="1.0" encoding="UTF-8"?>
+    <SERVICE xmlns="http://www.allinfinance.com/dataspec/">
+        <SERVICE_HEADER>
+            <SERVICE_SN>19823471237417412748</SERVICE_SN>
+            <SERVICE_ID>13060</SERVICE_ID>
+            <REQUESTER_ID>0004</REQUESTER_ID>
+            <CHANNEL_ID>070711</CHANNEL_ID>
+            <SERVICE_DATE>20050621</SERVICE_DATE>
+            <SERVICE_TIME>123000</SERVICE_TIME>
+            <VERSION_ID>02</VERSION_ID>
+            <SERV_RESPONSE>
+                <STATUS>S</STATUS>
+                <CODE></CODE>
+                <DESC></DESC>
+            </SERV_RESPONSE>
+        </SERVICE_HEADER>
+        <SERVICE_BODY>
+            <EXT_ATTRIBUTES>
+            </EXT_ATTRIBUTES>
+            <RESPONSE>
+                <NEXTPAGE_FLG>N</NEXTPAGE_FLG>
+                <TXNS>
+                    <TXN>
+                    <TXN_DATE>2017-02-17</TXN_DATE>
+                    <TXN_AMT>-2000.00</TXN_AMT>
+                    <TXN_CURR_CD>156</TXN_CURR_CD>
+                    <TXN_CARD_NO>12390819878918973</TXN_CARD_NO>
+                    <TXN_SHORT_DESC>支付宝快捷交易</TXN_SHORT_DESC>
+                    </TXN>
+                    <TXN>
+                    <TXN_DATE>2017-02-17</TXN_DATE>
+                    <TXN_AMT>-2000.00</TXN_AMT>
+                    <TXN_CURR_CD>156</TXN_CURR_CD>
+                    <TXN_CARD_NO>12390819878918973</TXN_CARD_NO>
+                    <TXN_SHORT_DESC>支付宝快捷交易</TXN_SHORT_DESC>
+                    </TXN>
+                    <TXN>
+                    <TXN_DATE>2017-02-17</TXN_DATE>
+                    <TXN_AMT>-2000.00</TXN_AMT>
+                    <TXN_CURR_CD>156</TXN_CURR_CD>
+                    <TXN_CARD_NO>12390819878918973</TXN_CARD_NO>
+                    <TXN_SHORT_DESC>支付宝快捷交易</TXN_SHORT_DESC>
+                    </TXN>
+                    <TXN>
+                    <TXN_DATE>2017-02-17</TXN_DATE>
+                    <TXN_AMT>-2000.00</TXN_AMT>
+                    <TXN_CURR_CD>156</TXN_CURR_CD>
+                    <TXN_CARD_NO>12390819878918973</TXN_CARD_NO>
+                    <TXN_SHORT_DESC>大润发支付</TXN_SHORT_DESC>
+                    </TXN>
+                </TXNS>
+            </RESPONSE>
+        </SERVICE_BODY>
+    </SERVICE>
+    
+[D 180507 09:38:27 bill:90] BILL_DETAIL: [OrderedDict([('TXN_DATE', '2017-02-17'), ('TXN_AMT', '-2000.00'), ('TXN_CURR_CD', '156'), ('TXN_CARD_NO', '12390819878918973'), ('TXN_SHORT_DESC', '支付宝快捷交易')]), OrderedDict([('TXN_DATE', '2017-02-17'), ('TXN_AMT', '-2000.00'), ('TXN_CURR_CD', '156'), ('TXN_CARD_NO', '12390819878918973'), ('TXN_SHORT_DESC', '支付宝快捷交易')]), OrderedDict([('TXN_DATE', '2017-02-17'), ('TXN_AMT', '-2000.00'), ('TXN_CURR_CD', '156'), ('TXN_CARD_NO', '12390819878918973'), ('TXN_SHORT_DESC', '支付宝快捷交易')]), OrderedDict([('TXN_DATE', '2017-02-17'), ('TXN_AMT', '-2000.00'), ('TXN_CURR_CD', '156'), ('TXN_CARD_NO', '12390819878918973'), ('TXN_SHORT_DESC', '大润发支付')])]
+    <class 'list'>
+[I 180507 09:38:27 web:2106] 200 POST /tlwx/ccrd/bill_due (192.168.100.52) 18.61ms
+[D 180507 09:38:27 common:36] FUNC: <function need_bind.<locals>.wrapper at 0x7fd52bb5aea0>
+[D 180507 09:38:27 tl_api:34] XML TYPE: <class 'str'>
+[I 180507 09:38:27 tl_api:62] [S]: b'000522<?xml version="1.0" encoding="UTF-8" ?><SERVICE xmlns="http://www.allinfinance.com/dataspec/"><SERVICE_HEADER><SERVICE_SN>20180507093827633</SERVICE_SN><SERVICE_ID>12010</SERVICE_ID><ORG>000069411200</ORG><CHANNEL_ID>07</CHANNEL_ID><OP_ID></OP_ID><REQUST_TIME>20180507093827</REQUST_TIME><VERSION_ID>01</VERSION_ID><MAC></MAC></SERVICE_HEADER><SERVICE_BODY><EXT_ATTRIBUTES></EXT_ATTRIBUTES><REQUEST><CARD_NO>330721199403195410</CARD_NO><CURR_CD>156</CURR_CD><STMT_DATE>000000</STMT_DATE></REQUEST></SERVICE_BODY></SERVICE>'
+[I 180507 09:38:27 tl_api:65] [R]: b'001047'
+[I 180507 09:38:27 tl_api:67] [R]: <?xml version="1.0" encoding="UTF-8"?>
+    <SERVICE xmlns="http://www.allinfinance.com/dataspec/">
+        <SERVICE_HEADER>
+            <SERVICE_SN>19823471237417412748</SERVICE_SN>
+            <SERVICE_ID>12010</SERVICE_ID>
+            <REQUESTER_ID>0004</REQUESTER_ID>
+            <CHANNEL_ID>070711</CHANNEL_ID>
+            <SERVICE_DATE>20050621</SERVICE_DATE>
+            <SERVICE_TIME>123000</SERVICE_TIME>
+            <VERSION_ID>02</VERSION_ID>
+            <SERV_RESPONSE>
+                <STATUS>S</STATUS>
+                <CODE></CODE>
+                <DESC></DESC>
+            </SERV_RESPONSE>
+        </SERVICE_HEADER>
+        <SERVICE_BODY>
+            <EXT_ATTRIBUTES>
+            </EXT_ATTRIBUTES>
+            <RESPONSE>
+                <DUAL_CURR_IND>N</DUAL_CURR_IND>
+                <CURR_CD>158</CURR_CD>
+                <QUAL_GRACE_BAL>10100.00</QUAL_GRACE_BAL>
+                <TOT_DUE_AMT>1000.00</TOT_DUE_AMT>
+                <CTD_PMT_NOT_AMT>4000.00</CTD_PMT_NOT_AMT>
+                <BILLING_DATE>20151110</BILLING_DATE>
+                <PMT_DUE_DATE>20151205</PMT_DUE_DATE>
+            </RESPONSE>
+        </SERVICE_BODY>
+    </SERVICE>
+    
+[I 180507 09:38:27 web:2106] 200 GET /tlwx/ccrd/bill?code=0812XOZH0iV79h2Eo0WH0HWqZH02XOZC&state=1 (192.168.100.52) 25.59ms
+[D 180507 09:38:28 common:36] FUNC: <function need_bind.<locals>.wrapper at 0x7fd52bb5c048>
+[D 180507 09:38:28 tl_api:34] XML TYPE: <class 'str'>
+[I 180507 09:38:28 tl_api:62] [S]: b'000522<?xml version="1.0" encoding="UTF-8" ?><SERVICE xmlns="http://www.allinfinance.com/dataspec/"><SERVICE_HEADER><SERVICE_SN>20180507093828634</SERVICE_SN><SERVICE_ID>12010</SERVICE_ID><ORG>000069411200</ORG><CHANNEL_ID>07</CHANNEL_ID><OP_ID></OP_ID><REQUST_TIME>20180507093828</REQUST_TIME><VERSION_ID>01</VERSION_ID><MAC></MAC></SERVICE_HEADER><SERVICE_BODY><EXT_ATTRIBUTES></EXT_ATTRIBUTES><REQUEST><CARD_NO>330721199403195410</CARD_NO><CURR_CD>156</CURR_CD><STMT_DATE>000000</STMT_DATE></REQUEST></SERVICE_BODY></SERVICE>'
+[I 180507 09:38:28 tl_api:65] [R]: b'001047'
+[I 180507 09:38:28 tl_api:67] [R]: <?xml version="1.0" encoding="UTF-8"?>
+    <SERVICE xmlns="http://www.allinfinance.com/dataspec/">
+        <SERVICE_HEADER>
+            <SERVICE_SN>19823471237417412748</SERVICE_SN>
+            <SERVICE_ID>12010</SERVICE_ID>
+            <REQUESTER_ID>0004</REQUESTER_ID>
+            <CHANNEL_ID>070711</CHANNEL_ID>
+            <SERVICE_DATE>20050621</SERVICE_DATE>
+            <SERVICE_TIME>123000</SERVICE_TIME>
+            <VERSION_ID>02</VERSION_ID>
+            <SERV_RESPONSE>
+                <STATUS>S</STATUS>
+                <CODE></CODE>
+                <DESC></DESC>
+            </SERV_RESPONSE>
+        </SERVICE_HEADER>
+        <SERVICE_BODY>
+            <EXT_ATTRIBUTES>
+            </EXT_ATTRIBUTES>
+            <RESPONSE>
+                <DUAL_CURR_IND>N</DUAL_CURR_IND>
+                <CURR_CD>158</CURR_CD>
+                <QUAL_GRACE_BAL>10100.00</QUAL_GRACE_BAL>
+                <TOT_DUE_AMT>1000.00</TOT_DUE_AMT>
+                <CTD_PMT_NOT_AMT>4000.00</CTD_PMT_NOT_AMT>
+                <BILLING_DATE>20151110</BILLING_DATE>
+                <PMT_DUE_DATE>20151205</PMT_DUE_DATE>
+            </RESPONSE>
+        </SERVICE_BODY>
+    </SERVICE>
+    
+[D 180507 09:38:28 tl_api:34] XML TYPE: <class 'str'>
+[I 180507 09:38:28 tl_api:62] [S]: b'000493<?xml version="1.0" encoding="UTF-8" ?><SERVICE xmlns="http://www.allinfinance.com/dataspec/"><SERVICE_HEADER><SERVICE_SN>20180507093828635</SERVICE_SN><SERVICE_ID>13110</SERVICE_ID><ORG>000069411200</ORG><CHANNEL_ID>07</CHANNEL_ID><OP_ID></OP_ID><REQUST_TIME>20180507093828</REQUST_TIME><VERSION_ID>01</VERSION_ID><MAC></MAC></SERVICE_HEADER><SERVICE_BODY><EXT_ATTRIBUTES></EXT_ATTRIBUTES><REQUEST><CARD_NO>330721199403195410</CARD_NO><CURR_CD>156</CURR_CD></REQUEST></SERVICE_BODY></SERVICE>'
+[I 180507 09:38:28 tl_api:65] [R]: b'001747'
+[I 180507 09:38:28 tl_api:67] [R]: <?xml version="1.0" encoding="UTF-8"?>
+    <SERVICE xmlns="http://www.allinfinance.com/dataspec/">
+        <SERVICE_HEADER>
+            <SERVICE_SN>19823471237417412748</SERVICE_SN>
+            <SERVICE_ID>13110</SERVICE_ID>
+            <REQUESTER_ID>0004</REQUESTER_ID>
+            <CHANNEL_ID>070711</CHANNEL_ID>
+            <SERVICE_DATE>20050621</SERVICE_DATE>
+            <SERVICE_TIME>123000</SERVICE_TIME>
+            <VERSION_ID>02</VERSION_ID>
+            <SERV_RESPONSE>
+                <STATUS>S</STATUS>
+                <CODE>EEE0204</CODE>
+                <DESC>*******</DESC>
+            </SERV_RESPONSE>
+        </SERVICE_HEADER>
+        <SERVICE_BODY>
+            <EXT_ATTRIBUTES>
+            </EXT_ATTRIBUTES>
+            <RESPONSE>
+                <CARD_NO>198138949998232</CARD_NO>
+                <CURR_CD>156</CURR_CD>
+                <STMT_DATE>2017-02-03</STMT_DATE>
+                <TERMS>
+                    <TERM>
+                      <LOAN_INIT_TERM>3</LOAN_INIT_TERM>
+                      <LOAN_AMT>200</LOAN_AMT>
+                     </TERM>
+                    <TERM>
+                     <LOAN_INIT_TERM>6</LOAN_INIT_TERM>
+                     <LOAN_AMT>200</LOAN_AMT>
+                    </TERM>
+                    <TERM>
+                     <LOAN_INIT_TERM>9</LOAN_INIT_TERM>
+                     <LOAN_AMT>200</LOAN_AMT>
+                    </TERM>
+                    <TERM>
+                     <LOAN_INIT_TERM>12</LOAN_INIT_TERM>
+                     <LOAN_AMT>200</LOAN_AMT>
+                    </TERM>
+                    <TERM>
+                     <LOAN_INIT_TERM>24</LOAN_INIT_TERM>
+                     <LOAN_AMT>200</LOAN_AMT>
+                    </TERM>
+                    <TERM>
+                     <LOAN_INIT_TERM>36</LOAN_INIT_TERM>
+                     <LOAN_AMT>1200</LOAN_AMT>
+                    </TERM>
+                </TERMS>
+            </RESPONSE>
+        </SERVICE_BODY>
+    </SERVICE>
+    
+[I 180507 09:38:28 installment:41] items: [OrderedDict([('LOAN_INIT_TERM', '3'), ('LOAN_AMT', '200')]), OrderedDict([('LOAN_INIT_TERM', '6'), ('LOAN_AMT', '200')]), OrderedDict([('LOAN_INIT_TERM', '9'), ('LOAN_AMT', '200')]), OrderedDict([('LOAN_INIT_TERM', '12'), ('LOAN_AMT', '200')]), OrderedDict([('LOAN_INIT_TERM', '24'), ('LOAN_AMT', '200')]), OrderedDict([('LOAN_INIT_TERM', '36'), ('LOAN_AMT', '1200')])]
+[I 180507 09:38:28 web:2106] 304 GET /tlwx/ccrd/installment/bill (192.168.100.52) 30.47ms
+[I 180507 09:39:04 root:152] EVENT
+[I 180507 09:39:04 web:2106] 200 POST /tlwx?signature=194a0f1d661dc01cc58e53be4b17ab0e18bfb770&timestamp=1525657215&nonce=459280963&openid=oSDTiwgyLLAgOBPWwHsBQxOXd860 (192.168.100.52) 2.66ms
+[D 180507 09:39:04 common:36] FUNC: <function ActivateHandler.get at 0x7fd52bb5c950>
+[I 180507 09:39:04 web:2106] 200 GET /tlwx/ccrd/activate?code=061FakWk1q80Am0lnaUk1HQlWk1FakWF&state=1 (192.168.100.52) 117.75ms
+[I 180507 09:39:04 web:2106] 200 GET /tlwx/static/asset/jquery-extend.js?v=76342d61d51045187e755415345c6ed8 (192.168.100.52) 2.62ms
+[I 180507 09:39:04 web:2106] 200 GET /tlwx/static/asset/dialog.js?v=a200543991dbeda7e5391d17fa0b04e4 (192.168.100.52) 2.04ms
+[I 180507 09:39:04 web:2106] 200 GET /tlwx/static/js/ccrd/activate.js?v=ea7f91c402c20649f2b2a6cd512ddfed (192.168.100.52) 2.00ms
+[I 180507 09:39:04 web:2106] 200 GET /tlwx/static/font/iconfont.woff?t=1493801407135 (192.168.100.52) 2.03ms
+[I 180507 09:39:30 root:152] EVENT
+[I 180507 09:39:30 web:2106] 200 POST /tlwx?signature=9a6f310f4c210ba08d1415712b3a89993a959199&timestamp=1525657242&nonce=1589994169&openid=oSDTiwgyLLAgOBPWwHsBQxOXd860 (192.168.100.52) 2.37ms
+[D 180507 09:39:31 common:36] FUNC: <function need_bind.<locals>.wrapper at 0x7fd52bb5aea0>
+[D 180507 09:39:31 tl_api:34] XML TYPE: <class 'str'>
+[I 180507 09:39:31 tl_api:62] [S]: b'000522<?xml version="1.0" encoding="UTF-8" ?><SERVICE xmlns="http://www.allinfinance.com/dataspec/"><SERVICE_HEADER><SERVICE_SN>20180507093931636</SERVICE_SN><SERVICE_ID>12010</SERVICE_ID><ORG>000069411200</ORG><CHANNEL_ID>07</CHANNEL_ID><OP_ID></OP_ID><REQUST_TIME>20180507093931</REQUST_TIME><VERSION_ID>01</VERSION_ID><MAC></MAC></SERVICE_HEADER><SERVICE_BODY><EXT_ATTRIBUTES></EXT_ATTRIBUTES><REQUEST><CARD_NO>330721199403195410</CARD_NO><CURR_CD>156</CURR_CD><STMT_DATE>000000</STMT_DATE></REQUEST></SERVICE_BODY></SERVICE>'
+[I 180507 09:39:31 tl_api:65] [R]: b'001047'
+[I 180507 09:39:31 tl_api:67] [R]: <?xml version="1.0" encoding="UTF-8"?>
+    <SERVICE xmlns="http://www.allinfinance.com/dataspec/">
+        <SERVICE_HEADER>
+            <SERVICE_SN>19823471237417412748</SERVICE_SN>
+            <SERVICE_ID>12010</SERVICE_ID>
+            <REQUESTER_ID>0004</REQUESTER_ID>
+            <CHANNEL_ID>070711</CHANNEL_ID>
+            <SERVICE_DATE>20050621</SERVICE_DATE>
+            <SERVICE_TIME>123000</SERVICE_TIME>
+            <VERSION_ID>02</VERSION_ID>
+            <SERV_RESPONSE>
+                <STATUS>S</STATUS>
+                <CODE></CODE>
+                <DESC></DESC>
+            </SERV_RESPONSE>
+        </SERVICE_HEADER>
+        <SERVICE_BODY>
+            <EXT_ATTRIBUTES>
+            </EXT_ATTRIBUTES>
+            <RESPONSE>
+                <DUAL_CURR_IND>N</DUAL_CURR_IND>
+                <CURR_CD>158</CURR_CD>
+                <QUAL_GRACE_BAL>10100.00</QUAL_GRACE_BAL>
+                <TOT_DUE_AMT>1000.00</TOT_DUE_AMT>
+                <CTD_PMT_NOT_AMT>4000.00</CTD_PMT_NOT_AMT>
+                <BILLING_DATE>20151110</BILLING_DATE>
+                <PMT_DUE_DATE>20151205</PMT_DUE_DATE>
+            </RESPONSE>
+        </SERVICE_BODY>
+    </SERVICE>
+    
+[I 180507 09:39:31 web:2106] 200 GET /tlwx/ccrd/bill?code=021yYoNt12p4Bb0OKVOt1X9uNt1yYoNJ&state=1 (192.168.100.52) 22.95ms
+[I 180507 10:00:02 async_wx:23] get_access_token {'access_token': '9_pLpJnIvC62WV9PQyr-yP_kjrLO8zc0xcRtJK1KX7QhmUPUEYvHARatjkZJdsEQmsiHXXrY8K6-PtA9ONfqIZaxPeryPrv_OrZcdFE7OR-4_L5ygp1PhuvaLJFvl4chpEbEEIT-LYj4pd8saLBADaABAUTW', 'expires_in': 7200}
+[I 180507 10:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpR9BW2CJB7hzkAj_mjzez_xehEdO6zcWFRUArKlQKm4fA', 'expires_in': 7200}
+[I 180507 10:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 339.91ms
+[W 180507 10:08:52 web:2106] 404 GET /tlwx/static/img/credit_card/mes_apply1.jpg (192.168.100.52) 5.81ms
+[W 180507 10:08:52 web:2106] 404 GET /tlwx/static/img/credit_card/mes_apply2.png (192.168.100.52) 1.09ms
+[W 180507 10:08:52 web:2106] 404 GET /tlwx/static/img/credit_card/mes_progress.png (192.168.100.52) 1.16ms
+[I 180507 11:00:02 async_wx:23] get_access_token {'access_token': '9_YdjMiJ1x__oDGZ0ZY2ZmEj1UFxReqF5Bp8WdsV1ywtMCxb5v43nwgQxXDeTaMwlz6tSHEApnvy7oh-ldl7ZkFpJwMm1AM_eIEUIHODj_epW94DEccxwoJAT638wigI5XhwCjNncyUUEgtb8dKGScAJASOA', 'expires_in': 7200}
+[I 180507 11:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpR9BW2CJB7hzkAj_mjzez_xehEdO6zcWFRUArKlQKm4fA', 'expires_in': 7200}
+[I 180507 11:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 335.24ms
+[I 180507 12:00:02 async_wx:23] get_access_token {'access_token': '9_pKeImcggXsciM78KvRd5yTzkcLN45DhBlD1O2-srNw5NaIImNsFWwgfwTBaHOIH0cW1IlEpb7v2mR35We-_yXyo-ky-hK79LmQ2gBOnYXF-wD36pDhX1G5lVZ9bUcBUoeWzJI0Bh6OelHjjjECHfAHAPNS', 'expires_in': 7200}
+[I 180507 12:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpS-f2HO-lyfpyI6WJtHYWOuKS3AasdVROVa-oDUCh9cqA', 'expires_in': 7200}
+[I 180507 12:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 384.49ms
+[I 180507 13:00:02 async_wx:23] get_access_token {'access_token': '9_5JZTkZR35PSP54ygdia2FX5NUSDXAKYHNRRMJL054e6LWodD2Ed6_RYTjOzDKfGyT87BcGN34aEkd-o01z26nWCYiyUmJEiPsc2Ae11t4ifFXMiTI5_Wqr_30bQFOBbABAPYL', 'expires_in': 7200}
+[I 180507 13:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpS-f2HO-lyfpyI6WJtHYWOuKS3AasdVROVa-oDUCh9cqA', 'expires_in': 7200}
+[I 180507 13:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 387.16ms
+[I 180507 13:26:46 root:152] EVENT
+[I 180507 13:26:46 web:2106] 200 POST /tlwx?signature=76df8ee944554be954019b3f38cf5f172c586acf&timestamp=1525670878&nonce=836443613&openid=oSDTiwsy16xhG3lrE2PBlxa9uPgA (192.168.100.52) 7.05ms
+[I 180507 14:00:02 async_wx:23] get_access_token {'access_token': '9_xCWoSYsgC0G0pz0ZsQ5Luu4p77RjqCQNXHn8aqsBbEKn91-6dpB6fIPY4_TksRzRhrJTAzqDfOoHT4bmMgep4hf94YpdMXhhuUgTKENk9iCMHIhPXl5b4D5C04JUTGRLeDr4yt36IfyKOcgQYBZjACAKNL', 'expires_in': 7200}
+[I 180507 14:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSnaE3KOFLTY0Of8dUYfEsnHj2T2COnHqEt3IWxF9Irjg', 'expires_in': 7200}
+[I 180507 14:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 426.46ms
+[I 180507 15:00:01 async_wx:23] get_access_token {'access_token': '9_SnDXbuLlgvVD08A0cB6z7MDKArc7bWzdmW_nP9bjIHhhP_TELwGSG95NFRENGxapO0vKdj0ZBpzR4u6K_q0FOf2fNsghCiHl4Q7OZk9rVMsEZfSXV8_sOPYUfQlQv9SIN0GEwUbO6X3QIdOUXLXcAAADRD', 'expires_in': 7200}
+[I 180507 15:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSnaE3KOFLTY0Of8dUYfEsnHj2T2COnHqEt3IWxF9Irjg', 'expires_in': 7200}
+[I 180507 15:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 346.72ms
+[W 180507 15:12:26 web:1618] 403 POST /tlwx/wx/jssdk (192.168.100.52): '_xsrf' argument missing from POST
+[W 180507 15:12:26 web:2106] 403 POST /tlwx/wx/jssdk (192.168.100.52) 7.14ms
+[E 180507 15:12:26 web:1065] Uncaught exception in write_error
+    Traceback (most recent call last):
+      File "/home/tonglian/py3venv/lib/python3.6/site-packages/tornado/web.py", line 1518, in _execute
+        self.check_xsrf_cookie()
+      File "/home/tonglian/tlwx/app/view/common.py", line 70, in check_xsrf_cookie
+        super().check_xsrf_cookie()
+      File "/home/tonglian/py3venv/lib/python3.6/site-packages/tornado/web.py", line 1359, in check_xsrf_cookie
+        raise HTTPError(403, "'_xsrf' argument missing from POST")
+    tornado.web.HTTPError: HTTP 403: Forbidden ('_xsrf' argument missing from POST)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/tonglian/py3venv/lib/python3.6/site-packages/tornado/web.py", line 1063, in send_error
+        self.write_error(status_code, **kwargs)
+      File "/home/tonglian/py3venv/lib/python3.6/site-packages/tornado/web.py", line 1086, in write_error
+        self.finish()
+      File "/home/tonglian/py3venv/lib/python3.6/site-packages/tornado/web.py", line 1022, in finish
+        self.on_finish()
+      File "/home/tonglian/tlwx/app/view/common.py", line 66, in on_finish
+        self.db.close()
+    AttributeError: 'JSSDKHandler' object has no attribute 'db'
+[I 180507 16:00:07 async_wx:23] get_access_token {'access_token': '9_l985IK6_5ATDC1abwWThIOE3UvFzd30rZKJgR6hiZ-6XYFSOZmzau4KDWaexnuQwFwCHh-RrYMjvw_Z56nE86uM549IHO7NUMa3tPq5t6fs_umpATtx4o6c-erR6WrqJFLlEeX2fOGLzQMnHGYAfAJATLN', 'expires_in': 7200}
+[I 180507 16:00:07 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpTR87uhE5XxWGHhasVKr9QUfwLw0eHKI87A5HMaKm7N2Q', 'expires_in': 7200}
+[I 180507 16:00:07 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 358.34ms
+[I 180507 16:59:09 root:152] EVENT
+[I 180507 16:59:09 web:2106] 200 POST /tlwx?signature=9f9e231c39675e9726d12bbc69caa65404c15a16&timestamp=1525683621&nonce=652071891&openid=oSDTiwq1vFtLARyBeBGhRpNeXczA (192.168.100.52) 5.47ms
+[D 180507 16:59:12 common:36] FUNC: <function need_bind.<locals>.wrapper at 0x7fd52bb5aea0>
+[D 180507 16:59:12 tl_api:34] XML TYPE: <class 'str'>
+[I 180507 16:59:12 tl_api:62] [S]: b'000522<?xml version="1.0" encoding="UTF-8" ?><SERVICE xmlns="http://www.allinfinance.com/dataspec/"><SERVICE_HEADER><SERVICE_SN>20180507165912637</SERVICE_SN><SERVICE_ID>12010</SERVICE_ID><ORG>000069411200</ORG><CHANNEL_ID>07</CHANNEL_ID><OP_ID></OP_ID><REQUST_TIME>20180507165912</REQUST_TIME><VERSION_ID>01</VERSION_ID><MAC></MAC></SERVICE_HEADER><SERVICE_BODY><EXT_ATTRIBUTES></EXT_ATTRIBUTES><REQUEST><CARD_NO>330721199403195410</CARD_NO><CURR_CD>156</CURR_CD><STMT_DATE>000000</STMT_DATE></REQUEST></SERVICE_BODY></SERVICE>'
+[I 180507 16:59:12 tl_api:65] [R]: b'001047'
+[I 180507 16:59:12 tl_api:67] [R]: <?xml version="1.0" encoding="UTF-8"?>
+    <SERVICE xmlns="http://www.allinfinance.com/dataspec/">
+        <SERVICE_HEADER>
+            <SERVICE_SN>19823471237417412748</SERVICE_SN>
+            <SERVICE_ID>12010</SERVICE_ID>
+            <REQUESTER_ID>0004</REQUESTER_ID>
+            <CHANNEL_ID>070711</CHANNEL_ID>
+            <SERVICE_DATE>20050621</SERVICE_DATE>
+            <SERVICE_TIME>123000</SERVICE_TIME>
+            <VERSION_ID>02</VERSION_ID>
+            <SERV_RESPONSE>
+                <STATUS>S</STATUS>
+                <CODE></CODE>
+                <DESC></DESC>
+            </SERV_RESPONSE>
+        </SERVICE_HEADER>
+        <SERVICE_BODY>
+            <EXT_ATTRIBUTES>
+            </EXT_ATTRIBUTES>
+            <RESPONSE>
+                <DUAL_CURR_IND>N</DUAL_CURR_IND>
+                <CURR_CD>158</CURR_CD>
+                <QUAL_GRACE_BAL>10100.00</QUAL_GRACE_BAL>
+                <TOT_DUE_AMT>1000.00</TOT_DUE_AMT>
+                <CTD_PMT_NOT_AMT>4000.00</CTD_PMT_NOT_AMT>
+                <BILLING_DATE>20151110</BILLING_DATE>
+                <PMT_DUE_DATE>20151205</PMT_DUE_DATE>
+            </RESPONSE>
+        </SERVICE_BODY>
+    </SERVICE>
+    
+[I 180507 16:59:12 web:2106] 200 GET /tlwx/ccrd/bill?code=001RodnP0Ea42c2g5TkP0Fd8nP0Rodn3&state=1 (192.168.100.52) 35.62ms
+[I 180507 16:59:16 root:152] EVENT
+[I 180507 16:59:16 web:2106] 200 POST /tlwx?signature=566f542a4744cf4994886e68909576eda7e42c77&timestamp=1525683628&nonce=324867127&openid=oSDTiwq1vFtLARyBeBGhRpNeXczA (192.168.100.52) 2.08ms
+[D 180507 16:59:17 common:36] FUNC: <function SelectHandler.get at 0x7fd52bb656a8>
+[I 180507 16:59:17 online_apply:46] items: [<app.db.model.ccrd.CCRDOnlineApply object at 0x7fd53247f7f0>]
+[I 180507 16:59:17 web:2106] 200 GET /tlwx/ccrd/online_apply/select?code=081X2Trk0r6gPk1a3srk06VTrk0X2TrZ&state=1 (192.168.100.52) 21.07ms
+[D 180507 16:59:18 common:36] FUNC: <function check_apply.<locals>.wrapper at 0x7fd52bb6f730>
+[I 180507 16:59:18 online_apply:23] product_cd: A002 A002
+[I 180507 16:59:18 web:2106] 200 GET /tlwx/ccrd/online_apply/face_check (192.168.100.52) 12.99ms
+[D 180507 16:59:18 async_wx:201] <class 'str'>
+    
+[D 180507 16:59:18 async_wx:201] <class 'str'>
+    
+[D 180507 16:59:18 async_wx:201] <class 'int'>
+    
+[D 180507 16:59:18 async_wx:201] <class 'str'>
+    
+[D 180507 16:59:18 async_wx:201] <class 'str'>
+    
+[I 180507 16:59:18 async_wx:213] RETURN: {'nonceStr': 'DU4yv5A55YSwfw6', 'jsapi_ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpTR87uhE5XxWGHhasVKr9QUfwLw0eHKI87A5HMaKm7N2Q', 'timestamp': 1525683558, 'url': 'https://hz.wx.yinsho.com/tlwx/ccrd/online_apply/face_check', 'signature': 'be25b0c4f99847844c4ebbecffbb0035d45af523'} <class 'dict'>
+[D 180507 16:59:18 wx:52] <class 'dict'> {'success': True, 'config': {'nonceStr': 'DU4yv5A55YSwfw6', 'jsapi_ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpTR87uhE5XxWGHhasVKr9QUfwLw0eHKI87A5HMaKm7N2Q', 'timestamp': 1525683558, 'url': 'https://hz.wx.yinsho.com/tlwx/ccrd/online_apply/face_check', 'signature': 'be25b0c4f99847844c4ebbecffbb0035d45af523'}}
+[I 180507 16:59:18 web:2106] 200 POST /tlwx/wx/jssdk (192.168.100.52) 3.03ms
+[D 180507 16:59:22 common:36] FUNC: <function SelectHandler.get at 0x7fd52bb656a8>
+[I 180507 16:59:22 online_apply:46] items: [<app.db.model.ccrd.CCRDOnlineApply object at 0x7fd527dd1048>]
+[I 180507 16:59:22 web:2106] 200 GET /tlwx/ccrd/online_apply/select?code=081X2Trk0r6gPk1a3srk06VTrk0X2TrZ&state=1 (192.168.100.52) 11.78ms
+[I 180507 17:00:02 async_wx:23] get_access_token {'access_token': '9_G8e86SEflQ6pROAp84BDGzq3lQwZ5jaBDHX-x1J60S9rnVlvfyTyenoXFaYgEoyWKqDSCsZsEs_2J5rjPeCY8cMZx_D8KVm0iCnJLz7WmX5CcSdbHUuyDpTQRXAUJVxaApFGXmPpCZufZWVxSWJiAJACGT', 'expires_in': 7200}
+[I 180507 17:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpTR87uhE5XxWGHhasVKr9QUfwLw0eHKI87A5HMaKm7N2Q', 'expires_in': 7200}
+[I 180507 17:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 311.50ms
+[I 180507 18:00:08 async_wx:23] get_access_token {'access_token': '9_T-EHrEnYqHOHgseGYSHwBydTvE1e5vyQp522s_L10kGUxN53f7DUddkvo7XcwLwlQ-Sw7MPW9CugKWblZ_mHxUEHOhGRFCa_e_RPZQSrI6mDJGlq2oxI19at4-62RsIDiaF9PEAkSTre5MFUMJFaAAAURN', 'expires_in': 7200}
+[I 180507 18:00:08 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpT12QLuKEcNsPT9AN3ubVzuD7xJzFs0QjBoH-XbxLg4yg', 'expires_in': 7200}
+[I 180507 18:00:08 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 375.61ms
+[I 180507 19:00:01 async_wx:23] get_access_token {'access_token': '9_Z0lGgzyHqTMonWaSXechaPMPKJ0aI77eB1d2fB8FlsV1C6oH7aYv-AzTE7xvrpy_QKOyNUwUlMOaNPUEIQTBo6bS32QNW8DLJM2dGrEW1gJcgp-ouxI8DEfAmysWLLjAHADSS', 'expires_in': 7200}
+[I 180507 19:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpT12QLuKEcNsPT9AN3ubVzuD7xJzFs0QjBoH-XbxLg4yg', 'expires_in': 7200}
+[I 180507 19:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 394.26ms
+[I 180507 20:00:07 async_wx:23] get_access_token {'access_token': '9_fntX-rGSgCVekL_pdIOIOC5K467tow6SBB6EVgdNmwiib6RXawY4lfSveNmp-o8nUr6XpipCI55lm746juQGjlW11RgLLHRQ9InseSWzZyGEz-rayHImEhr3gxr0p99bBAnOH0GUa2WThPL1TTQiABAKKH', 'expires_in': 7200}
+[I 180507 20:00:07 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSQMXDm8xRCK-cZPn8_QHwSz8wXjE_-PZ0s9pqnCF6GwA', 'expires_in': 7200}
+[I 180507 20:00:07 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 349.03ms
+[I 180507 21:00:02 async_wx:23] get_access_token {'access_token': '9_2gl2Y1Nm8WIv00MOMMO3eZBWoMSjzWTSVVZKbUfSk6PTdIkwaieLOKWXKylyiRCCWSQRJuswaLwPAh0pea-QzrysOVkOvgsQH-ffh0LIllKPED2LE-Zv4g2MLpFIgWixlpO8iYfIxtyH2p7IJXVdAFAVJH', 'expires_in': 7200}
+[I 180507 21:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSQMXDm8xRCK-cZPn8_QHwSz8wXjE_-PZ0s9pqnCF6GwA', 'expires_in': 7200}
+[I 180507 21:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 395.33ms
+[I 180507 22:00:02 async_wx:23] get_access_token {'access_token': '9_mXH5DJcpNDDZA12TKEr-Lh2zuvIwJn-J36wSMGjlRA1hR2T7PHU-B60kl0hactSy9n9pDLdl8U5GSGu1J-zwNSthae1yinZzzjfSToAL-uUN5A2ErC4O56iNiMG6tMyhXmvLVQjxhpi7dpe0RENjAHAVIR', 'expires_in': 7200}
+[I 180507 22:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpTPrhVczsitA9euuDOvpKTaYJRsU6ansMXfu0EUj7uRAA', 'expires_in': 7200}
+[I 180507 22:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 359.47ms
+[I 180507 23:00:07 async_wx:23] get_access_token {'access_token': '9_Pazg8JnXGYhmxVBxYZ5RE195001epwvHLuUKkPdDuB59CS3tJJ34Y2MuBjg5A48-kBMdh7xVnKOvP0MTa4LC_yq1-mD1K53N_ev57_7BJstGWGBi4LZOi9bvC0CY8vF0MMDT69yX04MKpjQEVGZbAGAALE', 'expires_in': 7200}
+[I 180507 23:00:08 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpTPrhVczsitA9euuDOvpKTaYJRsU6ansMXfu0EUj7uRAA', 'expires_in': 7200}
+[I 180507 23:00:08 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 369.56ms
+[I 180508 00:00:01 async_wx:23] get_access_token {'access_token': '9_TnPd2QJETV4kjk9JyyRNxaaz0dhw0hJStQW-AChY3jmle_D0pUuw188V77DQUKfB0cbCJRozJA2qLWxBTvt1PGnHmLhcFTj9EilNRS3oMES3EHXoqYwIAoRe4b1w_OFBQwzGonmL3apu3fW4YMZiADAOCP', 'expires_in': 7200}
+[I 180508 00:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpRyPoiSBRd8OYs9-gwjSZY4y5whjTKGLd-38Dn2S0veYg', 'expires_in': 7200}
+[I 180508 00:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 351.76ms
+[I 180508 01:00:01 async_wx:23] get_access_token {'access_token': '9_9L2d4U1Cf-C89rBgV5t53R6Vtl0hqfxMopOPt1jPP9uL3Xdh7rXdVWkjK1nf-FgdUtAiU10ImE9yfsaQYs0zbsshLZRCdjQ7HvyuiflJoK5rnAaSIhTIczawetAUwgU1_o6sSdBe011WmEyXAVMbAFAMHY', 'expires_in': 7200}
+[I 180508 01:00:01 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpRyPoiSBRd8OYs9-gwjSZY4y5whjTKGLd-38Dn2S0veYg', 'expires_in': 7200}
+[I 180508 01:00:01 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 318.17ms
+[I 180508 02:00:01 async_wx:23] get_access_token {'access_token': '9_3CS2SCZVfXXJ4cl45sPvwyNj8IruiFURfTjESjcGuDDDccDTvrkircadEsawMyxT4atMBsewK7WL6w_3Ov4AHm4kQW2uekQuyNkF4-ZdAU63BEH92qr_P3sOO-flUGK1dan6Um81jfwHP17CYPPcACASJJ', 'expires_in': 7200}
+[I 180508 02:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpT4poK6zDr9u-fxpNIXgCXcS1V8jWOWZhLGcsbvmS7a_Q', 'expires_in': 7200}
+[I 180508 02:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 307.96ms
+[I 180508 03:00:02 async_wx:23] get_access_token {'access_token': '9_UWEIUTyLK9vjy8paQuUwHPyhB6D7p6dm4P03y2h5o8772WikslIcqA42OVHQ8-j7kZYhQQNBsJiDwNikwTxF642PitnuJHDuOUFU-P4WtnKBc8TRnwviDx0Rg7YAVLn_eywjr6AM54HjjJywYJRaAFALWE', 'expires_in': 7200}
+[I 180508 03:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpT4poK6zDr9u-fxpNIXgCXcS1V8jWOWZhLGcsbvmS7a_Q', 'expires_in': 7200}
+[I 180508 03:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 349.78ms
+[I 180508 04:00:02 async_wx:23] get_access_token {'access_token': '9_ie6jWZmEn4J0sy8xi13KK35MLZq8Q8K4nJvGTsEN1bb7Bpuh__JopswaYizqCI2XiaD4p1ZWX5d_Vq_5D81sojo5obOGm87LBqil2QjIlMN4u7JXNst097Tr18OVRWOQRP_gl9XVRheT0YIlRVChAAAWAH', 'expires_in': 7200}
+[I 180508 04:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpQNE7ZY7xGG18b9Xur_b5Awfa8nVwiVtYcCIxOmTWyFQg', 'expires_in': 7200}
+[I 180508 04:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 306.61ms
+[I 180508 05:00:07 async_wx:23] get_access_token {'access_token': '9_m92os_EVDW0Rh2XZvRd5yTzkcLN45DhBlD1O27wmv4RWkDW4YcyDhpAXUEgHlRsUHdW_HjgzRYFAKuEdUPzfA6p4X4UHOFaQpgdJKBPww4VWrvBYy7Kyu2hTjHJlDirjV45wgcoIhKlfR7aaJNGfADAOSL', 'expires_in': 7200}
+[I 180508 05:00:07 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpQNE7ZY7xGG18b9Xur_b5Awfa8nVwiVtYcCIxOmTWyFQg', 'expires_in': 7200}
+[I 180508 05:00:07 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 309.57ms
+[I 180508 06:00:07 async_wx:23] get_access_token {'access_token': '9_J3K-TADixk7Z8ZUr7IbhBFpVqAJzJGOwPyYbp50azVf8fpdFxVsb1MkqRrpxYEfwy9XvhznC4-D_b_IvrArdoByB-nvaWz7dEASCiOm9stm51XkFAMrs0-TXbbxyTFjGSuwWXOu-3JbwfZbuXJPaAEASEK', 'expires_in': 7200}
+[I 180508 06:00:08 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpT2ZmpwPgJJIhqDXIdpschx0S3sBIb4DJnFwsZAAml5Ng', 'expires_in': 7200}
+[I 180508 06:00:08 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 306.66ms
+[I 180508 07:00:01 async_wx:23] get_access_token {'access_token': '9_Wmf8kNnAJFzmmfvEDfkmt0DI9W7RP1K0u80ahn0A2cbtDhWx-C2MUKXekIkLypNSJ__NJa6UTVyICMOMYK22GemmNjdENsE_xn8iBXFjPqNaKqFc_4JvaKstgZzico_gPgYZAVIrf3IsHYnpADZbAEAKNJ', 'expires_in': 7200}
+[I 180508 07:00:01 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpT2ZmpwPgJJIhqDXIdpschx0S3sBIb4DJnFwsZAAml5Ng', 'expires_in': 7200}
+[I 180508 07:00:01 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 323.15ms
+[I 180508 08:00:01 async_wx:23] get_access_token {'access_token': '9_nZ4NcWmCNKG1Ku5qFzlol0lhU-Ut7oLsi5YtoHpsR-cDcBQy2iW2YaxTKixzIlrbYkBy43xHY2sYaktixcTK_3KjC9KbmGdJHV_9B_cgU7opmVrXbeBrJ9IW-JzjL5UxWhSUn_68WNjqwE3hPBNjADAXJV', 'expires_in': 7200}
+[I 180508 08:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpQBunWwaCf4VwGIFDn99rwItXBy3GwKcKho2HxRcqLp9Q', 'expires_in': 7200}
+[I 180508 08:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 416.31ms
+[I 180508 09:00:01 async_wx:23] get_access_token {'access_token': '9_k19XUVePh7LpJqly6DhW0sQUH_zZFg1CrDJF287PdDFZh1SctF6FZhlCgaEXtvbhM8_HHSMX_O1sL5lZf5v1umA_SElMPwCLe_SpIq6UAG_SEAlK1iHwSWrfzZuglm49z4bpQ2LxMYQg7RrdKYGgAHARFN', 'expires_in': 7200}
+[I 180508 09:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpQBunWwaCf4VwGIFDn99rwItXBy3GwKcKho2HxRcqLp9Q', 'expires_in': 7200}
+[I 180508 09:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 368.47ms
+[D 180508 09:25:14 common:163] <?xml version="1.0" encoding="UTF-8"?>
+    <SERVICE xmlns="http://www.allinfinance.com/dataspec/">
+      <SERVICE_HEADER>
+        <SERVICE_ID>91000</SERVICE_ID>
+        <SERVICE_TIME>20180312094538</SERVICE_TIME>
+        <ORG>000064901380</ORG>
+      </SERVICE_HEADER>
+      <SERVICE_BODY>
+        <REQUEST>
+          <CARD_NO>330721199403195410</CARD_NO>
+          <MOBILE>18811111111</MOBILE>
+          <NAME>连一</NAME>
+          <GENDER>F</GENDER>
+          <TRANS_AMT>100.00</TRANS_AMT>
+          <CHB_TRANS_AMT>100.00</CHB_TRANS_AMT>
+          <TRANS_CURR>156</TRANS_CURR>
+          <B012>091349</B012>
+          <B013>0312</B013>
+          <B018>6012</B018>
+          <B019/>
+          <B032>64652280</B032>
+          <B033>64652280</B033>
+          <B039>00</B039>
+          <B041>500001</B041>
+          <B042>000000000000000</B042>
+          <B043>张家口银行</B043>
+          <B102>6231778000000001813</B102>
+          <B103>6282640008804352</B103>
+          <TRANS_TYPE>TransferCredit</TRANS_TYPE>zz
+          <TRANS_DIRECTION>Normal</TRANS_DIRECTION>
+          <CHANNEL>BANK</CHANNEL>
+          <TRANS_TIME>0312091349</TRANS_TIME>
+          <TRANS_TERMINAL>MB</TRANS_TERMINAL>
+          <ACCOUNT_OTB>30101.00</ACCOUNT_OTB>
+          <CASH_OTB>15101.00</CASH_OTB>
+          <AVAILABLE_OTB>30101.00</AVAILABLE_OTB>
+        </REQUEST>
+      </SERVICE_BODY>
+    </SERVICE>
+     <class 'str'>
+[I 180508 09:25:14 tl_api:62] [S]: b'001236<?xml version="1.0" encoding="UTF-8"?>\n<SERVICE xmlns="http://www.allinfinance.com/dataspec/">\n  <SERVICE_HEADER>\n    <SERVICE_ID>91000</SERVICE_ID>\n    <SERVICE_TIME>20180312094538</SERVICE_TIME>\n    <ORG>000064901380</ORG>\n  </SERVICE_HEADER>\n  <SERVICE_BODY>\n    <REQUEST>\n      <CARD_NO>330721199403195410</CARD_NO>\n      <MOBILE>18811111111</MOBILE>\n      <NAME>\xe8\xbf\x9e\xe4\xb8\x80</NAME>\n      <GENDER>F</GENDER>\n      <TRANS_AMT>100.00</TRANS_AMT>\n      <CHB_TRANS_AMT>100.00</CHB_TRANS_AMT>\n      <TRANS_CURR>156</TRANS_CURR>\n      <B012>091349</B012>\n      <B013>0312</B013>\n      <B018>6012</B018>\n      <B019/>\n      <B032>64652280</B032>\n      <B033>64652280</B033>\n      <B039>00</B039>\n      <B041>500001</B041>\n      <B042>000000000000000</B042>\n      <B043>\xe5\xbc\xa0\xe5\xae\xb6\xe5\x8f\xa3\xe9\x93\xb6\xe8\xa1\x8c</B043>\n      <B102>6231778000000001813</B102>\n      <B103>6282640008804352</B103>\n      <TRANS_TYPE>TransferCredit</TRANS_TYPE>zz\n      <TRANS_DIRECTION>Normal</TRANS_DIRECTION>\n      <CHANNEL>BANK</CHANNEL>\n      <TRANS_TIME>0312091349</TRANS_TIME>\n      <TRANS_TERMINAL>MB</TRANS_TERMINAL>\n      <ACCOUNT_OTB>30101.00</ACCOUNT_OTB>\n      <CASH_OTB>15101.00</CASH_OTB>\n      <AVAILABLE_OTB>30101.00</AVAILABLE_OTB>\n    </REQUEST>\n  </SERVICE_BODY>\n</SERVICE>\n'
+[I 180508 09:25:15 tl_api:65] [R]: b'000378'
+[I 180508 09:25:15 tl_api:67] [R]: <?xml version="1.0" encoding="UTF-8" ?><SERVICE xmlns="http://www.allinfinance.com/dataspec/"><SERVICE_HEADER><SERVICE_SN>20180508092515</SERVICE_SN><SERVICE_ID>91000</SERVICE_ID><ORG>000069411200</ORG><SERVICE_TIME>20180508092515</SERVICE_TIME><SERV_RESPONSE><STATUS>S</STATUS><CODE>00</CODE><DESC></DESC></SERV_RESPONSE></SERVICE_HEADER><SERVICE_BODY></SERVICE_BODY></SERVICE>
+[D 180508 09:25:15 common:165] <?xml version="1.0" encoding="UTF-8" ?><SERVICE xmlns="http://www.allinfinance.com/dataspec/"><SERVICE_HEADER><SERVICE_SN>20180508092515</SERVICE_SN><SERVICE_ID>91000</SERVICE_ID><ORG>000069411200</ORG><SERVICE_TIME>20180508092515</SERVICE_TIME><SERV_RESPONSE><STATUS>S</STATUS><CODE>00</CODE><DESC></DESC></SERV_RESPONSE></SERVICE_HEADER><SERVICE_BODY></SERVICE_BODY></SERVICE>
+[I 180508 09:25:15 web:2106] 200 GET /tlwx/test/a (192.168.100.52) 189.04ms
+[I 180508 09:25:15 root:152] EVENT
+[I 180508 09:25:15 web:2106] 200 POST /tlwx?signature=83c14c35d5293a065b37d3cf775aa060cbcdd3e8&timestamp=1525742787&nonce=1920351389&openid=oSDTiwq1vFtLARyBeBGhRpNeXczA (192.168.100.52) 2.58ms
+[I 180508 10:00:02 async_wx:23] get_access_token {'access_token': '9_eyArYvb4Jfwivbe4SB8PJJQhxKp7HxyTbeF5m5_-4VGzLJcdfsep10ZhwJzEqgtOtw3Q4iNTrHXwE6AUpXSZmcd-v94YRK9aLcN6TICqdBPLL3EvdKxEpDexuzlmHM8kqGPAdqmMoqgT468gMIRjAJAAWF', 'expires_in': 7200}
+[I 180508 10:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpQD4qAN41lFirZ7bz5iORYDZXd-FM6KftS3ApyCRLDXfw', 'expires_in': 7200}
+[I 180508 10:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 417.13ms
+[I 180508 11:00:02 async_wx:23] get_access_token {'access_token': '9_LunINDPR1zeZJHNdZh-m1cPLWhyjkRGZWS5q7pvmE_MTGdgbyns051wUWScTyITGuygYqXb4R5MAKDE6NdWsXaIRqc7zTVSaA-hM4ymPa92FnnPTqDgOOVh3T8tP29h0JW-DMeMmmRO_yJ1WPXSeAAABJE', 'expires_in': 7200}
+[I 180508 11:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpQD4qAN41lFirZ7bz5iORYDZXd-FM6KftS3ApyCRLDXfw', 'expires_in': 7200}
+[I 180508 11:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 509.28ms
+[I 180508 11:21:58 root:152] EVENT
+[I 180508 11:21:58 web:2106] 200 POST /tlwx?signature=c9a2cb3c5c0ca9daa4dea819bb9361e70b896e97&timestamp=1525749791&nonce=2109787715&openid=oSDTiwq1vFtLARyBeBGhRpNeXczA (192.168.100.52) 4.56ms
+[D 180508 11:22:01 common:36] FUNC: <function SelectHandler.get at 0x7fd52bb656a8>
+[I 180508 11:22:01 online_apply:46] items: [<app.db.model.ccrd.CCRDOnlineApply object at 0x7fd532489048>]
+[I 180508 11:22:01 web:2106] 200 GET /tlwx/ccrd/online_apply/select?code=011vkopU0Q2AUX1UfzmU0mKupU0vkopn&state=1 (192.168.100.52) 23.41ms
+[I 180508 11:22:13 root:152] EVENT
+[I 180508 11:22:13 web:2106] 200 POST /tlwx?signature=b6534c75c16db5b21b20a95937e1e1734f75d6d2&timestamp=1525749806&nonce=1223746396&openid=oSDTiwq1vFtLARyBeBGhRpNeXczA (192.168.100.52) 2.62ms
+[D 180508 11:22:14 common:36] FUNC: <function SelectHandler.get at 0x7fd52bb656a8>
+[I 180508 11:22:14 online_apply:46] items: [<app.db.model.ccrd.CCRDOnlineApply object at 0x7fd527ddb2b0>]
+[I 180508 11:22:14 web:2106] 200 GET /tlwx/ccrd/online_apply/select?code=061eAPlf0eNqiB1JVrkf08XKlf0eAPlJ&state=1 (192.168.100.52) 14.62ms
+[D 180508 11:22:15 common:36] FUNC: <function ChoiceHandler.get at 0x7fd52bb657b8>
+[I 180508 11:22:15 web:2106] 200 GET /tlwx/ccrd/online_apply/choice (192.168.100.52) 10.08ms
+[I 180508 11:22:16 web:2106] 304 GET /tlwx/static/img/card-bg.jpg (192.168.100.52) 1.84ms
+[I 180508 11:22:17 online_apply:69] REQ: {'product_cd': 'B01', 'openid': 'oSDTiwq1vFtLARyBeBGhRpNeXczA'}
+[I 180508 11:22:17 web:2106] 200 POST /tlwx/ccrd/online_apply/choice (192.168.100.52) 76.16ms
+[D 180508 11:22:17 common:36] FUNC: <function check_apply.<locals>.wrapper at 0x7fd52bb659d8>
+[I 180508 11:22:17 online_apply:23] product_cd: B01 B01
+[I 180508 11:22:17 web:2106] 200 GET /tlwx/ccrd/online_apply/base_info (192.168.100.52) 14.82ms
+[I 180508 11:22:18 web:2106] 200 GET /tlwx/static/js/ccrd/online_apply/main_base_info.js?v=b6f3e117b9429aa2344e6e4b7fa058f0 (192.168.100.52) 2.50ms
+[I 180508 11:22:22 root:152] EVENT
+[I 180508 11:22:22 web:2106] 200 POST /tlwx?signature=253b48b8997cbab7a335977a3b7c0ee5d6781114&timestamp=1525749815&nonce=2086946820&openid=oSDTiwq1vFtLARyBeBGhRpNeXczA (192.168.100.52) 2.57ms
+[D 180508 11:22:26 common:36] FUNC: <function SelectHandler.get at 0x7fd52bb656a8>
+[I 180508 11:22:26 online_apply:46] items: [<app.db.model.ccrd.CCRDOnlineApply object at 0x7fd527ddb550>, <app.db.model.ccrd.CCRDOnlineApply object at 0x7fd527ddb358>]
+[I 180508 11:22:26 web:2106] 200 GET /tlwx/ccrd/online_apply/select?code=061o9km20iJPVC19JZm20usFm20o9km8&state=1 (192.168.100.52) 13.37ms
+[D 180508 11:22:29 common:36] FUNC: <function check_apply.<locals>.wrapper at 0x7fd52bb659d8>
+[I 180508 11:22:29 online_apply:23] product_cd: B01 B01
+[I 180508 11:22:29 web:2106] 200 GET /tlwx/ccrd/online_apply/base_info (192.168.100.52) 14.12ms
+[I 180508 11:22:54 common:74] VCODE:REAL_VCODE 1234:None
+[I 180508 11:22:54 web:2106] 200 POST /tlwx/ccrd/online_apply/base_info (192.168.100.52) 3.18ms
+[I 180508 11:22:57 common:100] params: b'cellphone=17749775784&now=1525749848743'
+[I 180508 11:22:57 common:102] VCODE 1550
+[D 180508 11:22:57 tl_api:34] XML TYPE: <class 'str'>
+[I 180508 11:22:57 tl_api:62] [S]: b'000524<?xml version="1.0" encoding="UTF-8" ?><SERVICE xmlns="http://www.allinfinance.com/dataspec/"><SERVICE_HEADER><SERVICE_SN>20180508112257638</SERVICE_SN><SERVICE_ID>12105</SERVICE_ID><ORG>000069411200</ORG><CHANNEL_ID>07</CHANNEL_ID><OP_ID></OP_ID><REQUST_TIME>20180508112257</REQUST_TIME><VERSION_ID>01</VERSION_ID><MAC></MAC></SERVICE_HEADER><SERVICE_BODY><EXT_ATTRIBUTES></EXT_ATTRIBUTES><REQUEST><MOBILE_NO>17749775784</MOBILE_NO><MESSAGE>\xe6\x9d\xa5\xe8\x87\xaa\xe9\x80\x9a\xe8\x81\x94\xe9\x87\x91\xe8\x9e\x8d\xe7\x9a\x84\xe9\xaa\x8c\xe8\xaf\x81\xe7\xa0\x81\xef\xbc\x8c1550</MESSAGE></REQUEST></SERVICE_BODY></SERVICE>'
+[I 180508 11:22:57 tl_api:65] [R]: b'000634'
+[I 180508 11:22:57 tl_api:67] [R]: <SERVICE xmlns="http://www.allinfinance.com/dataspec/">
+      <SERVICE_HEADER>
+        <SERVICE_SN>20180426101335160</SERVICE_SN>
+        <SERVICE_ID>12105</SERVICE_ID>
+        <ORG>000069411200</ORG>
+        <CHANNEL_ID>07</CHANNEL_ID>
+        <OP_ID/>
+        <REQUST_TIME>20180426101335</REQUST_TIME>
+        <VERSION_ID>01</VERSION_ID>
+        <MAC/>
+        <SERV_RESPONSE>
+          <STATUS>S</STATUS>
+          <CODE>SSSS</CODE>
+          <DESC>交易成功</DESC>
+        </SERV_RESPONSE>
+        <RES_SERVICE_SN>20180426101335160</RES_SERVICE_SN>
+        <RES_SERVICE_TIME>20180426182339</RES_SERVICE_TIME>
+      </SERVICE_HEADER>
+      <SERVICE_BODY>
+        <RESPONSE/>
+      </SERVICE_BODY>
+    </SERVICE>
+    
+[I 180508 11:22:57 web:2106] 200 POST /tlwx/common/send_vcode (192.168.100.52) 17.25ms
+[I 180508 11:26:14 common:74] VCODE:REAL_VCODE 1234:None
+[I 180508 11:26:14 web:2106] 200 POST /tlwx/ccrd/online_apply/base_info (192.168.100.52) 3.70ms
+[I 180508 11:26:17 common:100] params: b'cellphone=17749775784&now=1525750049553'
+[I 180508 11:26:17 common:102] VCODE 9294
+[D 180508 11:26:17 tl_api:34] XML TYPE: <class 'str'>
+[I 180508 11:26:17 tl_api:62] [S]: b'000524<?xml version="1.0" encoding="UTF-8" ?><SERVICE xmlns="http://www.allinfinance.com/dataspec/"><SERVICE_HEADER><SERVICE_SN>20180508112617639</SERVICE_SN><SERVICE_ID>12105</SERVICE_ID><ORG>000069411200</ORG><CHANNEL_ID>07</CHANNEL_ID><OP_ID></OP_ID><REQUST_TIME>20180508112617</REQUST_TIME><VERSION_ID>01</VERSION_ID><MAC></MAC></SERVICE_HEADER><SERVICE_BODY><EXT_ATTRIBUTES></EXT_ATTRIBUTES><REQUEST><MOBILE_NO>17749775784</MOBILE_NO><MESSAGE>\xe6\x9d\xa5\xe8\x87\xaa\xe9\x80\x9a\xe8\x81\x94\xe9\x87\x91\xe8\x9e\x8d\xe7\x9a\x84\xe9\xaa\x8c\xe8\xaf\x81\xe7\xa0\x81\xef\xbc\x8c9294</MESSAGE></REQUEST></SERVICE_BODY></SERVICE>'
+[I 180508 11:26:17 tl_api:65] [R]: b'000634'
+[I 180508 11:26:17 tl_api:67] [R]: <SERVICE xmlns="http://www.allinfinance.com/dataspec/">
+      <SERVICE_HEADER>
+        <SERVICE_SN>20180426101335160</SERVICE_SN>
+        <SERVICE_ID>12105</SERVICE_ID>
+        <ORG>000069411200</ORG>
+        <CHANNEL_ID>07</CHANNEL_ID>
+        <OP_ID/>
+        <REQUST_TIME>20180426101335</REQUST_TIME>
+        <VERSION_ID>01</VERSION_ID>
+        <MAC/>
+        <SERV_RESPONSE>
+          <STATUS>S</STATUS>
+          <CODE>SSSS</CODE>
+          <DESC>交易成功</DESC>
+        </SERV_RESPONSE>
+        <RES_SERVICE_SN>20180426101335160</RES_SERVICE_SN>
+        <RES_SERVICE_TIME>20180426182339</RES_SERVICE_TIME>
+      </SERVICE_HEADER>
+      <SERVICE_BODY>
+        <RESPONSE/>
+      </SERVICE_BODY>
+    </SERVICE>
+    
+[I 180508 11:26:17 web:2106] 200 POST /tlwx/common/send_vcode (192.168.100.52) 15.74ms
+[I 180508 11:26:26 common:74] VCODE:REAL_VCODE 9294:b'9294'
+[I 180508 11:26:26 online_apply:89] PRODUCT_TYPE: B01
+[I 180508 11:26:26 web:2106] 200 POST /tlwx/ccrd/online_apply/base_info (192.168.100.52) 68.81ms
+[D 180508 11:26:26 common:36] FUNC: <function check_apply.<locals>.wrapper at 0x7fd52bb65bf8>
+[I 180508 11:26:26 online_apply:23] product_cd: B01 B01
+[I 180508 11:26:26 web:2106] 200 GET /tlwx/ccrd/online_apply/id_card (192.168.100.52) 18.10ms
+[I 180508 11:26:26 web:2106] 200 GET /tlwx/static/js/ccrd/online_apply/main_id_card.js?v=34d5b4b9e95797a4e40b7050d752c1c7 (192.168.100.52) 2.45ms
+[I 180508 11:26:26 web:2106] 200 GET /tlwx/static/img/id02.png?v=81ecdc6c371027ce7e27573cedf0216f (192.168.100.52) 1.83ms
+[D 180508 11:26:26 async_wx:201] <class 'str'>
+    
+[D 180508 11:26:26 async_wx:201] <class 'str'>
+    
+[D 180508 11:26:26 async_wx:201] <class 'int'>
+    
+[D 180508 11:26:26 async_wx:201] <class 'str'>
+    
+[D 180508 11:26:26 async_wx:201] <class 'str'>
+    
+[I 180508 11:26:26 async_wx:213] RETURN: {'nonceStr': 'V6S0WiwlBeLVhPM', 'jsapi_ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpQD4qAN41lFirZ7bz5iORYDZXd-FM6KftS3ApyCRLDXfw', 'timestamp': 1525749986, 'url': 'https://hz.wx.yinsho.com/tlwx/ccrd/online_apply/id_card', 'signature': 'e2b77111038e08bbaf64a99a3ed096874492defd'} <class 'dict'>
+[D 180508 11:26:26 wx:52] <class 'dict'> {'success': True, 'config': {'nonceStr': 'V6S0WiwlBeLVhPM', 'jsapi_ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpQD4qAN41lFirZ7bz5iORYDZXd-FM6KftS3ApyCRLDXfw', 'timestamp': 1525749986, 'url': 'https://hz.wx.yinsho.com/tlwx/ccrd/online_apply/id_card', 'signature': 'e2b77111038e08bbaf64a99a3ed096874492defd'}}
+[I 180508 11:26:26 web:2106] 200 POST /tlwx/wx/jssdk (192.168.100.52) 2.65ms
+[I 180508 11:26:31 web:2106] 200 POST /tlwx/ccrd/online_apply/id_card (192.168.100.52) 145.03ms
+[D 180508 11:26:31 common:36] FUNC: <function check_apply.<locals>.wrapper at 0x7fd52bb65e18>
+[I 180508 11:26:31 online_apply:23] product_cd: B01 B01
+[I 180508 11:26:31 web:2106] 200 GET /tlwx/ccrd/online_apply/profile (192.168.100.52) 24.90ms
+[I 180508 11:26:31 web:2106] 200 GET /tlwx/static/asset/photoswipe/photoswipe.css?v=a78e12d3a036307b9ef08fc063278e02 (192.168.100.52) 9.69ms
+[I 180508 11:26:31 web:2106] 200 GET /tlwx/static/asset/photoswipe/default-skin/default-skin.css?v=1ce09d402b4c3aee84ed6299f793cd21 (192.168.100.52) 7.62ms
+[I 180508 11:26:31 web:2106] 200 GET /tlwx/static/asset/picker.js?v=50226c50563b6d2b46abc8ddd5317dcd (192.168.100.52) 3.46ms
+[I 180508 11:26:31 web:2106] 200 GET /tlwx/static/asset/picker-city.js?v=4a5300e0dacfb54f4b40e88ad067fc36 (192.168.100.52) 6.92ms
+[I 180508 11:26:31 web:2106] 200 GET /tlwx/static/asset/photoswipe/photoswipe.min.js?v=90d5a5ff4789f25f79840f95fc089c0e (192.168.100.52) 1.92ms
+[I 180508 11:26:31 web:2106] 200 GET /tlwx/static/asset/photoswipe/photoswipe-ui-default.min.js?v=c061a13816b98ce8c8a7ffb2e62dc403 (192.168.100.52) 1.77ms
+[I 180508 11:26:31 web:2106] 200 GET /tlwx/static/js/ccrd/online_apply/main_profile.js?v=fbc042415808892cc4c7ee19512fb308 (192.168.100.52) 1.62ms
+[I 180508 11:26:31 web:2106] 304 GET /tlwx/static/font/iconfont.woff?t=1493801407135 (192.168.100.52) 1.16ms
+[D 180508 11:26:31 async_wx:201] <class 'str'>
+    
+[D 180508 11:26:31 async_wx:201] <class 'str'>
+    
+[D 180508 11:26:31 async_wx:201] <class 'int'>
+    
+[D 180508 11:26:31 async_wx:201] <class 'str'>
+    
+[D 180508 11:26:31 async_wx:201] <class 'str'>
+    
+[I 180508 11:26:31 async_wx:213] RETURN: {'nonceStr': '4YjsKRlHJMjm2Mj', 'jsapi_ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpQD4qAN41lFirZ7bz5iORYDZXd-FM6KftS3ApyCRLDXfw', 'timestamp': 1525749991, 'url': 'https://hz.wx.yinsho.com/tlwx/ccrd/online_apply/profile', 'signature': '36331e9293ea88e24ab95cdd959cb6e5308e261b'} <class 'dict'>
+[D 180508 11:26:31 wx:52] <class 'dict'> {'success': True, 'config': {'nonceStr': '4YjsKRlHJMjm2Mj', 'jsapi_ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpQD4qAN41lFirZ7bz5iORYDZXd-FM6KftS3ApyCRLDXfw', 'timestamp': 1525749991, 'url': 'https://hz.wx.yinsho.com/tlwx/ccrd/online_apply/profile', 'signature': '36331e9293ea88e24ab95cdd959cb6e5308e261b'}}
+[I 180508 11:26:31 web:2106] 200 POST /tlwx/wx/jssdk (192.168.100.52) 2.97ms
+[I 180508 11:26:31 web:2106] 200 GET /tlwx/static/doc/ccrd/1.txt (192.168.100.52) 8.55ms
+[I 180508 11:26:31 web:2106] 200 GET /tlwx/static/doc/ccrd/2.txt (192.168.100.52) 2.78ms
+[I 180508 11:26:40 web:2106] 200 GET /tlwx/static/asset/photoswipe/default-skin/default-skin.svg (192.168.100.52) 2.57ms
+[I 180508 12:00:02 async_wx:23] get_access_token {'access_token': '9_yD1nfrE3k-hX0T5XKHyIqj18kgwdjxVpIxW9Pk-BqL3okGKcJF3jKDXnrunG37_vdqcbNpTa3p-1qLZOG1RZH7C_ad9LOO_H8cjo0XOYhEUBymbFwBWawitef0nvNgOd4tt2NXnWoPdodEdpNBGbAHAIWB', 'expires_in': 7200}
+[I 180508 12:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSpCKGs9BnoHkJ-vsajNN3T-CiZEnL1xDKWcq1Gi34j-Q', 'expires_in': 7200}
+[I 180508 12:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 573.12ms
+[I 180508 13:00:02 async_wx:23] get_access_token {'access_token': '9_3bbl2WMIpvvtIvt9KEr-Lh2zuvIwJn-J36wSMD-0sI2M3-KUu6CyIwHZdsWqyVmMVeF1NJJqak7aDxklPgAP_AX2BxwcyvTba5DFJ9P0894GLWVRKLPy3ShSgNoRk08mzheD-CIiTtJt8jnFVGHhAIANYZ', 'expires_in': 7200}
+[I 180508 13:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpSpCKGs9BnoHkJ-vsajNN3T-CiZEnL1xDKWcq1Gi34j-Q', 'expires_in': 7200}
+[I 180508 13:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 346.31ms
+[I 180508 13:35:01 autoreload:196] main.py modified; restarting server
+[D 180508 13:35:02 selector_events:65] Using selector: EpollSelector
+[D 180508 13:35:02 selector_events:65] Using selector: EpollSelector
+[I 180508 13:35:44 autoreload:196] /home/tonglian/tlwx/app/config.py modified; restarting server
+[D 180508 13:35:45 selector_events:65] Using selector: EpollSelector
+[D 180508 13:35:45 selector_events:65] Using selector: EpollSelector
+[D 180508 15:59:54 selector_events:65] Using selector: EpollSelector
+[D 180508 15:59:54 selector_events:65] Using selector: EpollSelector
+[I 180508 16:00:01 async_wx:23] get_access_token {'access_token': '9_pdYc0rRwr4inlja25sPvwyNj8IruiFURfTjESsaXRnnDPEG3kimW3bM7ElfUIIgbVRqwKw92460YtyGVakdNuC8IHLiBo7bDN_EfY1-p7NYtj8CrujqNPa-QPBCY0osnjJ1hOg0SiZCPTLDuBYPeADAVSJ', 'expires_in': 7200}
+[I 180508 16:00:02 async_wx:32] get_jsapi_ticket {'errcode': 0, 'errmsg': 'ok', 'ticket': 'kgt8ON7yVITDhtdwci0qeQpTrCm5zD2zmuIQw5LoKpRASF1pFN3XdluXbk_07crn9Pf9kVwlHrRvOMwr-WGzFA', 'expires_in': 7200}
+[I 180508 16:00:02 web:2106] 200 GET /tlwx/wx/refresh_token (192.168.100.52) 346.71ms

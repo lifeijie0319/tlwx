@@ -156,6 +156,17 @@ class InfoCheckHandler(BaseHandler):
         return self.write({'success': True, 'cellphone': ret['MOBILE_NO']})
 
 
+class MigrateHandler(BaseHandler):
+    def get(self):
+        from ..db.sqlal import engine
+        from ..db.model import Base, CCRDOnlineApply
+        #Base.metadata.drop_all(engine)
+        #Base.metadata.create_all(engine)
+        CCRDOnlineApply.__table__.drop(engine, checkfirst=True)
+        CCRDOnlineApply.__table__.create(engine, checkfirst=True)
+        return self.write({'success': True})
+
+
 class TestHandler(BaseHandler):
     async def get(self, action):
         import datetime
