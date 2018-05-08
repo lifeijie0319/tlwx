@@ -70,9 +70,12 @@ class TLClient:
 
 
 class TLImageClient:
-    def __init__(self, cli, host, port):
+    def __init__(self, cli, config):
         self.cli = cli
-        self.url = 'http://' + host + ':' + port
+        self.org = config['ORG']
+        self.sys_id = config['SYS_ID']
+        self.operator_id = config['OPERATOR_ID']
+        self.url = 'http://' + config['HOST'] + ':' + config['PORT']
 
     async def send(self, data, url, method='POST'):
         #app_log.info('[S] %s', data)
@@ -84,38 +87,40 @@ class TLImageClient:
         app_log.info('[R] %s', res.body)
         return res.body
         
-    async def get_image_no(self):
+    async def get_image_no(self, name, id_no, id_type):
         data = {
-            'ORG': 'org1',
-            'ID_TYPE': 'I',
-            'ID_NO': '123',
-            'NAME': 'czy',
-            'SYS_ID': 'aps',
-            'OPERATOR_ID': 'tt'
+            'ORG': self.org,
+            'ID_TYPE': id_type,
+            'ID_NO': id_no,
+            'NAME': name,
+            'SYS_ID': self.sys_id,
+            'OPERATOR_ID': self.operator_id
         }
+        #return {'RET_CODE': 'F', 'RET_MSG': '获取影像批次号失败'}
         return {"IMAGE_NO":"aps.2018050811215607164dc9zS00000","RET_CODE":"S"}
         #return await self.send(data, '/api/v1/img/id')
 
-    async def add(self, image_no, images):
+    async def add(self, name, id_no, id_type, image_no, images):
         data = {
-            'ORG': 'org1',
-            'ID_TYPE': 'I',
-            'ID_NO': '123',
-            'NAME': 'czy',
-            'SYS_ID': 'aps',
+            'ORG': self.org,
+            'ID_TYPE': id_type,
+            'ID_NO': id_no,
+            'NAME': name,
+            'SYS_ID': self.sys_id,
             'IMAGE_NO': image_no,
-            'OPERATOR_ID': 'tt',
+            'OPERATOR_ID': self.operator_id,
             'images': images
         }
+        #return {'RET_CODE': 'F', 'RET_MSG': '新增影像失败'}
         return {"IMAGE_NO":"aps.2018050715580502264dc9zS00000","RET_CODE":"S"}
         #return await self.send(data, '/api/v1/img/org1/' + image_no)
 
     async def query(self, image_no):
         data = {
             'IMAGE_NO': image_no,
-            'ORG': 'org1',
-            'SYS_ID': 'aps',
-            'OPERATOR_ID': 'tt',
+            'ORG': self.org,
+            'SYS_ID': self.sys_id,
+            'OPERATOR_ID': self.operator_id,
         }
         app_log.info('DATA: %s', data)
         ret = await self.send(data, '/api/v1/img/info')

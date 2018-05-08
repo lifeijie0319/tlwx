@@ -9,6 +9,7 @@ from tornado.web import MissingArgumentError
 from ..common import BaseHandler, need_openid
 from ... import config
 from ...db.api import OP_CCRDOnlineApply
+from ...service.async_wx import Material
 from ...tool import G
 
 
@@ -104,26 +105,33 @@ class IDCardHandler(BaseHandler):
         product_cd = self.get_cookie('product_cd')
         updt_data = {'step': 'profile'}
         if not self.request.body:
-            OP_CCRDOnlineApply(self.db).update(self.openid, product_cd, data)
+            OP_CCRDOnlineApply(self.db).update(self.openid, product_cd, updt_data)
             self.db.commit()
             return self.write({'success': True})
         else:
             query_data = json.loads(self.request.body)
             front_id = query_data['front_id']
+            app_log.debug('FRONT_ID: %s', front_id)
             front_img_res = await Material.get_tmp(front_id)
+            app_log.debug('FRONT: %s', front_img_res['success'])
             if front_img_res['success']:
-                front_img = front_img_res['content']
+                front_img = base64.b64encode(front_img_res['content'])
+                app_log.debug('FRONT_IMG: %s', type(front_img))
             else:
                 return self.write({'success': False, 'msg': '获取身份证正面图片失败'})
             back_id = query_data['back_id']
+            app_log.debug('BACK_ID: %s', back_id)
             back_img_res = await Material.get_tmp(back_id)
+            app_log.debug('BACK: %s', back_img_res['success'])
             if back_img_res['success']:
-                back_img = back_img_res['content']
+                back_img = base64.b64encode(back_img_res['content'])
             else:
                 return self.write({'success': False, 'msg': '获取身份证反面图片失败'})
-            img_no_res = await G.tl_image_cli.get_image_no()
+            info = OP_CCRDOnlineApply(self.db).get(self.openid, product_cd=product_cd)[0]
+            img_no_res = await G.tl_image_cli.get_image_no(info.name, info.id_no, info.id_type)
+            app_log.debug('FETCH_IMG_NO: %s', img_no_res)
             if img_no_res['RET_CODE'] == 'S':
-                data['id_card_img_no'] = img_no_res['IMAGE_NO']
+                updt_data['id_card_img_no'] = img_no_res['IMAGE_NO']
                 now = datetime.datetime.now().isoformat()
                 images = [
                     {
@@ -132,7 +140,7 @@ class IDCardHandler(BaseHandler):
                         'list': [
                             {
                                 'SAME_TYPE_IMAGENO': 1,
-                                'UPLOAD_SYS_ID': 'aps',
+                                'UPLOAD_SYS_ID': config.TL_IMAGE['SYS_ID'],
                                 'UPLOAD_TIME': now,
                                 'content': front_img,
                                 'format': 'jpg',
@@ -145,7 +153,7 @@ class IDCardHandler(BaseHandler):
                         'list': [
                             {
                                 'SAME_TYPE_IMAGENO': 1,
-                                'UPLOAD_SYS_ID': 'aps',
+                                'UPLOAD_SYS_ID': config.TL_IMAGE['SYS_ID'],
                                 'UPLOAD_TIME': now,
                                 'content': back_img,
                                 'format': 'jpg',
@@ -153,13 +161,13 @@ class IDCardHandler(BaseHandler):
                         ]
                     }
                 ]
-                add_res = await G.tl_image_cli.add(img_no_res['IMAGE_NO'], images)
-                if add_res:
-                    OP_CCRDOnlineApply(self.db).update(self.openid, product_cd, data)
+                add_res = await G.tl_image_cli.add(info.name, info.id_no, info.id_type, img_no_res['IMAGE_NO'], images)
+                if add_res['RET_CODE'] == 'S':
+                    OP_CCRDOnlineApply(self.db).update(self.openid, product_cd, updt_data)
                     self.db.commit()
                     return self.write({'success': True})
                 else:
-                    return self.write({'success': False, 'msg': img_no_res['RET_MSG']})
+                    return self.write({'success': False, 'msg': add_res['RET_MSG']})
             else:
                 return self.write({'success': False, 'msg': img_no_res['RET_MSG']})
 
@@ -179,19 +187,28 @@ class ProfileHandler(BaseHandler):
 
     async def post(self):
         data = json.loads(self.request.body)
+        app_log.info('[REQ] %s', data)
         data['if_serve_ever'] = 'Y' if data.get('if_serve_ever') else 'N'
         data['id_start_date'] = data['id_start_date'].replace('-', '')
         data['id_last_date'] = data['id_last_date'].replace('-', '')
         data['step'] = 'job_info'
         product_cd = self.get_cookie('product_cd')
         images = {}
-        imgs = {key: data.pop(key) for key in data.keys() if key in ('driving_crt', 'working_crt', 'house_crt', 'other_crt')}
+        imgs = {key: data.pop(key) for key in list(data.keys()) if key in ('driving_crt', 'working_crt', 'house_crt', 'other_crt')}
+        app_log.debug('[IMGS] %s', imgs.keys())
+        for key in imgs.keys():
+            img_res = await Material.get_tmp(imgs[key])
+            if img_res['success']:
+                imgs[key] = base64.b64encode(img_res['content'])
+            else:
+                return self.write({'success': False, 'msg': '获取图片失败'})
         if not imgs:
             OP_CCRDOnlineApply(self.db).update(self.openid, product_cd, data)
             self.db.commit()
             return self.write({'success': True})
         else:
-            img_no_res = await G.tl_image_cli.get_image_no()
+            info = OP_CCRDOnlineApply(self.db).get(self.openid, product_cd=product_cd)[0]
+            img_no_res = await G.tl_image_cli.get_image_no(info.name, info.id_no, info.id_type)
             if img_no_res['RET_CODE'] == 'S':
                 data['profile_img_no'] = img_no_res['IMAGE_NO']
                 now = datetime.datetime.now().isoformat()
@@ -202,21 +219,21 @@ class ProfileHandler(BaseHandler):
                         'list': [
                             {
                                 'SAME_TYPE_IMAGENO': 1,
-                                'UPLOAD_SYS_ID': 'aps',
+                                'UPLOAD_SYS_ID': config.TL_IMAGE['SYS_ID'],
                                 'UPLOAD_TIME': now,
                                 'content': value,
                                 'format': 'jpg',
                             }
                         ]
                     }
-                for key, value in imgs]
-                add_res = await G.tl_image_cli.add(img_no_res['IMAGE_NO'], images)
-                if add_res:
+                for key, value in imgs.items()]
+                add_res = await G.tl_image_cli.add(info.name, info.id_no, info.id_type, img_no_res['IMAGE_NO'], images)
+                if add_res['RET_CODE'] == 'S':
                     OP_CCRDOnlineApply(self.db).update(self.openid, product_cd, data)
                     self.db.commit()
                     return self.write({'success': True})
                 else:
-                    return self.write({'success': False, 'msg': img_no_res['RET_MSG']})
+                    return self.write({'success': False, 'msg': add_res['RET_MSG']})
             else:
                 return self.write({'success': False, 'msg': img_no_res['RET_MSG']})
 

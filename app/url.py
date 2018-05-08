@@ -22,6 +22,7 @@ url_patterns = [
     (r'/tlwx/media/(.*)', StaticFileHandler, {'path': config.MEDIA_PATH}),
     (r'/tlwx/staticfile/(.*)', common.StaticTPLHandler),
     (r'/tlwx/test/(?P<action>\w+)', common.TestHandler),
+    (r'/tlwx/migrate', common.MigrateHandler),
     (r'/tlwx/common/send_vcode', common.SendVcodeHandler),
     (r'/tlwx/common/refresh_pic_vcode', common.RefreshPicVcodeHandler),
     (r'/tlwx/common/upload_img', common.UploadImgHandler),

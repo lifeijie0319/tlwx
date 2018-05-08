@@ -15,12 +15,14 @@ class CCRDOnlineApply(Base):
     id_no = Column(String(30))
     id_type = Column(String(1))
     cellphone = Column(String(20))
+    id_card_img_no = Column(String(40))#身份证正反面影像批次号
     #概述
     id_issuer_address = Column(String(200))#发证机关所在地址
     if_serve_ever = Column(String(1))#证件是否永久有效
     id_start_date = Column(String(8))#证件起始日
     id_last_date = Column(String(8))#证件到期日
     ref_no = Column(String(20))#推荐人编号
+    profile_img_no = Column(String(40))#常用证件影像批次号（驾驶证、工作证、房产证、其它证件）
     #工作信息
     corp_name = Column(String(80))#公司名称
     emp_province = Column(String(40))#公司所在省

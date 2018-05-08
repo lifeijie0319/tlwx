@@ -9,8 +9,8 @@ tornado_settings = {
     'xsrf_cookies': True,
     'debug': True,
 }
-#BASE_URL = 'https://hz.wx.yinsho.com/tlwx'
-BASE_URL = 'http://10.252.22.131:8002/tlwx'
+BASE_URL = 'https://hz.wx.yinsho.com/tlwx'
+#BASE_URL = 'http://10.252.22.131:8002/tlwx'
 URL_PREFIX = '/tlwx'
 TOKEN = 'yinshowxtoken'
 APPID = 'wx6290daffb81416ac'
@@ -20,23 +20,26 @@ JSAPI_TICKET_KEY = 'tl_jsapi_ticket'
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MEDIA_URL = BASE_URL + '/media'
 MEDIA_PATH = os.path.join(os.path.dirname(__file__), 'media')
-DB2_DIALECT = 'ibm_db_sa://py3:qwe123@127.0.0.1:50000/wxbank'
-#DB2_DIALECT = 'ibm_db_sa://tonglian:qwe123@127.0.0.1:50000/wxdb'
-DB2_SCHEMA = 'tlwx'
-#DB2_SCHEMA = 'tonglian'
+#DB2_DIALECT = 'ibm_db_sa://py3:qwe123@127.0.0.1:50000/wxbank'
+DB2_DIALECT = 'ibm_db_sa://tonglian:qwe123@127.0.0.1:50000/wxdb'
+#DB2_SCHEMA = 'tlwx'
+DB2_SCHEMA = 'tonglian'
 REDIS = {
     'HOST': 'localhost',
     'PORT': '6379',
 }
 TL_AIC = {
-    'HOST': '10.250.1.166',
-    #'HOST': '127.0.0.1',
-    'PORT': '15777'
-    #'PORT': '8001'
+    #'HOST': '10.250.1.166',
+    'HOST': '127.0.0.1',
+    #'PORT': '15777'
+    'PORT': '8001'
 }
 TL_IMAGE = {
     'HOST': '10.250.1.57',
     'PORT': '7777',
+    'ORG': 'org1',
+    'SYS_ID': 'aps',
+    'OPERATOR_ID': 'tt',
 }
 BILL_TPL_ID = 'z4QouwVQpchy1tNSe-SCk4J2BoAa0y8NXR3HcWp8kmE'
 TRADE_TPL_ID = '79SB1YCP7Ts06IkJKY_PfhtVzwTSg2H9jrZBL1DgXIY'

@@ -25,7 +25,7 @@ class Application(tornado.web.Application):
         G.http_cli = HTTPClient()
         G.async_http_cli = AsyncHTTPClient()
         G.tl_cli = TLClient(TL_AIC['HOST'], TL_AIC['PORT'])
-        G.tl_image_cli = TLImageClient(G.async_http_cli, TL_IMAGE['HOST'], TL_IMAGE['PORT'])
+        G.tl_image_cli = TLImageClient(G.async_http_cli, TL_IMAGE)
         handlers = url_patterns
         tornado.web.Application.__init__(self, handlers, **tornado_settings)
 
