@@ -36,6 +36,15 @@ $(function(){
             return false;
         }
         data = $('#form3').serializeForm();
+        data = JSON.parse(data);
+        $('a[name="upload_img_btn"]').each(function(index, ele){
+            img_dom = $(this).parents('.ys_cell').find('img');
+            img_mediaid = img_dom.attr('mediaid');
+            if(img_mediaid){
+                data[img_dom.attr('name')] = img_mediaid;
+            }
+        });
+        data = JSON.stringify(data);
         $.post('', data, function(resp){
             console.log(resp);
             if(resp.success){
