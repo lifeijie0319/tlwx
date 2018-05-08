@@ -20,18 +20,6 @@
     <script src="{{ static_url('asset/popup.js') }}"></script>
     <script src="{{ static_url('js/tool.js') }}"></script>
     <script src="{{ static_url('js/ccrd/online_apply/main_profile.js') }}"></script>
-    <script>
-        $(function() {
-            $("#date").datetimePicker({
-                title: "证件有效期（起始日）",
-                m: 1
-            });
-            $("#date2").datetimePicker({
-                title: "证件有效期（到期日）",
-                m: 1
-            });
-        });
-    </script>
 </head>
 <body ontouchstart>
 	<div class="container">
@@ -148,7 +136,7 @@
                     <div class="my-gallery" data-pswp-uid="1">
                     　　<figure>
                             <a href="{{ static_url('img/id01.png') }}" data-size="750x500">
-                                <img src="{{ static_url('img/id01.png') }}">
+                                <img name="driving_crt" src="{{ static_url('img/id01.png') }}">
                             </a>
                         </figure>
                     </div>
@@ -165,7 +153,7 @@
                     <div class="my-gallery" data-pswp-uid="2">
                     　　<figure>
                             <a href="{{ static_url('img/id01.png') }}" data-size="750x500">
-                                <img src="{{ static_url('img/id01.png') }}">
+                                <img name="working_crt" src="{{ static_url('img/id01.png') }}">
                             </a>
                         </figure>
                     </div>
@@ -182,7 +170,7 @@
                     <div class="my-gallery" data-pswp-uid="3">
                     　　<figure>
                             <a href="{{ static_url('img/id01.png') }}" data-size="750x500">
-                                <img src="{{ static_url('img/id01.png') }}">
+                                <img name="house_crt" src="{{ static_url('img/id01.png') }}">
                             </a>
                         </figure>
                     </div>
@@ -199,7 +187,7 @@
                     <div class="my-gallery" data-pswp-uid="4">
                     　　<figure>
                             <a href="{{ static_url('img/id01.png') }}" data-size="750x500">
-                                <img src="{{ static_url('img/id01.png') }}">
+                                <img name="other_crt" src="{{ static_url('img/id01.png') }}">
                             </a>
                         </figure>
                     </div>

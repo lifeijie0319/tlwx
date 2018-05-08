@@ -1,5 +1,5 @@
-var BASE_URL = 'https://hz.wx.yinsho.com/tlwx';
-//var BASE_URL = 'http://10.252.22.131:8002/tlwx';
+//var BASE_URL = 'https://hz.wx.yinsho.com/tlwx';
+var BASE_URL = 'http://10.252.22.131:8002/tlwx';
 var APPID = 'wx6290daffb81416ac';
 var PUB_KEY = '-----BEGIN PUBLIC KEY-----\
 MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDC3K9zrxu/uT/TfEzmCv0D0RA5\

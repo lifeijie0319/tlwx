@@ -1,5 +1,6 @@
 import datetime
 import dicttoxml
+import json
 import xmltodict
 
 from tornado.log import app_log
@@ -67,17 +68,55 @@ class TLClient:
         app_log.info('[R]: %s', ret.decode())
         return ret.decode()
 
-    async def api_12010(self, ccrdno, currency='156'):
-        request = {
-            'CARD_NO': ccrdno,
-            'CURR_CD': currency,
-            'STMT_DATE': '000000',
+
+class TLImageClient:
+    def __init__(self, cli, host, port):
+        self.cli = cli
+        self.url = 'http://' + host + ':' + port
+
+    async def send(self, data, url, method='POST'):
+        #app_log.info('[S] %s', data)
+        data = json.dumps(data, ensure_ascii=False)
+        headers = {'Content-Type': 'application/json'}
+        res = await self.cli.fetch(self.url + url, method=method, body=data, headers=headers)
+        if res.error:
+            res.rethrow()
+        app_log.info('[R] %s', res.body)
+        return res.body
+        
+    async def get_image_no(self):
+        data = {
+            'ORG': 'org1',
+            'ID_TYPE': 'I',
+            'ID_NO': '123',
+            'NAME': 'czy',
+            'SYS_ID': 'aps',
+            'OPERATOR_ID': 'tt'
         }
-        ret = await self.send_request('12010', request)
-        app_log.debug('[R] %s', ret)
-        serv_response = ret['SERVICE']['SERVICE_HEADER']['SERV_RESPONSE']
-        if serv_response['STATUS'] == 'F':
-            return {'success': False, 'msg': serv_response['DESC']}
-        response = ret['SERVICE']['SERVICE_BODY']['RESPONSE']
-        response['success'] = True
-        return response
+        return {"IMAGE_NO":"aps.2018050811215607164dc9zS00000","RET_CODE":"S"}
+        #return await self.send(data, '/api/v1/img/id')
+
+    async def add(self, image_no, images):
+        data = {
+            'ORG': 'org1',
+            'ID_TYPE': 'I',
+            'ID_NO': '123',
+            'NAME': 'czy',
+            'SYS_ID': 'aps',
+            'IMAGE_NO': image_no,
+            'OPERATOR_ID': 'tt',
+            'images': images
+        }
+        return {"IMAGE_NO":"aps.2018050715580502264dc9zS00000","RET_CODE":"S"}
+        #return await self.send(data, '/api/v1/img/org1/' + image_no)
+
+    async def query(self, image_no):
+        data = {
+            'IMAGE_NO': image_no,
+            'ORG': 'org1',
+            'SYS_ID': 'aps',
+            'OPERATOR_ID': 'tt',
+        }
+        app_log.info('DATA: %s', data)
+        ret = await self.send(data, '/api/v1/img/info')
+        return ret

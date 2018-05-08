@@ -10,8 +10,8 @@ from tornado.httpclient import AsyncHTTPClient, HTTPClient
 from tornado.options import define, options
 from dicttoxml import LOG
 
-from app.config import G, REDIS, TL_HOST, TL_PORT, tornado_settings, URL_PREFIX
-from app.service.tl_api import TLClient
+from app.config import G, REDIS, TL_AIC, TL_IMAGE, tornado_settings, URL_PREFIX
+from app.service.tl_api import TLClient, TLImageClient
 from app.url import url_patterns
 
 
@@ -24,7 +24,8 @@ class Application(tornado.web.Application):
         G.redis_conn = redis.StrictRedis(host=REDIS.get('HOST'), port=REDIS.get('PORT'), db=0)
         G.http_cli = HTTPClient()
         G.async_http_cli = AsyncHTTPClient()
-        G.tl_cli = TLClient(TL_HOST, TL_PORT)
+        G.tl_cli = TLClient(TL_AIC['HOST'], TL_AIC['PORT'])
+        G.tl_image_cli = TLImageClient(G.async_http_cli, TL_IMAGE['HOST'], TL_IMAGE['PORT'])
         handlers = url_patterns
         tornado.web.Application.__init__(self, handlers, **tornado_settings)
 

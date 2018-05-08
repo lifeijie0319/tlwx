@@ -158,9 +158,27 @@ class InfoCheckHandler(BaseHandler):
 
 class TestHandler(BaseHandler):
     async def get(self, action):
-        with open(config.BASE_DIR + '/app/tpl/xml/91000_REQ.xml') as f:
-            xml = f.read()
-        app_log.debug('%s %s', xml, type(xml))
-        ret = await G.tl_cli.send(xml.encode('utf-8'))
-        app_log.debug(ret)
-        return self.write(ret)
+        import datetime
+        import base64
+        with open(config.MEDIA_PATH + '/front_id/oSDTiwq1vFtLARyBeBGhRpNeXczA.jpg', 'rb') as f:
+            content = f.read()
+        app_log.info('IMG_TYPE: %s', type(content))
+        images = [
+            {
+                'TYPE': '001',
+                'TYPE_NAME': '001',
+                'list': [
+                    {
+                        'SAME_TYPE_IMAGENO': 1,
+                        'UPLOAD_SYS_ID': 'aps',
+                        'UPLOAD_TIME': datetime.datetime.now().isoformat(),
+                        'content': str(content),
+                        'format': 'jpg',
+                    }
+                ]
+            }
+        ]
+        #ret = await G.tl_image_cli.add('aps.2018050715580502264dc9zS00000', images)
+        ret = await G.tl_image_cli.query('aps.2018050715580502264dc9zS00000')
+        #ret = await G.tl_image_cli.get_image_no()
+        return ret
